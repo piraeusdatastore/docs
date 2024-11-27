@@ -1,0 +1,6006 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+      
+      
+        <meta name="author" content="The Piraeus Maintainers">
+      
+      
+        <link rel="canonical" href="https://piraeus.io/docs/v2.7.1/CHANGELOG/">
+      
+      
+        <link rel="prev" href="../reference/linstorsatellite/">
+      
+      
+      
+      <link rel="icon" href="../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>Changelog - Piraeus Datastore</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Changelog - Piraeus Datastore" >
+      
+        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+      
+        <meta  property="og:image"  content="https://piraeus.io/docs/v2.7.1/assets/images/social/CHANGELOG.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="https://piraeus.io/docs/v2.7.1/CHANGELOG/" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Changelog - Piraeus Datastore" >
+      
+        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+      
+        <meta  name="twitter:image"  content="https://piraeus.io/docs/v2.7.1/assets/images/social/CHANGELOG.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://piraeus.io" title="Piraeus Datastore" class="md-header__button md-logo" aria-label="Piraeus Datastore" data-md-component="logo">
+      
+  
+  <svg height="180" viewBox="0 0 190 180" width="190" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd" transform="translate(4.963191 2.824896)"><g fill-rule="nonzero"><path d="m150.0514 30.979219-112.34478-25.1158508 1.324509-5.64184921 137.908021 30.83078101c3.44304.769728 2.86998 5.714929-.66226 5.714929h-171.678117v-5.78801z"/><path d="m3.8235217 174.12869c-1.6535813 0-2.99407385-1.33389-2.99407385-2.97932v-136.19766c0-.826375.34492495-1.615628.95234835-2.179151l34.2179868-31.7449663c1.914275-1.77592493 5.0358-.42514153 5.0358 2.179151v167.9426263c0 1.64543-1.340493 2.97932-2.994074 2.97932zm31.2239133-5.95865v-158.112296l-28.2298394 26.189597v131.922699z"/><path d="m61.13865 126.2803 25.380912 40.28721h46.674638l33.48555-40.34566-54.59744-17.6234zm52.65813-22.51495 59.70647 19.24664c1.82356.58783 2.52435 2.20038 1.49468 3.43933l-36.56129 43.99233c-.60064.72272-1.67982 1.16465-2.84407 1.16465h-50.919404c-1.299335 0-2.479254-.54926-3.019463-1.40559l-27.752414-43.99233c-.752975-1.19359-.04694-2.60426 1.58686-3.17056l55.526641-19.24665c.87698-.30398 1.89376-.31415 2.78199-.0278z"/></g><path d="m133.47718 168.1633 35.61997-42.23318-56.92479-17.39461v59.62779z"/><g fill-rule="nonzero"><path d="m80.191257 116.90501c0 1.52927-1.236024 2.76899-2.760736 2.76899-1.524713 0-2.760736-1.23972-2.760736-2.76899v-18.388132c0-1.52927 1.236023-2.768988 2.760736-2.768988h30.196469c1.52472 0 2.76074 1.239718 2.76074 2.768988v7.713782c0 1.52927-1.23602 2.76899-2.76074 2.76899-1.52471 0-2.76073-1.23972-2.76073-2.76899v-4.94479h-24.675003z"/><path d="m120.39739 119.2728c0 1.52927-1.23602 2.76899-2.76073 2.76899-1.52472 0-2.76074-1.23972-2.76074-2.76899v-20.755922c0-1.52927 1.23602-2.768988 2.76074-2.768988h30.19647c1.52471 0 2.76073 1.239718 2.76073 2.768988v11.341772c0 1.52927-1.23602 2.76899-2.76073 2.76899s-2.76074-1.23972-2.76074-2.76899v-8.57278h-24.675z" transform="matrix(-1 0 0 1 265.46978 0)"/><path d="m120.68712 85.417721h24.13742v-22.949367h-24.13742zm-3.31289-28.487341h30.76319c1.21977 0 2.20859.991774 2.20859 2.21519v29.594936c0 1.223416-.98882 2.21519-2.20859 2.21519h-30.76319c-1.21977 0-2.20859-.991774-2.20859-2.21519v-29.594936c0-1.223416.98882-2.21519 2.20859-2.21519z"/><path d="m93.312883 92.484177c-9.75816 0-17.668711-7.934194-17.668711-17.721519 0-9.787324 7.910551-17.721519 17.668711-17.721519 9.758157 0 17.668717 7.934195 17.668717 17.721519 0 9.787325-7.91056 17.721519-17.668717 17.721519zm0-5.537975c6.708737 0 12.147237-5.454758 12.147237-12.183544s-5.4385-12.183544-12.147237-12.183544c-6.708735 0-12.147239 5.454758-12.147239 12.183544s5.438504 12.183544 12.147239 12.183544z"/></g></g></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Piraeus Datastore
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="orange" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="orange"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/piraeusdatastore/piraeus-operator" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    piraeusdatastore/piraeus-operator
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../tutorial/" class="md-tabs__link">
+          
+  
+    
+  
+  Tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../how-to/" class="md-tabs__link">
+          
+  
+    
+  
+  How-To Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../how-to/upgrade/" class="md-tabs__link">
+          
+  
+    
+  
+  Upgrades
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../explanation/" class="md-tabs__link">
+          
+  
+    
+  
+  Understanding Piraeus
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../reference/" class="md-tabs__link">
+          
+  
+    
+  
+  Reference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Changelog
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://piraeus.io" title="Piraeus Datastore" class="md-nav__button md-logo" aria-label="Piraeus Datastore" data-md-component="logo">
+      
+  
+  <svg height="180" viewBox="0 0 190 180" width="190" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd" transform="translate(4.963191 2.824896)"><g fill-rule="nonzero"><path d="m150.0514 30.979219-112.34478-25.1158508 1.324509-5.64184921 137.908021 30.83078101c3.44304.769728 2.86998 5.714929-.66226 5.714929h-171.678117v-5.78801z"/><path d="m3.8235217 174.12869c-1.6535813 0-2.99407385-1.33389-2.99407385-2.97932v-136.19766c0-.826375.34492495-1.615628.95234835-2.179151l34.2179868-31.7449663c1.914275-1.77592493 5.0358-.42514153 5.0358 2.179151v167.9426263c0 1.64543-1.340493 2.97932-2.994074 2.97932zm31.2239133-5.95865v-158.112296l-28.2298394 26.189597v131.922699z"/><path d="m61.13865 126.2803 25.380912 40.28721h46.674638l33.48555-40.34566-54.59744-17.6234zm52.65813-22.51495 59.70647 19.24664c1.82356.58783 2.52435 2.20038 1.49468 3.43933l-36.56129 43.99233c-.60064.72272-1.67982 1.16465-2.84407 1.16465h-50.919404c-1.299335 0-2.479254-.54926-3.019463-1.40559l-27.752414-43.99233c-.752975-1.19359-.04694-2.60426 1.58686-3.17056l55.526641-19.24665c.87698-.30398 1.89376-.31415 2.78199-.0278z"/></g><path d="m133.47718 168.1633 35.61997-42.23318-56.92479-17.39461v59.62779z"/><g fill-rule="nonzero"><path d="m80.191257 116.90501c0 1.52927-1.236024 2.76899-2.760736 2.76899-1.524713 0-2.760736-1.23972-2.760736-2.76899v-18.388132c0-1.52927 1.236023-2.768988 2.760736-2.768988h30.196469c1.52472 0 2.76074 1.239718 2.76074 2.768988v7.713782c0 1.52927-1.23602 2.76899-2.76074 2.76899-1.52471 0-2.76073-1.23972-2.76073-2.76899v-4.94479h-24.675003z"/><path d="m120.39739 119.2728c0 1.52927-1.23602 2.76899-2.76073 2.76899-1.52472 0-2.76074-1.23972-2.76074-2.76899v-20.755922c0-1.52927 1.23602-2.768988 2.76074-2.768988h30.19647c1.52471 0 2.76073 1.239718 2.76073 2.768988v11.341772c0 1.52927-1.23602 2.76899-2.76073 2.76899s-2.76074-1.23972-2.76074-2.76899v-8.57278h-24.675z" transform="matrix(-1 0 0 1 265.46978 0)"/><path d="m120.68712 85.417721h24.13742v-22.949367h-24.13742zm-3.31289-28.487341h30.76319c1.21977 0 2.20859.991774 2.20859 2.21519v29.594936c0 1.223416-.98882 2.21519-2.20859 2.21519h-30.76319c-1.21977 0-2.20859-.991774-2.20859-2.21519v-29.594936c0-1.223416.98882-2.21519 2.20859-2.21519z"/><path d="m93.312883 92.484177c-9.75816 0-17.668711-7.934194-17.668711-17.721519 0-9.787324 7.910551-17.721519 17.668711-17.721519 9.758157 0 17.668717 7.934195 17.668717 17.721519 0 9.787325-7.91056 17.721519-17.668717 17.721519zm0-5.537975c6.708737 0 12.147237-5.454758 12.147237-12.183544s-5.4385-12.183544-12.147237-12.183544c-6.708735 0-12.147239 5.454758-12.147239 12.183544s5.438504 12.183544 12.147239 12.183544z"/></g></g></svg>
+
+    </a>
+    Piraeus Datastore
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/piraeusdatastore/piraeus-operator" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    piraeusdatastore/piraeus-operator
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../tutorial/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Tutorials
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/get-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/replicated-volumes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Replicated Volumes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tutorial/snapshots/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating Snapshots
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../how-to/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    How-To Guides
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            How-To Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Advanced Deployments
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Advanced Deployments
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/external-controller/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use Piraeus Datastore with an Existing LINSTOR Cluster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/drbd-loader/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure the DRBD Module Loader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/install-kernel-headers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Kernel Headers to build DRBD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Securing Components
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Securing Components
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/internal-tls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure TLS Between LINSTOR Controller and LINSTOR Satellite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/api-tls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure TLS for the LINSTOR API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/drbd-tls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Configure TLS for DRBD Replication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/secure-boot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Load DRBD with SecureBoot Enabled
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kubernetes Distributions
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes Distributions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/openshift/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Openshift
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/talos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Talos Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/flatcar/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flatcar Container Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/microk8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Microk8s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/k0s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    k0s
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Networking
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Networking
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/http-proxy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy Piraeus Datastore behind an HTTP Proxy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/network-policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy a NetworkPolicy for Piraeus Datastore
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/drbd-host-networking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Use the Host Network for DRBD Replication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Maintenance Tasks
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Maintenance Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monitor Piraeus Datastore with Prometheus Operator
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/linstor-affinity-controller/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Keep Persistent Volume Affinity Updated with LINSTOR Affinity Controller
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/restore-linstor-db/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Restore a LINSTOR Database Backup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../how-to/upgrade/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Upgrades
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Upgrades
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/upgrade/UPGRADE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Upgrading from v2 to v2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Upgrading from v1 to v2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Upgrading from v1 to v2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/upgrade/1-migrate-database/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Migrating the LINSTOR Database
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/upgrade/2-collect-information/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collect Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/upgrade/3-remove-operator-v1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Remove Operator v1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/upgrade/4-install-operator-v2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Operator v2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../explanation/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Understanding Piraeus
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Understanding Piraeus
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../explanation/components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Piraeus Components
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../reference/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Reference
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/linstorcluster/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LinstorCluster
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/linstorsatelliteconfiguration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LinstorSatelliteConfiguration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/linstornodeconnection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LinstorNodeConnection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/linstorsatellite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LinstorSatellite
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unreleased" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unreleased
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v271-2024-11-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.7.1 - 2024-11-25
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.7.1 - 2024-11-25">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v270-2024-11-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.7.0 - 2024-11-11
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.7.0 - 2024-11-11">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v260-2024-09-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.6.0 - 2024-09-04
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.6.0 - 2024-09-04">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v252-2024-07-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.5.2 - 2024-07-17
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.5.2 - 2024-07-17">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v251-2024-05-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.5.1 - 2024-05-02
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.5.1 - 2024-05-02">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v250-2024-04-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.5.0 - 2024-04-03
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.5.0 - 2024-04-03">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v241-2024-03-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.4.1 - 2024-03-06
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.4.1 - 2024-03-06">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v240-2024-01-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.4.0 - 2024-01-30
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.4.0 - 2024-01-30">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breaking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v230-2023-12-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.3.0 - 2023-12-05
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.3.0 - 2023-12-05">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v220-2023-08-31" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.2.0 - 2023-08-31
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.2.0 - 2023-08-31">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v211-2023-05-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.1.1 - 2023-05-24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.1.1 - 2023-05-24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v210-2023-04-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.1.0 - 2023-04-24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.1.0 - 2023-04-24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v201-2023-03-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.0.1 - 2023-03-08
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.0.1 - 2023-03-08">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v200-2023-02-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.0.0 - 2023-02-23
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.0.0 - 2023-02-23">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#added_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1100-2022-10-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.10.0 - 2022-10-18
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.10.0 - 2022-10-18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v191-2022-07-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.9.1 - 2022-07-27
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.9.1 - 2022-07-27">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v190-2022-07-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.9.0 - 2022-07-20
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.9.0 - 2022-07-20">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v182-2022-05-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.8.2 - 2022-05-24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.8.2 - 2022-05-24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v181-2022-05-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.8.1 - 2022-05-12
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.8.1 - 2022-05-12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#added_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v180-2022-03-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.8.0 - 2022-03-15
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.8.0 - 2022-03-15">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breaking_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v171-2022-01-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.7.1 - 2022-01-18
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.7.1 - 2022-01-18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v170-2021-12-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.7.0 - 2021-12-14
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.7.0 - 2021-12-14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v160-2021-09-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.6.0 - 2021-09-02
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.6.0 - 2021-09-02">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v151-2021-06-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.5.1 - 2021-06-21
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.5.1 - 2021-06-21">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v150-2021-05-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.5.0 - 2021-05-12
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.5.0 - 2021-05-12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v140-2021-04-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.4.0 - 2021-04-07
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.4.0 - 2021-04-07">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v131-2021-01-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.3.1 - 2021-01-14
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.3.1 - 2021-01-14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v130-2020-12-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.3.0 - 2020-12-21
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.3.0 - 2020-12-21">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v120-2020-11-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.2.0 - 2020-11-18
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.2.0 - 2020-11-18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deprecation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprecation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v110-2020-10-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.1.0 - 2020-10-13
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.1.0 - 2020-10-13">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#added_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v100-2020-08-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.0 - 2020-08-06
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.0.0 - 2020-08-06">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v050-2020-06-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.5.0 - 2020-06-29
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.5.0 - 2020-06-29">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v041-2020-06-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.4.1 - 2020-06-10
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.4.1 - 2020-06-10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v040-2020-06-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.4.0 - 2020-06-05
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.4.0 - 2020-06-05">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v030-2020-05-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.3.0 - 2020-05-08
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.3.0 - 2020-05-08">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v022-2020-04-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.2.2 - 2020-04-24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.2.2 - 2020-04-24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v021-2020-04-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.2.1 - 2020-04-14
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.2.1 - 2020-04-14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v020-2020-04-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.2.0 - 2020-04-10
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.2.0 - 2020-04-10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v014-2020-03-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.1.4 - 2020-03-05
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.1.4 - 2020-03-05">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v013-2020-02-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      [v0.1.3] - 2020-02-24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[v0.1.3] - 2020-02-24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v0121-2020-02-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      [v0.1.2.1] - 2020-02-21
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[v0.1.2.1] - 2020-02-21">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v010-2020-01-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      [v0.1.0] - 2020-01-27
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[v0.1.0] - 2020-01-27">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v001-2019-07-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.0.1 - 2019-07-19
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.0.1 - 2019-07-19">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#unreleased" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unreleased
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v271-2024-11-25" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.7.1 - 2024-11-25
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.7.1 - 2024-11-25">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v270-2024-11-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.7.0 - 2024-11-11
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.7.0 - 2024-11-11">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v260-2024-09-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.6.0 - 2024-09-04
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.6.0 - 2024-09-04">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v252-2024-07-17" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.5.2 - 2024-07-17
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.5.2 - 2024-07-17">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v251-2024-05-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.5.1 - 2024-05-02
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.5.1 - 2024-05-02">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v250-2024-04-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.5.0 - 2024-04-03
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.5.0 - 2024-04-03">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v241-2024-03-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.4.1 - 2024-03-06
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.4.1 - 2024-03-06">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v240-2024-01-30" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.4.0 - 2024-01-30
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.4.0 - 2024-01-30">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breaking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v230-2023-12-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.3.0 - 2023-12-05
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.3.0 - 2023-12-05">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v220-2023-08-31" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.2.0 - 2023-08-31
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.2.0 - 2023-08-31">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v211-2023-05-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.1.1 - 2023-05-24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.1.1 - 2023-05-24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v210-2023-04-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.1.0 - 2023-04-24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.1.0 - 2023-04-24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v201-2023-03-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.0.1 - 2023-03-08
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.0.1 - 2023-03-08">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v200-2023-02-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      v2.0.0 - 2023-02-23
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v2.0.0 - 2023-02-23">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#added_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v1100-2022-10-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.10.0 - 2022-10-18
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.10.0 - 2022-10-18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v191-2022-07-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.9.1 - 2022-07-27
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.9.1 - 2022-07-27">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fixed_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v190-2022-07-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.9.0 - 2022-07-20
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.9.0 - 2022-07-20">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v182-2022-05-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.8.2 - 2022-05-24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.8.2 - 2022-05-24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v181-2022-05-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.8.1 - 2022-05-12
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.8.1 - 2022-05-12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#added_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v180-2022-03-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.8.0 - 2022-03-15
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.8.0 - 2022-03-15">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#breaking_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v171-2022-01-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.7.1 - 2022-01-18
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.7.1 - 2022-01-18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v170-2021-12-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.7.0 - 2021-12-14
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.7.0 - 2021-12-14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v160-2021-09-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.6.0 - 2021-09-02
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.6.0 - 2021-09-02">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v151-2021-06-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.5.1 - 2021-06-21
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.5.1 - 2021-06-21">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v150-2021-05-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.5.0 - 2021-05-12
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.5.0 - 2021-05-12">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v140-2021-04-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.4.0 - 2021-04-07
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.4.0 - 2021-04-07">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v131-2021-01-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.3.1 - 2021-01-14
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.3.1 - 2021-01-14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v130-2020-12-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.3.0 - 2020-12-21
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.3.0 - 2020-12-21">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fixed_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v120-2020-11-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.2.0 - 2020-11-18
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.2.0 - 2020-11-18">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deprecation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprecation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v110-2020-10-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.1.0 - 2020-10-13
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.1.0 - 2020-10-13">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breaking_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breaking
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#added_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v100-2020-08-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      v1.0.0 - 2020-08-06
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v1.0.0 - 2020-08-06">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v050-2020-06-29" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.5.0 - 2020-06-29
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.5.0 - 2020-06-29">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v041-2020-06-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.4.1 - 2020-06-10
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.4.1 - 2020-06-10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v040-2020-06-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.4.0 - 2020-06-05
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.4.0 - 2020-06-05">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v030-2020-05-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.3.0 - 2020-05-08
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.3.0 - 2020-05-08">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v022-2020-04-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.2.2 - 2020-04-24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.2.2 - 2020-04-24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v021-2020-04-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.2.1 - 2020-04-14
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.2.1 - 2020-04-14">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#changed_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v020-2020-04-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.2.0 - 2020-04-10
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.2.0 - 2020-04-10">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v014-2020-03-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.1.4 - 2020-03-05
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.1.4 - 2020-03-05">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v013-2020-02-24" class="md-nav__link">
+    <span class="md-ellipsis">
+      [v0.1.3] - 2020-02-24
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[v0.1.3] - 2020-02-24">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v0121-2020-02-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      [v0.1.2.1] - 2020-02-21
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[v0.1.2.1] - 2020-02-21">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v010-2020-01-27" class="md-nav__link">
+    <span class="md-ellipsis">
+      [v0.1.0] - 2020-01-27
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="[v0.1.0] - 2020-01-27">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removed_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#changed_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      Changed
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v001-2019-07-19" class="md-nav__link">
+    <span class="md-ellipsis">
+      v0.0.1 - 2019-07-19
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="v0.0.1 - 2019-07-19">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#added_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      Added
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="changelog">Changelog</h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>,
+and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<h2 id="unreleased"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v2.7.1...HEAD">Unreleased</a></h2>
+<h2 id="v271-2024-11-25"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v2.7.0...v2.7.1">v2.7.1</a> - 2024-11-25</h2>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Updated images:<ul>
+<li>DRBD 9.2.12</li>
+<li>DRBD Reactor 1.6.0</li>
+</ul>
+</li>
+</ul>
+<h2 id="v270-2024-11-11"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v2.6.0...v2.7.0">v2.7.0</a> - 2024-11-11</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Option to select IP Family to use for LINSTOR control traffic.</li>
+</ul>
+<h3 id="changed_1">Changed</h3>
+<ul>
+<li>Reconciliation of a Satellites network interfaces now also deletes unneeded interfaces.</li>
+<li>Satellites try to detect the LVM configuration on the host, reusing locks and udev rules if available.</li>
+<li>Updated images:<ul>
+<li>LINSTOR 1.29.2</li>
+<li>LINSTOR CSI 1.6.4</li>
+<li>DRBD Reactor 1.5.0</li>
+<li>LINSTOR HA Controller 1.2.2</li>
+</ul>
+</li>
+</ul>
+<h2 id="v260-2024-09-04"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v2.5.2...v2.6.0">v2.6.0</a> - 2024-09-04</h2>
+<h3 id="added_1">Added</h3>
+<ul>
+<li>Support wildcard patterns when referencing property values from node labels and annotations.</li>
+</ul>
+<h3 id="changed_2">Changed</h3>
+<ul>
+<li>Updated images:<ul>
+<li>LINSTOR 1.29.0</li>
+<li>DRBD 9.2.11</li>
+<li>Latest CSI Sidecars</li>
+</ul>
+</li>
+</ul>
+<h2 id="v252-2024-07-17"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v2.5.1...v2.5.2">v2.5.2</a> - 2024-07-17</h2>
+<h3 id="added_2">Added</h3>
+<ul>
+<li>Option to specify custom CA certificate resources for TLS configuration.</li>
+<li>Ensure all Certificate resources have <code>dnsNames</code> set.</li>
+</ul>
+<h3 id="changed_3">Changed</h3>
+<ul>
+<li>Updated images:<ul>
+<li>LINSTOR 1.28.0</li>
+<li>LINSTOR CSI 1.6.3</li>
+<li>DRBD 9.2.10</li>
+<li>DRBD Reactor 1.4.1</li>
+<li>kTLS-utils 0.11</li>
+<li>Latest CSI sidecars</li>
+</ul>
+</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>The operator will no longer restart reconciliation on every change to <code>ServiceAccount</code> resources.</li>
+</ul>
+<h2 id="v251-2024-05-02"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v2.5.0...v2.5.1">v2.5.1</a> - 2024-05-02</h2>
+<h3 id="added_3">Added</h3>
+<ul>
+<li>Default PriorityClasses for all components</li>
+</ul>
+<h3 id="changed_4">Changed</h3>
+<ul>
+<li>New DRBD loader detection for:<ul>
+<li>Ubuntu Noble Numbat (24.04)</li>
+</ul>
+</li>
+<li>Updated images:<ul>
+<li>LINSTOR 1.27.1</li>
+<li>LINSTOR CSI 1.6.0</li>
+<li>DRBD 9.2.9</li>
+</ul>
+</li>
+</ul>
+<h2 id="v250-2024-04-03"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v2.4.1...v2.5.0">v2.5.0</a> - 2024-04-03</h2>
+<h3 id="added_4">Added</h3>
+<ul>
+<li>Support for managing ZFS Storage Pools using <code>LinstorSatelliteConfiguration</code>.</li>
+</ul>
+<h3 id="changed_5">Changed</h3>
+<ul>
+<li>Updated images:<ul>
+<li>LINSTOR 1.27.0</li>
+<li>LINSTOR CSI 1.5.0</li>
+<li>High Availability Controller 1.2.1</li>
+<li>Latest CSI sidecars</li>
+</ul>
+</li>
+</ul>
+<h2 id="v241-2024-03-06"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v2.4.0...v2.4.1">v2.4.1</a> - 2024-03-06</h2>
+<h3 id="added_5">Added</h3>
+<ul>
+<li>New DRBD loader detection for:<ul>
+<li>Debian 12 (Bookworm)</li>
+<li>Rocky Linux 8 &amp; 9</li>
+</ul>
+</li>
+<li>Report <code>seLinuxMount</code> capability for the CSI Driver, speeding up volume mounts with SELinux
+  relabelling enabled.</li>
+<li>Alerts for offline LINSTOR Controller and Satellites.</li>
+</ul>
+<h3 id="changed_6">Changed</h3>
+<ul>
+<li>Use node label instead of pod name for Prometheus alerting descriptions.</li>
+<li>Updated images:<ul>
+<li>LINSTOR 1.26.2</li>
+<li>DRBD 9.2.8</li>
+</ul>
+</li>
+</ul>
+<h2 id="v240-2024-01-30"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v2.3.0...v2.4.0">v2.4.0</a> - 2024-01-30</h2>
+<h3 id="added_6">Added</h3>
+<ul>
+<li>Validating Webhook for Piraeus StorageClasses.</li>
+</ul>
+<h3 id="breaking">Breaking</h3>
+<ul>
+<li>Use DaemonSet to manage Satellite resources instead of bare Pods. This enables better integration with
+  common administrative tasks such as node draining. This change should be transparent for users, any patches
+  applied on the satellite Pods are internally converted to work on the new DaemonSet instead.</li>
+</ul>
+<h3 id="changed_7">Changed</h3>
+<ul>
+<li>Change default monitoring address for DRBD Reactor to support systems with IPv6 completely disabled.</li>
+<li>Updated images:<ul>
+<li>LINSTOR 1.26.1</li>
+<li>LINSTOR CSI 1.4.0</li>
+<li>DRBD 9.2.7</li>
+<li>High Availability Controller 1.2.0</li>
+<li>Latest CSI sidecars</li>
+</ul>
+</li>
+</ul>
+<h2 id="v230-2023-12-05"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v2.2.0...v2.3.0">v2.3.0</a> - 2023-12-05</h2>
+<h3 id="added_7">Added</h3>
+<ul>
+<li>Add a new option <code>.spec.internalTLS.tlsHandshakeDaemon</code> to enable deployment of <code>tlshd</code> alongside the LINSTOR
+  Satellite.</li>
+<li>Shortcuts to configure specific components. Components can be disabled by setting <code>enabled: false</code>, and the deployed
+  workload can be influenced using the <code>podTemplate</code> value. Available components:<ul>
+<li><code>LinstorCluster.spec.controller</code></li>
+<li><code>LinstorCluster.spec.csiController</code></li>
+<li><code>LinstorCluster.spec.csiNode</code></li>
+<li><code>LinstorCluster.spec.highAvailabilityController</code></li>
+</ul>
+</li>
+<li>Shortcut to modify the pod of a satellite by adding a <code>LinstorSatelliteConfiguration.spec.podTemplate</code>, which is
+  a shortcut for creating a <code>.spec.patches</code> patch.</li>
+</ul>
+<h3 id="changed_8">Changed</h3>
+<ul>
+<li>Fixed service resources relying on default protocol version.</li>
+<li>Moved NetworkPolicy for DRBD out of default deployed resources.</li>
+<li>Updated images:<ul>
+<li>LINSTOR 1.25.1</li>
+<li>LINSTOR CSI 1.3.0</li>
+<li>DRBD Reactor 1.4.0</li>
+<li>Latest CSI sidecars</li>
+</ul>
+</li>
+<li>Add a default toleration for the HA Controller taints to the operator.</li>
+</ul>
+<h2 id="v220-2023-08-31"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v2.1.1...v2.2.0">v2.2.0</a> - 2023-08-31</h2>
+<h3 id="added_8">Added</h3>
+<ul>
+<li>A new <code>LinstorNodeConnection</code> resource, used to configure the LINSTOR Node Connection feature in a Kubernetes way.</li>
+<li>Allow image configuration to be customized by adding additional items to the config map. Items using a "greater" key
+  take precedence when referencing the same images.</li>
+<li>Add image configuration for CSI sidecars.</li>
+<li>Check kernel module parameters for DRBD on load.</li>
+<li>Automatically set SELinux labels when loading kernel modules.</li>
+<li>Allow more complex node selection by adding <code>LinstorCluster.spec.nodeAffinity</code>.</li>
+</ul>
+<h3 id="changed_9">Changed</h3>
+<ul>
+<li>Upgrade to operator-sdk 1.29</li>
+<li>Upgrade to kubebuilder v4 layout</li>
+<li>Updated images:<ul>
+<li>LINSTOR 1.24.2</li>
+<li>LINSTOR CSI 1.2.3</li>
+<li>DRBD 9.2.5</li>
+</ul>
+</li>
+</ul>
+<h3 id="removed">Removed</h3>
+<ul>
+<li>Disable operator metrics by default. This removes a dependency on an external container.</li>
+<li>Dependency on cert-manager for initial deployment.</li>
+</ul>
+<h3 id="fixed_1">Fixed</h3>
+<ul>
+<li>A crash caused by insufficient permissions on the LINSTOR Controller.</li>
+<li>Satellite will now restart if the Pods terminated for unexpected reasons.</li>
+</ul>
+<h2 id="v211-2023-05-24"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v2.1.0...v2.1.1">v2.1.1</a> - 2023-05-24</h2>
+<h3 id="added_9">Added</h3>
+<ul>
+<li>LINSTOR Controller deployment now runs DB migrations as a separate init container, creating
+  a backup of current DB state if needed.</li>
+<li>Apply global rate limit to LINSTOR API, defaulting to 100 qps.</li>
+</ul>
+<h3 id="changed_10">Changed</h3>
+<ul>
+<li>Store LINSTOR Satellite logs on the host.</li>
+<li>Updated images:<ul>
+<li>LINSTOR 1.23.0</li>
+<li>LINSTOR CSI 1.1.0</li>
+<li>DRBD Reactor 1.2.0</li>
+<li>HA Controller 1.1.4</li>
+<li>external CSI images upgraded to latest versions</li>
+</ul>
+</li>
+</ul>
+<h3 id="fixed_2">Fixed</h3>
+<ul>
+<li>Fixed a bug where <code>LinstorSatellite</code> resources would be not be cleaned up when the satellite is already gone.</li>
+<li>Fixed a bug where the LINSTOR Controller would never report readiness when TLS is enabled.</li>
+<li>Fixed order in which patches are applied. Always apply user patches last.</li>
+</ul>
+<h2 id="v210-2023-04-24"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v2.0.1...v2.1.0">v2.1.0</a> - 2023-04-24</h2>
+<h3 id="added_10">Added</h3>
+<ul>
+<li>Ability to skip deploying the LINSTOR Controller by setting <code>LinstorCluster.spec.externalController</code>.</li>
+<li>Automatically reconcile changed image configuration.</li>
+</ul>
+<h3 id="changed_11">Changed</h3>
+<ul>
+<li>Fix an issue where the CSI node driver would use the CSI socket not through the expected path in the container.</li>
+<li>Updated images:<ul>
+<li>LINSTOR 1.22.0</li>
+<li>LINSTOR CSI 1.0.1</li>
+<li>DRBD 9.2.3</li>
+<li>DRBD Reactor 1.1.0</li>
+<li>HA Controller 1.1.3</li>
+<li>external CSI images upgraded to latest versions</li>
+</ul>
+</li>
+</ul>
+<h2 id="v201-2023-03-08"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v2.0.0...v2.0.1">v2.0.1</a> - 2023-03-08</h2>
+<h3 id="added_11">Added</h3>
+<ul>
+<li><code>drbd-shutdown-guard</code> init-container, installing a systemd unit that runs on shutdown.
+  It's purpose is to run <code>drbdsetup secondary --force</code> during shutdown, so that systemd can unmount all volumes, even
+  with <code>suspend-io</code>.</li>
+</ul>
+<h3 id="changed_12">Changed</h3>
+<ul>
+<li>Updated LINSTOR CSI to 1.0.0, mounting the <code>/run/mount</code> directory from the host to enable the <code>_netdev</code> mount option.</li>
+</ul>
+<h3 id="fixed_3">Fixed</h3>
+<ul>
+<li>HA Controller deployment requires additional rules to run on OpenShift.</li>
+</ul>
+<h2 id="v200-2023-02-23"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v1.10.0...v2.0.0">v2.0.0</a> - 2023-02-23</h2>
+<h3 id="breaking_1">Breaking</h3>
+<ul>
+<li>Removed existing CRD <code>LinstorController</code>, <code>LinstorSatelliteSet</code> and <code>LinstorCSIDriver</code>.</li>
+<li>Helm chart deprecated in favor of new <code>kustomize</code> deployment.</li>
+<li>Helm chart changed to only deploy the Operator. The LinstorCluster resource to create the storage cluster needs to be
+  created separately.</li>
+</ul>
+<h3 id="added_12">Added</h3>
+<ul>
+<li>New CRDs to control storage cluster: <code>LinstorCluster</code> and <code>LinstorSatelliteConfiguration</code>.</li>
+<li><a href="../tutorial/">Tutorials</a> on how to get started.</li>
+<li>Automatic selection of loader images based on operating system of node.</li>
+<li>Customization of single nodes or groups of nodes.</li>
+<li>Possibility to run DRBD replication using the container network.</li>
+<li>Support for file system backed storage pools</li>
+<li>Default deployment for HA Controller. Since we switch to defaulting to <code>suspend-io</code> for lost quorum, we should include
+  a way for Pods to get unstuck.</li>
+</ul>
+<h2 id="v1100-2022-10-18"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v1.9.1...v1.10.0">v1.10.0</a> - 2022-10-18</h2>
+<h3 id="added_13">Added</h3>
+<ul>
+<li>Can set the variable <code>mountDrbdResourceDirectoriesFromHost</code> in the Helm chart to create hostPath Volumes for DRBD and
+  LINSTOR configuration directories for the satellite set.</li>
+</ul>
+<h3 id="changed_13">Changed</h3>
+<ul>
+<li>Change default bind address for satellite monitoring to use IPv6 anylocal <code>[::]</code>. This will still to work on IPv4
+  only systems with IPv6 disabled via sysctl.</li>
+<li>Default images:<ul>
+<li>LINSTOR 1.20.0</li>
+<li>DRBD 9.1.11</li>
+<li>DRBD Reactor 0.9.0</li>
+<li>external CSI images upgraded to latest versions</li>
+</ul>
+</li>
+</ul>
+<h3 id="fixed_4">Fixed</h3>
+<ul>
+<li>Comparing IP addresses for registered components uses golang's built-in net.IP type.</li>
+<li>Restoring satellites after eviction only happens if the node is ready.</li>
+</ul>
+<h2 id="v191-2022-07-27"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v1.9.0...v1.9.1">v1.9.1</a> - 2022-07-27</h2>
+<h3 id="fixed_5">Fixed</h3>
+<ul>
+<li>ServiceMonitor resources can't be patched, instead we recreate them.</li>
+</ul>
+<h2 id="v190-2022-07-20"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v1.8.2...v1.9.0">v1.9.0</a> - 2022-07-20</h2>
+<h3 id="added_14">Added</h3>
+<ul>
+<li>Support for custom labels and annotations with added options to <code>values.yaml</code>.</li>
+<li>Instructions for deploying the affinity controller.</li>
+</ul>
+<h3 id="changed_14">Changed</h3>
+<ul>
+<li>Satellite operator now reports basic satellite status even if controller is not reachable</li>
+<li>Query single satellite devices to receive errors when the satellite is offline instead of assuming
+  devices are already configured.</li>
+<li>Disabled the legacy HA Controller deployment by default. It has been replaced a
+  separate <a href="https://artifacthub.io/packages/helm/piraeus-charts/piraeus-ha-controller">chart</a>.</li>
+<li>Default images:<ul>
+<li>LINSTOR 1.19.1</li>
+<li>LINSTOR CSI 0.20.0</li>
+<li>DRBD 9.1.8</li>
+<li>DRBD Reactor 0.8.0</li>
+<li>external CSI images to latest versions</li>
+</ul>
+</li>
+</ul>
+<h3 id="fixed_6">Fixed</h3>
+<ul>
+<li><code>last-applied-configuration</code>annotation was never updated, so updating of some fields was not performed correctly.</li>
+</ul>
+<h2 id="v182-2022-05-24"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v1.8.1...v1.8.2">v1.8.2</a> - 2022-05-24</h2>
+<h3 id="added_15">Added</h3>
+<ul>
+<li>Option to disable creating monitoring resources (Services and ServiceMonitors)</li>
+<li>Add options <code>csi.controllerSidecars</code>, <code>csi.controllerExtraVolumes</code>, <code>csi.nodeSidecars</code>, <code>csi.nodeExtraVolumes</code>,
+  <code>operator.controller.sidecars</code>, <code>operator.controller.extraVolumes</code>, <code>operator.satelliteSet.sidecars</code>,
+  <code>operator.satelliteSet.extraVolumes</code> to allow specifying extra sidecar containers.</li>
+<li>Add options <code>operator.controller.httpBindAddress</code>, <code>operator.controller.httpsBindAddress</code>,
+  <code>operator.satelliteSet.monitoringBindAddress</code> to allow specifying bind address.</li>
+<li>Add example values and doc reference to run piraeus-operator with rbac-proxy.</li>
+</ul>
+<h3 id="changed_15">Changed</h3>
+<ul>
+<li>Default images:<ul>
+<li>LINSTOR 1.18.2</li>
+<li>LINSTOR CSI 0.19.1</li>
+<li>DRBD Reactor 0.7.0</li>
+</ul>
+</li>
+</ul>
+<h3 id="removed_1">Removed</h3>
+<ul>
+<li>Get rid of operator-sdk binary, use native controller-gen instead</li>
+</ul>
+<h2 id="v181-2022-05-12"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v1.8.0...v1.8.1">v1.8.1</a> - 2022-05-12</h2>
+<h3 id="changed_16">Changed</h3>
+<ul>
+<li>Default images:<ul>
+<li>LINSTOR 1.18.1</li>
+<li>LINSTOR CSI 0.19.0</li>
+<li>DRBD 9.1.7</li>
+<li>DRBD Reactor 0.6.1</li>
+</ul>
+</li>
+</ul>
+<h3 id="added_16">Added</h3>
+<ul>
+<li>Upgrades involving k8s databases no long require manually confirming a backup exists using
+  <code>--set IHaveBackedUpAllMyLinstorResources=true</code>.</li>
+</ul>
+<h2 id="v180-2022-03-15"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v1.7.1...v1.8.0">v1.8.0</a> - 2022-03-15</h2>
+<h3 id="added_17">Added</h3>
+<ul>
+<li>Allow setting the number of parallel requests created by the CSI sidecars. This limits the load on the LINSTOR
+  backend, which could easily overload when creating many volumes at once.</li>
+<li>Unify certificates format for SSL enabled installation, no more java tooling required.</li>
+<li>Automatic certificates generation using Helm or Cert-manager</li>
+<li>HA Controller and CSI components now wait for the LINSTOR API to be initialized using InitContainers.</li>
+</ul>
+<h3 id="changed_17">Changed</h3>
+<ul>
+<li>Create backups of LINSTOR resource if the "k8s" database backend is used <em>and</em> an image change is detected. Backups
+  are stored in Secret resources as a <code>tar.gz</code>. If the secret would get too big, the backup can be downloaded from
+  the operator pod.</li>
+<li>Default images:<ul>
+<li>LINSTOR 1.18.0</li>
+<li>LINSTOR CSI 0.18.0</li>
+<li>DRBD 9.1.6</li>
+<li>DRBD Reactor 0.5.3</li>
+<li>LINSTOR HA Controller 0.3.0</li>
+<li>CSI Attacher v3.4.0</li>
+<li>CSI Node Driver Registrar v2.4.0</li>
+<li>CSI Provisioner v3.1.0</li>
+<li>CSI Snapshotter v5.0.1</li>
+<li>CSI Resizer v1.4.0</li>
+<li>Stork v2.8.2</li>
+</ul>
+</li>
+<li>Stork updated to support Kubernetes v1.22+.</li>
+<li>Satellites no longer have a readiness probe defined. This caused issues in the satellites by repeatedly opening
+  unexpected connections, especially when using SSL.</li>
+<li>Only query node devices if a storage pool needs to be created.</li>
+<li>Use cached storage pool response to avoid causing excessive load on LINSTOR satellites.</li>
+<li>Protect LINSTOR passphrase from accidental deletion by using a finalizer.</li>
+</ul>
+<h3 id="breaking_2">Breaking</h3>
+<ul>
+<li>If you have SSL configured, then the certificates must be regenerated in PEM format.
+  Learn more in the <a href="../how-to/upgrade/UPGRADE/#upgrade-from-v10-to-v11">upgrade guide</a>.</li>
+</ul>
+<h2 id="v171-2022-01-18"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v1.7.0...v1.7.1">v1.7.1</a> - 2022-01-18</h2>
+<h3 id="added_18">Added</h3>
+<ul>
+<li>Allow the external-provisioner and external-snapshotter access to secrets. This is required to support StorageClass
+  and SnapshotClass <a href="https://kubernetes-csi.github.io/docs/secrets-and-credentials-storage-class.html">secrets</a>.</li>
+<li>Instruct external-provisioner to pass PVC name+namespace to the CSI driver, enabling optional support for PVC based
+  names for LINSTOR volumes.</li>
+<li>Allow setting the log level of LINSTOR components via CRs. Other components are left using their default log level.
+  The new default log level is INFO (was DEBUG previously, which was often too verbose).</li>
+<li>Override the kernel source directory used when compiling DRBD (defaults to /usr/src). See
+  <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v1.7.1/doc/helm-values.adoc#operatorsatellitesetkernelmoduleinjectionadditionalsourcedirectory">
+  <code>operator.satelliteSet.kernelModuleInjectionAdditionalSourceDirectory</code></a></li>
+<li>etcd-chart: add option to set priorityClassName.</li>
+</ul>
+<h3 id="fixed_7">Fixed</h3>
+<ul>
+<li>Use correct secret name when setting up TLS for satellites</li>
+<li>Correctly configure ServiceMonitor resource if TLS is enabled for LINSTOR Controller.</li>
+</ul>
+<h2 id="v170-2021-12-14"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v1.6.0...v1.7.0">v1.7.0</a> - 2021-12-14</h2>
+<h3 id="added_19">Added</h3>
+<ul>
+<li><code>pv-hostpath</code>: automatically determine on which nodes PVs should be created if no override is given.</li>
+<li>Automatically add labels on Kubernetes Nodes to LINSTOR satellites as Auxiliary Properties. This enables using
+  Kubernetes labels for volume scheduling, for example using <code>replicasOnSame: topology.kubernetes.io/zone</code>.</li>
+<li>Support LINSTORs <code>k8s</code> backend by adding the necessary RBAC resources and <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v1.7.0/doc/k8s-backend.md">documentation</a>.</li>
+<li>Automatically create a LINSTOR passphrase when none is configured.</li>
+<li>Automatic eviction and deletion of offline satellites if the Kubernetes node object was also deleted.</li>
+</ul>
+<h3 id="changed_18">Changed</h3>
+<ul>
+<li>Default images:<ul>
+<li><code>quay.io/piraeusdatastore/piraeus-server:v1.17.0</code></li>
+<li><code>quay.io/piraeusdatastore/piraeus-csi:v0.17.0</code></li>
+<li><code>quay.io/piraeusdatastore/drbd9-bionic:v9.1.4</code></li>
+<li><code>quay.io/piraeusdatastore/drbd-reactor:v0.4.4</code></li>
+</ul>
+</li>
+<li>Recreates or updates to the satellite pods are now applied at once, instead of waiting for a node to complete before
+  moving to the next.</li>
+<li>Enable CSI topology by default, allowing better volume scheduling with <code>volumeBindingMode: WaitForFirstConsumer</code>.</li>
+<li>Disable STORK by default. Instead, we recommend using <code>volumeBindingMode: WaitForFirstConsumer</code> in storage classes.</li>
+</ul>
+<h2 id="v160-2021-09-02"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v1.5.1...v1.6.0">v1.6.0</a> - 2021-09-02</h2>
+<h3 id="added_20">Added</h3>
+<ul>
+<li>Allow CSI to work with distributions that use a kubelet working directory other than <code>/var/lib/kubelet</code>. See
+  the <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v1.6.0/doc/helm-values.adoc#csikubeletpath"><code>csi.kubeletPath</code></a> option.</li>
+<li>Enable <a href="https://github.com/kubernetes/enhancements/tree/master/keps/sig-storage/1472-storage-capacity-tracking">Storage Capacity Tacking</a>. This enables Kubernetes to base Pod scheduling decisions on remaining storage
+  capacity. The feature is in beta and enabled by default starting with Kubernetes 1.21.</li>
+</ul>
+<h3 id="changed_19">Changed</h3>
+<ul>
+<li>
+<p>Disable Stork Health Monitoring by default. Stork cannot distinguish between control plane and data plane issues,
+  which can lead to instances where Stork will migrate a volume that is still mounted on another node, making the
+  volume effectively unusable.</p>
+</li>
+<li>
+<p>Updated operator to kubernetes v1.21 components.</p>
+</li>
+<li>
+<p>Default images:</p>
+<ul>
+<li><code>quay.io/piraeusdatastore/piraeus-server:v1.14.0</code></li>
+<li><code>quay.io/piraeusdatastore/drbd9-bionic:v9.0.30</code></li>
+<li><code>quay.io/piraeusdatastore/drbd-reactor:v0.4.3</code></li>
+<li><code>quay.io/piraeusdatastore/piraeus-ha-controller:v0.2.0</code></li>
+<li>external CSI images</li>
+</ul>
+</li>
+</ul>
+<h3 id="removed_2">Removed</h3>
+<ul>
+<li>The cluster-wide snapshot controller is no longer deployed as a dependency of the piraeus-operator chart.
+  Instead, separate charts are available on <a href="https://artifacthub.io/packages/search?repo=piraeus-charts">artifacthub.io</a>
+  that deploy the snapshot controller and extra validation for snapshot resources.</li>
+</ul>
+<p>The subchart was removed, as it unnecessarily tied updates of the snapshot controller to piraeus and vice versa. With
+  the tightened validation starting with snapshot CRDs <code>v1</code>, moving the snapshot controller to a proper chart seems
+  like a good solution.</p>
+<h2 id="v151-2021-06-21"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v1.5.0...v1.5.1">v1.5.1</a> - 2021-06-21</h2>
+<h3 id="changed_20">Changed</h3>
+<ul>
+<li>Default images:<ul>
+<li>Piraeus Server v1.13.0</li>
+<li>Piraeus CSI v0.13.1</li>
+<li>CSI Provisioner v2.1.2</li>
+</ul>
+</li>
+</ul>
+<h2 id="v150-2021-05-12"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v1.4.0...v1.5.0">v1.5.0</a> - 2021-05-12</h2>
+<h3 id="added_21">Added</h3>
+<ul>
+<li>All operator-managed workloads apply recommended labels. This requires the recreation of Deployments and DaemonSets
+  on upgrade. This is automatically handled by the operator, however any customizations applied to the deployments
+  not managed by the operator will be reverted in the process.</li>
+<li>Use <a href="https://github.com/LINBIT/drbd-reactor/"><code>drbd-reactor</code></a> to expose Prometheus endpoints on each satellite.</li>
+<li>Configure <code>ServiceMonitor</code> resources if they are supported by the cluster (i.e. prometheus operator is configured)</li>
+</ul>
+<h3 id="changed_21">Changed</h3>
+<ul>
+<li>CSI Nodes no longer use <code>hostNetwork: true</code>. The pods already got the correct hostname via the downwardAPI and do not
+  talk to DRBD's netlink interface directly.</li>
+<li>External: CSI snapshotter subchart now packages <code>v1</code> CRDs. Fixes deprecation warnings when installing
+  the snapshot controller.</li>
+<li>Default images:<ul>
+<li>Piraeus Server v1.12.3</li>
+<li>Piraeus CSI v0.13.0</li>
+<li>DRBD v9.0.29</li>
+</ul>
+</li>
+</ul>
+<h2 id="v140-2021-04-07"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v1.3.1...v1.4.0">v1.4.0</a> - 2021-04-07</h2>
+<h3 id="added_22">Added</h3>
+<ul>
+<li>Additional environment variables and Linstor properties can now be set in the <code>LinstorController</code> CRD.</li>
+<li>Set node name variable for Controller Pods, enabling <a href="https://github.com/LINBIT/k8s-await-election/commit/60748fcec722e4c32b8881c4c84957cc50543db2">k8s-await-election</a> to correctly set up the endpoint for
+  hairpin mode.</li>
+</ul>
+<h3 id="fixed_8">Fixed</h3>
+<ul>
+<li>Update the network address of controller pods if they diverged between Linstor and kubernetes. This can happen after
+  a node restart, where a pod is recreated with the same name but different IP address.</li>
+</ul>
+<h2 id="v131-2021-01-14"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v1.3.0...v1.3.1">v1.3.1</a> - 2021-01-14</h2>
+<h3 id="added_23">Added</h3>
+<ul>
+<li>New guide on host preparation <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v1.3.1/doc/host-setup.md">here.</a></li>
+</ul>
+<h3 id="changed_22">Changed</h3>
+<ul>
+<li>Default image updated:<ul>
+<li><code>operator.satelliteSet.kernelModuleInjectionImage</code>: <code>quay.io/piraeusdatastore/drbd9-bionic:v9.0.27</code></li>
+<li><code>operator.satelliteSet.satelliteImage</code>: <code>quay.io/piraeusdatastore/piraeus-server:v1.11.1</code></li>
+<li><code>operator.controller.controllerImage</code>: <code>quay.io/piraeusdatastore/piraeus-server:v1.11.1</code></li>
+<li><code>haController.image</code>: <code>quay.io/piraeusdatastore/piraeus-ha-controller:v0.1.3</code></li>
+<li><code>pv-hostpath</code>: <code>chownerImage</code>: <code>quay.io/centos/centos:8</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="v130-2020-12-21"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v1.2.0...v1.3.0">v1.3.0</a> - 2020-12-21</h2>
+<h3 id="added_24">Added</h3>
+<ul>
+<li>New component: <code>haController</code> will deploy the <a href="https://github.com/piraeusdatastore/piraeus-ha-controller">Piraeus High Availability Controller</a>.
+  More information is available in
+  the <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v1.3.0/doc/optional-components.md#high-availability-controller">optional components page</a></li>
+<li>Enable strict checking of DRBD parameter to disable usermode helper in container environments.</li>
+<li>Override the image used in "chown" jobs in the <code>pv-hostpath</code> chart by using <code>--set chownerImage=&lt;my-image&gt;</code>.</li>
+</ul>
+<h3 id="changed_23">Changed</h3>
+<ul>
+<li>Updated <code>operator-sdk</code> to v0.19.4</li>
+<li>Set CSI component timeout to 1 minute to reduce the number of retries in the CSI driver</li>
+<li>Default images updated:<ul>
+<li><code>operator.controller.controllerImage</code>: <code>quay.io/piraeusdatastore/piraeus-server:v1.11.0</code></li>
+<li><code>operator.satelliteSet.satelliteImage</code>: <code>quay.io/piraeusdatastore/piraeus-server:v1.11.0</code></li>
+<li><code>operator.satelliteSet.kernelModuleInjectionImage</code>: <code>quay.io/piraeusdatastore/drbd9-bionic:v9.0.26</code></li>
+<li><code>csi.pluginImage</code>: <code>quay.io/piraeusdatastore/piraeus-csi:v0.11.0</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="fixed_9">Fixed</h3>
+<ul>
+<li>Fixed Helm warnings when setting "csi.controllerAffinity", "operator.controller.affinity" and
+  "operator.satelliteSet.storagePools".</li>
+</ul>
+<h2 id="v120-2020-11-18"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v1.1.0...v1.2.0">v1.2.0</a> - 2020-11-18</h2>
+<h3 id="added_25">Added</h3>
+<ul>
+<li><code>storagePools</code> can now also set up devices similar to <code>automaticStorageType</code>, but with more fine grained control.
+  See the <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v1.2.0/doc/storage.md#preparing-physical-devices">updated storage guide</a></li>
+<li>New Helm options to disable creation of LinstorController and LinstorSatelliteSet resource
+  <code>operator.controller.enabled</code> and <code>operator.satelliteSet.enabled</code>.</li>
+<li>New Helm option to override the generated controller endpoint: <code>controllerEndpoint</code></li>
+<li>Allow overriding the default <code>securityContext</code> on a component basis:<ul>
+<li><code>etcd.podsecuritycontext</code> sets the securityContext of etcd pods</li>
+<li><code>stork.podsecuritycontext</code> sets the securityContext of stork plugin and scheduler pods</li>
+<li><code>csi-snapshotter.podsecuritycontext</code> sets the securityContext of the CSI-Snapshotter pods</li>
+<li><code>operator.podsecuritycontext</code> sets the securityContext of the operator pods</li>
+</ul>
+</li>
+<li>Example settings for openshift</li>
+<li>LINSTOR controller runs with additional GID 1000, to ensure write access to log directory</li>
+</ul>
+<h3 id="changed_24">Changed</h3>
+<ul>
+<li>Fixed a bug in <code>pv-hostpath</code> where permissions on the created directory are not applied on all nodes.</li>
+<li>Volumes created by <code>pv-hostpath</code> are now group writable. This makes them easier to integrate with <code>fsGroup</code> settings.</li>
+<li>Default value for affinity on LINSTOR controller and CSI controller changed. The new default is to distribute the pods
+  across all available nodes.</li>
+<li>Default value for tolerations for etcd pods changed. They are now able to run on master nodes.</li>
+<li>Updates to LinstorController, LinstorSatelliteSet and LinstorCSIDriver are now propagated across all created resources</li>
+<li>Updated default images:<ul>
+<li>csi sidecar containers updated (compatible with Kubernetes v1.17+)</li>
+<li>LINSTOR 1.10.0</li>
+<li>LINSTOR CSI 0.10.0</li>
+</ul>
+</li>
+</ul>
+<h3 id="deprecation">Deprecation</h3>
+<ul>
+<li>Using <code>automaticStorageType</code> is deprecated. Use the <code>storagePools</code> values instead.</li>
+</ul>
+<h2 id="v110-2020-10-13"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v1.0.0...v1.1.0">v1.1.0</a> - 2020-10-13</h2>
+<h3 id="breaking_3">Breaking</h3>
+<ul>
+<li>The LINSTOR controller image given in <code>operator.controller.controllerImage</code> has to have
+  its entrypoint set to <a href="https://github.com/LINBIT/k8s-await-election/"><code>k8s-await-election v0.2.0</code></a>
+  or newer. Learn more in the <a href="../how-to/upgrade/UPGRADE/#upgrade-from-v10-to-v11">upgrade guide</a>.</li>
+</ul>
+<h3 id="added_26">Added</h3>
+<ul>
+<li>LINSTOR controller can be started with multiple replicas. See <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v1.1.0/doc/helm-values.adoc#operatorcontrollerreplicas">
+  <code>operator.controller.replicas</code></a>.
+  NOTE: This requires support from the container. You need <code>piraeus-server:v1.8.0</code> or newer.</li>
+<li>The <code>pv-hostpath</code> helper chart automatically sets up permissions for non-root etcd containers.</li>
+<li>Disable securityContext enforcement by setting <code>global.setSecurityContext=false</code>.</li>
+<li>Add cluster roles to work with OpenShift's SCC system.</li>
+<li>Control volume placement and accessibility by using CSIs Topology feature. Controlled by setting
+  <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v1.1.0/doc/helm-values.adoc#csienabletopology"><code>csi.enableTopology</code></a>.</li>
+<li>All pods use a dedicated service account to allow for fine-grained permission control.</li>
+<li>The new <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v1.1.0/doc/helm-values.adoc#psp">helm section <code>psp.*</code></a> can automatically configure the ServiceAccount
+  of all components to use the appropriate <a href="https://kubernetes.io/docs/concepts/policy/pod-security-policy/">PSP</a> roles.</li>
+</ul>
+<h3 id="changed_25">Changed</h3>
+<ul>
+<li>Default values:<ul>
+<li><code>operator.controller.controllerImage</code>: <code>quay.io/piraeusdatastore/piraeus-server:v1.9.0</code></li>
+<li><code>operator.satelliteSet.satelliteImage</code>: <code>quay.io/piraeusdatastore/piraeus-server:v1.9.0</code></li>
+<li><code>operator.satelliteSet.kernelModuleInjectionImage</code>: <code>quay.io/piraeusdatastore/drbd9-bionic:v9.0.25</code></li>
+<li><code>stork.storkImage</code>: <code>docker.io/openstorage/stork:2.5.0</code></li>
+</ul>
+</li>
+<li>linstor-controller no longer starts in a privileged container.</li>
+</ul>
+<h3 id="removed_3">Removed</h3>
+<ul>
+<li>legacy CRDs (LinstorControllerSet, LinstorNodeSet) have been removed.</li>
+<li><code>v1alpha</code> CRD versions have been removed.</li>
+<li>default pull secret <code>drbdiocred</code> removed. To keep using it, use <code>--set drbdRepoCred=drbdiocred</code>.</li>
+</ul>
+<h2 id="v100-2020-08-06"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v0.5.0...v1.0.0">v1.0.0</a> - 2020-08-06</h2>
+<h3 id="added_27">Added</h3>
+<ul>
+<li><code>v1</code> of all CRDs</li>
+<li>Central value for controller image pull policy of all pods. Use <code>--set global.imagePullPolicy=&lt;value&gt;</code> on
+  helm deployment.</li>
+<li><code>charts/piraeus/values.cn.yaml</code> a set of helm values for faster image download for CN users.</li>
+<li>Allow specifying <a href="https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/">resource requirements</a> for all pods. In helm you can set:<ul>
+<li><code>etcd.resources</code> for etcd containers</li>
+<li><code>stork.storkResources</code> for stork plugin resources</li>
+<li><code>stork.schedulerResources</code> for the kube-scheduler deployed for use with stork</li>
+<li><code>csi-snapshotter.resources</code> for the cluster snapshotter controller</li>
+<li><code>csi.resources</code> for all CSI related containers. for brevity, there is only one setting for ALL CSI containers.
+  They
+  are all stateless go process which use the same amount of resources.</li>
+<li><code>operator.resources</code> for operator containers</li>
+<li><code>operator.controller.resources</code> for LINSTOR controller containers</li>
+<li><code>operator.satelliteSet.resources</code> for LINSTOR satellite containers</li>
+<li><code>operator.satelliteSet.kernelModuleInjectionResources</code> for kernel module injector/builder containers</li>
+</ul>
+</li>
+<li>Components deployed by the operator can now run with multiple replicas. Components
+  elect a leader, that will take on the actual work as long as it is active. Should one
+  pod go down, another replica will take over.
+  Currently these components support multiple replicas:<ul>
+<li><code>etcd</code> =&gt; set <code>etcd.replicas</code> to the desired count</li>
+<li><code>stork</code> =&gt; set <code>stork.replicas</code> to the desired count for stork scheduler and controller</li>
+<li><code>snapshot-controller</code> =&gt; set <code>csi-snapshotter.replicas</code> to the desired count for cluster-wide CSI snapshot
+  controller</li>
+<li><code>csi-controller</code> =&gt; set <code>csi.controllerReplicas</code> to the desired count for the linstor CSI controller</li>
+<li><code>operator</code> =&gt; set <code>operator.replicas</code> to have multiple replicas of the operator running</li>
+</ul>
+</li>
+<li>Reference docs for all helm settings. <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v1.0.0/doc/helm-values.adoc">Link</a></li>
+<li><code>stork.schedulerTag</code> can override the automatically chosen tag for the <code>kube-scheduler</code> image.
+  Previously, the tag always matched the kubernetes release.</li>
+</ul>
+<h3 id="changed_26">Changed</h3>
+<ul>
+<li>Renamed <code>LinstorNodeSet</code> to <code>LinstorSatelliteSet</code>. This brings the operator in line with other LINSTOR resources.
+  Existing <code>LinstorNodeSet</code> resources will automatically be migrated to <code>LinstorSatelliteSet</code>.</li>
+<li>Renamed <code>LinstorControllerSet</code> to <code>LinstorController</code>. The old name implied the existence of multiple (separate)
+  controllers. Existing <code>LinstorControllerSet</code> resources will automatically be migrated to <code>LinstorController</code>.</li>
+<li>Helm values renamed to align with new CRD names:<ul>
+<li><code>operator.controllerSet</code> to <code>operator.controller</code></li>
+<li><code>operator.nodeSet</code> to <code>operator.satelliteSet</code></li>
+</ul>
+</li>
+<li>
+<p>Node scheduling no longer relies on <code>linstor.linbit.com/piraeus-node</code> labels. Instead, all CRDs support
+  setting pod <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity">affinity</a> and <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/">tolerations</a>.
+  In detail:</p>
+<ul>
+<li><code>linstorcsidrivers</code> gained 4 new resource keys, with no change in default behaviour:<ul>
+<li><code>nodeAffinity</code> affinity passed to the csi nodes</li>
+<li><code>nodeTolerations</code> tolerations passed to the csi nodes</li>
+<li><code>controllerAffinity</code> affinity passed to the csi controller</li>
+<li><code>controllerTolerations</code> tolerations passed to the csi controller</li>
+</ul>
+</li>
+<li><code>linstorcontrollerset</code> gained 2 new resource keys, with no change in default behaviour:<ul>
+<li><code>affinity</code> affinity passed to the linstor controller pod</li>
+<li><code>tolerations</code> tolerations passed to the linstor controller pod</li>
+</ul>
+</li>
+<li><code>linstornodeset</code> gained 2 new resource keys, <strong>with change in default behaviour</strong>:<ul>
+<li><code>affinity</code> affinity passed to the linstor controller pod</li>
+<li><code>tolerations</code> tolerations passed to the linstor controller pod</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Controller is now a Deployment instead of StatefulSet.</p>
+</li>
+<li>Renamed <code>kernelModImage</code> to <code>kernelModuleInjectionImage</code></li>
+<li>Renamed <code>drbdKernelModuleInjectionMode</code> to <code>KernelModuleInjectionMode</code></li>
+</ul>
+<h2 id="v050-2020-06-29"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v0.4.1...v0.5.0">v0.5.0</a> - 2020-06-29</h2>
+<h3 id="added_28">Added</h3>
+<ul>
+<li>Support volume resizing with newer CSI versions.</li>
+<li>A new Helm chart <code>csi-snapshotter</code> that deploys extra components needed for volume snapshots.</li>
+<li>
+<p>Add new kmod injection mode <code>DepsOnly</code>. Will try load kmods for LINSTOR layers from the host. Deprecates <code>None</code>.</p>
+</li>
+<li>
+<p>Automatic deployment of <a href="https://github.com/libopenstorage/stork">Stork</a> scheduler configured for LINSTOR.</p>
+</li>
+</ul>
+<h3 id="removed_4">Removed</h3>
+<h3 id="changed_27">Changed</h3>
+<ul>
+<li>Replaced <code>bitnami/etcd</code> dependency with vendored custom version
+  Some important keys for the <code>etcd</code> helm chart have changed:<ul>
+<li><code>statefulset.replicaCount</code> -&gt; <code>replicas</code></li>
+<li><code>persistence.enabled</code> -&gt; <code>persistentVolume.enabled</code></li>
+<li><code>persistence.size</code> -&gt; <code>persistentVolume.storage</code></li>
+<li><code>àuth.rbac</code> was removed: use <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v0.5.0/doc/security.md#authentication-with-etcd-using-certificates">tls certificates</a></li>
+<li><code>auth.peer.useAutoTLS</code> was removed</li>
+<li><code>envVarsConfigMap</code> was removed</li>
+<li>When using etcd with TLS enabled:<ul>
+<li>For peer communication, peers need valid certificates for <code>*.&lt;release-name&gt;-etcd</code> (was
+  <code>.&lt;release-name&gt;&gt;-etcd-headless.&lt;namespace&gt;.svc.cluster.local</code>)</li>
+<li>For client communication, servers need valid certificates for <code>*.&lt;release-name&gt;-etcd</code>  (was
+  <code>.&lt;release-name&gt;&gt;-etcd.&lt;namespace&gt;.svc.cluster.local</code>)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="v041-2020-06-10"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v0.4.0...v0.4.1">v0.4.1</a> - 2020-06-10</h2>
+<h3 id="added_29">Added</h3>
+<ul>
+<li>Automatic storage pool creation via <code>automaticStorageType</code> on <code>LinstorNodeSet</code>. If this option is set, LINSTOR
+  will create a storage pool based on all available devices on a node.</li>
+</ul>
+<h3 id="changed_28">Changed</h3>
+<ul>
+<li>Moved storage documentation to the <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v0.4.1/doc/storage.md">storage guide</a></li>
+<li>Helm: update default images</li>
+</ul>
+<h2 id="v040-2020-06-05"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v0.3.0...v0.4.0">v0.4.0</a> - 2020-06-05</h2>
+<h3 id="added_30">Added</h3>
+<ul>
+<li>Secured database connection for Linstor: When using the <code>etcd</code> connector, you can specify a secret containing a CA
+  certificate to switch from HTTP to HTTPS communication.</li>
+<li>Secured connection between Linstor components: You can specify TLS keys to secure the communication between
+  controller and satellite</li>
+<li>Secure storage with LUKS: You can specify the master passphrase used by Linstor when creating encrypted volumes
+  when installing via Helm.</li>
+<li>Authentication with etcd using TLS client certificates.</li>
+<li>Secured connection between linstor-client and controller (HTTPS). More in
+  the <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v0.4.0/doc/security.md#configuring-secure-communications-for-the-linstor-api">security guide</a></li>
+<li>Linstor controller endpoint can now be customized for all resources. If not specified, the old default values will be
+  filled in.</li>
+</ul>
+<h3 id="removed_5">Removed</h3>
+<ul>
+<li>NodeSet service (<code>piraeus-op-ns</code>) was replaced by the ControllerSet service (<code>piraeus-op-cs</code>) everywhere</li>
+</ul>
+<h3 id="changed_29">Changed</h3>
+<ul>
+<li>CSI storage driver setup: move setup from helm to go operator. This is mostly an internal change.
+  These changes may be of note if you used a non-default CSI configuration:<ul>
+<li>helm value <code>csi.image</code> was renamed to <code>csi.pluginImage</code></li>
+<li>CSI deployment can be controlled by a new resource <code>linstorcsidrivers.piraeus.linbit.com</code></li>
+</ul>
+</li>
+<li>PriorityClasses are not automatically created. When not specified, the priority class is:<ul>
+<li>"system-node-critical", if deployed in "kube-system" namespace</li>
+<li>default PriorityClass in other namespaces</li>
+</ul>
+</li>
+<li>RBAC rules for CSI: creation moved to deployment step (Helm/OLM). ServiceAccounts should be specified in CSI resource.
+  If no ServiceAccounts are named, the implicitly created accounts from previous deployments will be used.</li>
+<li>Helm: update default images</li>
+</ul>
+<h2 id="v030-2020-05-08"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v0.2.2...v0.3.0">v0.3.0</a> - 2020-05-08</h2>
+<h3 id="changed_30">Changed</h3>
+<ul>
+<li>Use single values for images in CRDs instead of specifying the version
+  separately</li>
+<li>Helm: Use single values for images instead of specifying repo, name and
+  version separately</li>
+<li>Helm: Replace fixed storage pool configuration with list</li>
+<li>Helm: Do not create any storage pools by default</li>
+<li>Helm: Replace <code>operator.nodeSet.spec</code> and <code>operator.controllerSet.spec</code> by
+  just <code>operator.nodeSet</code> and <code>operator.controllerSet</code>.</li>
+</ul>
+<h2 id="v022-2020-04-24"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v0.2.1...v0.2.2">v0.2.2</a> - 2020-04-24</h2>
+<h3 id="changed_31">Changed</h3>
+<ul>
+<li>Fix reporting of errors in LinstorControllerSet status</li>
+</ul>
+<h2 id="v021-2020-04-14"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v0.2.0...v0.2.1">v0.2.1</a> - 2020-04-14</h2>
+<h3 id="changed_32">Changed</h3>
+<ul>
+<li>Helm: Update LINSTOR server dependencies to fix startup problems</li>
+</ul>
+<h2 id="v020-2020-04-10"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v0.1.4...v0.2.0">v0.2.0</a> - 2020-04-10</h2>
+<h3 id="added_31">Added</h3>
+<ul>
+<li>Helm: Allow an existing database to be used instead of always setting up
+  a dedicated etcd instance</li>
+</ul>
+<h3 id="changed_33">Changed</h3>
+<ul>
+<li>Rename <code>etcdURL</code> parameter of LinstorControllerSet to <code>dbConnectionURL</code> to
+  reflect the fact that it can be used for any database type</li>
+<li>Upgrade to operator-sdk v0.16.0</li>
+<li>Helm: Create multiple volumes with a single <code>pv-hostchart</code> installation</li>
+<li>Helm: Update dependencies</li>
+</ul>
+<h2 id="v014-2020-03-05"><a href="https://github.com/piraeusdatastore/piraeus-operator/compare/v0.0.1...v0.1.4">v0.1.4</a> - 2020-03-05</h2>
+<h3 id="added_32">Added</h3>
+<ul>
+<li>Helm: Add support for <code>hostPath</code> <code>PersistentVolume</code> persistence of etcd</li>
+</ul>
+<h3 id="removed_6">Removed</h3>
+<ul>
+<li>Helm: Remove vendored etcd chart from repository</li>
+</ul>
+<h3 id="changed_34">Changed</h3>
+<ul>
+<li>Rename CRDs from Piraeus<em> to Linstor</em></li>
+<li>Make priority classes configurable</li>
+<li>Fix LINSTOR Controller/Satellite arguments</li>
+<li>Helm: Make etcd persistent by default</li>
+<li>Helm: Fix deployment of permissions objects into a non-default namespace</li>
+<li>Helm: Set default etcd size to 1Gi</li>
+<li>Helm: Update dependent image versions</li>
+<li>Docker: Change base image to Debian Buster</li>
+</ul>
+<h2 id="v013-2020-02-24">[v0.1.3] - 2020-02-24</h2>
+<h3 id="added_33">Added</h3>
+<ul>
+<li>Support for kernel module injection based on shipped modules - necessary for
+  CoreOS support.</li>
+</ul>
+<h2 id="v0121-2020-02-21">[v0.1.2.1] - 2020-02-21</h2>
+<h3 id="added_34">Added</h3>
+<ul>
+<li>/charts contains Helm v3 chart for this operator</li>
+</ul>
+<h3 id="changed_35">Changed</h3>
+<ul>
+<li>CRDs contain additional Spec parameters that allow customizing image repo and
+  tag/version of the image.</li>
+<li>Another Spec parameter 'drbdRepoCred' can specify the name of the k8s secret
+  used to access the container images.</li>
+<li>LINSTOR Controller image now contains the LINSTOR client, away from the
+  Satellite images as it was previously the case. Hence, the readiness probe
+  is changed to use <code>curl</code> instead of <code>linstor</code> client command.</li>
+</ul>
+<h2 id="v010-2020-01-27">[v0.1.0] - 2020-01-27</h2>
+<h3 id="added_35">Added</h3>
+<ul>
+<li>examples/operator-intra.yaml file to bundle all the rbac, crds, etc to run the
+  operator</li>
+<li>EtcdURL field to controllersetcontroller spec. default: etcd-piraeus:2379</li>
+<li>Host networking on the LINSTOR Satellite pods with DNSClusterFirstWithHostNet
+  DNS policy</li>
+<li>NodeSet service for the Satellite pods that also point to the Controller
+  service for LINSTOR discovery</li>
+</ul>
+<h3 id="removed_7">Removed</h3>
+<ul>
+<li><code>ControllerEndpoint</code> and <code>DefaultController</code> from the PiraeusNodeSet spec</li>
+</ul>
+<h3 id="changed_36">Changed</h3>
+<ul>
+<li>Controller persistence is now handled by etcd. There must be a reachable and
+  operable etcd cluster for this operator to work.</li>
+<li>Networking is now handled by a kubernetes service with the same name
+  as the ControllerSet. The NodeSet must have the same name as the ControllerSet
+  for networking to work properly.</li>
+<li>Opt-in node label for nodes is now <code>linstor.linbit.com/piraeus-node=true</code></li>
+<li>Remove requirement for <code>kube-system</code> namespace</li>
+<li>Naming convention for NodeSet and ControllerSet Pods</li>
+<li>Updated ports for LINSTOR access on NodeSet and ControllerSet pods</li>
+<li>Updated framework to work with Operator Framework 0.13.0</li>
+<li>API Versions on PriorityClass, DaemonSet, StatefulSet, and CRD kinds to reflect
+  K8s 1.16.0 release</li>
+</ul>
+<h2 id="v001-2019-07-19"><a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v0.0.1">v0.0.1</a> - 2019-07-19</h2>
+<h3 id="added_36">Added</h3>
+<ul>
+<li>Initial public version with docs</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../reference/linstorsatellite/" class="md-footer__link md-footer__link--prev" aria-label="Previous: LinstorSatellite">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                LinstorSatellite
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 The Piraeus Maintainers
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/piraeusdatastore/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://piraeus-datastore.slack.com/" target="_blank" rel="noopener" title="piraeus-datastore.slack.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1s21.16-47.06 47.06-47.06h47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06S448 171 448 196.9s-21.16 47.06-47.06 47.06h-47.06zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06S309 480 283.1 480s-47.06-21.16-47.06-47.06v-47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06s21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "default": "stable", "provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
