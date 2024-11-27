@@ -380,6 +380,23 @@
   
 
       
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../CHANGELOG/" class="md-tabs__link">
+        
+  
+    
+  
+  Changelog
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -656,6 +673,8 @@
       
         
       
+        
+      
     
     
       
@@ -722,6 +741,27 @@
   
   <span class="md-ellipsis">
     Configure the DRBD Module Loader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install-kernel-headers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Kernel Headers to build DRBD
   </span>
   
 
@@ -1780,6 +1820,26 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CHANGELOG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1823,7 +1883,7 @@ volumes and volumes already in use by a pod will continue to work without interr
 (<code>kubectl</code> vs <code>helm</code>). There is no need to change existing <code>LinstorCluster</code>, <code>LinstorSatelliteConfiguration</code> or
 <code>LinstorNodeConnection</code> resources.</p>
 <p>To upgrade to the latest release using <code>kubectl</code>, run the following commands:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl apply --server-side -k &quot;https://github.com/piraeusdatastore/piraeus-operator//config/default?ref=v2.7.0&quot;
+<div class="highlight"><pre><span></span><code>$ kubectl apply --server-side -k &quot;https://github.com/piraeusdatastore/piraeus-operator//config/default?ref=v2.7.1&quot;
 $ kubectl wait pod --for=condition=Ready -n piraeus-datastore --all
 </code></pre></div>
 <h1 id="upgrades-from-v26-to-v27">Upgrades from v2.6 to v2.7</h1>
@@ -1841,7 +1901,7 @@ automatically converted to the equivalent DaemonSet resource patch. In the Pod l
 a new <code>linstor-satellite</code> prefix.</p>
 <h1 id="upgrades-from-v22-to-v23">Upgrades from v2.2 to v2.3</h1>
 <p>Removed the <code>NetworkPolicy</code> resource from default deployment. It can be reapplied as a
-<a href="./docs/how-to/network-policy.md">separate step</a>.</p>
+<a href="../../network-policy/">separate step</a>.</p>
 <h1 id="upgrades-from-v21-to-v22">Upgrades from v2.1 to v2.2</h1>
 <p>Removed the dependency on cert-manager for the initial deployment. To clean up an existing <code>Certificate</code> resource,
 run the following commands:</p>
@@ -1850,13 +1910,13 @@ run the following commands:</p>
 <h1 id="upgrades-from-v20-to-v21">Upgrades from v2.0 to v2.1</h1>
 <p>No special steps required.</p>
 <h1 id="upgrades-from-v1-to-v2">Upgrades from v1 to v2</h1>
-<p>Please follow the specialized <a href="./docs/how-to/upgrade/index.md">upgrade guides</a>.</p>
+<p>Please follow the specialized <a href="../">upgrade guides</a>.</p>
 <h1 id="upgrade-from-v19-to-v110">Upgrade from v1.9 to v1.10</h1>
 <p>If you want to share DRBD configuration directories with the host, please update the CRDs before upgrading using helm:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl replace -f ./charts/piraeus/crds
 </code></pre></div>
 <h1 id="upgrade-from-v18-to-v19">Upgrade from v1.8 to v1.9</h1>
-<p>If you want to protect metrics endpoints, take a look on <a href="doc/security.md">guide on enabling rbac-proxy sidecars</a>.</p>
+<p>If you want to protect metrics endpoints, take a look on <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v1.9.0/doc/security.md">guide on enabling rbac-proxy sidecars</a>.</p>
 <p>We've also disabled the <code>haController</code> component in our chart. The replacement is available from
 <a href="https://artifacthub.io/packages/helm/piraeus-charts/piraeus-ha-controller">artifacthub.io</a>, containing much needed
 improvements in robustness and fail-over speed. If you want to still use the old version, set
@@ -1867,7 +1927,7 @@ the CRDs before upgrading using helm:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl replace -f ./charts/piraeus/crds
 </code></pre></div>
 <p>In case if you have SSL enabled installation, you need to regenerate your certificates in PEM format.
-Read the <a href="doc/security.md">guide on securing the deployment</a> and repeat the described steps.</p>
+Read the <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v1.8.0/doc/security.md">guide on securing the deployment</a> and repeat the described steps.</p>
 <h1 id="upgrade-from-v16-to-v17">Upgrade from v1.6 to v1.7</h1>
 <p>Node labels are now automatically applied to LINSTOR satellites as "Auxiliary Properties". That means you can reuse your
 existing Kubernetes Topology information (for example <code>topology.kubernetes.io/zone</code> labels) when scheduling volumes
@@ -1876,7 +1936,8 @@ any existing auxiliary properties that were already applied. To apply auxiliary 
 apply a label to the Kubernetes node object.</p>
 <h1 id="upgrade-from-v15-to-v16">Upgrade from v1.5 to v1.6</h1>
 <p>The <code>csi-snapshotter</code> subchart was removed from this repository. Users who relied on it for their snapshot support
-should switch to the seperate charts provided by the Piraeus team on <a href="https://artifacthub.io/packages/search?repo=piraeus-charts">artifacthub.io</a>
+should switch to the seperate charts provided by the Piraeus team
+on <a href="https://artifacthub.io/packages/search?repo=piraeus-charts">artifacthub.io</a>
 The new charts also include notes on how to upgrade to newer CRD versions.</p>
 <p>To support the new <code>csi.kubeletPath</code> option an update to the LinstorCSIDriver CRD is required:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl replace -f ./charts/piraeus/crds
@@ -1904,7 +1965,8 @@ alongside the satellites.</p>
 </code></pre></div>
 <h1 id="upgrade-from-v11-to-v12">Upgrade from v1.1 to v1.2</h1>
 <p>Piraeus v1.2 is supported on Kubernetes 1.17+. If you are using an older Kubernetes distribution, you may need
-to change the default settings (for example <a href="https://kubernetes-csi.github.io/docs/external-provisioner.html">the CSI provisioner</a>)</p>
+to change the default settings (for
+example <a href="https://kubernetes-csi.github.io/docs/external-provisioner.html">the CSI provisioner</a>)</p>
 <p>To start the upgrade process, ensure you have a backup of the LINSTOR Controller database. If you are using
 the etcd deployment included in Piraeus, you can create a backup using:</p>
 <div class="highlight"><pre><span></span><code>kubectl exec piraeus-op-etcd-0 -- etcdctl snapshot save /tmp/save.db
@@ -1959,17 +2021,17 @@ piraeus-op-cs true    true
 </li>
 <li>
 <p>Along with the CRDs, Helm settings changed too:</p>
-</li>
+<ul>
 <li><code>operator.controllerSet</code> to <code>operator.controller</code></li>
-<li>
-<p><code>operator.nodeSet</code> to <code>operator.satelliteSet</code>
-  If old settings are used, Helm will return an error.</p>
+<li><code>operator.nodeSet</code> to <code>operator.satelliteSet</code>
+  If old settings are used, Helm will return an error.</li>
+</ul>
 </li>
 <li>
 <p>Node scheduling no longer relies on <code>linstor.linbit.com/piraeus-node</code> labels. Instead, all CRDs support
   setting pod <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity">affinity</a> and <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/">tolerations</a>.
   In detail:</p>
-</li>
+<ul>
 <li><code>linstorcsidrivers</code> gained 4 new resource keys, with no change in default behaviour:<ul>
 <li><code>nodeAffinity</code> affinity passed to the csi nodes</li>
 <li><code>nodeTolerations</code> tolerations passed to the csi nodes</li>
@@ -1982,15 +2044,15 @@ piraeus-op-cs true    true
 <li><code>tolerations</code> tolerations passed to the linstor controller pod</li>
 </ul>
 </li>
-<li>
-<p><code>linstornodeset</code> gained 2 new resource keys, <strong>with change in default behaviour</strong>:</p>
-<ul>
+<li><code>linstornodeset</code> gained 2 new resource keys, <strong>with change in default behaviour</strong>:<ul>
 <li><code>affinity</code> affinity passed to the linstor controller pod</li>
 <li><code>tolerations</code> tolerations passed to the linstor controller pod</li>
 </ul>
+</li>
+</ul>
 <p>Previously, linstor satellite pods required nodes marked with <code>linstor.linbit.com/piraeus-node=true</code>. The new
-default value does not place this restriction on nodes. To restore the old behaviour, set the following affinity:
-<div class="highlight"><pre><span></span><code><span class="nt">affinity</span><span class="p">:</span>
+  default value does not place this restriction on nodes. To restore the old behaviour, set the following affinity:
+  <div class="highlight"><pre><span></span><code><span class="nt">affinity</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">nodeAffinity</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">requiredDuringSchedulingIgnoredDuringExecution</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">nodeSelectorTerms</span><span class="p">:</span>

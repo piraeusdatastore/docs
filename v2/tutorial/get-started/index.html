@@ -380,6 +380,23 @@
   
 
       
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../CHANGELOG/" class="md-tabs__link">
+        
+  
+    
+  
+  Changelog
+
+      </a>
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -574,36 +591,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-install-piraeus-operator" class="md-nav__link">
+  <a href="#install-piraeus-operator" class="md-nav__link">
     <span class="md-ellipsis">
-      1: Install Piraeus Operator
+      Install Piraeus Operator
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-deploy-piraeus-datastore" class="md-nav__link">
+  <a href="#deploy-piraeus-datastore" class="md-nav__link">
     <span class="md-ellipsis">
-      2: Deploy Piraeus Datastore
+      Deploy Piraeus Datastore
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-configuring-storage" class="md-nav__link">
+  <a href="#configuring-storage" class="md-nav__link">
     <span class="md-ellipsis">
-      3: Configuring Storage
+      Configuring Storage
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-using-piraeus-datastore" class="md-nav__link">
+  <a href="#using-piraeus-datastore" class="md-nav__link">
     <span class="md-ellipsis">
-      4: Using Piraeus Datastore
+      Using Piraeus Datastore
     </span>
   </a>
   
@@ -746,6 +763,8 @@
       
         
       
+        
+      
     
     
       
@@ -812,6 +831,27 @@
   
   <span class="md-ellipsis">
     Configure the DRBD Module Loader
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how-to/install-kernel-headers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install Kernel Headers to build DRBD
   </span>
   
 
@@ -1852,6 +1892,26 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CHANGELOG/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1888,36 +1948,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#1-install-piraeus-operator" class="md-nav__link">
+  <a href="#install-piraeus-operator" class="md-nav__link">
     <span class="md-ellipsis">
-      1: Install Piraeus Operator
+      Install Piraeus Operator
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-deploy-piraeus-datastore" class="md-nav__link">
+  <a href="#deploy-piraeus-datastore" class="md-nav__link">
     <span class="md-ellipsis">
-      2: Deploy Piraeus Datastore
+      Deploy Piraeus Datastore
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-configuring-storage" class="md-nav__link">
+  <a href="#configuring-storage" class="md-nav__link">
     <span class="md-ellipsis">
-      3: Configuring Storage
+      Configuring Storage
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-using-piraeus-datastore" class="md-nav__link">
+  <a href="#using-piraeus-datastore" class="md-nav__link">
     <span class="md-ellipsis">
-      4: Using Piraeus Datastore
+      Using Piraeus Datastore
     </span>
   </a>
   
@@ -1945,14 +2005,14 @@
 <p>Learn about the ways to get started with Piraeus Datastore by deploying Piraeus Operator and provisioning your first volume.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <ul>
-<li><a href="../install-kernel-headers/">Install the Linux kernel headers on the hosts</a>.</li>
+<li><a href="../../how-to/install-kernel-headers/">Install the Linux kernel headers on the hosts</a>.</li>
 <li><a href="https://kubernetes.io/docs/tasks/tools/">Install <code>kubectl</code> version <code>&gt;= 1.22</code></a></li>
 </ul>
-<h2 id="1-install-piraeus-operator">1: Install Piraeus Operator</h2>
+<h2 id="install-piraeus-operator">Install Piraeus Operator</h2>
 <p>In this tutorial we will be using <code>kubectl</code> with the built-in <code>kustomize</code> feature to deploy Piraeus Operator.
 All resources needed to run Piraeus Operator are included in a single Kustomization.</p>
 <p>Install Piraeus Operator by running:</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>kubectl<span class="w"> </span>apply<span class="w"> </span>--server-side<span class="w"> </span>-k<span class="w"> </span><span class="s2">&quot;https://github.com/piraeusdatastore/piraeus-operator//config/default?ref=v2.7.0&quot;</span>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>kubectl<span class="w"> </span>apply<span class="w"> </span>--server-side<span class="w"> </span>-k<span class="w"> </span><span class="s2">&quot;https://github.com/piraeusdatastore/piraeus-operator//config/default?ref=v2.7.1&quot;</span>
 namespace/piraeus-datastore<span class="w"> </span>configured
 ...
 </code></pre></div>
@@ -1961,7 +2021,7 @@ ready. The following command waits until the Operator is ready:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl wait pod --for=condition=Ready -n piraeus-datastore -l app.kubernetes.io/component=piraeus-operator
 pod/piraeus-operator-controller-manager-dd898f48c-bhbtv condition met
 </code></pre></div>
-<h2 id="2-deploy-piraeus-datastore">2: Deploy Piraeus Datastore</h2>
+<h2 id="deploy-piraeus-datastore">Deploy Piraeus Datastore</h2>
 <p>Now, we will deploy Piraeus Datastore using a new resource managed by Piraeus Operator. We create a <code>LinstorCluster</code>,
 which creates all the necessary resources (Deployments, Pods, and so on...) for our Datastore:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl apply -f - &lt;&lt;EOF
@@ -1994,7 +2054,7 @@ pod/piraeus-operator-controller-manager-dd898f48c-bhbtv condition met
 | n3.example.com | SATELLITE | 10.125.97.33:3366 (PLAIN)   | Online |
 +-------------------------------------------------------------------+
 </code></pre></div>
-<h2 id="3-configuring-storage">3: Configuring Storage</h2>
+<h2 id="configuring-storage">Configuring Storage</h2>
 <p>We have not yet configured any storage location for our volumes. This can be accomplished by creating a new
 <code>LinstorSatelliteConfiguration</code> resource. We will create a storage pool of type <code>fileThinPool</code> on each node.
 We chose <code>fileThinPool</code> as it does not require further configuration on the host.</p>
@@ -2034,7 +2094,7 @@ the storage pools were configured:</p>
 | pool1                | n3.example.com | FILE_THIN | /var/lib/piraeus-datastore/pool1 |    26.54 GiB |     49.30 GiB | True         | Ok    |            |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 </code></pre></div>
-<h2 id="4-using-piraeus-datastore">4: Using Piraeus Datastore</h2>
+<h2 id="using-piraeus-datastore">Using Piraeus Datastore</h2>
 <p>We now have successfully deployed and configured Piraeus Datastore, and are ready to create our first
 <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/"><code>PersistentVolume</code></a> in Kubernetes.</p>
 <p>First, we will set up a new <a href="https://kubernetes.io/docs/concepts/storage/storage-classes/"><code>StorageClass</code></a> for our

@@ -2,150 +2,154 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://piraeus.io/docs/v2/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
+    </url>
+    <url>
+         <loc>https://piraeus.io/docs/v2/CHANGELOG/</loc>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/explanation/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/explanation/components/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/api-tls/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/drbd-host-networking/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/drbd-loader/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/drbd-tls/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/external-controller/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/flatcar/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/http-proxy/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
+    </url>
+    <url>
+         <loc>https://piraeus.io/docs/v2/how-to/install-kernel-headers/</loc>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/internal-tls/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/k0s/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/linstor-affinity-controller/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/microk8s/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/monitoring/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/network-policy/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/openshift/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/restore-linstor-db/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/secure-boot/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/talos/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/upgrade/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/upgrade/1-migrate-database/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/upgrade/2-collect-information/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/upgrade/3-remove-operator-v1/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/upgrade/4-install-operator-v2/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/how-to/upgrade/UPGRADE/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/reference/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/reference/linstorcluster/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/reference/linstornodeconnection/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/reference/linstorsatellite/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/reference/linstorsatelliteconfiguration/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/tutorial/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/tutorial/get-started/</loc>
-         <lastmod>2024-11-15</lastmod>
-    </url>
-    <url>
-         <loc>https://piraeus.io/docs/v2/tutorial/install-kernel-headers/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/tutorial/replicated-volumes/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/tutorial/snapshots/</loc>
-         <lastmod>2024-11-15</lastmod>
+         <lastmod>2024-11-27</lastmod>
     </url>
 </urlset>
