@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
@@ -63,7 +63,7 @@
       
         <meta  property="og:title"  content="Creating Replicated Volumes - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  property="og:image"  content="https://piraeus.io/docs/v2.7.1/assets/images/social/tutorial/replicated-volumes.png" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:title"  content="Creating Replicated Volumes - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  name="twitter:image"  content="https://piraeus.io/docs/v2.7.1/assets/images/social/tutorial/replicated-volumes.png" >
       
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../how-to/upgrade/" class="md-tabs__link">
+        <a href="../../upgrade/" class="md-tabs__link">
           
   
     
@@ -1427,8 +1427,6 @@
       
         
       
-        
-      
     
     
       
@@ -1446,7 +1444,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../how-to/upgrade/" class="md-nav__link ">
+            <a href="../../upgrade/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1478,29 +1476,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../how-to/upgrade/UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1522,26 +1503,36 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../upgrade/migration/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1550,7 +1541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/1-migrate-database/" class="md-nav__link">
+      <a href="../../upgrade/migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1571,7 +1562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/2-collect-information/" class="md-nav__link">
+      <a href="../../upgrade/migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1592,7 +1583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/3-remove-operator-v1/" class="md-nav__link">
+      <a href="../../upgrade/migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1613,7 +1604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/4-install-operator-v2/" class="md-nav__link">
+      <a href="../../upgrade/migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1983,16 +1974,16 @@
   
 
 
-<h1 id="creating-replicated-volumes">Creating Replicated Volumes</h1>
+<h1 id="creating-replicated-volumes">Creating Replicated Volumes<a class="headerlink" href="#creating-replicated-volumes" title="Permanent link">&para;</a></h1>
 <p>Learn about creating replicated volumes, making your data accessible on any cluster node.</p>
 <p>In this tutorial you will learn how to create a replicated volume, and verify that the data stays accessible when
 moving Pods from one node to another.</p>
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>A Kubernetes Cluster with at least two nodes.</li>
 <li>An installed and configured Piraeus Datastore. Learn how to get started in our <a href="../get-started/">introduction tutorial</a></li>
 </ul>
-<h2 id="creating-the-volume">Creating the Volume</h2>
+<h2 id="creating-the-volume">Creating the Volume<a class="headerlink" href="#creating-the-volume" title="Permanent link">&para;</a></h2>
 <p>First, we will create a new <a href="https://kubernetes.io/docs/concepts/storage/storage-classes/"><code>StorageClass</code></a> for our
 replicated volumes. We will be using the <code>pool1</code> storage pool from the <a href="../get-started/">Get Started tutorial</a>, but
 this time also set the <code>placementCount</code> to 2, telling LINSTOR® to store the volume data on two nodes.</p>
@@ -2089,7 +2080,7 @@ intentional and improves the behaviour should one of the cluster nodes become un
 <div class="highlight"><pre><span></span><code>$ kubectl exec deploy/volume-logger -- cat /volume/hello
 Hello from volume-logger-84dd47f4cb-trh4l, running on n1.example.com, started at Fri Feb  3 08:53:47 UTC 2023
 </code></pre></div>
-<h2 id="testing-replication">Testing Replication</h2>
+<h2 id="testing-replication">Testing Replication<a class="headerlink" href="#testing-replication" title="Permanent link">&para;</a></h2>
 <p>Now, we will verify that when we move the Pod to another node, we still have access to the same data.</p>
 <p>To test this, we will disable scheduling on the node the Pod is currently running on. This forces Kubernetes to move the
 Pod to another node once we trigger a restart. In our examples, the Hello message tells us that the Pod was started on
@@ -2124,7 +2115,7 @@ Hello from volume-logger-5db9dd7b87-lps2f, running on n2.example.com, started at
 +-------------------------------------------------------------------------------------------------------------------------------------------+
 </code></pre></div>
 <p>You have now successfully created a replicated volume and verified that the data is accessible from multiple nodes.</p>
-<h2 id="resetting-the-disabled-node">Resetting the Disabled Node</h2>
+<h2 id="resetting-the-disabled-node">Resetting the Disabled Node<a class="headerlink" href="#resetting-the-disabled-node" title="Permanent link">&para;</a></h2>
 <p>Now that we have verified replication works, we can reset the disabled node:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl uncordon n1.example.com
 node/n1.example.com uncordoned

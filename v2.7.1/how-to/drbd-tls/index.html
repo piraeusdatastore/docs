@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
@@ -63,7 +63,7 @@
       
         <meta  property="og:title"  content="Configure TLS for DRBD Replication - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  property="og:image"  content="https://piraeus.io/docs/v2.7.1/assets/images/social/how-to/drbd-tls.png" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:title"  content="Configure TLS for DRBD Replication - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  name="twitter:image"  content="https://piraeus.io/docs/v2.7.1/assets/images/social/how-to/drbd-tls.png" >
       
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../upgrade/" class="md-tabs__link">
+        <a href="../../upgrade/" class="md-tabs__link">
           
   
     
@@ -1453,8 +1453,6 @@
       
         
       
-        
-      
     
     
       
@@ -1472,7 +1470,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../upgrade/" class="md-nav__link ">
+            <a href="../../upgrade/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1504,29 +1502,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../upgrade/UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1548,26 +1529,36 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../upgrade/migration/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1576,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/1-migrate-database/" class="md-nav__link">
+      <a href="../../upgrade/migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1597,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/2-collect-information/" class="md-nav__link">
+      <a href="../../upgrade/migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1618,7 +1609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/3-remove-operator-v1/" class="md-nav__link">
+      <a href="../../upgrade/migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1639,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/4-install-operator-v2/" class="md-nav__link">
+      <a href="../../upgrade/migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2018,7 +2009,7 @@
   
 
 
-<h1 id="how-to-use-transport-layer-security-for-drbd-replication">How to Use Transport Layer Security for DRBD Replication</h1>
+<h1 id="how-to-use-transport-layer-security-for-drbd-replication">How to Use Transport Layer Security for DRBD Replication<a class="headerlink" href="#how-to-use-transport-layer-security-for-drbd-replication" title="Permanent link">&para;</a></h1>
 <p>This guide shows you how to use Transport Layer Security (TLS) for DRBD® replication.</p>
 <p>TLS is a protocol designed to provide security, including privacy, integrity and authentication for network
 communications. Starting with DRBD 9.2.6, replication traffic in DRBD can be encrypted using TLS, using the Linux
@@ -2028,7 +2019,7 @@ kernel <a href="https://www.kernel.org/doc/html/latest/networking/tls.html#kerne
 <li>editing <code>LinstorCluster</code> and <code>LinstorSatelliteConfiguration</code> resources.</li>
 <li>configuring <a href="../internal-tls/">TLS certificates for internal traffic</a>.</li>
 </ul>
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Install Piraeus Operator &gt;= 2.3.0. The following command shows the deployed version, in this case v2.3.0:
   <div class="highlight"><pre><span></span><code>$ kubectl get pods -l app.kubernetes.io/component=piraeus-operator -ojsonpath=&#39;{.items[*].spec.containers[?(@.name==&quot;manager&quot;)].image}{&quot;\n&quot;}&#39;
@@ -2045,7 +2036,7 @@ quay.io/piraeusdatastore/piraeus-operator:v2.3.0
 done
 </code></pre></div></li>
 </ul>
-<h2 id="configure-tls-between-linstor-controller-and-linstor-satellite">Configure TLS Between LINSTOR Controller and LINSTOR Satellite</h2>
+<h2 id="configure-tls-between-linstor-controller-and-linstor-satellite">Configure TLS Between LINSTOR Controller and LINSTOR Satellite<a class="headerlink" href="#configure-tls-between-linstor-controller-and-linstor-satellite" title="Permanent link">&para;</a></h2>
 <p>This step is covered in <a href="../internal-tls/">a dedicated guide</a>. Follow the steps in the guide, but set the
 <code>tlsHandshakeDaemon</code> field in the <code>LinstorSatelliteConfiguration</code> resource:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
@@ -2063,7 +2054,7 @@ tlshd[1]: Built from ktls-utils 0.10 on Oct  4 2023 07:26:06
 tlshd[1]: Built from ktls-utils 0.10 on Oct  4 2023 07:26:06
 tlshd[1]: Built from ktls-utils 0.10 on Oct  4 2023 07:26:06
 </code></pre></div>
-<h2 id="configure-tls-for-drbd">Configure TLS for DRBD</h2>
+<h2 id="configure-tls-for-drbd">Configure TLS for DRBD<a class="headerlink" href="#configure-tls-for-drbd" title="Permanent link">&para;</a></h2>
 <p>To instruct LINSTOR® to configure TLS for DRBD, the <code>DrbdOptions/Net/tls</code> property needs to be set to <code>yes</code>. This
 can be done directly on the <code>LinstorCluster</code> resource, so it automatically applies to all resources, or as part of
 the parameters in a StorageClass.</p>
@@ -2087,7 +2078,7 @@ the parameters in a StorageClass.</p>
 <span class="w">  </span><span class="nt">property.linstor.csi.linbit.com/DrbdOptions/Net/tls</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;yes&quot;</span>
 <span class="w">  </span><span class="c1"># ...</span>
 </code></pre></div>
-<h2 id="switch-existing-resources-to-tls">Switch Existing Resources to TLS</h2>
+<h2 id="switch-existing-resources-to-tls">Switch Existing Resources to TLS<a class="headerlink" href="#switch-existing-resources-to-tls" title="Permanent link">&para;</a></h2>
 <p>DRBD does not support online reconfiguration to use DRBD. To switch existing resources to use TLS, for example by
 setting the property on the <code>LinstorCluster</code> resource, you need to perform the following steps on all nodes:</p>
 <p>First, you need to temporarily stop all replication and suspend all DRBD volumes using <code>drbdadm suspend-io all</code>.
@@ -2106,7 +2097,7 @@ $ kubectl exec node3.example.com -- drbdadm disconnect --force all
 $ kubectl exec node2.example.com -- drbdadm adjust all
 $ kubectl exec node3.example.com -- drbdadm adjust all
 </code></pre></div>
-<h2 id="confirm-drbd-uses-tls">Confirm DRBD Uses TLS</h2>
+<h2 id="confirm-drbd-uses-tls">Confirm DRBD Uses TLS<a class="headerlink" href="#confirm-drbd-uses-tls" title="Permanent link">&para;</a></h2>
 <p>To confirm that DRBD is using TLS for replication, check the following resources.</p>
 <p>First, confirm that the <code>ktls-utils</code> container performed the expected handshakes:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl logs -l app.kubernetes.io/component=linstor-satellite -c ktls-utils

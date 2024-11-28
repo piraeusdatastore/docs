@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
@@ -63,7 +63,7 @@
       
         <meta  property="og:title"  content="Use Piraeus Datastore with an Existing LINSTOR Cluster - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  property="og:image"  content="https://piraeus.io/docs/v2.7.1/assets/images/social/how-to/external-controller.png" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:title"  content="Use Piraeus Datastore with an Existing LINSTOR Cluster - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  name="twitter:image"  content="https://piraeus.io/docs/v2.7.1/assets/images/social/how-to/external-controller.png" >
       
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../upgrade/" class="md-tabs__link">
+        <a href="../../upgrade/" class="md-tabs__link">
           
   
     
@@ -1435,8 +1435,6 @@
       
         
       
-        
-      
     
     
       
@@ -1454,7 +1452,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../upgrade/" class="md-nav__link ">
+            <a href="../../upgrade/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1486,29 +1484,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../upgrade/UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1530,26 +1511,36 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../upgrade/migration/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1558,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/1-migrate-database/" class="md-nav__link">
+      <a href="../../upgrade/migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1579,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/2-collect-information/" class="md-nav__link">
+      <a href="../../upgrade/migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1600,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/3-remove-operator-v1/" class="md-nav__link">
+      <a href="../../upgrade/migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/4-install-operator-v2/" class="md-nav__link">
+      <a href="../../upgrade/migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1982,13 +1973,13 @@
   
 
 
-<h1 id="how-to-use-an-existing-linstor-cluster">How to Use an Existing LINSTOR Cluster</h1>
+<h1 id="how-to-use-an-existing-linstor-cluster">How to Use an Existing LINSTOR Cluster<a class="headerlink" href="#how-to-use-an-existing-linstor-cluster" title="Permanent link">&para;</a></h1>
 <p>This guide shows you how to connect Piraeus with an existing LINSTOR® Cluster, managed outside Kubernetes.</p>
 <p>To complete this guide, you should be familiar with:</p>
 <ul>
 <li>editing <code>LinstorCluster</code> resources.</li>
 </ul>
-<h2 id="configure-the-piraeus-resources">Configure the Piraeus Resources</h2>
+<h2 id="configure-the-piraeus-resources">Configure the Piraeus Resources<a class="headerlink" href="#configure-the-piraeus-resources" title="Permanent link">&para;</a></h2>
 <p>To use an externally managed LINSTOR Cluster, specify the URL of the LINSTOR Controller in the <code>LinstorCluster</code>
 resource. In the following example, the Controller is reachable at <code>http://linstor-controller.example.com:3370</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
@@ -2004,7 +1995,7 @@ resource. In the following example, the Controller is reachable at <code>http://
 <li>The <code>linstor-controller</code> Deployment is removed</li>
 <li>The <code>linstor-csi-controller</code> and <code>linstor-csi-node</code> resources will reference the external controller.</li>
 </ul>
-<h2 id="configuring-host-networking-for-linstor-satellites">Configuring Host Networking for LINSTOR Satellites</h2>
+<h2 id="configuring-host-networking-for-linstor-satellites">Configuring Host Networking for LINSTOR Satellites<a class="headerlink" href="#configuring-host-networking-for-linstor-satellites" title="Permanent link">&para;</a></h2>
 <p>Normally the Pod network is not reachable from outside the Kubernetes Cluster.
 In this case the existing LINSTOR Controller won't be able to communicate with the Satellites in the Kubernetes cluster.
 So you should configure your Satellites to use <a href="../drbd-host-networking/">host networking</a>.</p>
@@ -2018,7 +2009,7 @@ So you should configure your Satellites to use <a href="../drbd-host-networking/
 <span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">hostNetwork</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 </code></pre></div>
-<h2 id="verifying-the-configuration">Verifying the Configuration</h2>
+<h2 id="verifying-the-configuration">Verifying the Configuration<a class="headerlink" href="#verifying-the-configuration" title="Permanent link">&para;</a></h2>
 <p>To verify that the external LINSTOR Controller is configured, check:</p>
 <ul>
 <li>The <code>Available</code> condition on the <code>LinstorCluster</code> resource reports the expected Controller URL:

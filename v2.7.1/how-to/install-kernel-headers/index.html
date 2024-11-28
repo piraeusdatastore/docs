@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
@@ -63,7 +63,7 @@
       
         <meta  property="og:title"  content="Install Kernel Headers to build DRBD - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  property="og:image"  content="https://piraeus.io/docs/v2.7.1/assets/images/social/how-to/install-kernel-headers.png" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:title"  content="Install Kernel Headers to build DRBD - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  name="twitter:image"  content="https://piraeus.io/docs/v2.7.1/assets/images/social/how-to/install-kernel-headers.png" >
       
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../upgrade/" class="md-tabs__link">
+        <a href="../../upgrade/" class="md-tabs__link">
           
   
     
@@ -1435,8 +1435,6 @@
       
         
       
-        
-      
     
     
       
@@ -1454,7 +1452,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../upgrade/" class="md-nav__link ">
+            <a href="../../upgrade/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1486,29 +1484,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../upgrade/UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1530,26 +1511,36 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../upgrade/migration/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1558,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/1-migrate-database/" class="md-nav__link">
+      <a href="../../upgrade/migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1579,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/2-collect-information/" class="md-nav__link">
+      <a href="../../upgrade/migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1600,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/3-remove-operator-v1/" class="md-nav__link">
+      <a href="../../upgrade/migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/4-install-operator-v2/" class="md-nav__link">
+      <a href="../../upgrade/migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1982,14 +1973,14 @@
   
 
 
-<h1 id="installing-linux-kernel-headers">Installing Linux Kernel Headers</h1>
+<h1 id="installing-linux-kernel-headers">Installing Linux Kernel Headers<a class="headerlink" href="#installing-linux-kernel-headers" title="Permanent link">&para;</a></h1>
 <p>Piraeus Datastore uses <a href="https://linbit.com/DRBD/">DRBD®</a> to mirror your volume data to one or more nodes. This document
 aims to describe the way to install the necessary files for common Linux distributions.</p>
 <p>To check if your nodes already have the necessary files installed, try running:</p>
 <div class="highlight"><pre><span></span><code>$ test -d /lib/modules/$(uname -r)/build/ &amp;&amp; echo found headers
 </code></pre></div>
 <p>If the command prints <code>found headers</code>, your nodes are good to go.</p>
-<h2 id="installing-on-ubuntu">Installing on Ubuntu</h2>
+<h2 id="installing-on-ubuntu">Installing on Ubuntu<a class="headerlink" href="#installing-on-ubuntu" title="Permanent link">&para;</a></h2>
 <p>Installation of Linux Kernel headers on Ubuntu can be done through the <code>apt</code> package manager:</p>
 <div class="highlight"><pre><span></span><code>$ sudo apt-get update
 $ sudo apt-get install -y linux-headers-$(uname -r)
@@ -1999,7 +1990,7 @@ matching any newly installed kernel versions.</p>
 <div class="highlight"><pre><span></span><code>$ sudo apt-get update
 $ sudo apt-get install -y linux-headers-virtual
 </code></pre></div>
-<h2 id="installing-on-debian">Installing on Debian</h2>
+<h2 id="installing-on-debian">Installing on Debian<a class="headerlink" href="#installing-on-debian" title="Permanent link">&para;</a></h2>
 <p>Installation of Linux Kernel headers on Debian can be done through the <code>apt</code> package manager:</p>
 <div class="highlight"><pre><span></span><code>$ sudo apt-get update
 $ sudo apt-get install -y linux-headers-$(uname -r)
@@ -2008,7 +1999,7 @@ $ sudo apt-get install -y linux-headers-$(uname -r)
 <div class="highlight"><pre><span></span><code>$ sudo apt-get update
 $ sudo apt-get install -y linux-headers-$(dpkg --print-architecture)
 </code></pre></div>
-<h2 id="installing-on-redhat-enterprise-linux">Installing on RedHat Enterprise Linux</h2>
+<h2 id="installing-on-redhat-enterprise-linux">Installing on RedHat Enterprise Linux<a class="headerlink" href="#installing-on-redhat-enterprise-linux" title="Permanent link">&para;</a></h2>
 <p>Installing on RedHat Enterprise Linux or compatible distributions, such as AlmaLinux or Rocky Linux can be done through
 the <code>dnf</code> package manager:</p>
 <div class="highlight"><pre><span></span><code>$ sudo dnf install -y kernel-devel-$(uname -r)

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
@@ -63,7 +63,7 @@
       
         <meta  property="og:title"  content="Getting Started - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  property="og:image"  content="https://piraeus.io/docs/v2.7.1/assets/images/social/tutorial/get-started.png" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:title"  content="Getting Started - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  name="twitter:image"  content="https://piraeus.io/docs/v2.7.1/assets/images/social/tutorial/get-started.png" >
       
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../how-to/upgrade/" class="md-tabs__link">
+        <a href="../../upgrade/" class="md-tabs__link">
           
   
     
@@ -1436,8 +1436,6 @@
       
         
       
-        
-      
     
     
       
@@ -1455,7 +1453,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../how-to/upgrade/" class="md-nav__link ">
+            <a href="../../upgrade/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1487,29 +1485,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../how-to/upgrade/UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1531,26 +1512,36 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../upgrade/migration/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1559,7 +1550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/1-migrate-database/" class="md-nav__link">
+      <a href="../../upgrade/migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1580,7 +1571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/2-collect-information/" class="md-nav__link">
+      <a href="../../upgrade/migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1601,7 +1592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/3-remove-operator-v1/" class="md-nav__link">
+      <a href="../../upgrade/migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1622,7 +1613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/4-install-operator-v2/" class="md-nav__link">
+      <a href="../../upgrade/migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2001,14 +1992,14 @@
   
 
 
-<h1 id="get-started">Get Started</h1>
+<h1 id="get-started">Get Started<a class="headerlink" href="#get-started" title="Permanent link">&para;</a></h1>
 <p>Learn about the ways to get started with Piraeus Datastore by deploying Piraeus Operator and provisioning your first volume.</p>
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../../how-to/install-kernel-headers/">Install the Linux kernel headers on the hosts</a>.</li>
 <li><a href="https://kubernetes.io/docs/tasks/tools/">Install <code>kubectl</code> version <code>&gt;= 1.22</code></a></li>
 </ul>
-<h2 id="install-piraeus-operator">Install Piraeus Operator</h2>
+<h2 id="install-piraeus-operator">Install Piraeus Operator<a class="headerlink" href="#install-piraeus-operator" title="Permanent link">&para;</a></h2>
 <p>In this tutorial we will be using <code>kubectl</code> with the built-in <code>kustomize</code> feature to deploy Piraeus Operator.
 All resources needed to run Piraeus Operator are included in a single Kustomization.</p>
 <p>Install Piraeus Operator by running:</p>
@@ -2021,7 +2012,7 @@ ready. The following command waits until the Operator is ready:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl wait pod --for=condition=Ready -n piraeus-datastore -l app.kubernetes.io/component=piraeus-operator
 pod/piraeus-operator-controller-manager-dd898f48c-bhbtv condition met
 </code></pre></div>
-<h2 id="deploy-piraeus-datastore">Deploy Piraeus Datastore</h2>
+<h2 id="deploy-piraeus-datastore">Deploy Piraeus Datastore<a class="headerlink" href="#deploy-piraeus-datastore" title="Permanent link">&para;</a></h2>
 <p>Now, we will deploy Piraeus Datastore using a new resource managed by Piraeus Operator. We create a <code>LinstorCluster</code>,
 which creates all the necessary resources (Deployments, Pods, and so on...) for our Datastore:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl apply -f - &lt;&lt;EOF
@@ -2054,7 +2045,7 @@ pod/piraeus-operator-controller-manager-dd898f48c-bhbtv condition met
 | n3.example.com | SATELLITE | 10.125.97.33:3366 (PLAIN)   | Online |
 +-------------------------------------------------------------------+
 </code></pre></div>
-<h2 id="configuring-storage">Configuring Storage</h2>
+<h2 id="configuring-storage">Configuring Storage<a class="headerlink" href="#configuring-storage" title="Permanent link">&para;</a></h2>
 <p>We have not yet configured any storage location for our volumes. This can be accomplished by creating a new
 <code>LinstorSatelliteConfiguration</code> resource. We will create a storage pool of type <code>fileThinPool</code> on each node.
 We chose <code>fileThinPool</code> as it does not require further configuration on the host.</p>
@@ -2094,7 +2085,7 @@ the storage pools were configured:</p>
 | pool1                | n3.example.com | FILE_THIN | /var/lib/piraeus-datastore/pool1 |    26.54 GiB |     49.30 GiB | True         | Ok    |            |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 </code></pre></div>
-<h2 id="using-piraeus-datastore">Using Piraeus Datastore</h2>
+<h2 id="using-piraeus-datastore">Using Piraeus Datastore<a class="headerlink" href="#using-piraeus-datastore" title="Permanent link">&para;</a></h2>
 <p>We now have successfully deployed and configured Piraeus Datastore, and are ready to create our first
 <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/"><code>PersistentVolume</code></a> in Kubernetes.</p>
 <p>First, we will set up a new <a href="https://kubernetes.io/docs/concepts/storage/storage-classes/"><code>StorageClass</code></a> for our

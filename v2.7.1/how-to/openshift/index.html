@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
@@ -63,7 +63,7 @@
       
         <meta  property="og:title"  content="Openshift - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  property="og:image"  content="https://piraeus.io/docs/v2.7.1/assets/images/social/how-to/openshift.png" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:title"  content="Openshift - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  name="twitter:image"  content="https://piraeus.io/docs/v2.7.1/assets/images/social/how-to/openshift.png" >
       
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../upgrade/" class="md-tabs__link">
+        <a href="../../upgrade/" class="md-tabs__link">
           
   
     
@@ -1435,8 +1435,6 @@
       
         
       
-        
-      
     
     
       
@@ -1454,7 +1452,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../upgrade/" class="md-nav__link ">
+            <a href="../../upgrade/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1486,29 +1484,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../upgrade/UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1530,26 +1511,36 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../upgrade/migration/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1558,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/1-migrate-database/" class="md-nav__link">
+      <a href="../../upgrade/migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1579,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/2-collect-information/" class="md-nav__link">
+      <a href="../../upgrade/migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1600,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/3-remove-operator-v1/" class="md-nav__link">
+      <a href="../../upgrade/migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/4-install-operator-v2/" class="md-nav__link">
+      <a href="../../upgrade/migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1982,21 +1973,21 @@
   
 
 
-<h1 id="how-to-load-drbd-on-openshift">How to Load DRBD on OpenShift</h1>
+<h1 id="how-to-load-drbd-on-openshift">How to Load DRBD on OpenShift<a class="headerlink" href="#how-to-load-drbd-on-openshift" title="Permanent link">&para;</a></h1>
 <p>This guide shows you how to set the DRBD® Module Loader when using OpenShift.</p>
 <p>To complete this guide, you should be familiar with:</p>
 <ul>
 <li>editing <code>LinstorSatelliteConfiguration</code> resources.</li>
 <li>using the <code>oc</code> command line tool to access the OpenShift cluster.</li>
 </ul>
-<h2 id="find-the-driver-toolkit-image">Find the Driver Toolkit Image</h2>
+<h2 id="find-the-driver-toolkit-image">Find the Driver Toolkit Image<a class="headerlink" href="#find-the-driver-toolkit-image" title="Permanent link">&para;</a></h2>
 <p>The <a href="https://github.com/openshift/driver-toolkit">Driver Toolkit</a> image contains the necessary files for building DRBD.
 Every OpenShift release includes a version of the Driver Toolkit image matching the operating system version of the
 release. You can use <code>oc</code> to print the correct image version:</p>
 <div class="highlight"><pre><span></span><code>$ oc adm release info --image-for=driver-toolkit
 quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1328c4e7944b6d8eda40a8f789471a1aec63abda75ac1199ce098b965ec16709
 </code></pre></div>
-<h2 id="configure-the-drbd-module-loader">Configure the DRBD Module Loader</h2>
+<h2 id="configure-the-drbd-module-loader">Configure the DRBD Module Loader<a class="headerlink" href="#configure-the-drbd-module-loader" title="Permanent link">&para;</a></h2>
 <p>By default, the DRBD Module Loader will try to find the necessary header files to build DRBD from source on the host
 system. In OpenShift, these header files are not included in the host system. Instead, they are included in the Driver
 Toolkit image.</p>
@@ -2034,7 +2025,7 @@ following <code>LinstorSatelliteConfiguration</code>:</p>
 <p><strong>NOTE</strong>: Replace the <code>image</code> of the <code>kernel-header-copy</code> container with the image returned by <code>oc adm release info</code>.</p>
 <p>After the automatic restart of the LINSTOR® Satellite Pods, DRBD will be built from source, using the correct header
 files.</p>
-<h2 id="openshift-update-considerations">OpenShift Update Considerations</h2>
+<h2 id="openshift-update-considerations">OpenShift Update Considerations<a class="headerlink" href="#openshift-update-considerations" title="Permanent link">&para;</a></h2>
 <p>OpenShift updates also update the host operating system. Since every node will be rebooted during the update, the DRBD
 Module loader needs to rebuild DRBD once after the restart for the new host operating system.</p>
 <p>To ensure that the DRBD rebuild is successful, you need to update the image in the <code>openshift-loader-override</code>
