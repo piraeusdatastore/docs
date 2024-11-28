@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
@@ -63,7 +63,7 @@
       
         <meta  property="og:title"  content="Use the Host Network for DRBD Replication - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/drbd-host-networking.png" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:title"  content="Use the Host Network for DRBD Replication - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/drbd-host-networking.png" >
       
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../upgrade/" class="md-tabs__link">
+        <a href="../../upgrade/" class="md-tabs__link">
           
   
     
@@ -1450,8 +1450,6 @@
       
         
       
-        
-      
     
     
       
@@ -1469,7 +1467,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../upgrade/" class="md-nav__link ">
+            <a href="../../upgrade/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1501,29 +1499,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../upgrade/UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1545,26 +1526,36 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../upgrade/migration/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1573,7 +1564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/1-migrate-database/" class="md-nav__link">
+      <a href="../../upgrade/migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1594,7 +1585,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/2-collect-information/" class="md-nav__link">
+      <a href="../../upgrade/migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1615,7 +1606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/3-remove-operator-v1/" class="md-nav__link">
+      <a href="../../upgrade/migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1636,7 +1627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/4-install-operator-v2/" class="md-nav__link">
+      <a href="../../upgrade/migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2012,7 +2003,7 @@
   
 
 
-<h1 id="how-to-use-the-host-network-for-drbd-replication">How to Use the Host Network for DRBD Replication</h1>
+<h1 id="how-to-use-the-host-network-for-drbd-replication">How to Use the Host Network for DRBD Replication<a class="headerlink" href="#how-to-use-the-host-network-for-drbd-replication" title="Permanent link">&para;</a></h1>
 <p>This guide shows you how to use the host network for DRBD® replication.</p>
 <p>By default, DRBD will use the container network to replicate volume data. This ensures replication works on a wide
 range of clusters without further configuration. It also enables use of <code>NetworkPolicy</code> to block unauthorized access
@@ -2022,7 +2013,7 @@ temporarily disrupt replication when the LINSTOR® Satellite Pod is restarted.</
 Satellite Pod. The host network might also offer better performance than the container network. As a downside, you
 will have to manually ensure connectivity between Nodes on the relevant ports.</p>
 <p>To follow the steps in this guide, you should be familiar with editing <code>LinstorSatelliteConfiguration</code> resources.</p>
-<h2 id="switch-from-container-network-to-host-network">Switch from Container Network to Host Network</h2>
+<h2 id="switch-from-container-network-to-host-network">Switch from Container Network to Host Network<a class="headerlink" href="#switch-from-container-network-to-host-network" title="Permanent link">&para;</a></h2>
 <p>Switching from the default container network to host network is possible at any time. Existing DRBD resources will be
 reconfigured to use the host network interface.</p>
 <p>To configure the host network for the LINSTOR Satellite, apply the following configuration:</p>
@@ -2037,10 +2028,10 @@ reconfigured to use the host network interface.</p>
 </code></pre></div>
 <p>After the Satellite Pods are recreated, they will use the host network. Any existing DRBD resources are reconfigured
 to use the new IP Address instead.</p>
-<h2 id="switch-from-host-network-to-container-network">Switch from Host Network to Container Network</h2>
+<h2 id="switch-from-host-network-to-container-network">Switch from Host Network to Container Network<a class="headerlink" href="#switch-from-host-network-to-container-network" title="Permanent link">&para;</a></h2>
 <p>Switching back from host network to container network involves manually resetting the configured peer addresses used by
 DRBD. This can either be achieved by rebooting every node, or by manually resetting the address using <code>drbdadm</code>.</p>
-<h3 id="switch-from-host-network-to-container-network-using-reboots">Switch from Host Network to Container Network Using Reboots</h3>
+<h3 id="switch-from-host-network-to-container-network-using-reboots">Switch from Host Network to Container Network Using Reboots<a class="headerlink" href="#switch-from-host-network-to-container-network-using-reboots" title="Permanent link">&para;</a></h3>
 <p>First, you need to remove the <code>LinstorSatelliteConfiguration</code> that set <code>hostNetwork: true</code>:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl delete linstorsatelliteconfigurations.piraeus.io host-network
 linstorsatelliteconfiguration.piraeus.io &quot;host-network&quot; deleted
@@ -2050,7 +2041,7 @@ rebooted nodes and non-rebooted nodes. The non-rebooted nodes will continue to u
 are generally not reachable from the container network.</p>
 <p>After all nodes are rebooted, all resources are configured to use the container network, and all DRBD connections
 should be connected again.</p>
-<h3 id="switch-from-host-network-to-container-network-using-drbdadm">Switch from Host Network to Container Network Using <code>drbdadm</code></h3>
+<h3 id="switch-from-host-network-to-container-network-using-drbdadm">Switch from Host Network to Container Network Using <code>drbdadm</code><a class="headerlink" href="#switch-from-host-network-to-container-network-using-drbdadm" title="Permanent link">&para;</a></h3>
 <p>During this procedure, ensure no new volumes or snapshots are created: otherwise the migration to the
 container network might not be applied to all resources.</p>
 <p>First, you need to temporarily stop all replication and suspend all DRBD volumes using <code>drbdadm suspend-io all</code>.

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
@@ -63,7 +63,7 @@
       
         <meta  property="og:title"  content="LinstorSatellite - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/reference/linstorsatellite.png" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:title"  content="LinstorSatellite - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/reference/linstorsatellite.png" >
       
@@ -325,7 +325,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../how-to/upgrade/" class="md-tabs__link">
+        <a href="../../upgrade/" class="md-tabs__link">
           
   
     
@@ -1346,8 +1346,6 @@
       
         
       
-        
-      
     
     
       
@@ -1365,7 +1363,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../how-to/upgrade/" class="md-nav__link ">
+            <a href="../../upgrade/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1397,29 +1395,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../how-to/upgrade/UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1441,26 +1422,36 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../upgrade/migration/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1469,7 +1460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/1-migrate-database/" class="md-nav__link">
+      <a href="../../upgrade/migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1490,7 +1481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/2-collect-information/" class="md-nav__link">
+      <a href="../../upgrade/migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1511,7 +1502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/3-remove-operator-v1/" class="md-nav__link">
+      <a href="../../upgrade/migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1532,7 +1523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/4-install-operator-v2/" class="md-nav__link">
+      <a href="../../upgrade/migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2097,33 +2088,33 @@
   
 
 
-<h1 id="linstorsatellite"><code>LinstorSatellite</code></h1>
+<h1 id="linstorsatellite"><code>LinstorSatellite</code><a class="headerlink" href="#linstorsatellite" title="Permanent link">&para;</a></h1>
 <p>This resource controls the state of a LINSTOR® satellite.</p>
 <p><strong>NOTE:</strong> This resource is not intended to be changed directly, instead it is created by the Piraeus Operator
 by merging all matching <a href="../linstorsatelliteconfiguration/"><code>LinstorSatelliteConfiguration</code></a> resources.</p>
-<h2 id="spec"><code>.spec</code></h2>
+<h2 id="spec"><code>.spec</code><a class="headerlink" href="#spec" title="Permanent link">&para;</a></h2>
 <p>Holds the desired state the satellite.</p>
-<h3 id="specrepository"><code>.spec.repository</code></h3>
+<h3 id="specrepository"><code>.spec.repository</code><a class="headerlink" href="#specrepository" title="Permanent link">&para;</a></h3>
 <p>Holds the default image registry to use for all Piraeus images. Inherited from
 <a href="../linstorcluster/#specrepository"><code>LinstorCluster</code></a>.</p>
 <p>If empty (the default), the operator will use <code>quay.io/piraeusdatastore</code>.</p>
-<h3 id="specclusterref"><code>.spec.clusterRef</code></h3>
+<h3 id="specclusterref"><code>.spec.clusterRef</code><a class="headerlink" href="#specclusterref" title="Permanent link">&para;</a></h3>
 <p>Holds a reference to the <a href="../linstorcluster/"><code>LinstorCluster</code></a> that controls this satellite.</p>
-<h3 id="specstoragepools"><code>.spec.storagePools</code></h3>
+<h3 id="specstoragepools"><code>.spec.storagePools</code><a class="headerlink" href="#specstoragepools" title="Permanent link">&para;</a></h3>
 <p>Holds the storage pools to configure on the node. Inherited from matching
 <a href="../linstorsatelliteconfiguration/#specstoragepools"><code>LinstorSatelliteConfiguration</code></a> resources.</p>
-<h3 id="specproperties"><code>.spec.properties</code></h3>
+<h3 id="specproperties"><code>.spec.properties</code><a class="headerlink" href="#specproperties" title="Permanent link">&para;</a></h3>
 <p>Holds the properties which should be set on the node level. Inherited from matching
 <a href="../linstorsatelliteconfiguration/#specproperties"><code>LinstorSatelliteConfiguration</code></a> resources.</p>
-<h3 id="specinternaltls"><code>.spec.internalTLS</code></h3>
+<h3 id="specinternaltls"><code>.spec.internalTLS</code><a class="headerlink" href="#specinternaltls" title="Permanent link">&para;</a></h3>
 <p>Configures a TLS secret used by the LINSTOR Satellite. Inherited from matching
 <a href="../linstorsatelliteconfiguration/#specproperties"><code>LinstorSatelliteConfiguration</code></a> resources.</p>
-<h3 id="specpatches"><code>.spec.patches</code></h3>
+<h3 id="specpatches"><code>.spec.patches</code><a class="headerlink" href="#specpatches" title="Permanent link">&para;</a></h3>
 <p>Holds patches to apply to the Kubernetes resources. Inherited from matching
 <a href="../linstorsatelliteconfiguration/#specpatches"><code>LinstorSatelliteConfiguration</code></a> resources.</p>
-<h2 id="status"><code>.status</code></h2>
+<h2 id="status"><code>.status</code><a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
 <p>Reports the actual state of the satellite.</p>
-<h3 id="statusconditions"><code>.status.conditions</code></h3>
+<h3 id="statusconditions"><code>.status.conditions</code><a class="headerlink" href="#statusconditions" title="Permanent link">&para;</a></h3>
 <p>The Operator reports the current state of the LINSTOR Satellite through a set of conditions. Conditions are
 identified by their <code>type</code>.</p>
 <table>

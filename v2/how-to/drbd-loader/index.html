@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
@@ -63,7 +63,7 @@
       
         <meta  property="og:title"  content="Configure the DRBD Module Loader - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/drbd-loader.png" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:title"  content="Configure the DRBD Module Loader - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/drbd-loader.png" >
       
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../upgrade/" class="md-tabs__link">
+        <a href="../../upgrade/" class="md-tabs__link">
           
   
     
@@ -1435,8 +1435,6 @@
       
         
       
-        
-      
     
     
       
@@ -1454,7 +1452,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../upgrade/" class="md-nav__link ">
+            <a href="../../upgrade/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1486,29 +1484,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../upgrade/UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1530,26 +1511,36 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../upgrade/migration/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1558,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/1-migrate-database/" class="md-nav__link">
+      <a href="../../upgrade/migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1579,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/2-collect-information/" class="md-nav__link">
+      <a href="../../upgrade/migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1600,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/3-remove-operator-v1/" class="md-nav__link">
+      <a href="../../upgrade/migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/4-install-operator-v2/" class="md-nav__link">
+      <a href="../../upgrade/migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1982,7 +1973,7 @@
   
 
 
-<h1 id="how-to-configure-the-drbd-module-loader">How to Configure the DRBD Module Loader</h1>
+<h1 id="how-to-configure-the-drbd-module-loader">How to Configure the DRBD Module Loader<a class="headerlink" href="#how-to-configure-the-drbd-module-loader" title="Permanent link">&para;</a></h1>
 <p>This guide shows you how to configure various aspects of the DRBD® Module Loader.</p>
 <p>To follow the steps in this guide, you should be familiar with editing <code>LinstorSatelliteConfiguration</code> resources.</p>
 <p>DRBD Module Loader is the component responsible for making the DRBD kernel module available, as well as loading other
@@ -2030,7 +2021,7 @@ useful kernel modules for Piraeus.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="disable-the-drbd-module-loader">Disable the DRBD Module Loader</h2>
+<h2 id="disable-the-drbd-module-loader">Disable the DRBD Module Loader<a class="headerlink" href="#disable-the-drbd-module-loader" title="Permanent link">&para;</a></h2>
 <p>In some circumstances it might be necessary to disable the DRBD Module Loader entirely. For example, you are using an
 immutable operating system, and DRBD and other modules are loaded as part of the host configuration.</p>
 <p>To disable the DRBD Module Loader completely, use the following configuration:</p>
@@ -2045,7 +2036,7 @@ immutable operating system, and DRBD and other modules are loaded as part of the
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drbd-module-loader</span>
 <span class="w">          </span><span class="nt">$patch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">delete</span>
 </code></pre></div>
-<h2 id="select-a-different-drbd-loader-version">Select a Different DRBD Loader Version</h2>
+<h2 id="select-a-different-drbd-loader-version">Select a Different DRBD Loader Version<a class="headerlink" href="#select-a-different-drbd-loader-version" title="Permanent link">&para;</a></h2>
 <p>By default, the Operator will try to find a DRBD Module Loader matching the host operating system. The host distribution
 is determined by inspecting the <code>.status.nodeInfo.osImage</code> field of the Kubernetes Node resource. A user-defined image
 can be used if the automatic mapping does not succeed or if you have different module loading requirements.</p>
@@ -2114,7 +2105,7 @@ can be used if the automatic mapping does not succeed or if you have different m
 </table>
 <p>You can create a loader image for your own distribution using the <a href="https://github.com/piraeusdatastore/piraeus/tree/master/dockerfiles/drbd-driver-loader">Piraeus sources</a>
 as reference.</p>
-<h2 id="change-the-way-drbd-module-loader-loads-the-drbd-module">Change the Way DRBD Module Loader Loads the DRBD Module</h2>
+<h2 id="change-the-way-drbd-module-loader-loads-the-drbd-module">Change the Way DRBD Module Loader Loads the DRBD Module<a class="headerlink" href="#change-the-way-drbd-module-loader-loads-the-drbd-module" title="Permanent link">&para;</a></h2>
 <p>By default, DRBD Module Loader will try to build the kernel module from source. The loader can also be configured to load the
 module from a Debian or RPM package included in the image, or skip loading DRBD entirely.</p>
 <p>To change the behaviour of the DRBD Loader, set the <code>LB_HOW</code> environment variable:</p>

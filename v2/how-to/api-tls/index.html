@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
@@ -63,7 +63,7 @@
       
         <meta  property="og:title"  content="Configure TLS for the LINSTOR API - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/api-tls.png" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:title"  content="Configure TLS for the LINSTOR API - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/api-tls.png" >
       
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../upgrade/" class="md-tabs__link">
+        <a href="../../upgrade/" class="md-tabs__link">
           
   
     
@@ -1435,8 +1435,6 @@
       
         
       
-        
-      
     
     
       
@@ -1454,7 +1452,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../upgrade/" class="md-nav__link ">
+            <a href="../../upgrade/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1486,29 +1484,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../upgrade/UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1530,26 +1511,36 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../upgrade/migration/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1558,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/1-migrate-database/" class="md-nav__link">
+      <a href="../../upgrade/migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1579,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/2-collect-information/" class="md-nav__link">
+      <a href="../../upgrade/migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1600,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/3-remove-operator-v1/" class="md-nav__link">
+      <a href="../../upgrade/migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/4-install-operator-v2/" class="md-nav__link">
+      <a href="../../upgrade/migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1982,7 +1973,7 @@
   
 
 
-<h1 id="how-to-configure-tls-for-the-linstor-api">How to Configure TLS for the LINSTOR API</h1>
+<h1 id="how-to-configure-tls-for-the-linstor-api">How to Configure TLS for the LINSTOR API<a class="headerlink" href="#how-to-configure-tls-for-the-linstor-api" title="Permanent link">&para;</a></h1>
 <p>This guide shows you how to set up TLS for the LINSTOR® API. The API, served by the LINSTOR Controller, is used by
 clients such as the CSI Driver and the Operator itself to control the LINSTOR Cluster.</p>
 <p>To complete this guide, you should be familiar with:</p>
@@ -1990,7 +1981,7 @@ clients such as the CSI Driver and the Operator itself to control the LINSTOR Cl
 <li>editing <code>LinstorCluster</code> resources.</li>
 <li>using either <a href="https://cert-manager.io">cert-manager</a> or <code>openssl</code> to create TLS certificates.</li>
 </ul>
-<h2 id="provision-keys-and-certificates-using-cert-manager">Provision Keys and Certificates Using cert-manager</h2>
+<h2 id="provision-keys-and-certificates-using-cert-manager">Provision Keys and Certificates Using cert-manager<a class="headerlink" href="#provision-keys-and-certificates-using-cert-manager" title="Permanent link">&para;</a></h2>
 <p>This method requires a working <a href="https://cert-manager.io">cert-manager</a> deployment in your cluster. For an alternative
 way to provision keys and certificates, see the <a href="#provision-keys-and-certificates-using-openssl"><code>openssl</code> section</a>
 below.</p>
@@ -2044,7 +2035,7 @@ below.</p>
 <span class="w">      </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Issuer</span>
 </code></pre></div>
 <p>This completes the necessary steps for secure the LINSTOR API with TLS using cert-manager. Skip to the <a href="#verifying-tls-configuration">last section</a> to verify TLS is working.</p>
-<h2 id="provision-keys-and-certificates-using-openssl">Provision Keys and Certificates Using <code>openssl</code></h2>
+<h2 id="provision-keys-and-certificates-using-openssl">Provision Keys and Certificates Using <code>openssl</code><a class="headerlink" href="#provision-keys-and-certificates-using-openssl" title="Permanent link">&para;</a></h2>
 <p>If you completed the <a href="#provision-keys-and-certificates-using-cert-manager">cert-manager section</a> above, skip directly
 to the <a href="#verifying-tls-configuration">verifying the configuration</a> below.</p>
 <p>This method requires the <code>openssl</code> program on the command line. For an alternative way to provision keys and
@@ -2090,7 +2081,7 @@ kubectl<span class="w"> </span>create<span class="w"> </span>secret<span class="
 <span class="w">    </span><span class="nt">csiControllerSecretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstor-client-tls</span>
 <span class="w">    </span><span class="nt">csiNodeSecretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstor-client-tls</span>
 </code></pre></div>
-<h2 id="verifying-tls-configuration">Verifying TLS Configuration</h2>
+<h2 id="verifying-tls-configuration">Verifying TLS Configuration<a class="headerlink" href="#verifying-tls-configuration" title="Permanent link">&para;</a></h2>
 <p>You can verify that the secure API is running by manually connecting to the HTTPS endpoint using <code>curl</code></p>
 <div class="highlight"><pre><span></span><code>$ kubectl exec -n piraeus-datastore deploy/linstor-controller -- curl --key /etc/linstor/client/tls.key --cert /etc/linstor/client/tls.crt --cacert /etc/linstor/client/ca.crt https://linstor-controller.piraeus-datastore.svc:3371/v1/controller/version
 {&quot;version&quot;:&quot;1.20.2&quot;,&quot;git_hash&quot;:&quot;58a983a5c2f49eb8d22c89b277272e6c4299457a&quot;,&quot;build_time&quot;:&quot;2022-12-14T14:21:28+00:00&quot;,&quot;rest_api_version&quot;:&quot;1.16.0&quot;}%

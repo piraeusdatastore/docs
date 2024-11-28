@@ -93,30 +93,6 @@
          <lastmod>2024-11-28</lastmod>
     </url>
     <url>
-         <loc>https://piraeus.io/docs/v2/how-to/upgrade/</loc>
-         <lastmod>2024-11-28</lastmod>
-    </url>
-    <url>
-         <loc>https://piraeus.io/docs/v2/how-to/upgrade/1-migrate-database/</loc>
-         <lastmod>2024-11-28</lastmod>
-    </url>
-    <url>
-         <loc>https://piraeus.io/docs/v2/how-to/upgrade/2-collect-information/</loc>
-         <lastmod>2024-11-28</lastmod>
-    </url>
-    <url>
-         <loc>https://piraeus.io/docs/v2/how-to/upgrade/3-remove-operator-v1/</loc>
-         <lastmod>2024-11-28</lastmod>
-    </url>
-    <url>
-         <loc>https://piraeus.io/docs/v2/how-to/upgrade/4-install-operator-v2/</loc>
-         <lastmod>2024-11-28</lastmod>
-    </url>
-    <url>
-         <loc>https://piraeus.io/docs/v2/how-to/upgrade/UPGRADE/</loc>
-         <lastmod>2024-11-28</lastmod>
-    </url>
-    <url>
          <loc>https://piraeus.io/docs/v2/reference/</loc>
          <lastmod>2024-11-28</lastmod>
     </url>
@@ -150,6 +126,30 @@
     </url>
     <url>
          <loc>https://piraeus.io/docs/v2/tutorial/snapshots/</loc>
+         <lastmod>2024-11-28</lastmod>
+    </url>
+    <url>
+         <loc>https://piraeus.io/docs/v2/upgrade/</loc>
+         <lastmod>2024-11-28</lastmod>
+    </url>
+    <url>
+         <loc>https://piraeus.io/docs/v2/upgrade/migration/</loc>
+         <lastmod>2024-11-28</lastmod>
+    </url>
+    <url>
+         <loc>https://piraeus.io/docs/v2/upgrade/migration/1-migrate-database/</loc>
+         <lastmod>2024-11-28</lastmod>
+    </url>
+    <url>
+         <loc>https://piraeus.io/docs/v2/upgrade/migration/2-collect-information/</loc>
+         <lastmod>2024-11-28</lastmod>
+    </url>
+    <url>
+         <loc>https://piraeus.io/docs/v2/upgrade/migration/3-remove-operator-v1/</loc>
+         <lastmod>2024-11-28</lastmod>
+    </url>
+    <url>
+         <loc>https://piraeus.io/docs/v2/upgrade/migration/4-install-operator-v2/</loc>
          <lastmod>2024-11-28</lastmod>
     </url>
 </urlset>

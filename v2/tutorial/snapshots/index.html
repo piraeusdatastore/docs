@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
@@ -63,7 +63,7 @@
       
         <meta  property="og:title"  content="Creating Snapshots - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/tutorial/snapshots.png" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:title"  content="Creating Snapshots - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/tutorial/snapshots.png" >
       
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../how-to/upgrade/" class="md-tabs__link">
+        <a href="../../upgrade/" class="md-tabs__link">
           
   
     
@@ -1436,8 +1436,6 @@
       
         
       
-        
-      
     
     
       
@@ -1455,7 +1453,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../how-to/upgrade/" class="md-nav__link ">
+            <a href="../../upgrade/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1487,29 +1485,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../how-to/upgrade/UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1531,26 +1512,36 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../upgrade/migration/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1559,7 +1550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/1-migrate-database/" class="md-nav__link">
+      <a href="../../upgrade/migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1580,7 +1571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/2-collect-information/" class="md-nav__link">
+      <a href="../../upgrade/migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1601,7 +1592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/3-remove-operator-v1/" class="md-nav__link">
+      <a href="../../upgrade/migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1622,7 +1613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/4-install-operator-v2/" class="md-nav__link">
+      <a href="../../upgrade/migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2001,14 +1992,14 @@
   
 
 
-<h1 id="creating-and-restoring-from-snapshots">Creating and Restoring From Snapshots</h1>
+<h1 id="creating-and-restoring-from-snapshots">Creating and Restoring From Snapshots<a class="headerlink" href="#creating-and-restoring-from-snapshots" title="Permanent link">&para;</a></h1>
 <p>Learn how to create snapshots of your data, and how you can restore the data in a snapshot.</p>
 <p>Snapshots create a copy of the volume content at a particular point in time. This copy remains untouched when you make
 modifications to the volume content. This, for example, enables you to create backups of your data before performing
 modifications or deletion on your data.</p>
 <p>Since a backup is useless, unless you have a way to restore it, this tutorial will teach you both how to create a
 snapshot, and how to restore in the case of accidental deletion of your data.</p>
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>An installed and configured Piraeus Datastore. Learn how to get started in our <a href="../get-started/">introduction tutorial</a></li>
 <li>A storage pool supporting snapshots. LINSTOR supports snapshots for <code>LVM_THIN</code>, <code>FILE_THIN</code>, <code>ZFS</code> and <code>ZFS_THIN</code> pools.
@@ -2026,7 +2017,7 @@ volumesnapshots.snapshot.storage.k8s.io
 kubectl apply -k https://github.com/kubernetes-csi/external-snapshotter//deploy/kubernetes/snapshot-controller
 </code></pre></div></li>
 </ul>
-<h2 id="creating-an-example-workload">Creating an Example Workload</h2>
+<h2 id="creating-an-example-workload">Creating an Example Workload<a class="headerlink" href="#creating-an-example-workload" title="Permanent link">&para;</a></h2>
 <p>We will be using the same workload as in the <a href="../replicated-volumes/">replicated volumes tutorial</a>. This workload
 will save the Pods name, the node it is running on, and a timestamp to our volume. By logging this information to our
 volume, we can easily keep track of our data.</p>
@@ -2101,7 +2092,7 @@ pod/volume-logger-cbcd897b7-jrmks condition met
 $ kubectl exec deploy/volume-logger -- cat /volume/hello
 Hello from volume-logger-cbcd897b7-jrmks, running on n3.example.com, started at Mon Feb 13 15:32:46 UTC 2023
 </code></pre></div>
-<h2 id="creating-a-snapshot">Creating a Snapshot</h2>
+<h2 id="creating-a-snapshot">Creating a Snapshot<a class="headerlink" href="#creating-a-snapshot" title="Permanent link">&para;</a></h2>
 <p>Creating a snapshot requires the creation of a <a href="https://kubernetes.io/docs/concepts/storage/volume-snapshot-classes/"><code>SnapshotClass</code></a> first.
 The <code>SnapshotClass</code> specifies our <code>linstor.csi.linbit.com</code> provisioner, and sets the clean-up policy for our snapshots
 to <code>Delete</code>, meaning deleting the Kubernetes resources will also delete the snapshots in LINSTOR®.</p>
@@ -2141,7 +2132,7 @@ $ kubectl -n piraeus-datastore exec deploy/linstor-controller -- linstor snapsho
 | pvc-9c04b307-d22d-454f-8f24-ed5837fe4426 | snapshot-a8757c1d-cd37-42d2-9557-a24b1222d118 | n3.example.com | 0: 1 GiB | 2023-02-13 15:36:18 | Successful |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 </code></pre></div>
-<h2 id="modifying-the-data">Modifying the Data</h2>
+<h2 id="modifying-the-data">Modifying the Data<a class="headerlink" href="#modifying-the-data" title="Permanent link">&para;</a></h2>
 <p>Now we want to simulate a situation where we accidentally delete some important data. The important data in our example
 workload is the log of Pod name, Node name and timestamp. We will manually delete the file on the volume to simulate
 accidental removal of an important file on a persistent volume:</p>
@@ -2150,7 +2141,7 @@ $ kubectl exec deploy/volume-logger -- cat /volume/hello
 cat: can&#39;t open &#39;/volume/hello&#39;: No such file or directory
 command terminated with exit code 1
 </code></pre></div>
-<h2 id="restoring-from-a-snapshot">Restoring From a Snapshot</h2>
+<h2 id="restoring-from-a-snapshot">Restoring From a Snapshot<a class="headerlink" href="#restoring-from-a-snapshot" title="Permanent link">&para;</a></h2>
 <p>This is the exact situation where snapshots can come in handy. Since we created a snapshot before we made removed the
 file, we can create a new volume to recover our data. We will be replacing the existing <code>data-volume</code> with a new version
 based on the snapshot.</p>

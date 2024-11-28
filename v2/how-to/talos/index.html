@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
@@ -63,7 +63,7 @@
       
         <meta  property="og:title"  content="Talos Linux - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/talos.png" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:title"  content="Talos Linux - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/talos.png" >
       
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../upgrade/" class="md-tabs__link">
+        <a href="../../upgrade/" class="md-tabs__link">
           
   
     
@@ -1426,8 +1426,6 @@
       
         
       
-        
-      
     
     
       
@@ -1445,7 +1443,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../upgrade/" class="md-nav__link ">
+            <a href="../../upgrade/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1477,29 +1475,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../upgrade/UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1521,26 +1502,36 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../upgrade/migration/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1549,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/1-migrate-database/" class="md-nav__link">
+      <a href="../../upgrade/migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1570,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/2-collect-information/" class="md-nav__link">
+      <a href="../../upgrade/migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1591,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/3-remove-operator-v1/" class="md-nav__link">
+      <a href="../../upgrade/migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1612,7 +1603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/4-install-operator-v2/" class="md-nav__link">
+      <a href="../../upgrade/migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1964,7 +1955,7 @@
   
 
 
-<h1 id="how-to-load-drbd-on-talos-linux">How to Load DRBD on Talos Linux</h1>
+<h1 id="how-to-load-drbd-on-talos-linux">How to Load DRBD on Talos Linux<a class="headerlink" href="#how-to-load-drbd-on-talos-linux" title="Permanent link">&para;</a></h1>
 <p>This guide shows you how to set the DRBD® Module Loader when using <a href="https://talos.dev">Talos Linux</a>.</p>
 <p>To complete this guide, you should be familiar with:</p>
 <ul>
@@ -1972,7 +1963,7 @@
 <li>using the <code>talosctl</code> command line to to access Talos Linux nodes.</li>
 <li>using the <code>kubectl</code> command line tool to access the Kubernetes cluster.</li>
 </ul>
-<h2 id="configure-talos-system-extension-for-drbd">Configure Talos system extension for DRBD</h2>
+<h2 id="configure-talos-system-extension-for-drbd">Configure Talos system extension for DRBD<a class="headerlink" href="#configure-talos-system-extension-for-drbd" title="Permanent link">&para;</a></h2>
 <p>By default, the DRBD Module Loader will try to find the necessary header files to build DRBD from source on the host system. In <a href="https://talos.dev">Talos Linux</a> these header files are not included in the host system. Instead, the Kernel modules is packed into a system extension.</p>
 <p>Ensure Talos has the correct <code>drbd</code> <a href="https://github.com/siderolabs/extensions">system extension</a> loaded for the running Kernel.</p>
 <p>This is done by building a install image from the <a href="https://factory.talos.dev">talos factory</a> with drbd included</p>
@@ -1994,7 +1985,7 @@ drbd<span class="w"> </span><span class="m">643072</span><span class="w"> </span
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>talosctl<span class="w"> </span>-n<span class="w"> </span>&lt;NODE_IP&gt;<span class="w"> </span><span class="nb">read</span><span class="w"> </span>/sys/module/drbd/parameters/usermode_helper
 disabled
 </code></pre></div></p>
-<h2 id="configure-the-drbd-module-loader">Configure the DRBD Module Loader</h2>
+<h2 id="configure-the-drbd-module-loader">Configure the DRBD Module Loader<a class="headerlink" href="#configure-the-drbd-module-loader" title="Permanent link">&para;</a></h2>
 <p>To change the DRBD Module Loader, so that it uses the modules provided by system extension, apply the following <code>LinstorSatelliteConfiguration</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorSatelliteConfiguration</span>

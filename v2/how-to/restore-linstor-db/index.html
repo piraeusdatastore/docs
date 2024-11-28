@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
@@ -18,7 +18,7 @@
         <link rel="prev" href="../linstor-affinity-controller/">
       
       
-        <link rel="next" href="../upgrade/">
+        <link rel="next" href="../../upgrade/">
       
       
       <link rel="icon" href="../../assets/favicon.png">
@@ -63,7 +63,7 @@
       
         <meta  property="og:title"  content="Restore a LINSTOR Database Backup - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/restore-linstor-db.png" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:title"  content="Restore a LINSTOR Database Backup - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/restore-linstor-db.png" >
       
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../upgrade/" class="md-tabs__link">
+        <a href="../../upgrade/" class="md-tabs__link">
           
   
     
@@ -1453,8 +1453,6 @@
       
         
       
-        
-      
     
     
       
@@ -1472,7 +1470,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../upgrade/" class="md-nav__link ">
+            <a href="../../upgrade/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1504,29 +1502,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../upgrade/UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1548,26 +1529,36 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../upgrade/migration/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1576,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/1-migrate-database/" class="md-nav__link">
+      <a href="../../upgrade/migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1597,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/2-collect-information/" class="md-nav__link">
+      <a href="../../upgrade/migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1618,7 +1609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/3-remove-operator-v1/" class="md-nav__link">
+      <a href="../../upgrade/migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1639,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/4-install-operator-v2/" class="md-nav__link">
+      <a href="../../upgrade/migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2018,7 +2009,7 @@
   
 
 
-<h1 id="how-to-restore-a-linstor-database-backup">How to Restore a LINSTOR Database Backup</h1>
+<h1 id="how-to-restore-a-linstor-database-backup">How to Restore a LINSTOR Database Backup<a class="headerlink" href="#how-to-restore-a-linstor-database-backup" title="Permanent link">&para;</a></h1>
 <p>This guide shows you how to restore a LINSTOR® Controller from a database backup. A backup is created automatically
 on every database migration of the default <code>k8s</code> database.</p>
 <blockquote>
@@ -2030,7 +2021,7 @@ This includes information about Persistent Volumes and Volume Snapshots that whe
 <ul>
 <li>using the <code>kubectl</code> command line tool to access the Kubernetes cluster.</li>
 </ul>
-<h2 id="find-the-latest-backup">Find the Latest Backup</h2>
+<h2 id="find-the-latest-backup">Find the Latest Backup<a class="headerlink" href="#find-the-latest-backup" title="Permanent link">&para;</a></h2>
 <p>The backup is stored in Kubernetes Secrets. List all backups by using the following command:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl get secrets --field-selector type=piraeus.io/linstor-backup --sort-by .metadata.creationTimestamp -ocustom-columns=&quot;NAME:.metadata.name,CREATED-AT:metadata.creationTimestamp,VERSION:.metadata.annotations.piraeus\.io/linstor-version&quot;
 NAME                                                     CREATED-AT             VERSION
@@ -2041,7 +2032,7 @@ linstor-backup-for-linstor-controller-745d54bf99-544hf   2024-11-04T08:03:59Z   
 we set:</p>
 <div class="highlight"><pre><span></span><code>$ BACKUP_NAME=linstor-backup-for-linstor-controller-db7fbfd95-zsfmm
 </code></pre></div>
-<h2 id="temporarily-stop-the-linstor-controller-deployment">Temporarily stop the LINSTOR Controller Deployment</h2>
+<h2 id="temporarily-stop-the-linstor-controller-deployment">Temporarily stop the LINSTOR Controller Deployment<a class="headerlink" href="#temporarily-stop-the-linstor-controller-deployment" title="Permanent link">&para;</a></h2>
 <p>To safely restore the database, ensure that the LINSTOR Controller is shut down by scaling the Piraeus Operator and
 LINSTOR Controller deployment to 0 replicas:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl scale deployment piraeus-operator-controller-manager --replicas 0
@@ -2049,14 +2040,14 @@ deployment.apps/piraeus-operator-controller-manager scaled
 $ kubectl scale deployment linstor-controller --replicas 0
 deployment.apps/linstor-controller scaled
 </code></pre></div>
-<h2 id="create-a-new-backup-of-the-current-cluster-state">Create a New Backup of the Current Cluster State</h2>
+<h2 id="create-a-new-backup-of-the-current-cluster-state">Create a New Backup of the Current Cluster State<a class="headerlink" href="#create-a-new-backup-of-the-current-cluster-state" title="Permanent link">&para;</a></h2>
 <p>Since the restore process is destructive, first create a backup of the current database:</p>
 <div class="highlight"><pre><span></span><code>$ mkdir backup
 $ cd backup
 $ kubectl api-resources --api-group=internal.linstor.linbit.com -oname | xargs --no-run-if-empty kubectl get crds -oyaml &gt; crds.yaml
 $ kubectl api-resources --api-group=internal.linstor.linbit.com -oname | xargs --no-run-if-empty -I {} sh -c &#39;kubectl get {} -oyaml &gt; {}.yaml&#39;
 </code></pre></div>
-<h2 id="restore-the-database">Restore the Database</h2>
+<h2 id="restore-the-database">Restore the Database<a class="headerlink" href="#restore-the-database" title="Permanent link">&para;</a></h2>
 <p>Copy and unpack the selected backup to a local directory by using the following commands:</p>
 <div class="highlight"><pre><span></span><code>$ mkdir restore
 $ cd restore
@@ -2070,7 +2061,7 @@ crds.yaml
 <div class="highlight"><pre><span></span><code>$ kubectl api-resources --api-group=internal.linstor.linbit.com -oname | xargs --no-run-if-empty kubectl delete crds
 $ kubectl create -f .
 </code></pre></div>
-<h2 id="restart-the-linstor-controller-deployment">Restart the LINSTOR Controller Deployment</h2>
+<h2 id="restart-the-linstor-controller-deployment">Restart the LINSTOR Controller Deployment<a class="headerlink" href="#restart-the-linstor-controller-deployment" title="Permanent link">&para;</a></h2>
 <p>Now we can safely restart the Piraeus Operator and LINSTOR Controller Deployment.</p>
 <div class="highlight"><pre><span></span><code>$ kubectl scale deployment piraeus-operator-controller-manager --replicas 1
 deployment.apps/piraeus-operator-controller-manager scaled
@@ -2138,7 +2129,7 @@ deployment &quot;linstor-controller&quot; successfully rolled out
         
         
           
-          <a href="../upgrade/" class="md-footer__link md-footer__link--next" aria-label="Next: Upgrades">
+          <a href="../../upgrade/" class="md-footer__link md-footer__link--next" aria-label="Next: Upgrades">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next

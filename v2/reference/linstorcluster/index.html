@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
@@ -63,7 +63,7 @@
       
         <meta  property="og:title"  content="LinstorCluster - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/reference/linstorcluster.png" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:title"  content="LinstorCluster - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/reference/linstorcluster.png" >
       
@@ -325,7 +325,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../how-to/upgrade/" class="md-tabs__link">
+        <a href="../../upgrade/" class="md-tabs__link">
           
   
     
@@ -1346,8 +1346,6 @@
       
         
       
-        
-      
     
     
       
@@ -1365,7 +1363,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../how-to/upgrade/" class="md-nav__link ">
+            <a href="../../upgrade/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1397,29 +1395,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../how-to/upgrade/UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1441,26 +1422,36 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../upgrade/migration/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1469,7 +1460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/1-migrate-database/" class="md-nav__link">
+      <a href="../../upgrade/migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1490,7 +1481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/2-collect-information/" class="md-nav__link">
+      <a href="../../upgrade/migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1511,7 +1502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/3-remove-operator-v1/" class="md-nav__link">
+      <a href="../../upgrade/migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1532,7 +1523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/4-install-operator-v2/" class="md-nav__link">
+      <a href="../../upgrade/migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2223,7 +2214,7 @@
   
 
 
-<h1 id="linstorcluster"><code>LinstorCluster</code></h1>
+<h1 id="linstorcluster"><code>LinstorCluster</code><a class="headerlink" href="#linstorcluster" title="Permanent link">&para;</a></h1>
 <p>This resource controls the state of the LINSTOR® cluster and integration with Kubernetes.
 In particular, it controls:</p>
 <ul>
@@ -2231,15 +2222,15 @@ In particular, it controls:</p>
 <li>LINSTOR CSI Driver</li>
 <li><code>LinstorSatellite</code>, configured through <code>LinstorSatelliteConfiguration</code> resources.</li>
 </ul>
-<h2 id="spec"><code>.spec</code></h2>
+<h2 id="spec"><code>.spec</code><a class="headerlink" href="#spec" title="Permanent link">&para;</a></h2>
 <p>Configures the desired state of the cluster.</p>
-<h3 id="specnodeselector"><code>.spec.nodeSelector</code></h3>
+<h3 id="specnodeselector"><code>.spec.nodeSelector</code><a class="headerlink" href="#specnodeselector" title="Permanent link">&para;</a></h3>
 <p>Selects on which nodes Piraeus Datastore should be deployed. Nodes that are
 excluded by the selector will not be able to run any workload using a Piraeus volume.</p>
 <p>If empty (the default), Piraeus will be deployed on all nodes in the cluster.</p>
 <p>When this is used together with <code>.spec.nodeAffinity</code>, both need to match in order for
 a node to run Piraeus.</p>
-<h4 id="example">Example</h4>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
 <p>This example restricts Piraeus Datastore to nodes matching <code>example.com/storage: "yes"</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
@@ -2249,13 +2240,13 @@ a node to run Piraeus.</p>
 <span class="w">  </span><span class="nt">nodeSelector</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">example.com/storage</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;yes&quot;</span>
 </code></pre></div>
-<h3 id="specnodeaffinity"><code>.spec.nodeAffinity</code></h3>
+<h3 id="specnodeaffinity"><code>.spec.nodeAffinity</code><a class="headerlink" href="#specnodeaffinity" title="Permanent link">&para;</a></h3>
 <p>Selects on which nodes Piraeus Datastore should be deployed. Nodes that are
 excluded by the affinity will not be able to run any workload using a Piraeus volume.</p>
 <p>If empty (the default), Piraeus will be deployed on all nodes in the cluster.</p>
 <p>When this is used together with <code>.spec.nodeSelector</code>, both need to match in order for
 a node to run Piraeus.</p>
-<h4 id="example_1">Example</h4>
+<h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
 <p>This example restricts Piraeus Datastore to nodes in zones <code>a</code> and <code>b</code>, but not on <code>control-plane</code> nodes:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
@@ -2273,12 +2264,12 @@ a node to run Piraeus.</p>
 <span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node-role.kubernetes.io/control-plane</span>
 <span class="w">            </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DoesNotExist</span>
 </code></pre></div>
-<h3 id="specrepository"><code>.spec.repository</code></h3>
+<h3 id="specrepository"><code>.spec.repository</code><a class="headerlink" href="#specrepository" title="Permanent link">&para;</a></h3>
 <p>Sets the default image registry to use for all Piraeus images. The full image name is
 created by appending an image identifier and tag.</p>
 <p>If empty (the default), Piraeus will use <code>quay.io/piraeusdatastore</code>.</p>
-<p>The current list of default images is available <a href="https://github.com/piraeus/config/manager/0_piraeus_datastore_images.yaml">here</a>.</p>
-<h4 id="example_2">Example</h4>
+<p>The current list of default images is available <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v2/config/manager/0_piraeus_datastore_images.yaml">here</a>.</p>
+<h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
 <p>This example pulls all Piraeus images from <code>registry.example.com/piraeus-mirror</code>
 rather than <code>quay.io/piraeusdatastore</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
@@ -2288,9 +2279,9 @@ rather than <code>quay.io/piraeusdatastore</code>.</p>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">registry.example.com/piraeus-mirror</span>
 </code></pre></div>
-<h3 id="specproperties"><code>.spec.properties</code></h3>
+<h3 id="specproperties"><code>.spec.properties</code><a class="headerlink" href="#specproperties" title="Permanent link">&para;</a></h3>
 <p>Sets the given properties on the LINSTOR Controller level, applying them to the whole Cluster.</p>
-<h4 id="example_3">Example</h4>
+<h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
 <p>This example sets the port range used for DRBD® volumes to <code>10000-20000</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
@@ -2301,13 +2292,13 @@ rather than <code>quay.io/piraeusdatastore</code>.</p>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TcpPortAutoRange</span>
 <span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10000-20000&quot;</span>
 </code></pre></div>
-<h3 id="speclinstorpassphrasesecret"><code>.spec.linstorPassphraseSecret</code></h3>
+<h3 id="speclinstorpassphrasesecret"><code>.spec.linstorPassphraseSecret</code><a class="headerlink" href="#speclinstorpassphrasesecret" title="Permanent link">&para;</a></h3>
 <p>Configures the <a href="https://linbit.com/drbd-user-guide/linstor-guide-1_0-en/#s-linstor-encrypted-volumes">LINSTOR passphrase</a>,
 used by LINSTOR when creating encrypted volumes and storing access credentials
 for backups.</p>
 <p>The referenced secret must exist in the same namespace as the operator
 (by default <code>piraeus-datastore</code>), and have a <code>MASTER_PASSPHRASE</code> entry.</p>
-<h4 id="example_4">Example</h4>
+<h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h4>
 <p>This example configures a passphrase <code>example-passphrase</code>. Please <strong>choose a different passphrase</strong> for your deployment.</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
 <span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
@@ -2327,15 +2318,15 @@ for backups.</p>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">linstorPassphraseSecret</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstor-passphrase</span>
 </code></pre></div>
-<h3 id="specpatches"><code>.spec.patches</code></h3>
+<h3 id="specpatches"><code>.spec.patches</code><a class="headerlink" href="#specpatches" title="Permanent link">&para;</a></h3>
 <p>The given patches will be applied to all resources controlled by the operator. The patches are
 forwarded to <code>kustomize</code> internally, and take the <a href="https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/patches/">same format</a>.</p>
 <p>The unpatched resources are available in the <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v2/pkg/resources/cluster">subdirectories of the <code>pkg/resources</code> directory</a>.</p>
-<h4 id="warning">Warning</h4>
+<h4 id="warning">Warning<a class="headerlink" href="#warning" title="Permanent link">&para;</a></h4>
 <p>No checks are run on the result of user-supplied patches: the resources are applied
 as-is. Patching some fundamental aspect, such as removing a specific volume from a
 container may lead to a degraded cluster.</p>
-<h4 id="example_5">Example</h4>
+<h4 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h4>
 <p>This example sets a CPU limit of <code>10m</code> on the CSI Node init container and changes the
 LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
@@ -2364,9 +2355,9 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <span class="w">        </span><span class="no">spec:</span>
 <span class="w">          </span><span class="no">ipFamilyPolicy: SingleStack</span>
 </code></pre></div>
-<h3 id="specexternalcontroller"><code>.spec.externalController</code></h3>
+<h3 id="specexternalcontroller"><code>.spec.externalController</code><a class="headerlink" href="#specexternalcontroller" title="Permanent link">&para;</a></h3>
 <p>Configures the Operator to use an external controller instead of deploying one in the Cluster.</p>
-<h4 id="example_6">Example</h4>
+<h4 id="example_6">Example<a class="headerlink" href="#example_6" title="Permanent link">&para;</a></h4>
 <p>This examples instructs the Operator to use the external LINSTOR Controller reachable at <code>http://linstor.example.com:3370</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
@@ -2376,11 +2367,11 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <span class="w">  </span><span class="nt">externalController</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://linstor.example.com:3370</span>
 </code></pre></div>
-<h3 id="speccontroller"><code>.spec.controller</code></h3>
+<h3 id="speccontroller"><code>.spec.controller</code><a class="headerlink" href="#speccontroller" title="Permanent link">&para;</a></h3>
 <p>Controls the LINSTOR Controller Deployment:
 * Setting <code>enabled: false</code> disables the controller deployment entirely. See also <a href="#specexternalcontroller"><code>.spec.externalController</code></a>.
 * Setting a <code>podTemplate:</code> allows for simple modification of the LINSTOR Controller Deployment.</p>
-<h4 id="example_7">Example</h4>
+<h4 id="example_7">Example<a class="headerlink" href="#example_7" title="Permanent link">&para;</a></h4>
 <p>This example configures a resource request of <code>memory: 1Gi</code> for the LINSTOR Controller Deployment:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
@@ -2397,11 +2388,11 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <span class="w">              </span><span class="nt">requests</span><span class="p">:</span>
 <span class="w">                </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1Gi</span>
 </code></pre></div>
-<h3 id="speccsicontroller"><code>.spec.csiController</code></h3>
+<h3 id="speccsicontroller"><code>.spec.csiController</code><a class="headerlink" href="#speccsicontroller" title="Permanent link">&para;</a></h3>
 <p>Controls the CSI Controller Deployment:
 * Setting <code>enabled: false</code> disables the deployment entirely.
 * Setting a <code>podTemplate:</code> allows for simple modification of the CSI Controller Deployment.</p>
-<h4 id="example_8">Example</h4>
+<h4 id="example_8">Example<a class="headerlink" href="#example_8" title="Permanent link">&para;</a></h4>
 <p>This example configures a resource request of <code>cpu: 10m</code> for the CSI Controller Deployment:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
@@ -2418,11 +2409,11 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <span class="w">              </span><span class="nt">requests</span><span class="p">:</span>
 <span class="w">                </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1Gi</span>
 </code></pre></div>
-<h3 id="speccsinode"><code>.spec.csiNode</code></h3>
+<h3 id="speccsinode"><code>.spec.csiNode</code><a class="headerlink" href="#speccsinode" title="Permanent link">&para;</a></h3>
 <p>Controls the CSI Node DaemonSet:
 * Setting <code>enabled: false</code> disables the deployment entirely.
 * Setting a <code>podTemplate:</code> allows for simple modification of the CSI Node DaemonSet.</p>
-<h4 id="example_9">Example</h4>
+<h4 id="example_9">Example<a class="headerlink" href="#example_9" title="Permanent link">&para;</a></h4>
 <p>This example configures a resource request of <code>cpu: 10m</code> for the CSI Node DaemonSet:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
@@ -2439,11 +2430,11 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <span class="w">              </span><span class="nt">requests</span><span class="p">:</span>
 <span class="w">                </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1Gi</span>
 </code></pre></div>
-<h3 id="spechighavailabilitycontroller"><code>.spec.highAvailabilityController</code></h3>
+<h3 id="spechighavailabilitycontroller"><code>.spec.highAvailabilityController</code><a class="headerlink" href="#spechighavailabilitycontroller" title="Permanent link">&para;</a></h3>
 <p>Controls the High Availability Controller DaemonSet:
 * Setting <code>enabled: false</code> disables the deployment entirely.
 * Setting a <code>podTemplate:</code> allows for simple modification of the CSI Node Deployment.</p>
-<h4 id="example_10">Example</h4>
+<h4 id="example_10">Example<a class="headerlink" href="#example_10" title="Permanent link">&para;</a></h4>
 <p>This example configures a resource request of <code>cpu: 10m</code> for the CSI Node Deployment:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
@@ -2460,7 +2451,7 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <span class="w">              </span><span class="nt">requests</span><span class="p">:</span>
 <span class="w">                </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1Gi</span>
 </code></pre></div>
-<h3 id="specinternaltls"><code>.spec.internalTLS</code></h3>
+<h3 id="specinternaltls"><code>.spec.internalTLS</code><a class="headerlink" href="#specinternaltls" title="Permanent link">&para;</a></h3>
 <p>Configures a TLS secret used by the LINSTOR Controller to:
 * Validate the certificate of the LINSTOR Satellites, that is the Satellites must have certificates signed by <code>ca.crt</code>.
 * Provide a client certificate for authentication with LINSTOR Satellites, that is <code>tls.key</code> and <code>tls.crt</code> must be accepted by the Satellites.</p>
@@ -2471,7 +2462,7 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 to let the operator create the required secret.</p>
 <p>If the referenced secret does not contain a <code>ca.crt</code> certificate of a certificate authority, a <code>caReference</code> pointing
 to a secondary <code>Secret</code> or <code>ConfigMap</code> resource can be configured.</p>
-<h4 id="example_11">Example</h4>
+<h4 id="example_11">Example<a class="headerlink" href="#example_11" title="Permanent link">&para;</a></h4>
 <p>This example creates a manually provisioned TLS secret and references it in the
 LinstorCluster configuration.</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
@@ -2493,7 +2484,7 @@ LinstorCluster configuration.</p>
 <span class="w">  </span><span class="nt">internalTLS</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-linstor-controller-tls</span>
 </code></pre></div>
-<h4 id="example_12">Example</h4>
+<h4 id="example_12">Example<a class="headerlink" href="#example_12" title="Permanent link">&para;</a></h4>
 <p>This example sets up automatic creation of the LINSTOR Controller TLS secret using a
 cert-manager issuer named <code>piraeus-root</code>. The certificates will be validated against the certificate in the <code>trust-root</code>
 ConfigMap.</p>
@@ -2511,7 +2502,7 @@ ConfigMap.</p>
 <span class="w">      </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigMap</span>
 <span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root.crt</span>
 </code></pre></div>
-<h3 id="specapitls"><code>.spec.apiTLS</code></h3>
+<h3 id="specapitls"><code>.spec.apiTLS</code><a class="headerlink" href="#specapitls" title="Permanent link">&para;</a></h3>
 <p>Configures the TLS secrets used to secure the LINSTOR API. There are four different secrets to configure:</p>
 <ul>
 <li><code>apiSecretName</code>: sets the name of the secret used by the LINSTOR Controller to enable HTTPS. Defaults to
@@ -2528,7 +2519,7 @@ ConfigMap.</p>
 to let the operator create the required secrets.</p>
 <p>If the referenced secret does not contain a <code>ca.crt</code> certificate of a certificate authority, a <code>caReference</code> pointing
 to a secondary <code>Secret</code> or <code>ConfigMap</code> resource can be configured.</p>
-<h4 id="example_13">Example</h4>
+<h4 id="example_13">Example<a class="headerlink" href="#example_13" title="Permanent link">&para;</a></h4>
 <p>This example creates a manually provisioned TLS secret and references it in the
 LinstorCluster configuration. It uses the same secret for all clients of the LINSTOR API.</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
@@ -2563,7 +2554,7 @@ LinstorCluster configuration. It uses the same secret for all clients of the LIN
 <span class="w">    </span><span class="nt">csiControllerSecretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-linstor-client-tls</span>
 <span class="w">    </span><span class="nt">csiNodeSecretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-linstor-client-tls</span>
 </code></pre></div>
-<h4 id="example_14">Example</h4>
+<h4 id="example_14">Example<a class="headerlink" href="#example_14" title="Permanent link">&para;</a></h4>
 <p>This example sets up automatic creation of the LINSTOR API and LINSTOR Client TLS secret using a
 cert-manager issuer named <code>piraeus-root</code>. The certificates will be validated against the certificate in the <code>trust-root</code>
 Secret.</p>
@@ -2581,9 +2572,9 @@ Secret.</p>
 <span class="w">      </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Secret</span>
 <span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root.crt</span>
 </code></pre></div>
-<h2 id="status"><code>.status</code></h2>
+<h2 id="status"><code>.status</code><a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
 <p>Reports the actual state of the cluster.</p>
-<h3 id="statusconditions"><code>.status.conditions</code></h3>
+<h3 id="statusconditions"><code>.status.conditions</code><a class="headerlink" href="#statusconditions" title="Permanent link">&para;</a></h3>
 <p>The Operator reports the current state of the Cluster through a set of conditions. Conditions are identified by their
 <code>type</code>.</p>
 <table>

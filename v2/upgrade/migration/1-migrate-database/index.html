@@ -6,19 +6,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
       
       
-        <link rel="canonical" href="https://piraeus.io/docs/v2/how-to/upgrade/3-remove-operator-v1/">
+        <link rel="canonical" href="https://piraeus.io/docs/v2/upgrade/migration/1-migrate-database/">
       
       
-        <link rel="prev" href="../2-collect-information/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../4-install-operator-v2/">
+        <link rel="next" href="../2-collect-information/">
       
       
       <link rel="icon" href="../../../assets/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Remove Operator v1 - Piraeus Datastore</title>
+        <title>Migrating the LINSTOR Database - Piraeus Datastore</title>
       
     
     
@@ -61,11 +61,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Remove Operator v1 - Piraeus Datastore" >
+        <meta  property="og:title"  content="Migrating the LINSTOR Database - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
-        <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/upgrade/3-remove-operator-v1.png" >
+        <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/upgrade/migration/1-migrate-database.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -73,15 +73,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://piraeus.io/docs/v2/how-to/upgrade/3-remove-operator-v1/" >
+        <meta  property="og:url"  content="https://piraeus.io/docs/v2/upgrade/migration/1-migrate-database/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Remove Operator v1 - Piraeus Datastore" >
+        <meta  name="twitter:title"  content="Migrating the LINSTOR Database - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
-        <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/upgrade/3-remove-operator-v1.png" >
+        <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/upgrade/migration/1-migrate-database.png" >
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#remove-the-piraeus-operator-v1-deployment" class="md-skip">
+        <a href="#migrating-the-linstor-controller-database-to-use-the-k8s-backend" class="md-skip">
           Skip to content
         </a>
       
@@ -142,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Remove Operator v1
+              Migrating the LINSTOR Database
             
           </span>
         </div>
@@ -305,7 +305,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../" class="md-tabs__link">
+        <a href="../../../how-to/" class="md-tabs__link">
           
   
     
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -634,7 +634,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../../how-to/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -715,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../external-controller/" class="md-nav__link">
+      <a href="../../../how-to/external-controller/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -736,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../drbd-loader/" class="md-nav__link">
+      <a href="../../../how-to/drbd-loader/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -757,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../install-kernel-headers/" class="md-nav__link">
+      <a href="../../../how-to/install-kernel-headers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -836,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../internal-tls/" class="md-nav__link">
+      <a href="../../../how-to/internal-tls/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api-tls/" class="md-nav__link">
+      <a href="../../../how-to/api-tls/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -878,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../drbd-tls/" class="md-nav__link">
+      <a href="../../../how-to/drbd-tls/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../secure-boot/" class="md-nav__link">
+      <a href="../../../how-to/secure-boot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -980,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openshift/" class="md-nav__link">
+      <a href="../../../how-to/openshift/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1001,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../talos/" class="md-nav__link">
+      <a href="../../../how-to/talos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1022,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../flatcar/" class="md-nav__link">
+      <a href="../../../how-to/flatcar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1043,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../microk8s/" class="md-nav__link">
+      <a href="../../../how-to/microk8s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1064,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../k0s/" class="md-nav__link">
+      <a href="../../../how-to/k0s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1141,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../http-proxy/" class="md-nav__link">
+      <a href="../../../how-to/http-proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1162,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../network-policy/" class="md-nav__link">
+      <a href="../../../how-to/network-policy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1183,7 +1183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../drbd-host-networking/" class="md-nav__link">
+      <a href="../../../how-to/drbd-host-networking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1260,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../monitoring/" class="md-nav__link">
+      <a href="../../../how-to/monitoring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1281,7 +1281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linstor-affinity-controller/" class="md-nav__link">
+      <a href="../../../how-to/linstor-affinity-controller/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1302,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../restore-linstor-db/" class="md-nav__link">
+      <a href="../../../how-to/restore-linstor-db/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1348,8 +1348,6 @@
       
         
       
-        
-      
     
     
       
@@ -1370,7 +1368,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1400,33 +1398,16 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../UPGRADE/" class="md-nav__link">
+  
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1451,67 +1432,35 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../1-migrate-database/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Migrating the LINSTOR Database
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../2-collect-information/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Collect Information
-  </span>
-  
-
-      </a>
-    </li>
-  
-
               
             
               
@@ -1534,7 +1483,7 @@
           
   
   <span class="md-ellipsis">
-    Remove Operator v1
+    Migrating the LINSTOR Database
   </span>
   
 
@@ -1545,7 +1494,7 @@
         
   
   <span class="md-ellipsis">
-    Remove Operator v1
+    Migrating the LINSTOR Database
   </span>
   
 
@@ -1576,47 +1525,89 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scale-down-the-operator-deployment" class="md-nav__link">
+  <a href="#when-to-migrate-the-linstor-controller-database-to-the-k8s-backend" class="md-nav__link">
     <span class="md-ellipsis">
-      Scale Down the Operator Deployment
+      When to Migrate the LINSTOR Controller Database to the k8s Backend
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#remove-the-finalizers-from-the-piraeus-resources" class="md-nav__link">
+  <a href="#migrating-the-linstor-controller-database" class="md-nav__link">
     <span class="md-ellipsis">
-      Remove the Finalizers from the Piraeus Resources
+      Migrating the LINSTOR Controller Database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrating the LINSTOR Controller Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-stop-the-linstor-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Stop the LINSTOR Controller
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-the-piraeus-resources" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-prepare-a-pod-for-running-the-migration" class="md-nav__link">
     <span class="md-ellipsis">
-      Remove the Piraeus Resources
+      2. Prepare a Pod for Running the Migration
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-the-piraeus-deployment" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#3-create-a-database-backup" class="md-nav__link">
     <span class="md-ellipsis">
-      Remove the Piraeus Deployment
+      3. Create a Database Backup
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#optional-remove-additional-piraeus-components" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#4-update-the-linstor-configuration-to-point-to-the-new-database-backend" class="md-nav__link">
     <span class="md-ellipsis">
-      Optional: Remove additional Piraeus Components
+      4. Update the LINSTOR Configuration to Point to the New Database Backend
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-import-the-database-from-the-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Import the Database from the Backup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-start-the-linstor-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Start the LINSTOR Controller
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-clean-up-migration-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Clean up Migration Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1624,6 +1615,48 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2-collect-information/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collect Information
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3-remove-operator-v1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Remove Operator v1
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1962,47 +1995,89 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#scale-down-the-operator-deployment" class="md-nav__link">
+  <a href="#when-to-migrate-the-linstor-controller-database-to-the-k8s-backend" class="md-nav__link">
     <span class="md-ellipsis">
-      Scale Down the Operator Deployment
+      When to Migrate the LINSTOR Controller Database to the k8s Backend
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#remove-the-finalizers-from-the-piraeus-resources" class="md-nav__link">
+  <a href="#migrating-the-linstor-controller-database" class="md-nav__link">
     <span class="md-ellipsis">
-      Remove the Finalizers from the Piraeus Resources
+      Migrating the LINSTOR Controller Database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Migrating the LINSTOR Controller Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-stop-the-linstor-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Stop the LINSTOR Controller
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-the-piraeus-resources" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-prepare-a-pod-for-running-the-migration" class="md-nav__link">
     <span class="md-ellipsis">
-      Remove the Piraeus Resources
+      2. Prepare a Pod for Running the Migration
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#remove-the-piraeus-deployment" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#3-create-a-database-backup" class="md-nav__link">
     <span class="md-ellipsis">
-      Remove the Piraeus Deployment
+      3. Create a Database Backup
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#optional-remove-additional-piraeus-components" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#4-update-the-linstor-configuration-to-point-to-the-new-database-backend" class="md-nav__link">
     <span class="md-ellipsis">
-      Optional: Remove additional Piraeus Components
+      4. Update the LINSTOR Configuration to Point to the New Database Backend
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-import-the-database-from-the-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Import the Database from the Backup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-start-the-linstor-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Start the LINSTOR Controller
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-clean-up-migration-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Clean up Migration Resources
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2024,50 +2099,168 @@
   
 
 
-<h1 id="remove-the-piraeus-operator-v1-deployment">Remove the Piraeus Operator v1 Deployment</h1>
-<p>Migrating to the new Piraeus Operator deployment requires temporarily removing the existing deployment.</p>
-<p>After this step no new volumes can be created and no existing volume can be attached or detached, until the
-new deployment is rolled out.</p>
-<p>This is the third step when migrating Piraeus Operator from version 1 (v1) to version 2 (v2).
+<h1 id="migrating-the-linstor-controller-database-to-use-the-k8s-backend">Migrating the LINSTOR Controller Database to Use the <code>k8s</code> Backend<a class="headerlink" href="#migrating-the-linstor-controller-database-to-use-the-k8s-backend" title="Permanent link">&para;</a></h1>
+<p>This document guides you through the process of migrating an existing LINSTOR® Cluster to use the <code>k8s</code> database
+backend.</p>
+<p>This is the optional first step when migrating Piraeus Operator from version 1 (v1) to version 2 (v2).
 <a href="../">Click here to get back to the overview</a>.</p>
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://kubernetes.io/docs/tasks/tools/">Install <code>kubectl</code></a></li>
 <li><a href="https://docs.helm.sh/docs/intro/install/">Install <code>helm</code></a></li>
 </ul>
-<h2 id="scale-down-the-operator-deployment">Scale Down the Operator Deployment</h2>
-<p>To prevent modification of the existing cluster, scale down the existing Piraeus Operator deployment.</p>
-<div class="highlight"><pre><span></span><code>$ helm upgrade piraeus-op ./charts/piraeus --set operator.replicas=0
-$ kubectl rollout status -w deploy/piraeus-op-operator
-deployment &quot;piraeus-op-operator&quot; successfully rolled out
+<h2 id="when-to-migrate-the-linstor-controller-database-to-the-k8s-backend">When to Migrate the LINSTOR Controller Database to the <code>k8s</code> Backend<a class="headerlink" href="#when-to-migrate-the-linstor-controller-database-to-the-k8s-backend" title="Permanent link">&para;</a></h2>
+<p>LINSTOR can use different database backends to store important state, such as the available volumes and where
+they are deployed. The available backends are:</p>
+<ul>
+<li>An <a href="https://h2database.com/html/main.html">H2 database</a> stored in a local file on the controller.</li>
+<li>A compatible database server, such as <a href="https://www.mysql.com/">MySQL</a> or <a href="https://www.postgresql.org/">PostgreSQL</a>.</li>
+<li>An <a href="https://etcd.io/">etcd cluster</a>.</li>
+<li>An <code>k8s</code> backend, using Custom Resources to store the cluster state directly in the Kubernetes API.</li>
+</ul>
+<p>Of these backends, only the <code>k8s</code> backend works without any additional components when running in the
+Kubernetes cluster.</p>
+<p>Because the Piraeus Operator v1 is older than the LINSTOR <code>k8s</code> backend, the default for a long time was
+the use of a separate etcd cluster, deployed by default when using Piraeus Operator v1. Since then, etcd
+proved to be difficult to maintain, often requiring manual intervention.</p>
+<p>Because of this, <strong>consider migrating away from separate etcd cluster to using the <code>k8s</code> backend</strong>.</p>
+<p>If you already use one of the other backends, no migration is necessary. You can check the currently used
+backend of your LINSTOR cluster by running the following command:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl exec deploy/piraeus-op-cs-controller -- cat /etc/linstor/linstor.toml
+[db]
+  connection_url = &quot;etcd://piraeus-op-etcd:2379&quot;
 </code></pre></div>
-<h2 id="remove-the-finalizers-from-the-piraeus-resources">Remove the Finalizers from the Piraeus Resources</h2>
-<p>The Operator sets Finalizers on the resource it controls. This prevents the deletion of these resources when the
-Operator is not running. Remove the Finalizers by applying a patch:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl patch linstorsatellitesets piraeus-op-ns --type merge --patch &#39;{&quot;metadata&quot;: {&quot;finalizers&quot;: []}}&#39;
-linstorsatelliteset.piraeus.linbit.com/piraeus-op-ns patched
-$ kubectl patch linstorcontrollers piraeus-op-cs --type merge --patch &#39;{&quot;metadata&quot;: {&quot;finalizers&quot;: []}}&#39;
-linstorcontroller.piraeus.linbit.com/piraeus-op-cs patched
+<p>If the <code>connection_url</code> value starts with <code>etcd://</code> you are using the etcd backend and should consider
+migrating.</p>
+<h2 id="migrating-the-linstor-controller-database">Migrating the LINSTOR Controller Database<a class="headerlink" href="#migrating-the-linstor-controller-database" title="Permanent link">&para;</a></h2>
+<p>During the migration, the LINSTOR Controller needs to be stopped. This means that provisioning and deletion
+of volumes will not work for the duration of the migration. Existing volumes will continue working normally.</p>
+<h3 id="1-stop-the-linstor-controller">1. Stop the LINSTOR Controller<a class="headerlink" href="#1-stop-the-linstor-controller" title="Permanent link">&para;</a></h3>
+<p>To prevent unwanted modifications to the database during the migration, you need to stop the LINSTOR Controller.
+To stop the LINSTOR Controller, set the expected replicas for the controller to zero.</p>
+<p>First, find the currently deployed Piraeus Datastore release. For this guide, it is 1.10.8:</p>
+<div class="highlight"><pre><span></span><code>$ helm list
+NAME        NAMESPACE          REVISION  UPDATED                                 STATUS    CHART           APP VERSION
+piraeus-op  piraeus-datastore  1         2023-11-07 10:30:44.184389038 +0100 CET deployed  piraeus-1.10.8  1.10.8
 </code></pre></div>
-<h2 id="remove-the-piraeus-resources">Remove the Piraeus Resources</h2>
-<p>Having removed the Finalizers, you can delete the Piraeus Resources. This will stop the LINSTOR Cluster, and no
-new volumes can be created, and existing volumes will not attach or detach. Volumes already attached to a Pod will
-continue to replicate.</p>
-<div class="highlight"><pre><span></span><code>$ kubectl delete linstorcsidrivers/piraeus-op
-$ kubectl delete linstorsatellitesets/piraeus-op-ns
-$ kubectl delete linstorcontrollers/piraeus-op-cs
+<p>Then change the deployment to deploy no replicas for the LINSTOR Controller. Ensure to check out the chart version
+currently deployed, so that no accidental upgrade happens:</p>
+<div class="highlight"><pre><span></span><code>$ git checkout v1.10.8
+$ helm upgrade piraeus-op ./charts/piraeus --reuse-values --set operator.controller.replicas=0
+$ kubectl rollout status deploy/piraeus-op-cs-controller -w
+deployment &quot;piraeus-op-cs-controller&quot; successfully rolled out
 </code></pre></div>
-<h2 id="remove-the-piraeus-deployment">Remove the Piraeus Deployment</h2>
-<p>As a last step, you can completely remove the helm deployment, deleting additional resources such as service accounts
-and RBAC resources. In addition, also clean up the Custom Resource Definitions:</p>
-<div class="highlight"><pre><span></span><code>$ helm uninstall piraeus-op
-$ kubectl delete crds linstorcsidrivers.piraeus.linbit.com linstorsatellitesets.piraeus.linbit.com linstorcontrollers.piraeus.linbit.com
+<h3 id="2-prepare-a-pod-for-running-the-migration">2. Prepare a Pod for Running the Migration<a class="headerlink" href="#2-prepare-a-pod-for-running-the-migration" title="Permanent link">&para;</a></h3>
+<p>To run the migration, you need access to the <code>linstor-database</code> tool, which comes preinstalled with the LINSTOR
+Controller image. The following command displays the LINSTOR Controller image, the name of the ConfigMap storing the
+LINSTOR Configuration, and the service account for LINSTOR Controller. Take note of them, as they will be used for the
+migration Pod.</p>
+<div class="highlight"><pre><span></span><code>$ kubectl get deploy/piraeus-op-cs-controller --output=jsonpath=&#39;IMAGE={$.spec.template.spec.containers[?(@.name==&quot;linstor-controller&quot;)].image}{&quot;\n&quot;}CONFIG_MAP={$.spec.template.spec.volumes[?(@.name==&quot;linstor-conf&quot;)].configMap.name}{&quot;\n&quot;}SERVICE_ACCOUNT={$.spec.template.spec.serviceAccountName}{&quot;\n&quot;}&#39;
+IMAGE=quay.io/piraeusdatastore/piraeus-server:v1.24.2
+CONFIG_MAP=piraeus-op-cs-controller-config
+SERVICE_ACCOUNT=linstor-controller
 </code></pre></div>
-<h2 id="optional-remove-additional-piraeus-components">Optional: Remove additional Piraeus Components</h2>
-<p>If you have deployed additional components from Piraeus, such as the HA Controller or LINSTOR Affinity Controller, you
-will need to remove them, too. After completing the migration, you can install them again, if needed.</p>
-<div class="highlight"><pre><span></span><code>$ helm uninstall piraeus-ha-controller
-$ helm uninstall linstor-affinity-controller
+<p>Using the information from the LINSTOR Controller deployment, create a Pod used during the migration process. Replace
+<code>$IMAGE</code>, <code>$CONFIG_MAP</code> and <code>$SERVICE_ACCOUNT</code> with the appropriate values.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstor-database-migration</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">serviceAccountName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$SERVICE_ACCOUNT</span>
+<span class="w">  </span><span class="nt">containers</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">backup</span>
+<span class="w">      </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$IMAGE</span>
+<span class="w">      </span><span class="nt">command</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/bin/bash</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-c</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;sleep</span><span class="nv"> </span><span class="s">infinity&quot;</span>
+<span class="w">      </span><span class="nt">volumeMounts</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstor-conf</span>
+<span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/linstor</span>
+<span class="w">          </span><span class="nt">readOnly</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">backup</span>
+<span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/backup</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">logs</span>
+<span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/logs</span>
+<span class="w">  </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">backup</span>
+<span class="w">      </span><span class="nt">emptyDir</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">logs</span>
+<span class="w">      </span><span class="nt">emptyDir</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstor-conf</span>
+<span class="w">      </span><span class="nt">configMap</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$CONFIG_MAP</span>
+</code></pre></div>
+<h3 id="3-create-a-database-backup">3. Create a Database Backup<a class="headerlink" href="#3-create-a-database-backup" title="Permanent link">&para;</a></h3>
+<p>Using the newly created migration Pod, create a database backup using the <code>linstor-database</code> tool.</p>
+<div class="highlight"><pre><span></span><code>$ kubectl exec linstor-database-migration -- /usr/share/linstor-server/bin/linstor-database export-db -c /etc/linstor /backup/backup-before-migration.json
+Loading configuration file &quot;/etc/linstor/linstor.toml&quot;
+15:22:55.684 [main] INFO LINSTOR/linstor-db -- SYSTEM - ErrorReporter DB first time init.
+15:22:55.685 [main] INFO LINSTOR/linstor-db -- SYSTEM - Log directory set to: &#39;./logs&#39;
+15:22:56.417 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module &quot;com.linbit.linstor.modularcrypto.FipsCryptoModule&quot;
+15:22:56.418 [main] INFO LINSTOR/linstor-db -- SYSTEM - Extension module &quot;com.linbit.linstor.modularcrypto.FipsCryptoModule&quot; is not installed
+15:22:56.418 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module &quot;com.linbit.linstor.modularcrypto.JclCryptoModule&quot;
+15:22:56.426 [main] INFO LINSTOR/linstor-db -- SYSTEM - Dynamic load of extension module &quot;com.linbit.linstor.modularcrypto.JclCryptoModule&quot; was successful
+15:22:56.427 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module &quot;com.linbit.linstor.spacetracking.ControllerSpaceTrackingModule&quot;
+15:22:56.429 [main] INFO LINSTOR/linstor-db -- SYSTEM - Dynamic load of extension module &quot;com.linbit.linstor.spacetracking.ControllerSpaceTrackingModule&quot; was successful
+15:22:57.666 [main] INFO LINSTOR/linstor-db -- SYSTEM - Initializing the etcd database
+15:22:57.667 [main] INFO LINSTOR/linstor-db -- SYSTEM - etcd connection URL is &quot;etcd://piraeus-op-etcd:2379&quot;
+15:22:59.480 [main] INFO LINSTOR/linstor-db -- SYSTEM - Export finished
+</code></pre></div>
+<p>Then, copy the just created backup to permanent storage, so that it is not lost should the migration pod restart:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl cp linstor-database-migration:/backup/backup-before-migration.json backup-before-migration.json
+</code></pre></div>
+<h3 id="4-update-the-linstor-configuration-to-point-to-the-new-database-backend">4. Update the LINSTOR Configuration to Point to the New Database Backend<a class="headerlink" href="#4-update-the-linstor-configuration-to-point-to-the-new-database-backend" title="Permanent link">&para;</a></h3>
+<p>After creating and storing the backup it is safe to change the LINSTOR configuration. This is done by running another
+<code>helm upgrade</code>, changing the database configuration for the LINSTOR Controller. Once again, ensure that you apply the
+chart version currently deployed, so that no accidental upgrade happens:</p>
+<div class="highlight"><pre><span></span><code>$ helm upgrade piraeus-op ./charts/piraeus --reuse-values --set operator.controller.dbConnectionURL=k8s
+</code></pre></div>
+<p>This will also change the configuration in the <code>linstor-database-migration</code> Pod, but it might need some time to
+propagate. Eventually, you will see the <code>k8s</code> database connection:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl exec linstor-database-migration -- cat /etc/linstor/linstor.toml
+[db]
+  connection_url = &quot;k8s&quot;
+</code></pre></div>
+<h3 id="5-import-the-database-from-the-backup">5. Import the Database from the Backup<a class="headerlink" href="#5-import-the-database-from-the-backup" title="Permanent link">&para;</a></h3>
+<p>After changing the configuration, you can again use the <code>linstor-database</code> tool to restore the database backup to the
+new backend.</p>
+<div class="highlight"><pre><span></span><code>$ kubectl exec linstor-database-migration -- /usr/share/linstor-server/bin/linstor-database import-db -c /etc/linstor /backup/backup-before-migration.json
+Loading configuration file &quot;/etc/linstor/linstor.toml&quot;
+15:39:41.270 [main] INFO LINSTOR/linstor-db -- SYSTEM - ErrorReporter DB version 1 found.
+15:39:41.272 [main] INFO LINSTOR/linstor-db -- SYSTEM - Log directory set to: &#39;./logs&#39;
+15:39:41.848 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module &quot;com.linbit.linstor.modularcrypto.FipsCryptoModule&quot;
+15:39:41.849 [main] INFO LINSTOR/linstor-db -- SYSTEM - Extension module &quot;com.linbit.linstor.modularcrypto.FipsCryptoModule&quot; is not installed
+15:39:41.850 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module &quot;com.linbit.linstor.modularcrypto.JclCryptoModule&quot;
+15:39:41.858 [main] INFO LINSTOR/linstor-db -- SYSTEM - Dynamic load of extension module &quot;com.linbit.linstor.modularcrypto.JclCryptoModule&quot; was successful
+15:39:41.859 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module &quot;com.linbit.linstor.spacetracking.ControllerSpaceTrackingModule&quot;
+15:39:41.860 [main] INFO LINSTOR/linstor-db -- SYSTEM - Dynamic load of extension module &quot;com.linbit.linstor.spacetracking.ControllerSpaceTrackingModule&quot; was successful
+15:39:43.307 [main] INFO LINSTOR/linstor-db -- SYSTEM - Initializing the k8s crd database connector
+15:39:43.307 [main] INFO LINSTOR/linstor-db -- SYSTEM - Kubernetes-CRD connection URL is &quot;k8s&quot;
+15:40:22.418 [main] INFO LINSTOR/linstor-db -- SYSTEM - Import finished
+</code></pre></div>
+<h3 id="6-start-the-linstor-controller">6. Start the LINSTOR Controller<a class="headerlink" href="#6-start-the-linstor-controller" title="Permanent link">&para;</a></h3>
+<p>Now that the new database backend is initialized, it is safe to start the LINSTOR Controller again. Simply change the
+number of replicas for the LINSTOR Controller back to the original value before starting the migration. Once again,
+ensure that you apply the chart version currently deployed, so that no accidental upgrade happens:</p>
+<div class="highlight"><pre><span></span><code>$ helm upgrade piraeus-op ./charts/piraeus --reuse-values --set operator.controller.replicas=1
+deployment &quot;piraeus-op-cs-controller&quot; successfully rolled out
+</code></pre></div>
+<p>Once the LINSTOR Controller is up and running, verify the state of your cluster: check all nodes and resource are in
+the expected state:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl exec deploy/piraeus-op-cs-controller -- linstor node list
+$ kubectl exec deploy/piraeus-op-cs-controller -- linstor storage-pool list
+$ kubectl exec deploy/piraeus-op-cs-controller -- linstor resource list-volumes
+$ kubectl exec deploy/piraeus-op-cs-controller -- linstor error-reports list
+</code></pre></div>
+<h3 id="7-clean-up-migration-resources">7. Clean up Migration Resources<a class="headerlink" href="#7-clean-up-migration-resources" title="Permanent link">&para;</a></h3>
+<p>After successful migration, you can clean up left over resources.</p>
+<p>First, you can remove the <code>linstor-database-migration</code> Pod:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl delete pod linstor-database-migration
+</code></pre></div>
+<p>Then, you can also remove the etcd deployment by upgrading the helm deployment, setting <code>etcd.enabled=false</code>:</p>
+<div class="highlight"><pre><span></span><code>$ helm upgrade piraeus-op ./charts/piraeus --reuse-values --set etcd.enabled=false
 </code></pre></div>
 
 
@@ -2107,7 +2300,7 @@ $ helm uninstall linstor-affinity-controller
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../2-collect-information/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Collect Information">
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Upgrading from v1 to v2">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2117,20 +2310,20 @@ $ helm uninstall linstor-affinity-controller
                 Previous
               </span>
               <div class="md-ellipsis">
-                Collect Information
+                Upgrading from v1 to v2
               </div>
             </div>
           </a>
         
         
           
-          <a href="../4-install-operator-v2/" class="md-footer__link md-footer__link--next" aria-label="Next: Install Operator v2">
+          <a href="../2-collect-information/" class="md-footer__link md-footer__link--next" aria-label="Next: Collect Information">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Install Operator v2
+                Collect Information
               </div>
             </div>
             <div class="md-footer__button md-icon">

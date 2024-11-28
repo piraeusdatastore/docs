@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
@@ -63,7 +63,7 @@
       
         <meta  property="og:title"  content="Load DRBD with SecureBoot Enabled - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/secure-boot.png" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:title"  content="Load DRBD with SecureBoot Enabled - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/secure-boot.png" >
       
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../upgrade/" class="md-tabs__link">
+        <a href="../../upgrade/" class="md-tabs__link">
           
   
     
@@ -1453,8 +1453,6 @@
       
         
       
-        
-      
     
     
       
@@ -1472,7 +1470,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../upgrade/" class="md-nav__link ">
+            <a href="../../upgrade/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1504,29 +1502,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../upgrade/UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1548,26 +1529,36 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../upgrade/migration/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1576,7 +1567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/1-migrate-database/" class="md-nav__link">
+      <a href="../../upgrade/migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1597,7 +1588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/2-collect-information/" class="md-nav__link">
+      <a href="../../upgrade/migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1618,7 +1609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/3-remove-operator-v1/" class="md-nav__link">
+      <a href="../../upgrade/migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1639,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/4-install-operator-v2/" class="md-nav__link">
+      <a href="../../upgrade/migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2018,7 +2009,7 @@
   
 
 
-<h1 id="how-to-load-drbd-with-secureboot-enabled">How to Load DRBD with SecureBoot Enabled</h1>
+<h1 id="how-to-load-drbd-with-secureboot-enabled">How to Load DRBD with SecureBoot Enabled<a class="headerlink" href="#how-to-load-drbd-with-secureboot-enabled" title="Permanent link">&para;</a></h1>
 <p>This guide shows you how to use the DRBD® Module Loader on machines with SecureBoot enabled.</p>
 <p>When SecureBoot is enabled the Linux Kernel refuses to load unsigned kernel modules. Since the DRBD modules are built
 from source, they do not have a valid signature by default. To load them, they need to be signed, and the signing key
@@ -2030,7 +2021,7 @@ needs to be inserted into the machine's trust store.</p>
 <li>managing machine owner keys with <code>mokutil</code>.</li>
 <li>creating and protecting Kubernetes Secret resources.</li>
 </ul>
-<h2 id="prerequisites">Prerequisites</h2>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>A Kubernetes node running with SecureBoot enabled. This can be checked by running the following command on each node:
   <div class="highlight"><pre><span></span><code># mokutil --sb-state
@@ -2038,7 +2029,7 @@ SecureBoot enabled
 </code></pre></div></li>
 <li>Console access to the machine during early boot, or permissions to update the EFI platform keys another way.</li>
 </ul>
-<h2 id="generate-key-material">Generate Key Material</h2>
+<h2 id="generate-key-material">Generate Key Material<a class="headerlink" href="#generate-key-material" title="Permanent link">&para;</a></h2>
 <p>Create a private key and self-signed certificate using the <code>openssl</code> command line utility. The following command will
 create a new private key named <code>signing_key.pem</code> and a certificate named <code>signing_key.x509</code>, valid for 10 years, in the
 appropriate format:</p>
@@ -2063,7 +2054,7 @@ subjectKeyIdentifier=hash
 authorityKeyIdentifier=keyid
 EOF
 </code></pre></div>
-<h2 id="enroll-the-certificate-in-the-machine-trust-store">Enroll the Certificate in the Machine Trust Store</h2>
+<h2 id="enroll-the-certificate-in-the-machine-trust-store">Enroll the Certificate in the Machine Trust Store<a class="headerlink" href="#enroll-the-certificate-in-the-machine-trust-store" title="Permanent link">&para;</a></h2>
 <p>The generated certificate needs to be added to the machine's trust store. This step depends on the machine platform you
 are using. The instructions here apply to any system where you have console access during early boot, such as bare-metal
 or most virtualization platforms.</p>
@@ -2085,7 +2076,7 @@ or VNC.</p>
 <p><img alt="mok-password.png" src="../../assets/mok-password.png" />
 * Reboot the machine:</p>
 <p><img alt="mok-reboot.png" src="../../assets/mok-reboot.png" /></p>
-<h2 id="sign-the-drbd-module-using-the-created-key-material">Sign the DRBD Module Using the Created Key Material</h2>
+<h2 id="sign-the-drbd-module-using-the-created-key-material">Sign the DRBD Module Using the Created Key Material<a class="headerlink" href="#sign-the-drbd-module-using-the-created-key-material" title="Permanent link">&para;</a></h2>
 <p>Create a Kubernetes Secret resource containing the generated key material. The following command creates a secret named
 <code>drbd-signing-keys</code>:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl create secret generic drbd-signing-keys --type piraeus.io/signing-key \
@@ -2116,7 +2107,7 @@ sets the <code>LB_SIGN</code> environment variable to start signing the modules:
 <span class="w">        </span><span class="nt">secret</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drbd-signing-keys</span>
 </code></pre></div>
-<h2 id="verifying-success">Verifying Success</h2>
+<h2 id="verifying-success">Verifying Success<a class="headerlink" href="#verifying-success" title="Permanent link">&para;</a></h2>
 <p>When everything is configured correctly, the <code>drbd-module-loader</code> init container will be able to insert the DRBD
 modules.</p>
 <div class="highlight"><pre><span></span><code>$ kubectl logs ds/linstor-satellite.node1.example.com drbd-module-loader

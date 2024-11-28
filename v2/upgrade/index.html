@@ -6,34 +6,34 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
       
       
-        <link rel="canonical" href="https://piraeus.io/docs/v2/how-to/upgrade/4-install-operator-v2/">
+        <link rel="canonical" href="https://piraeus.io/docs/v2/upgrade/">
       
       
-        <link rel="prev" href="../3-remove-operator-v1/">
+        <link rel="prev" href="../how-to/restore-linstor-db/">
       
       
-        <link rel="next" href="../../../explanation/">
+        <link rel="next" href="migration/">
       
       
-      <link rel="icon" href="../../../assets/favicon.png">
+      <link rel="icon" href="../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
     
     
       
-        <title>Install Operator v2 - Piraeus Datastore</title>
+        <title>Upgrades - Piraeus Datastore</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -52,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -61,11 +61,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Install Operator v2 - Piraeus Datastore" >
+        <meta  property="og:title"  content="Upgrades - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
-        <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/upgrade/4-install-operator-v2.png" >
+        <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/upgrade/README.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -73,15 +73,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://piraeus.io/docs/v2/how-to/upgrade/4-install-operator-v2/" >
+        <meta  property="og:url"  content="https://piraeus.io/docs/v2/upgrade/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Install Operator v2 - Piraeus Datastore" >
+        <meta  name="twitter:title"  content="Upgrades - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
-        <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/upgrade/4-install-operator-v2.png" >
+        <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/upgrade/README.png" >
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#install-piraeus-operator-v2" class="md-skip">
+        <a href="#general-notes" class="md-skip">
           Skip to content
         </a>
       
@@ -142,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Install Operator v2
+              Upgrades
             
           </span>
         </div>
@@ -266,7 +266,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href=".." class="md-tabs__link">
         
   
     
@@ -285,7 +285,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../tutorial/" class="md-tabs__link">
+        <a href="../tutorial/" class="md-tabs__link">
           
   
     
@@ -305,7 +305,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../" class="md-tabs__link">
+        <a href="../how-to/" class="md-tabs__link">
           
   
     
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -347,7 +347,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../explanation/" class="md-tabs__link">
+        <a href="../explanation/" class="md-tabs__link">
           
   
     
@@ -367,7 +367,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../reference/" class="md-tabs__link">
+        <a href="../reference/" class="md-tabs__link">
           
   
     
@@ -385,7 +385,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../CHANGELOG/" class="md-tabs__link">
+      <a href="../CHANGELOG/" class="md-tabs__link">
         
   
     
@@ -449,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -498,7 +498,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../tutorial/" class="md-nav__link ">
+            <a href="../tutorial/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -531,7 +531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/get-started/" class="md-nav__link">
+      <a href="../tutorial/get-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -552,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/replicated-volumes/" class="md-nav__link">
+      <a href="../tutorial/replicated-volumes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -573,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tutorial/snapshots/" class="md-nav__link">
+      <a href="../tutorial/snapshots/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -634,7 +634,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../how-to/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -715,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../external-controller/" class="md-nav__link">
+      <a href="../how-to/external-controller/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -736,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../drbd-loader/" class="md-nav__link">
+      <a href="../how-to/drbd-loader/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -757,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../install-kernel-headers/" class="md-nav__link">
+      <a href="../how-to/install-kernel-headers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -836,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../internal-tls/" class="md-nav__link">
+      <a href="../how-to/internal-tls/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -857,7 +857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../api-tls/" class="md-nav__link">
+      <a href="../how-to/api-tls/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -878,7 +878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../drbd-tls/" class="md-nav__link">
+      <a href="../how-to/drbd-tls/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../secure-boot/" class="md-nav__link">
+      <a href="../how-to/secure-boot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -980,7 +980,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openshift/" class="md-nav__link">
+      <a href="../how-to/openshift/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1001,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../talos/" class="md-nav__link">
+      <a href="../how-to/talos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1022,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../flatcar/" class="md-nav__link">
+      <a href="../how-to/flatcar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1043,7 +1043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../microk8s/" class="md-nav__link">
+      <a href="../how-to/microk8s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1064,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../k0s/" class="md-nav__link">
+      <a href="../how-to/k0s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1141,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../http-proxy/" class="md-nav__link">
+      <a href="../how-to/http-proxy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1162,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../network-policy/" class="md-nav__link">
+      <a href="../how-to/network-policy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1183,7 +1183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../drbd-host-networking/" class="md-nav__link">
+      <a href="../how-to/drbd-host-networking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1260,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../monitoring/" class="md-nav__link">
+      <a href="../how-to/monitoring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1281,7 +1281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linstor-affinity-controller/" class="md-nav__link">
+      <a href="../how-to/linstor-affinity-controller/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1302,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../restore-linstor-db/" class="md-nav__link">
+      <a href="../how-to/restore-linstor-db/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1348,8 +1348,6 @@
       
         
       
-        
-      
     
     
       
@@ -1370,7 +1368,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   <span class="md-ellipsis">
@@ -1381,7 +1379,7 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+              <label class="md-nav__link md-nav__link--active" for="__nav_4" id="__nav_4_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
@@ -1402,75 +1400,66 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="migration/" class="md-nav__link ">
               
-            
-              
-                
-  
-  
-    
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
-            
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1479,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1-migrate-database/" class="md-nav__link">
+      <a href="migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1500,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2-collect-information/" class="md-nav__link">
+      <a href="migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1521,7 +1510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3-remove-operator-v1/" class="md-nav__link">
+      <a href="migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1539,30 +1528,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Install Operator v2
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1571,71 +1540,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploy-piraeus-operator-v2-using-kubectl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deploy Piraeus Operator v2 Using kubectl
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploy-piraeus-operator-v2-using-helm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deploy Piraeus Operator v2 Using Helm
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploy-the-piraeus-datastore-cluster" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deploy the Piraeus Datastore Cluster
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verifying-cluster-state" class="md-nav__link">
-    <span class="md-ellipsis">
-      Verifying Cluster State
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1688,7 +1592,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../explanation/" class="md-nav__link ">
+            <a href="../explanation/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1721,7 +1625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../explanation/components/" class="md-nav__link">
+      <a href="../explanation/components/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1780,7 +1684,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../reference/" class="md-nav__link ">
+            <a href="../reference/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1813,7 +1717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/linstorcluster/" class="md-nav__link">
+      <a href="../reference/linstorcluster/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1834,7 +1738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/linstorsatelliteconfiguration/" class="md-nav__link">
+      <a href="../reference/linstorsatelliteconfiguration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1855,7 +1759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/linstornodeconnection/" class="md-nav__link">
+      <a href="../reference/linstornodeconnection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1876,7 +1780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../reference/linstorsatellite/" class="md-nav__link">
+      <a href="../reference/linstorsatellite/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1904,7 +1808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../CHANGELOG/" class="md-nav__link">
+      <a href="../CHANGELOG/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1937,59 +1841,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploy-piraeus-operator-v2-using-kubectl" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deploy Piraeus Operator v2 Using kubectl
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploy-piraeus-operator-v2-using-helm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deploy Piraeus Operator v2 Using Helm
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deploy-the-piraeus-datastore-cluster" class="md-nav__link">
-    <span class="md-ellipsis">
-      Deploy the Piraeus Datastore Cluster
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#verifying-cluster-state" class="md-nav__link">
-    <span class="md-ellipsis">
-      Verifying Cluster State
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -2006,67 +1857,214 @@
   
 
 
-<h1 id="install-piraeus-operator-v2">Install Piraeus Operator v2</h1>
-<p>After removing the Piraeus Operator v1 deployment, you can install Piraeus Operator v2.</p>
-<p>You can either use the <code>kubectl</code> method to deploy Piraeus Operator, or alternatively deploy the Operator using Helm.</p>
-<p>This is the last step when migrating Piraeus Operator from version 1 (v1) to version 2 (v2).
-<a href="../">Click here to get back to the overview</a>.</p>
-<h2 id="prerequisites">Prerequisites</h2>
+<h1 id="general-notes">General notes<a class="headerlink" href="#general-notes" title="Permanent link">&para;</a></h1>
+<p>During the upgrade process, provisioning of volumes and attach/detach operations might not work. Existing
+volumes and volumes already in use by a pod will continue to work without interruption.</p>
+<p>To upgrade, apply the resource of the latest release. Use the same method that was used to create the initial deployment
+(<code>kubectl</code> vs <code>helm</code>). There is no need to change existing <code>LinstorCluster</code>, <code>LinstorSatelliteConfiguration</code> or
+<code>LinstorNodeConnection</code> resources.</p>
+<p>To upgrade to the latest release using <code>kubectl</code>, run the following commands:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl apply --server-side -k &quot;https://github.com/piraeusdatastore/piraeus-operator//config/default?ref=v2.7.1&quot;
+$ kubectl wait pod --for=condition=Ready -n piraeus-datastore --all
+</code></pre></div>
+<h1 id="upgrades-from-v26-to-v27">Upgrades from v2.6 to v2.7<a class="headerlink" href="#upgrades-from-v26-to-v27" title="Permanent link">&para;</a></h1>
+<p>Generally, no special steps required.</p>
+<p>LINSTOR Satellites now try to automatically detect the LVM configuration on the host. Any patch targeting the Satellites
+/etc/lvm/lvm.conf file may need to be adapted.</p>
+<h1 id="upgrades-from-v25-to-v26">Upgrades from v2.5 to v2.6<a class="headerlink" href="#upgrades-from-v25-to-v26" title="Permanent link">&para;</a></h1>
+<p>No special steps required.</p>
+<h1 id="upgrades-from-v24-to-v25">Upgrades from v2.4 to v2.5<a class="headerlink" href="#upgrades-from-v24-to-v25" title="Permanent link">&para;</a></h1>
+<p>No special steps required.</p>
+<h1 id="upgrades-from-v23-to-v24">Upgrades from v2.3 to v2.4<a class="headerlink" href="#upgrades-from-v23-to-v24" title="Permanent link">&para;</a></h1>
+<p>Generally, no special steps required.</p>
+<p>LINSTOR Satellites are now managed via DaemonSet resources. Any patch targeting a <code>satellite</code> Pod resources is
+automatically converted to the equivalent DaemonSet resource patch. In the Pod list, you will see these Pods using
+a new <code>linstor-satellite</code> prefix.</p>
+<h1 id="upgrades-from-v22-to-v23">Upgrades from v2.2 to v2.3<a class="headerlink" href="#upgrades-from-v22-to-v23" title="Permanent link">&para;</a></h1>
+<p>Removed the <code>NetworkPolicy</code> resource from default deployment. It can be reapplied as a
+<a href="../how-to/network-policy/">separate step</a>.</p>
+<h1 id="upgrades-from-v21-to-v22">Upgrades from v2.1 to v2.2<a class="headerlink" href="#upgrades-from-v21-to-v22" title="Permanent link">&para;</a></h1>
+<p>Removed the dependency on cert-manager for the initial deployment. To clean up an existing <code>Certificate</code> resource,
+run the following commands:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl delete certificate -n piraeus-datastore piraeus-operator-serving-cert
+</code></pre></div>
+<h1 id="upgrades-from-v20-to-v21">Upgrades from v2.0 to v2.1<a class="headerlink" href="#upgrades-from-v20-to-v21" title="Permanent link">&para;</a></h1>
+<p>No special steps required.</p>
+<h1 id="upgrades-from-v1-to-v2">Upgrades from v1 to v2<a class="headerlink" href="#upgrades-from-v1-to-v2" title="Permanent link">&para;</a></h1>
+<p>Please follow the specialized <a href="migration/">upgrade guides</a>.</p>
+<h1 id="upgrade-from-v19-to-v110">Upgrade from v1.9 to v1.10<a class="headerlink" href="#upgrade-from-v19-to-v110" title="Permanent link">&para;</a></h1>
+<p>If you want to share DRBD configuration directories with the host, please update the CRDs before upgrading using helm:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl replace -f ./charts/piraeus/crds
+</code></pre></div>
+<h1 id="upgrade-from-v18-to-v19">Upgrade from v1.8 to v1.9<a class="headerlink" href="#upgrade-from-v18-to-v19" title="Permanent link">&para;</a></h1>
+<p>If you want to protect metrics endpoints, take a look on <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v1.9.0/doc/security.md">guide on enabling rbac-proxy sidecars</a>.</p>
+<p>We've also disabled the <code>haController</code> component in our chart. The replacement is available from
+<a href="https://artifacthub.io/packages/helm/piraeus-charts/piraeus-ha-controller">artifacthub.io</a>, containing much needed
+improvements in robustness and fail-over speed. If you want to still use the old version, set
+<code>haController.enabled=true</code>.</p>
+<h1 id="upgrade-from-v17-to-v18">Upgrade from v1.7 to v1.8<a class="headerlink" href="#upgrade-from-v17-to-v18" title="Permanent link">&para;</a></h1>
+<p>If you need to set the number of worker threads, or you need to set the log level of LINSTOR components, please update
+the CRDs before upgrading using helm:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl replace -f ./charts/piraeus/crds
+</code></pre></div>
+<p>In case if you have SSL enabled installation, you need to regenerate your certificates in PEM format.
+Read the <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v1.8.0/doc/security.md">guide on securing the deployment</a> and repeat the described steps.</p>
+<h1 id="upgrade-from-v16-to-v17">Upgrade from v1.6 to v1.7<a class="headerlink" href="#upgrade-from-v16-to-v17" title="Permanent link">&para;</a></h1>
+<p>Node labels are now automatically applied to LINSTOR satellites as "Auxiliary Properties". That means you can reuse your
+existing Kubernetes Topology information (for example <code>topology.kubernetes.io/zone</code> labels) when scheduling volumes
+using the <code>replicasOnSame</code> and <code>replicasOnDifferent</code> settings. However, this also means that the Operator will delete
+any existing auxiliary properties that were already applied. To apply auxiliary properties to satellites, you <em>have to</em>
+apply a label to the Kubernetes node object.</p>
+<h1 id="upgrade-from-v15-to-v16">Upgrade from v1.5 to v1.6<a class="headerlink" href="#upgrade-from-v15-to-v16" title="Permanent link">&para;</a></h1>
+<p>The <code>csi-snapshotter</code> subchart was removed from this repository. Users who relied on it for their snapshot support
+should switch to the seperate charts provided by the Piraeus team
+on <a href="https://artifacthub.io/packages/search?repo=piraeus-charts">artifacthub.io</a>
+The new charts also include notes on how to upgrade to newer CRD versions.</p>
+<p>To support the new <code>csi.kubeletPath</code> option an update to the LinstorCSIDriver CRD is required:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl replace -f ./charts/piraeus/crds
+</code></pre></div>
+<h1 id="upgrade-from-v14-to-v15">Upgrade from v1.4 to v1.5<a class="headerlink" href="#upgrade-from-v14-to-v15" title="Permanent link">&para;</a></h1>
+<p>To make use of the new <code>monitoringImage</code> value in the LinstorSatelliteSet CRD, you need to replace the existing CRDs
+before running the upgrade. If the CRDs are not upgraded, the operator will not deploy the monitoring container
+alongside the satellites.</p>
+<div class="highlight"><pre><span></span><code>$ kubectl replace -f ./charts/piraeus/crds
+</code></pre></div>
+<p>Then run the upgrade:</p>
+<div class="highlight"><pre><span></span><code>helm upgrade piraeus-op ./charts/piraeus -f &lt;overrides&gt;
+</code></pre></div>
+<h1 id="upgrade-from-v13-to-v14">Upgrade from v1.3 to v1.4<a class="headerlink" href="#upgrade-from-v13-to-v14" title="Permanent link">&para;</a></h1>
+<p>No special steps required, unless using the newly introduced <code>additionalEnv</code> and <code>additionalProperties</code> overrides.</p>
+<p>If you plan to use the new overrides, replace the CustomResourceDefinitions before running the upgrade</p>
+<div class="highlight"><pre><span></span><code>$ kubectl replace -f ./charts/piraeus/crds
+</code></pre></div>
+<p>Then run the upgrade:</p>
+<div class="highlight"><pre><span></span><code>helm upgrade piraeus-op ./charts/piraeus -f &lt;overrides&gt;
+</code></pre></div>
+<h1 id="upgrade-from-v12-to-v13">Upgrade from v1.2 to v1.3<a class="headerlink" href="#upgrade-from-v12-to-v13" title="Permanent link">&para;</a></h1>
+<p>No special steps required. After checking out the new repo, run a simple helm upgrade:</p>
+<div class="highlight"><pre><span></span><code>helm upgrade piraeus-op ./charts/piraeus -f &lt;overrides&gt;
+</code></pre></div>
+<h1 id="upgrade-from-v11-to-v12">Upgrade from v1.1 to v1.2<a class="headerlink" href="#upgrade-from-v11-to-v12" title="Permanent link">&para;</a></h1>
+<p>Piraeus v1.2 is supported on Kubernetes 1.17+. If you are using an older Kubernetes distribution, you may need
+to change the default settings (for
+example <a href="https://kubernetes-csi.github.io/docs/external-provisioner.html">the CSI provisioner</a>)</p>
+<p>To start the upgrade process, ensure you have a backup of the LINSTOR Controller database. If you are using
+the etcd deployment included in Piraeus, you can create a backup using:</p>
+<div class="highlight"><pre><span></span><code>kubectl exec piraeus-op-etcd-0 -- etcdctl snapshot save /tmp/save.db
+kubectl cp piraeus-op-etcd-0:/tmp/save.db save.db
+</code></pre></div>
+<p>Now you can start the upgrade process. Simply run <code>helm upgrade piraeus-op ./charts/piraeus</code>. If you installed Piraeus
+with customization, pass the same options you used for <code>helm install</code> to <code>helm upgrade</code>. This will cause the operator
+pod to be re-created and shortly after all other Piraeus pods.</p>
+<p>There is a known issue when updating the CSI components: the pods will not be updated to the newest image and the
+<code>errors</code> section of the LinstorCSIDrivers resource shows an error updating the DaemonSet. In this case, manually
+delete <code>deployment/piraeus-op-csi-controller</code> and <code>daemonset/piraeus-op-csi-node</code>. They will be re-created by the
+operator.</p>
+<p>After a short wait, all pods should be running and ready. Check that no errors are listed in the status section of
+LinstorControllers, LinstorSatelliteSets and LinstorCSIDrivers.</p>
+<h1 id="upgrade-from-v10-to-v11">Upgrade from v1.0 to v1.1<a class="headerlink" href="#upgrade-from-v10-to-v11" title="Permanent link">&para;</a></h1>
 <ul>
-<li><a href="https://kubernetes.io/docs/tasks/tools/">Install <code>kubectl</code></a></li>
-<li><a href="https://docs.helm.sh/docs/intro/install/">Install <code>helm</code></a></li>
+<li>The LINSTOR controller image given in <code>operator.controller.controllerImage</code> has to have
+  its entrypoint set to <a href="https://github.com/LINBIT/k8s-await-election/"><code>k8s-await-election v0.2.0</code></a>
+  or newer. All images starting with <code>piraeus-server:v1.8.0</code> meet this requirement.</li>
 </ul>
-<h2 id="deploy-piraeus-operator-v2-using-kubectl">Deploy Piraeus Operator v2 Using <code>kubectl</code></h2>
-<p>You can use <code>kubectl</code> and the built-in <code>kustomize</code> feature to deploy Piraeus Operator v2.</p>
-<p>First, create a file named <code>kustomization.yaml</code>, referencing the latest Piraeus Operator release, and the
-namespace you which to deploy the Piraeus Operator in. The latest releases are available  on the <a href="https://github.com/piraeusdatastore/piraeus-operator/releases">release page</a>.</p>
-<p>In the example below, the version is <code>v2.3.0</code>, and the namespace is <code>piraeus-datastore</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kustomize.config.k8s.io/v1beta1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Kustomization</span>
-<span class="nt">resources</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/piraeusdatastore/piraeus-operator//config/default?ref=v2.3.0</span><span class="w"> </span><span class="c1"># Change the version here</span>
-<span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus-datastore</span><span class="w"> </span><span class="c1"># Change the namespace here</span>
+<p>Older images will not work, as the <code>Service</code> will not automatically pick up on the active pod.</p>
+<p>To upgrade, first update the deployed LINSTOR image to a compatible version, then upgrade the
+  operator.</p>
+<h1 id="upgrade-to-v10">Upgrade to v1.0<a class="headerlink" href="#upgrade-to-v10" title="Permanent link">&para;</a></h1>
+<p>Upgrades from v0.* versions to v1.0 are best-effort only. The following guide assumes
+an upgrade from v0.5.0.</p>
+<ul>
+<li>
+<p>CRDs have been updated and set to version <code>v1</code>. You need to replace any existing CRDs with these new ones:
+  <div class="highlight"><pre><span></span><code>kubectl replace -f charts/piraeus/crds/piraeus.linbit.com_linstorcontrollers_crd.yaml
+kubectl replace -f charts/piraeus/crds/piraeus.linbit.com_linstorcsidrivers_crd.yaml
+kubectl replace -f charts/piraeus/crds/piraeus.linbit.com_linstorsatellitesets_crd.yaml
+</code></pre></div></p>
+</li>
+<li>
+<p>Renamed <code>LinstorNodeSet</code> to <code>LinstorSatelliteSet</code>. This brings the operator in line with other LINSTOR resources.
+  Existing <code>LinstorNodeSet</code> resources will automatically be migrated to <code>LinstorSatelliteSet</code>. The old resources will
+  not be deleted. You can verify that migration was successful by running the following command:
+  <div class="highlight"><pre><span></span><code>$ kubectl get linstornodesets.piraeus.linbit.com -o=jsonpath=&#39;{range .items[*]}{.metadata.name}{&quot;\t&quot;}{.status.ResourceMigrated}{&quot;\t&quot;}{.status.DependantsMigrated}{&quot;\n&quot;}{end}&#39;
+piraeus-op-ns true    true
 </code></pre></div>
-<p>Then, deploy the Operator using <code>kubectl</code> and wait for the deployment to complete:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl apply -k . --server-side
-$ kubectl rollout status -n piraeus-datastore -w deploy/piraeus-operator-controller-manager
+  If both values are <code>true</code>, migration was successful. The old resource can be removed after migration.</p>
+</li>
+<li>
+<p>Renamed <code>LinstorControllerSet</code> to <code>LinstorController</code>. The old name implied the existence of multiple (separate)
+  controllers. Existing <code>LinstorControllerSet</code> resources will automatically be migrated to <code>LinstorController</code>. The old
+  resources will not be deleted. You can verify that migration was successful by running the following command:
+  <div class="highlight"><pre><span></span><code>$ kubectl get linstorcontrollersets.piraeus.linbit.com -o=jsonpath=&#39;{range .items[*]}{.metadata.name}{&quot;\t&quot;}{.status.ResourceMigrated}{&quot;\t&quot;}{.status.DependantsMigrated}{&quot;\n&quot;}{end}&#39;
+piraeus-op-cs true    true
 </code></pre></div>
-<h2 id="deploy-piraeus-operator-v2-using-helm">Deploy Piraeus Operator v2 Using Helm</h2>
-<p>To deploy Piraeus Operator v2 using Helm, clone the latest v2 release of Piraeus. The latest releases are available
-on the <a href="https://github.com/piraeusdatastore/piraeus-operator/releases">release page</a>.</p>
-<p>To also install the necessary Custom Resource Definitions for Piraeus, set <code>installCRDs</code> to <code>true</code>.</p>
-<div class="highlight"><pre><span></span><code>$ git clone -b v2.3.0 https://github.com/piraeusdatastore/piraeus-operator.git
-$ cd piraeus-operator
-$ helm install piraeus-operator charts/piraeus --set installCRDs=true
+  If both values are <code>true</code>, migration was successful. The old resource can be removed after migration.</p>
+</li>
+<li>
+<p>Along with the CRDs, Helm settings changed too:</p>
+<ul>
+<li><code>operator.controllerSet</code> to <code>operator.controller</code></li>
+<li><code>operator.nodeSet</code> to <code>operator.satelliteSet</code>
+  If old settings are used, Helm will return an error.</li>
+</ul>
+</li>
+<li>
+<p>Node scheduling no longer relies on <code>linstor.linbit.com/piraeus-node</code> labels. Instead, all CRDs support
+  setting pod <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity">affinity</a> and <a href="https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/">tolerations</a>.
+  In detail:</p>
+<ul>
+<li><code>linstorcsidrivers</code> gained 4 new resource keys, with no change in default behaviour:<ul>
+<li><code>nodeAffinity</code> affinity passed to the csi nodes</li>
+<li><code>nodeTolerations</code> tolerations passed to the csi nodes</li>
+<li><code>controllerAffinity</code> affinity passed to the csi controller</li>
+<li><code>controllerTolerations</code> tolerations passed to the csi controller</li>
+</ul>
+</li>
+<li><code>linstorcontrollerset</code> gained 2 new resource keys, with no change in default behaviour:<ul>
+<li><code>affinity</code> affinity passed to the linstor controller pod</li>
+<li><code>tolerations</code> tolerations passed to the linstor controller pod</li>
+</ul>
+</li>
+<li><code>linstornodeset</code> gained 2 new resource keys, <strong>with change in default behaviour</strong>:<ul>
+<li><code>affinity</code> affinity passed to the linstor controller pod</li>
+<li><code>tolerations</code> tolerations passed to the linstor controller pod</li>
+</ul>
+</li>
+</ul>
+<p>Previously, linstor satellite pods required nodes marked with <code>linstor.linbit.com/piraeus-node=true</code>. The new
+  default value does not place this restriction on nodes. To restore the old behaviour, set the following affinity:
+  <div class="highlight"><pre><span></span><code><span class="nt">affinity</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">nodeAffinity</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">requiredDuringSchedulingIgnoredDuringExecution</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">nodeSelectorTerms</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">matchExpressions</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstor.linbit.com/piraeus-node</span>
+<span class="w">          </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">In</span>
+<span class="w">          </span><span class="nt">values</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Other changed helm settings:
+  <code>drbdKernelModuleInjectionMode</code>: renamed to <code>kernelModuleInjectionMode</code>
+  <code>kernelModImage</code>: renamed to <code>kernelModuleInjectionImage</code>
+  If old settings are used, Helm will return an error.</p>
+</li>
+</ul>
+<h1 id="upgrade-between-v0-versions">Upgrade between v0.* versions<a class="headerlink" href="#upgrade-between-v0-versions" title="Permanent link">&para;</a></h1>
+<p>While the API version was <code>v1alpha1</code>, this project did not maintain
+stability of or provide conversion of the Custom Resource Definitions.</p>
+<p>If you are using the Helm deployment, you may find that upgrades fail with
+errors similar to the following:</p>
+<div class="highlight"><pre><span></span><code>UPGRADE FAILED: cannot patch &quot;piraeus-op-cs&quot; with kind LinstorController: LinstorController.piraeus.linbit.com &quot;piraeus-op-cs&quot; is invalid: spec.etcdURL: Required value
 </code></pre></div>
-<h2 id="deploy-the-piraeus-datastore-cluster">Deploy the Piraeus Datastore Cluster</h2>
-<p>Once the Operator is deployed, deploy the Cluster using the generated resources from <a href="../2-collect-information/#run-the-data-collection-script">step 2</a>.</p>
-<p>First, create the secret used for the LINSTOR passphrase collected at the <a href="../2-collect-information/#collect-helm-generated-secrets">end of step 2</a>.</p>
-<div class="highlight"><pre><span></span><code>$ cat &lt;&lt;-EOF | kubectl apply -f - --server-side
-apiVersion: v1
-kind: Secret
-metadata:
-  name: piraeus-op-passphrase
-  namespace: piraeus-datastore # Change the namespace here
-data:
-  MASTER_PASSPHRASE: ZVRxanl1cVBscXV1ZTk1cmEwVTk5b0ptd0F4OGFmWlVPUVA0NWNnUw==
-EOF
+<p>The simplest solution in this case is to manually replace the CRD:</p>
+<div class="highlight"><pre><span></span><code>kubectl replace -f charts/piraeus/crds/piraeus.linbit.com_linstorcsidrivers_crd.yaml
+kubectl replace -f charts/piraeus/crds/piraeus.linbit.com_linstorsatellitesets_crd.yaml
+kubectl replace -f charts/piraeus/crds/piraeus.linbit.com_linstorcontrollers_crd.yaml
 </code></pre></div>
-<p>Then, apply the resource generated by the script from step 2:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl apply -f v2-resources.yaml --server-side
-linstorcluster.piraeus.io/linstorcluster created
-linstorsatelliteconfiguration.piraeus.io/host-networking created
-linstorsatelliteconfiguration.piraeus.io/piraeus-op-ns created
-</code></pre></div>
-<p>Now the cluster will come up, using the existing data to restore the cluster state.</p>
-<h2 id="verifying-cluster-state">Verifying Cluster State</h2>
-<p>You can check the Cluster state by using the <code>linstor</code> command line client:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl exec deploy/linstor-controller -- linstor node list
-$ kubectl exec deploy/linstor-controller -- linstor storage-pool list
-$ kubectl exec deploy/linstor-controller -- linstor resource list-volumes
-$ kubectl exec deploy/linstor-controller -- linstor error-reports list
-</code></pre></div>
-<p>You can also provision new volumes, to verify that the cluster is operational.</p>
+<p>Then continue with the Helm upgrade. Values that are lost during the
+replacement will be set again by Helm.</p>
 
 
 
@@ -2105,7 +2103,7 @@ $ kubectl exec deploy/linstor-controller -- linstor error-reports list
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../3-remove-operator-v1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Remove Operator v1">
+          <a href="../how-to/restore-linstor-db/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Restore a LINSTOR Database Backup">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2115,20 +2113,20 @@ $ kubectl exec deploy/linstor-controller -- linstor error-reports list
                 Previous
               </span>
               <div class="md-ellipsis">
-                Remove Operator v1
+                Restore a LINSTOR Database Backup
               </div>
             </div>
           </a>
         
         
           
-          <a href="../../../explanation/" class="md-footer__link md-footer__link--next" aria-label="Next: Understanding Piraeus">
+          <a href="migration/" class="md-footer__link md-footer__link--next" aria-label="Next: Upgrading from v1 to v2">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Understanding Piraeus
+                Upgrading from v1 to v2
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2192,10 +2190,10 @@ $ kubectl exec deploy/linstor-controller -- linstor error-reports list
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "default": "stable", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.code.copy", "content.tooltips", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "default": "stable", "provider": "mike"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>

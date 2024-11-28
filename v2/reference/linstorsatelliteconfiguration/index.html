@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
@@ -63,7 +63,7 @@
       
         <meta  property="og:title"  content="LinstorSatelliteConfiguration - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/reference/linstorsatelliteconfiguration.png" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:title"  content="LinstorSatelliteConfiguration - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/reference/linstorsatelliteconfiguration.png" >
       
@@ -325,7 +325,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../how-to/upgrade/" class="md-tabs__link">
+        <a href="../../upgrade/" class="md-tabs__link">
           
   
     
@@ -1346,8 +1346,6 @@
       
         
       
-        
-      
     
     
       
@@ -1365,7 +1363,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../how-to/upgrade/" class="md-nav__link ">
+            <a href="../../upgrade/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1397,29 +1395,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../how-to/upgrade/UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1441,26 +1422,36 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../upgrade/migration/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1469,7 +1460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/1-migrate-database/" class="md-nav__link">
+      <a href="../../upgrade/migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1490,7 +1481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/2-collect-information/" class="md-nav__link">
+      <a href="../../upgrade/migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1511,7 +1502,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/3-remove-operator-v1/" class="md-nav__link">
+      <a href="../../upgrade/migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1532,7 +1523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../how-to/upgrade/4-install-operator-v2/" class="md-nav__link">
+      <a href="../../upgrade/migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2133,13 +2124,13 @@
   
 
 
-<h1 id="linstorsatelliteconfiguration"><code>LinstorSatelliteConfiguration</code></h1>
+<h1 id="linstorsatelliteconfiguration"><code>LinstorSatelliteConfiguration</code><a class="headerlink" href="#linstorsatelliteconfiguration" title="Permanent link">&para;</a></h1>
 <p>This resource controls the state of one or more LINSTOR® satellites.</p>
-<h2 id="spec"><code>.spec</code></h2>
+<h2 id="spec"><code>.spec</code><a class="headerlink" href="#spec" title="Permanent link">&para;</a></h2>
 <p>Configures the desired state of satellites.</p>
-<h3 id="specnodeselector"><code>.spec.nodeSelector</code></h3>
+<h3 id="specnodeselector"><code>.spec.nodeSelector</code><a class="headerlink" href="#specnodeselector" title="Permanent link">&para;</a></h3>
 <p>Selects which nodes the LinstorSatelliteConfiguration should apply to. If empty, the configuration applies to all nodes.</p>
-<h4 id="example">Example</h4>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
 <p>This example sets the <code>AutoplaceTarget</code> property to <code>no</code> on all nodes labelled <code>piraeus.io/autoplace: "no"</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorSatelliteConfiguration</span>
@@ -2152,11 +2143,11 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AutoplaceTarget</span>
 <span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;no&quot;</span>
 </code></pre></div>
-<h3 id="specnodeaffinity"><code>.spec.nodeAffinity</code></h3>
+<h3 id="specnodeaffinity"><code>.spec.nodeAffinity</code><a class="headerlink" href="#specnodeaffinity" title="Permanent link">&para;</a></h3>
 <p>Selects which nodes the LinstorSatelliteConfiguration should apply to. If empty, the configuration applies to all nodes.</p>
 <p>When this is used together with <code>.spec.nodeSelector</code>, both need to match in order for the configuration to apply to a
 node.</p>
-<h4 id="example_1">Example</h4>
+<h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
 <p>This example sets the <code>AutoplaceTarget</code> property to <code>no</code> on all non-worker nodes:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorSatelliteConfiguration</span>
@@ -2172,7 +2163,7 @@ node.</p>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AutoplaceTarget</span>
 <span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;no&quot;</span>
 </code></pre></div>
-<h3 id="specproperties"><code>.spec.properties</code></h3>
+<h3 id="specproperties"><code>.spec.properties</code><a class="headerlink" href="#specproperties" title="Permanent link">&para;</a></h3>
 <p>Sets the given properties on the LINSTOR Satellite level.</p>
 <p>The property value can either be set directly using <code>value</code>, inherited from the Kubernetes Node's metadata using
 <code>valueFrom</code>, or <em>expanded</em> from Kubernetes Node's metadata using <code>expandFrom</code>. Metadata fields are specified using the
@@ -2192,7 +2183,7 @@ already a map (<code>metadata.labels</code> or <code>metadata.annotations</code>
   is joined using the optional <code>delimiter</code> value.</p>
 <p>In addition, setting <code>optional</code> to true means the property is only applied if the value is not empty. This is useful
 in case the property value should be inherited from the node's metadata</p>
-<h4 id="example_2">Example</h4>
+<h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
 <p>This examples sets the following Properties on every satellite:
 * <code>PrefNic</code> (the preferred network interface) is always set to <code>default-ipv6</code>
 * <code>Aux/example-property</code> (an auxiliary property, unused by LINSTOR itself) takes the value from the <code>piraeus.io/example</code>
@@ -2231,7 +2222,7 @@ in case the property value should be inherited from the node's metadata</p>
 <span class="w">        </span><span class="nt">valueTemplate</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$1&quot;</span>
 <span class="w">        </span><span class="nt">delimiter</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;,&quot;</span>
 </code></pre></div>
-<h3 id="specstoragepools"><code>.spec.storagePools</code></h3>
+<h3 id="specstoragepools"><code>.spec.storagePools</code><a class="headerlink" href="#specstoragepools" title="Permanent link">&para;</a></h3>
 <p>Configures LINSTOR Storage Pools.</p>
 <p>Every Storage Pool needs at least a <code>name</code>, and a type. Types are specified by setting a (potentially empty) value on
 the matching key. Available types are:</p>
@@ -2254,7 +2245,7 @@ the matching key. Available types are:</p>
 of raw block devices, which LINSTOR will prepare as the chosen backing pool.</p>
 <p>All storage pools also can also be configured with <code>properties</code>. Properties are set on the Storage Pool level. The
 configuration values have the same form as <a href="#specproperties">Satellite Properties</a>.</p>
-<h4 id="example_3">Example</h4>
+<h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
 <p>This example configures these LINSTOR Storage Pools on all satellites:
 * A LVM Pool named <code>vg1</code>. It will use the VG <code>vg1</code>, which needs to exist on the nodes already.
 * A LVM Thin Pool named <code>vg1-thin</code>. It will use the thin pool <code>vg1/thin</code>, which also needs to exist on the nodes.
@@ -2303,7 +2294,7 @@ configuration values have the same form as <a href="#specproperties">Satellite P
 <span class="w">        </span><span class="nt">hostDevices</span><span class="p">:</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/sdd</span>
 </code></pre></div>
-<h3 id="specinternaltls"><code>.spec.internalTLS</code></h3>
+<h3 id="specinternaltls"><code>.spec.internalTLS</code><a class="headerlink" href="#specinternaltls" title="Permanent link">&para;</a></h3>
 <p>Configures a TLS secret used by the LINSTOR Satellites to:
 * Validate the certificate of the LINSTOR Controller, that is the Controller must have certificates signed by <code>ca.crt</code>.
 * Provide a server certificate for authentication by the LINSTOR Controller, that is <code>tls.key</code> and <code>tls.crt</code> must be accepted by the Controller.</p>
@@ -2312,7 +2303,7 @@ configuration values have the same form as <a href="#specproperties">Satellite P
 name of the Kubernetes Node.</p>
 <p>Optional, a reference to a <a href="https://cert-manager.io/docs/concepts/issuer/">cert-manager <code>Issuer</code></a> can be provided
 to let the operator create the required secret.</p>
-<h4 id="example_4">Example</h4>
+<h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h4>
 <p>This example creates a manually provisioned TLS secret and references it in the LinstorSatelliteConfiguration, setting
 it for all nodes.</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
@@ -2334,7 +2325,7 @@ it for all nodes.</p>
 <span class="w">  </span><span class="nt">internalTLS</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-node-tls</span>
 </code></pre></div>
-<h4 id="example_5">Example</h4>
+<h4 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h4>
 <p>This example sets up automatic creation of the LINSTOR Satellite TLS secrets using a
 cert-manager issuer named <code>piraeus-root</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
@@ -2347,14 +2338,14 @@ cert-manager issuer named <code>piraeus-root</code>.</p>
 <span class="w">      </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Issuer</span>
 <span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus-root</span>
 </code></pre></div>
-<h3 id="specipfamilies"><code>.spec.ipFamilies</code></h3>
+<h3 id="specipfamilies"><code>.spec.ipFamilies</code><a class="headerlink" href="#specipfamilies" title="Permanent link">&para;</a></h3>
 <p>Configures the IP Family (IPv4 or IPv6) to use to connect to the LINSTOR Satellite.</p>
 <p>If unset, the LINSTOR Controller will attempt to reach the LINSTOR Satellite via all recognized addresses in the
 Satellite Pods' Status.
 If set, the LINSTOR Controller will only attempt to reach the LINSTOR Satellite via all addresses matching the listed
 IP Families.</p>
 <p>Valid values are <code>IPv4</code> and <code>IPv6</code>.</p>
-<h4 id="example_6">Example</h4>
+<h4 id="example_6">Example<a class="headerlink" href="#example_6" title="Permanent link">&para;</a></h4>
 <p>This example configures the LINSTOR Controller to only use IPv4, even in a dual stack cluster.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorSatelliteConfiguration</span>
@@ -2364,11 +2355,11 @@ IP Families.</p>
 <span class="w">  </span><span class="nt">ipFamilies</span><span class="p">:</span>
 <span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">IPv4</span>
 </code></pre></div>
-<h3 id="specpodtemplate"><code>.spec.podTemplate</code></h3>
+<h3 id="specpodtemplate"><code>.spec.podTemplate</code><a class="headerlink" href="#specpodtemplate" title="Permanent link">&para;</a></h3>
 <p>Configures the Pod used to run the LINSTOR Satellite.</p>
 <p>The template is applied as a patch (see <a href="#specpatches"><code>.spec.patches</code></a>) to the default resources, so it can be
 "sparse".</p>
-<h4 id="example_7">Example</h4>
+<h4 id="example_7">Example<a class="headerlink" href="#example_7" title="Permanent link">&para;</a></h4>
 <p>This example configures a resource request of <code>cpu: 100m</code> on the satellite, and also enables host networking.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorSatelliteConfiguration</span>
@@ -2384,15 +2375,15 @@ IP Families.</p>
 <span class="w">            </span><span class="nt">requests</span><span class="p">:</span>
 <span class="w">              </span><span class="nt">cpu</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100m</span>
 </code></pre></div>
-<h3 id="specpatches"><code>.spec.patches</code></h3>
+<h3 id="specpatches"><code>.spec.patches</code><a class="headerlink" href="#specpatches" title="Permanent link">&para;</a></h3>
 <p>The given patches will be applied to all resources controlled by the operator. The patches are
 forwarded to <code>kustomize</code> internally, and take the <a href="https://kubectl.docs.kubernetes.io/references/kustomize/kustomization/patches/">same format</a>.</p>
 <p>The unpatched resources are available in the <a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v2/pkg/resources/satellite">subdirectories of the <code>pkg/resources/satellite</code> directory</a>.</p>
-<h4 id="warning">Warning</h4>
+<h4 id="warning">Warning<a class="headerlink" href="#warning" title="Permanent link">&para;</a></h4>
 <p>No checks are run on the result of user-supplied patches: the resources are applied
 as-is. Patching some fundamental aspect, such as removing a specific volume from a
 container may lead to a degraded cluster.</p>
-<h4 id="example_8">Example</h4>
+<h4 id="example_8">Example<a class="headerlink" href="#example_8" title="Permanent link">&para;</a></h4>
 <p>This example configures the LINSTOR Satellite to use the "TRACE" log level, creating very verbose output.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorSatelliteConfiguration</span>
@@ -2413,9 +2404,9 @@ container may lead to a degraded cluster.</p>
 <span class="w">            </span><span class="no">[logging]</span>
 <span class="w">              </span><span class="no">linstor_level = &quot;TRACE&quot;</span>
 </code></pre></div>
-<h2 id="status"><code>.status</code></h2>
+<h2 id="status"><code>.status</code><a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
 <p>Reports the actual state of the cluster.</p>
-<h3 id="statusconditions"><code>.status.conditions</code></h3>
+<h3 id="statusconditions"><code>.status.conditions</code><a class="headerlink" href="#statusconditions" title="Permanent link">&para;</a></h3>
 <p>The Operator reports the current state of the Satellite Configuration through a set of conditions. Conditions are
 identified by their <code>type</code>.</p>
 <table>

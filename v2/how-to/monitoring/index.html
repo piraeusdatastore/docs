@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere.">
+        <meta name="description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere.">
       
       
         <meta name="author" content="The Piraeus Maintainers">
@@ -63,7 +63,7 @@
       
         <meta  property="og:title"  content="Monitor Piraeus Datastore with Prometheus Operator - Piraeus Datastore" >
       
-        <meta  property="og:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/monitoring.png" >
       
@@ -79,7 +79,7 @@
       
         <meta  name="twitter:title"  content="Monitor Piraeus Datastore with Prometheus Operator - Piraeus Datastore" >
       
-        <meta  name="twitter:description"  content="An easy-using cloud native datastore for Kubernetes. 100% open source, run anywhere." >
+        <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
         <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/monitoring.png" >
       
@@ -327,7 +327,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../upgrade/" class="md-tabs__link">
+        <a href="../../upgrade/" class="md-tabs__link">
           
   
     
@@ -1435,8 +1435,6 @@
       
         
       
-        
-      
     
     
       
@@ -1454,7 +1452,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../upgrade/" class="md-nav__link ">
+            <a href="../../upgrade/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1486,29 +1484,12 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../upgrade/UPGRADE/" class="md-nav__link">
+    
+    
+      
         
-  
-  <span class="md-ellipsis">
-    Upgrading from v2 to v2
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
+          
+        
       
         
       
@@ -1530,26 +1511,36 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
-            
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../upgrade/migration/" class="md-nav__link ">
+              
   
   <span class="md-ellipsis">
     Upgrading from v1 to v2
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_3">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
             Upgrading from v1 to v2
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
             
               
                 
@@ -1558,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/1-migrate-database/" class="md-nav__link">
+      <a href="../../upgrade/migration/1-migrate-database/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1579,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/2-collect-information/" class="md-nav__link">
+      <a href="../../upgrade/migration/2-collect-information/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1600,7 +1591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/3-remove-operator-v1/" class="md-nav__link">
+      <a href="../../upgrade/migration/3-remove-operator-v1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../upgrade/4-install-operator-v2/" class="md-nav__link">
+      <a href="../../upgrade/migration/4-install-operator-v2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1982,7 +1973,7 @@
   
 
 
-<h1 id="how-to-deploy-monitoring-with-prometheus-operator">How to Deploy Monitoring with Prometheus Operator</h1>
+<h1 id="how-to-deploy-monitoring-with-prometheus-operator">How to Deploy Monitoring with Prometheus Operator<a class="headerlink" href="#how-to-deploy-monitoring-with-prometheus-operator" title="Permanent link">&para;</a></h1>
 <p>Piraeus Datastore offers integration with the <a href="https://github.com/prometheus-operator/kube-prometheus">Prometheus monitoring stack</a>.</p>
 <p>The integration configures:</p>
 <ul>
@@ -1995,7 +1986,7 @@
 <li>Deploying workloads in Kubernetes using <a href="https://helm.sh/"><code>helm</code></a></li>
 <li>Deploying resources using <a href="https://kubernetes.io/docs/tasks/tools/"><code>kubectl</code></a></li>
 </ul>
-<h2 id="deploying-prometheus-operator">Deploying Prometheus Operator</h2>
+<h2 id="deploying-prometheus-operator">Deploying Prometheus Operator<a class="headerlink" href="#deploying-prometheus-operator" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>🗒️ NOTE: If you already have a working Prometheus Operator deployment, skip this step.</p>
 </blockquote>
@@ -2017,12 +2008,12 @@ alerting rules in all namespaces:</p>
 Datastore is usually deployed in a different namespace, so Prometheus needs to be configured to watch this namespace.
 In the example above, this is achieved by setting the various <code>*NilUsesHelmValues</code> parameters to <code>false</code>.</p>
 </blockquote>
-<h2 id="deploying-monitoring-and-alerting-rules-for-piraeus-datastore">Deploying Monitoring and Alerting Rules for Piraeus Datastore</h2>
+<h2 id="deploying-monitoring-and-alerting-rules-for-piraeus-datastore">Deploying Monitoring and Alerting Rules for Piraeus Datastore<a class="headerlink" href="#deploying-monitoring-and-alerting-rules-for-piraeus-datastore" title="Permanent link">&para;</a></h2>
 <p>After creating a Prometheus Operator deployment and configuring it to watch all namespaces, apply the monitoring
 and alerting resources for Piraeus Datastore:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl apply --server-side -n piraeus-datastore -k &quot;https://github.com/piraeusdatastore/piraeus-operator//config/extras/monitoring?ref=v2&quot;
 </code></pre></div>
-<h2 id="verify-monitoring">Verify Monitoring</h2>
+<h2 id="verify-monitoring">Verify Monitoring<a class="headerlink" href="#verify-monitoring" title="Permanent link">&para;</a></h2>
 <p>Verify that the monitoring configuration is working by checking the prometheus console. First, get access to the
 prometheus console from your local browser by forwarding it to local port 9090:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl port-forward -n monitoring services/prometheus-kube-prometheus-prometheus 9090:9090
