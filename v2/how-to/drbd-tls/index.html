@@ -2109,13 +2109,13 @@ Handshake with node3.example.com (10.125.97.42) was successful
 Handshake with node3.example.com (10.125.97.42) was successful
 ...
 </code></pre></div>
-<blockquote>
-<p>[!NOTE]
-The following messages are expected when running <code>ktls-utils</code> in a container and can be safely ignored:
-<div class="highlight"><pre><span></span><code>File /etc/tlshd.d/tls.key: expected mode 600
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The following messages are expected when running <code>ktls-utils</code> in a container and can be safely ignored:</p>
+<pre><code>File /etc/tlshd.d/tls.key: expected mode 600
 add_key: Bad message
-</code></pre></div></p>
-</blockquote>
+</code></pre>
+</div>
 <p>Next, check the statistics on TLS sessions controlled by the kernel on each node. You should see an equal, nonzero
 number of <code>TlsRxSw</code> and <code>TlsRxSw</code>.</p>
 <div class="highlight"><pre><span></span><code>$ kubectl exec node1.example.com -- cat /proc/net/tls_stat
@@ -2132,10 +2132,10 @@ TlsRxDeviceResync                   0
 TlsDecryptRetry                     0
 TlsRxNoPadViolation                 0
 </code></pre></div>
-<blockquote>
-<p>[!NOTE]
-If your network card supports TLS offloading, you might see <code>TlsTxDevice</code> and <code>TlsRxDevice</code> being nonzero instead.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If your network card supports TLS offloading, you might see <code>TlsTxDevice</code> and <code>TlsRxDevice</code> being nonzero instead.</p>
+</div>
 
 
 

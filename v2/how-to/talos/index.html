@@ -1966,7 +1966,7 @@
 <h2 id="configure-talos-system-extension-for-drbd">Configure Talos system extension for DRBD<a class="headerlink" href="#configure-talos-system-extension-for-drbd" title="Permanent link">&para;</a></h2>
 <p>By default, the DRBD Module Loader will try to find the necessary header files to build DRBD from source on the host system. In <a href="https://talos.dev">Talos Linux</a> these header files are not included in the host system. Instead, the Kernel modules is packed into a system extension.</p>
 <p>Ensure Talos has the correct <code>drbd</code> <a href="https://github.com/siderolabs/extensions">system extension</a> loaded for the running Kernel.</p>
-<p>This is done by building a install image from the <a href="https://factory.talos.dev">talos factory</a> with drbd included</p>
+<p>This is done by building a install image from the <a href="https://factory.talos.dev">talos factory</a> with drbd included.</p>
 <p>You will also need to update the machine config to set the following kernel module parameters:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">machine</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">kernel</span><span class="p">:</span>
@@ -1975,6 +1975,10 @@
 <span class="w">        </span><span class="nt">parameters</span><span class="p">:</span>
 <span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">usermode_helper=disabled</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drbd_transport_tcp</span>
+<span class="w">      </span><span class="c1"># LVM_THIN storage pools require this module</span>
+<span class="w">      </span><span class="c1">#- name: dm-thin-pool</span>
+<span class="w">      </span><span class="c1"># ZFS storage pools require this module from the ZFS extension</span>
+<span class="w">      </span><span class="c1">#- name: zfs</span>
 </code></pre></div>
 <p>Validate <code>drbd</code> module is loaded:
 <div class="highlight"><pre><span></span><code>$<span class="w"> </span>talosctl<span class="w"> </span>-n<span class="w"> </span>&lt;NODE_IP&gt;<span class="w"> </span><span class="nb">read</span><span class="w"> </span>/proc/modules

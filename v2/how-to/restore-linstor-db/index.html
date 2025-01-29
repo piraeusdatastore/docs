@@ -2012,11 +2012,11 @@
 <h1 id="how-to-restore-a-linstor-database-backup">How to Restore a LINSTOR Database Backup<a class="headerlink" href="#how-to-restore-a-linstor-database-backup" title="Permanent link">&para;</a></h1>
 <p>This guide shows you how to restore a LINSTOR® Controller from a database backup. A backup is created automatically
 on every database migration of the default <code>k8s</code> database.</p>
-<blockquote>
-<p>[!CAUTION]
-Restoring from a backup means all changes made to the Cluster state after the backup was taken are lost.
-This includes information about Persistent Volumes and Volume Snapshots that where created after the backup.</p>
-</blockquote>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Restoring from a backup means all changes made to the Cluster state after the backup was taken are lost.
+Persistent Volumes and Volume Snapshots that were created after the backup are lost.</p>
+</div>
 <p>To complete this guide, you should be familiar with:</p>
 <ul>
 <li>using the <code>kubectl</code> command line tool to access the Kubernetes cluster.</li>
