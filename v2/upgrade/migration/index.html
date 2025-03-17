@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -1971,10 +1971,12 @@ requiring manual oversight.</p>
 <ul>
 <li>You used Helm to create the original deployment and are familiar with upgrading Helm deployments.</li>
 <li>Your Piraeus Datastore deployment is up-to-date with the latest v1 release. Check the releases <a href="https://github.com/piraeusdatastore/piraeus-operator/releases?q=v1&amp;expanded=true">here</a>.</li>
-<li>You have the following command line tools available:</li>
+<li>You have the following command line tools available:<ul>
 <li><a href="https://kubernetes.io/docs/tasks/tools/"><code>kubectl</code></a></li>
 <li><a href="https://docs.helm.sh/docs/intro/install/"><code>helm</code></a></li>
 <li><a href="https://jqlang.github.io/jq/download/"><code>jq</code></a></li>
+</ul>
+</li>
 <li>You are familiar with the <code>linstor</code> command line utility, specifically to verify the cluster state.</li>
 </ul>
 <h2 id="key-changes-between-operator-v1-and-v2">Key Changes Between Operator V1 and V2<a class="headerlink" href="#key-changes-between-operator-v1-and-v2" title="Permanent link">&para;</a></h2>
@@ -1988,21 +1990,29 @@ requiring manual oversight.</p>
 </ul>
 <h3 id="operational-changes">Operational Changes<a class="headerlink" href="#operational-changes" title="Permanent link">&para;</a></h3>
 <ul>
-<li>In Operator v1, all labels on the Kubernetes node resource were replicated on the satellite, making them usable in the
-  <code>replicasOnSame</code> and <code>replicasOnDifferent</code> parameters on the storage class. In Operator v2, only the following
-  labels are automatically synchronized.</li>
+<li>
+<p>In Operator v1, all labels on the Kubernetes node resource were replicated on the satellite, making them usable in the
+    <code>replicasOnSame</code> and <code>replicasOnDifferent</code> parameters on the storage class. In Operator v2, only the following
+    labels are automatically synchronized.</p>
+<ul>
 <li><code>kubernetes.io/hostname</code></li>
 <li><code>topology.kubernetes.io/region</code></li>
-<li><code>topology.kubernetes.io/zone</code>
-  Use <a href="../../reference/linstorsatelliteconfiguration/#specproperties"><code>LinstorSatelliteConfiguration.spec.properties</code></a>
-  to synchronize additional labels.</li>
-<li>The following settings are applied by Operator v2 cluster-wide:</li>
-<li>DrbdOptions/Net/rr-conflict: retry-connect</li>
-<li>DrbdOptions/Resource/on-suspended-primary-outdated: force-secondary</li>
-<li>DrbdOptions/Resource/on-no-data-accessible: suspend-io</li>
-<li>DrbdOptions/auto-quorum: suspend-io</li>
+<li><code>topology.kubernetes.io/zone</code></li>
+</ul>
+<p>Use <a href="../../reference/linstorsatelliteconfiguration/#specproperties"><code>LinstorSatelliteConfiguration.spec.properties</code></a>
+to synchronize additional labels.</p>
+</li>
+<li>
+<p>The following settings are applied by Operator v2 cluster-wide:</p>
+<ul>
+<li><code>DrbdOptions/Net/rr-conflict: retry-connect</code></li>
+<li><code>DrbdOptions/Resource/on-suspended-primary-outdated: force-secondary</code></li>
+<li><code>DrbdOptions/Resource/on-no-data-accessible: suspend-io</code></li>
+<li><code>DrbdOptions/auto-quorum: suspend-io</code></li>
+</ul>
+</li>
 <li>Operator v2 also includes a <a href="https://github.com/piraeusdatastore/piraeus-ha-controller">High-Availability Controller</a>
-  deployment to prevent stuck nodes caused by suspended DRBD devices.</li>
+    deployment to prevent stuck nodes caused by suspended DRBD devices.</li>
 </ul>
 
 

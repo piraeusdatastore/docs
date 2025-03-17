@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -2071,10 +2071,12 @@ kernel <a href="https://www.kernel.org/doc/html/latest/networking/tls.html#kerne
 quay.io/piraeusdatastore/piraeus-operator:v2.3.0
 </code></pre></div></li>
 <li>Use a host operating system with kernel TLS offload enabled. TLS offload was added in Linux 4.19. The following
-  distributions are known to have TLS offload enabled:</li>
+  distributions are known to have TLS offload enabled:<ul>
 <li>RHEL &gt;= 8.2</li>
 <li>Ubuntu &gt;= 22.04</li>
 <li>Debian &gt;= 12</li>
+</ul>
+</li>
 <li>Have DRBD 9.2.6 or newer loaded. The following script shows the currently loaded DRBD version on all nodes:
   <div class="highlight"><pre><span></span><code>for SATELLITE in $(kubectl get pods -l app.kubernetes.io/component=linstor-satellite -ojsonpath=&#39;{range .items[*]}{.metadata.name}{&quot;\n&quot;}{end}&#39;); do
   echo &quot;$SATELLITE: $(kubectl exec $SATELLITE -- head -1 /proc/drbd)&quot;

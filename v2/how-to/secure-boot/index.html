@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -2112,15 +2112,13 @@ input password again:
 <p>To enable the keys, start a console session on the machine, either by directly attching a keyboard and monitor,
 attaching a virtual console using the machines BMC, or using tools of your virtualization platform such as virt-viewer
 or VNC.</p>
-<p>Then, reboot the machine, chosing to "Perform MOK management" when promted. Now:
-* Select "Enroll MOK":</p>
-<p><img alt="mok-enroll.png" src="../../assets/mok-enroll.png" />
-* Continue enrollment of the key:</p>
-<p><img alt="mok-continue.png" src="../../assets/mok-continue.png" />
-* Enter the password chosen when running <code>mokutil --import</code>:</p>
-<p><img alt="mok-password.png" src="../../assets/mok-password.png" />
-* Reboot the machine:</p>
-<p><img alt="mok-reboot.png" src="../../assets/mok-reboot.png" /></p>
+<p>Then, reboot the machine, chosing to "Perform MOK management" when promted. Now:</p>
+<ul>
+<li>Select "Enroll MOK": <img alt="mok-enroll.png" src="../../assets/mok-enroll.png" /></li>
+<li>Continue enrollment of the key: <img alt="mok-continue.png" src="../../assets/mok-continue.png" /></li>
+<li>Enter the password chosen when running <code>mokutil --import</code>: <img alt="mok-password.png" src="../../assets/mok-password.png" /></li>
+<li>Reboot the machine: <img alt="mok-reboot.png" src="../../assets/mok-reboot.png" /></li>
+</ul>
 <h2 id="sign-the-drbd-module-using-the-created-key-material">Sign the DRBD Module Using the Created Key Material<a class="headerlink" href="#sign-the-drbd-module-using-the-created-key-material" title="Permanent link">&para;</a></h2>
 <p>Create a Kubernetes Secret resource containing the generated key material. The following command creates a secret named
 <code>drbd-signing-keys</code>:</p>

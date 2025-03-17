@@ -22,7 +22,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
     
     
       
@@ -30,7 +30,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.4af4bdda.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -2413,9 +2413,11 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://linstor.example.com:3370</span>
 </code></pre></div>
 <h3 id="speccontroller"><code>.spec.controller</code><a class="headerlink" href="#speccontroller" title="Permanent link">&para;</a></h3>
-<p>Controls the LINSTOR Controller Deployment:
-* Setting <code>enabled: false</code> disables the controller deployment entirely. See also <a href="#specexternalcontroller"><code>.spec.externalController</code></a>.
-* Setting a <code>podTemplate:</code> allows for simple modification of the LINSTOR Controller Deployment.</p>
+<p>Controls the LINSTOR Controller Deployment:</p>
+<ul>
+<li>Setting <code>enabled: false</code> disables the controller deployment entirely. See also <a href="#specexternalcontroller"><code>.spec.externalController</code></a>.</li>
+<li>Setting a <code>podTemplate:</code> allows for simple modification of the LINSTOR Controller Deployment.</li>
+</ul>
 <h4 id="example_7">Example<a class="headerlink" href="#example_7" title="Permanent link">&para;</a></h4>
 <p>This example configures a resource request of <code>memory: 1Gi</code> for the LINSTOR Controller Deployment:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
@@ -2434,9 +2436,11 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <span class="w">                </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1Gi</span>
 </code></pre></div>
 <h3 id="speccsicontroller"><code>.spec.csiController</code><a class="headerlink" href="#speccsicontroller" title="Permanent link">&para;</a></h3>
-<p>Controls the CSI Controller Deployment:
-* Setting <code>enabled: false</code> disables the deployment entirely.
-* Setting a <code>podTemplate:</code> allows for simple modification of the CSI Controller Deployment.</p>
+<p>Controls the CSI Controller Deployment:</p>
+<ul>
+<li>Setting <code>enabled: false</code> disables the deployment entirely.</li>
+<li>Setting a <code>podTemplate:</code> allows for simple modification of the CSI Controller Deployment.</li>
+</ul>
 <h4 id="example_8">Example<a class="headerlink" href="#example_8" title="Permanent link">&para;</a></h4>
 <p>This example configures a resource request of <code>cpu: 10m</code> for the CSI Controller Deployment:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
@@ -2455,9 +2459,11 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <span class="w">                </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1Gi</span>
 </code></pre></div>
 <h3 id="speccsinode"><code>.spec.csiNode</code><a class="headerlink" href="#speccsinode" title="Permanent link">&para;</a></h3>
-<p>Controls the CSI Node DaemonSet:
-* Setting <code>enabled: false</code> disables the deployment entirely.
-* Setting a <code>podTemplate:</code> allows for simple modification of the CSI Node DaemonSet.</p>
+<p>Controls the CSI Node DaemonSet:</p>
+<ul>
+<li>Setting <code>enabled: false</code> disables the deployment entirely.</li>
+<li>Setting a <code>podTemplate:</code> allows for simple modification of the CSI Node DaemonSet.</li>
+</ul>
 <h4 id="example_9">Example<a class="headerlink" href="#example_9" title="Permanent link">&para;</a></h4>
 <p>This example configures a resource request of <code>cpu: 10m</code> for the CSI Node DaemonSet:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
@@ -2476,9 +2482,11 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <span class="w">                </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1Gi</span>
 </code></pre></div>
 <h3 id="spechighavailabilitycontroller"><code>.spec.highAvailabilityController</code><a class="headerlink" href="#spechighavailabilitycontroller" title="Permanent link">&para;</a></h3>
-<p>Controls the High Availability Controller DaemonSet:
-* Setting <code>enabled: false</code> disables the deployment entirely.
-* Setting a <code>podTemplate:</code> allows for simple modification of the CSI Node Deployment.</p>
+<p>Controls the High Availability Controller DaemonSet:</p>
+<ul>
+<li>Setting <code>enabled: false</code> disables the deployment entirely.</li>
+<li>Setting a <code>podTemplate:</code> allows for simple modification of the CSI Node Deployment.</li>
+</ul>
 <h4 id="example_10">Example<a class="headerlink" href="#example_10" title="Permanent link">&para;</a></h4>
 <p>This example configures a resource request of <code>cpu: 10m</code> for the CSI Node Deployment:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
@@ -2497,9 +2505,11 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <span class="w">                </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1Gi</span>
 </code></pre></div>
 <h3 id="specinternaltls"><code>.spec.internalTLS</code><a class="headerlink" href="#specinternaltls" title="Permanent link">&para;</a></h3>
-<p>Configures a TLS secret used by the LINSTOR Controller to:
-* Validate the certificate of the LINSTOR Satellites, that is the Satellites must have certificates signed by <code>ca.crt</code>.
-* Provide a client certificate for authentication with LINSTOR Satellites, that is <code>tls.key</code> and <code>tls.crt</code> must be accepted by the Satellites.</p>
+<p>Configures a TLS secret used by the LINSTOR Controller to:</p>
+<ul>
+<li>Validate the certificate of the LINSTOR Satellites, that is the Satellites must have certificates signed by <code>ca.crt</code>.</li>
+<li>Provide a client certificate for authentication with LINSTOR Satellites, that is <code>tls.key</code> and <code>tls.crt</code> must be accepted by the Satellites.</li>
+</ul>
 <p>To configure TLS communication between Satellite and Controller,
 <a href="../linstorsatelliteconfiguration/#specinternaltls"><code>LinstorSatelliteConfiguration.spec.internalTLS</code></a> must be set accordingly.</p>
 <p>Setting a <code>secretName</code> is optional, it will default to <code>linstor-controller-internal-tls</code>.</p>
