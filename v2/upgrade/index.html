@@ -1976,6 +1976,20 @@ volumes and volumes already in use by a pod will continue to work without interr
 <div class="highlight"><pre><span></span><code>$ kubectl apply --server-side -k &quot;https://github.com/piraeusdatastore/piraeus-operator//config/default?ref=v2.8.1&quot;
 $ kubectl wait pod --for=condition=Ready -n piraeus-datastore --all
 </code></pre></div>
+<h1 id="upgrades-from-v28-to-v29">Upgrades from v2.8 to v2.9<a class="headerlink" href="#upgrades-from-v28-to-v29" title="Permanent link">&para;</a></h1>
+<p>Generally, no special steps required.</p>
+<p>The default behaviour when deleting the <code>LinstorSatellite</code> resource has been changed. The Operator no longer causes
+the node to be evacuated by default. Instead, the LINSTOR Satellite is left unchanged. To restore the old behaviour,
+create the following resource:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorSatelliteConfiguration</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">satellite-deletion-policy</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w"> </span><span class="nt">deletionPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Evacuate</span>
+</code></pre></div>
+<h1 id="upgrades-from-v27-to-v28">Upgrades from v2.7 to v2.8<a class="headerlink" href="#upgrades-from-v27-to-v28" title="Permanent link">&para;</a></h1>
+<p>No special steps required.</p>
 <h1 id="upgrades-from-v26-to-v27">Upgrades from v2.6 to v2.7<a class="headerlink" href="#upgrades-from-v26-to-v27" title="Permanent link">&para;</a></h1>
 <p>Generally, no special steps required.</p>
 <p>LINSTOR Satellites now try to automatically detect the LVM configuration on the host. Any patch targeting the Satellites
