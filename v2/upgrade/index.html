@@ -1988,6 +1988,23 @@ create the following resource:</p>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w"> </span><span class="nt">deletionPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Evacuate</span>
 </code></pre></div>
+<p>The default behaviour of starting Piraeus Datastore components also on control plane nodes has been changed.
+Piraeus Datastore will no longer run on nodes tainted by the <code>node-role.kubernetes.io/control-plane:NoSchedule</code> or
+<code>node-role.kubernetes.io/master:NoSchedule</code> Taints. To restore the old behaviour, make the following change to the
+<code>LinstorCluster</code> resource:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstorcluster</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">tolerations</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node-role.kubernetes.io/control-plane</span>
+<span class="w">    </span><span class="nt">effect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NoSchedule</span>
+<span class="w">    </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Exists</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node-role.kubernetes.io/worker</span>
+<span class="w">    </span><span class="nt">effect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NoSchedule</span>
+<span class="w">    </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Exists</span>
+</code></pre></div>
 <h1 id="upgrades-from-v27-to-v28">Upgrades from v2.7 to v2.8<a class="headerlink" href="#upgrades-from-v27-to-v28" title="Permanent link">&para;</a></h1>
 <p>No special steps required.</p>
 <h1 id="upgrades-from-v26-to-v27">Upgrades from v2.6 to v2.7<a class="headerlink" href="#upgrades-from-v26-to-v27" title="Permanent link">&para;</a></h1>
