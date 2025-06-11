@@ -1998,7 +1998,7 @@ volumes and volumes already in use by a pod will continue to work without interr
 (<code>kubectl</code> vs <code>helm</code>). There is no need to change existing <code>LinstorCluster</code>, <code>LinstorSatelliteConfiguration</code> or
 <code>LinstorNodeConnection</code> resources.</p>
 <p>To upgrade to the latest release using <code>kubectl</code>, run the following commands:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl apply --server-side -k &quot;https://github.com/piraeusdatastore/piraeus-operator//config/default?ref=v2.8.1&quot;
+<div class="highlight"><pre><span></span><code>$ kubectl apply --server-side -f &quot;https://github.com/piraeusdatastore/piraeus-operator/releases/latest/download/manifest.yaml&quot;
 $ kubectl wait pod --for=condition=Ready -n piraeus-datastore --all
 </code></pre></div>
 <h1 id="upgrades-from-v28-to-v29">Upgrades from v2.8 to v2.9<a class="headerlink" href="#upgrades-from-v28-to-v29" title="Permanent link">&para;</a></h1>
