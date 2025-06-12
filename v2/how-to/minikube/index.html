@@ -12,13 +12,13 @@
         <meta name="author" content="The Piraeus Maintainers">
       
       
-        <link rel="canonical" href="https://piraeus.io/docs/v2/how-to/talos/">
+        <link rel="canonical" href="https://piraeus.io/docs/v2/how-to/minikube/">
       
       
-        <link rel="prev" href="../openshift/">
+        <link rel="prev" href="../raspian/">
       
       
-        <link rel="next" href="../flatcar/">
+        <link rel="next" href="../http-proxy/">
       
       
       <link rel="icon" href="../../assets/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Talos Linux - Piraeus Datastore</title>
+        <title>minikube - Piraeus Datastore</title>
       
     
     
@@ -61,11 +61,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Talos Linux - Piraeus Datastore" >
+        <meta  property="og:title"  content="minikube - Piraeus Datastore" >
       
         <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
-        <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/talos.png" >
+        <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/minikube.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -73,15 +73,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://piraeus.io/docs/v2/how-to/talos/" >
+        <meta  property="og:url"  content="https://piraeus.io/docs/v2/how-to/minikube/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Talos Linux - Piraeus Datastore" >
+        <meta  name="twitter:title"  content="minikube - Piraeus Datastore" >
       
         <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
-        <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/talos.png" >
+        <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/minikube.png" >
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-load-drbd-on-talos-linux" class="md-skip">
+        <a href="#how-to-configure-piraeus-datastore-on-minikube" class="md-skip">
           Skip to content
         </a>
       
@@ -142,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Talos Linux
+              minikube
             
           </span>
         </div>
@@ -1072,32 +1072,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Talos Linux
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../talos/" class="md-nav__link">
         
   
   
@@ -1108,44 +1086,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configure-talos-system-extension-for-drbd" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure Talos system extension for DRBD
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-the-drbd-module-loader" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure the DRBD Module Loader
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1247,10 +1187,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../minikube/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    minikube
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1261,6 +1223,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configure-the-drbd-module-loader-for-minikube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configure the DRBD Module Loader for minikube
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2080,18 +2071,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configure-talos-system-extension-for-drbd" class="md-nav__link">
+  <a href="#configure-the-drbd-module-loader-for-minikube" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure Talos system extension for DRBD
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-the-drbd-module-loader" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure the DRBD Module Loader
+      Configure the DRBD Module Loader for minikube
     </span>
   </a>
   
@@ -2116,80 +2098,59 @@
   
 
 
-<h1 id="how-to-load-drbd-on-talos-linux">How to Load DRBD on Talos Linux<a class="headerlink" href="#how-to-load-drbd-on-talos-linux" title="Permanent link">&para;</a></h1>
-<p>This guide shows you how to set the DRBD® Module Loader when using <a href="https://talos.dev">Talos Linux</a>.</p>
+<h1 id="how-to-configure-piraeus-datastore-on-minikube">How to Configure Piraeus Datastore on minikube<a class="headerlink" href="#how-to-configure-piraeus-datastore-on-minikube" title="Permanent link">&para;</a></h1>
+<p>This guide shows you how to configure Piraeus Datastore when using <a href="https://minikube.sigs.k8s.io/docs/">minikube</a>.</p>
 <p>To complete this guide, you should be familiar with:</p>
 <ul>
 <li>editing <code>LinstorSatelliteConfiguration</code> resources.</li>
-<li>using the <code>talosctl</code> command line to to access Talos Linux nodes.</li>
-<li>using the <code>kubectl</code> command line tool to access the Kubernetes cluster.</li>
 </ul>
-<h2 id="configure-talos-system-extension-for-drbd">Configure Talos system extension for DRBD<a class="headerlink" href="#configure-talos-system-extension-for-drbd" title="Permanent link">&para;</a></h2>
-<p>By default, the DRBD Module Loader will try to find the necessary header files to build DRBD from source on the host system. In <a href="https://talos.dev">Talos Linux</a> these header files are not included in the host system. Instead, the Kernel modules is packed into a system extension.</p>
-<p>Ensure Talos has the correct <code>drbd</code> <a href="https://github.com/siderolabs/extensions">system extension</a> loaded for the running Kernel.</p>
-<p>This is done by building a install image from the <a href="https://factory.talos.dev">talos factory</a> with drbd included.</p>
-<p>You will also need to update the machine config to set the following kernel module parameters:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">machine</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">kernel</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">modules</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drbd</span>
-<span class="w">        </span><span class="nt">parameters</span><span class="p">:</span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">usermode_helper=disabled</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drbd_transport_tcp</span>
-<span class="w">      </span><span class="c1"># LVM_THIN storage pools require this module</span>
-<span class="w">      </span><span class="c1">#- name: dm-thin-pool</span>
-<span class="w">      </span><span class="c1"># ZFS storage pools require this module from the ZFS extension</span>
-<span class="w">      </span><span class="c1">#- name: zfs</span>
-</code></pre></div>
-<p>Validate <code>drbd</code> module is loaded:
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>talosctl<span class="w"> </span>-n<span class="w"> </span>&lt;NODE_IP&gt;<span class="w"> </span><span class="nb">read</span><span class="w"> </span>/proc/modules
-drbd_transport_tcp<span class="w"> </span><span class="m">28672</span><span class="w"> </span>-<span class="w"> </span>-<span class="w"> </span>Live<span class="w"> </span>0xffffffffc046c000<span class="w"> </span><span class="o">(</span>O<span class="o">)</span>
-drbd<span class="w"> </span><span class="m">643072</span><span class="w"> </span>-<span class="w"> </span>-<span class="w"> </span>Live<span class="w"> </span>0xffffffffc03b9000<span class="w"> </span><span class="o">(</span>O<span class="o">)</span>
-</code></pre></div></p>
-<p>Validate <code>drbd</code> module parameter <code>usermode_helper</code> is set to <code>disabled</code>:
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span>talosctl<span class="w"> </span>-n<span class="w"> </span>&lt;NODE_IP&gt;<span class="w"> </span><span class="nb">read</span><span class="w"> </span>/sys/module/drbd/parameters/usermode_helper
-disabled
-</code></pre></div></p>
-<h2 id="configure-the-drbd-module-loader">Configure the DRBD Module Loader<a class="headerlink" href="#configure-the-drbd-module-loader" title="Permanent link">&para;</a></h2>
-<p>To change the DRBD Module Loader, so that it uses the modules provided by system extension, apply the following <code>LinstorSatelliteConfiguration</code>:</p>
+<h2 id="configure-the-drbd-module-loader-for-minikube">Configure the DRBD Module Loader for minikube<a class="headerlink" href="#configure-the-drbd-module-loader-for-minikube" title="Permanent link">&para;</a></h2>
+<p>minikube uses a stripped down Linux system to run its nodes. The system does not include the required sources to build
+DRBD. In order for the DRBD Module Loader to work, the Linux sources need to be fetched on demand.</p>
+<p>Configure the DRBD Module Loader to fetch the required Linux sources on demand by applying the following configuration:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorSatelliteConfiguration</span>
 <span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">talos-loader-override</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">minikube</span>
 <span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">nodeAffinity</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">nodeSelectorTerms</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">matchExpressions</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">minikube.k8s.io/name</span>
+<span class="w">        </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Exists</span>
 <span class="w">  </span><span class="nt">podTemplate</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">initContainers</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drbd-shutdown-guard</span>
-<span class="w">          </span><span class="nt">$patch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">delete</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drbd-module-loader</span>
-<span class="w">          </span><span class="nt">$patch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">delete</span>
 <span class="w">      </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run-systemd-system</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">usr-src</span>
+<span class="w">        </span><span class="nt">hostPath</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">$patch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">delete</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">run-drbd-shutdown-guard</span>
-<span class="w">          </span><span class="nt">$patch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">delete</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">systemd-bus-socket</span>
-<span class="w">          </span><span class="nt">$patch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">delete</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lib-modules</span>
-<span class="w">          </span><span class="nt">$patch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">delete</span>
+<span class="w">        </span><span class="nt">emptyDir</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
+<span class="w">      </span><span class="nt">initContainers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drbd-module-loader</span>
+<span class="w">        </span><span class="nt">command</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/bin/sh</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-exc</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">if [ ! -e /proc/drbd ]; then</span>
+<span class="w">            </span><span class="no">apt-get update</span>
+<span class="w">            </span><span class="no">apt-get install -y flex bison bc libssl-dev libelf-dev</span>
+<span class="w">            </span><span class="no">curl -fsSL https://www.kernel.org/pub/linux/kernel/v$(uname -r | cut -d. -f1).x/linux-$(uname -r).tar.gz | tar xzC /usr/src</span>
+<span class="w">            </span><span class="no">cd /usr/src/linux-$(uname -r)</span>
+<span class="w">            </span><span class="no">zcat /proc/config.gz &gt; .config</span>
+<span class="w">            </span><span class="no">make olddefconfig</span>
+<span class="w">            </span><span class="no">make modules_prepare</span>
+<span class="w">            </span><span class="no">cd /</span>
+<span class="w">          </span><span class="no">fi</span>
+<span class="w">          </span><span class="no">exec env &quot;LB_MAKEOPTS=KDIR=/usr/src/linux-$(uname -r)&quot; LB_HOW=compile /entry.sh</span>
+<span class="w">        </span><span class="nt">securityContext</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">privileged</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">          </span><span class="nt">readOnlyRootFilesystem</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">        </span><span class="nt">volumeMounts</span><span class="p">:</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">usr-src</span>
-<span class="w">          </span><span class="nt">$patch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">delete</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">etc-lvm-backup</span>
-<span class="w">          </span><span class="nt">hostPath</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/etc/lvm/backup</span>
-<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DirectoryOrCreate</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">etc-lvm-archive</span>
-<span class="w">          </span><span class="nt">hostPath</span><span class="p">:</span>
-<span class="w">            </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/etc/lvm/archive</span>
-<span class="w">            </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DirectoryOrCreate</span>
+<span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/src</span>
+<span class="w">          </span><span class="nt">readOnly</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 </code></pre></div>
-<p>Explanation:</p>
-<ul>
-<li><code>/etc/lvm/*</code> is read-only in Talos and therefore can't be used. Let's use <code>/var/etc/lvm/*</code> instead.</li>
-<li>Talos does not ship with Systemd, so everything Systemd related needs to be removed</li>
-<li><code>/usr/lib/modules</code> and <code>/usr/src</code> are not needed as the Kernel module is already compiled and needs just to be used.</li>
-</ul>
+<p>Applying this configuration will let the <code>drbd-module-loader</code> container of the LINSTOR Satellite Pods complete.</p>
 
 
 
@@ -2228,7 +2189,7 @@ disabled
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../openshift/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Openshift">
+          <a href="../raspian/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Raspian">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2238,20 +2199,20 @@ disabled
                 Previous
               </span>
               <div class="md-ellipsis">
-                Openshift
+                Raspian
               </div>
             </div>
           </a>
         
         
           
-          <a href="../flatcar/" class="md-footer__link md-footer__link--next" aria-label="Next: Flatcar Container Linux">
+          <a href="../http-proxy/" class="md-footer__link md-footer__link--next" aria-label="Next: Deploy Piraeus Datastore behind an HTTP Proxy">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Flatcar Container Linux
+                Deploy Piraeus Datastore behind an HTTP Proxy
               </div>
             </div>
             <div class="md-footer__button md-icon">
