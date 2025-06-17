@@ -12,13 +12,13 @@
         <meta name="author" content="The Piraeus Maintainers">
       
       
-        <link rel="canonical" href="https://piraeus.io/docs/v2/how-to/minikube/">
+        <link rel="canonical" href="https://piraeus.io/docs/v2/explanation/image-configuration/">
       
       
-        <link rel="prev" href="../raspian/">
+        <link rel="prev" href="../components/">
       
       
-        <link rel="next" href="../http-proxy/">
+        <link rel="next" href="../../reference/">
       
       
       <link rel="icon" href="../../assets/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>minikube - Piraeus Datastore</title>
+        <title>Image Configuration - Piraeus Datastore</title>
       
     
     
@@ -61,11 +61,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="minikube - Piraeus Datastore" >
+        <meta  property="og:title"  content="Image Configuration - Piraeus Datastore" >
       
         <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
-        <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/minikube.png" >
+        <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/explanation/image-configuration.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -73,15 +73,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://piraeus.io/docs/v2/how-to/minikube/" >
+        <meta  property="og:url"  content="https://piraeus.io/docs/v2/explanation/image-configuration/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="minikube - Piraeus Datastore" >
+        <meta  name="twitter:title"  content="Image Configuration - Piraeus Datastore" >
       
         <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
-        <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/minikube.png" >
+        <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/explanation/image-configuration.png" >
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-configure-piraeus-datastore-on-minikube" class="md-skip">
+        <a href="#how-piraeus-operator-selects-image-versions-for-deployed-resources" class="md-skip">
           Skip to content
         </a>
       
@@ -142,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              minikube
+              Image Configuration
             
           </span>
         </div>
@@ -309,13 +309,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../how-to/" class="md-tabs__link">
           
   
   
@@ -355,11 +353,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../explanation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -625,8 +625,6 @@
       
   
   
-    
-  
   
   
     
@@ -650,23 +648,20 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../how-to/" class="md-nav__link ">
               
   
   
@@ -679,13 +674,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             How-To Guides
@@ -715,20 +710,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
   
@@ -755,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../external-controller/" class="md-nav__link">
+      <a href="../../how-to/external-controller/" class="md-nav__link">
         
   
   
@@ -778,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../drbd-loader/" class="md-nav__link">
+      <a href="../../how-to/drbd-loader/" class="md-nav__link">
         
   
   
@@ -801,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../install-kernel-headers/" class="md-nav__link">
+      <a href="../../how-to/install-kernel-headers/" class="md-nav__link">
         
   
   
@@ -848,20 +840,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
   
@@ -888,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../internal-tls/" class="md-nav__link">
+      <a href="../../how-to/internal-tls/" class="md-nav__link">
         
   
   
@@ -911,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api-tls/" class="md-nav__link">
+      <a href="../../how-to/api-tls/" class="md-nav__link">
         
   
   
@@ -934,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../drbd-tls/" class="md-nav__link">
+      <a href="../../how-to/drbd-tls/" class="md-nav__link">
         
   
   
@@ -957,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../secure-boot/" class="md-nav__link">
+      <a href="../../how-to/secure-boot/" class="md-nav__link">
         
   
   
@@ -985,10 +974,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1011,21 +998,18 @@
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
             
   
   
@@ -1038,7 +1022,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             Kubernetes Distributions
@@ -1052,7 +1036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../openshift/" class="md-nav__link">
+      <a href="../../how-to/openshift/" class="md-nav__link">
         
   
   
@@ -1075,7 +1059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../talos/" class="md-nav__link">
+      <a href="../../how-to/talos/" class="md-nav__link">
         
   
   
@@ -1098,7 +1082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../flatcar/" class="md-nav__link">
+      <a href="../../how-to/flatcar/" class="md-nav__link">
         
   
   
@@ -1121,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../microk8s/" class="md-nav__link">
+      <a href="../../how-to/microk8s/" class="md-nav__link">
         
   
   
@@ -1144,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../k0s/" class="md-nav__link">
+      <a href="../../how-to/k0s/" class="md-nav__link">
         
   
   
@@ -1167,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../raspian/" class="md-nav__link">
+      <a href="../../how-to/raspian/" class="md-nav__link">
         
   
   
@@ -1187,32 +1171,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    minikube
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../how-to/minikube/" class="md-nav__link">
         
   
   
@@ -1223,35 +1185,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configure-the-drbd-module-loader-for-minikube" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure the DRBD Module Loader for minikube
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1286,20 +1219,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
         
           
-          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
             
   
   
@@ -1326,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http-proxy/" class="md-nav__link">
+      <a href="../../how-to/http-proxy/" class="md-nav__link">
         
   
   
@@ -1349,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../network-policy/" class="md-nav__link">
+      <a href="../../how-to/network-policy/" class="md-nav__link">
         
   
   
@@ -1372,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../drbd-host-networking/" class="md-nav__link">
+      <a href="../../how-to/drbd-host-networking/" class="md-nav__link">
         
   
   
@@ -1417,20 +1347,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
         
           
-          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
             
   
   
@@ -1457,7 +1384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../monitoring/" class="md-nav__link">
+      <a href="../../how-to/monitoring/" class="md-nav__link">
         
   
   
@@ -1480,7 +1407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linstor-affinity-controller/" class="md-nav__link">
+      <a href="../../how-to/linstor-affinity-controller/" class="md-nav__link">
         
   
   
@@ -1503,7 +1430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../restore-linstor-db/" class="md-nav__link">
+      <a href="../../how-to/restore-linstor-db/" class="md-nav__link">
         
   
   
@@ -1771,6 +1698,8 @@
       
   
   
+    
+  
   
   
     
@@ -1788,20 +1717,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../explanation/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1814,13 +1746,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Understanding Piraeus
@@ -1836,7 +1768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../explanation/components/" class="md-nav__link">
+      <a href="../components/" class="md-nav__link">
         
   
   
@@ -1856,10 +1788,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../explanation/image-configuration/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Image Configuration
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1870,6 +1824,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-default-image-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Default Image Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-cluster-automations" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Cluster Automations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options-for-overriding-the-image-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options for Overriding the Image Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Options for Overriding the Image Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overriding-the-image-configuration-via-linstorcluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding the Image Configuration via LinstorCluster
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-the-image-configuration-by-adding-new-yaml-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding the Image Configuration by Adding New YAML Documents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-the-image-configuration-by-adding-environment-variables-to-the-operator-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding the Image Configuration by Adding Environment Variables to the Operator Deployment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2096,11 +2130,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configure-the-drbd-module-loader-for-minikube" class="md-nav__link">
+  <a href="#the-default-image-configuration" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure the DRBD Module Loader for minikube
+      The Default Image Configuration
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#external-cluster-automations" class="md-nav__link">
+    <span class="md-ellipsis">
+      External Cluster Automations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options-for-overriding-the-image-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options for Overriding the Image Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Options for Overriding the Image Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overriding-the-image-configuration-via-linstorcluster" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding the Image Configuration via LinstorCluster
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-the-image-configuration-by-adding-new-yaml-documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding the Image Configuration by Adding New YAML Documents
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overriding-the-image-configuration-by-adding-environment-variables-to-the-operator-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overriding the Image Configuration by Adding Environment Variables to the Operator Deployment
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2123,59 +2208,196 @@
   
 
 
-<h1 id="how-to-configure-piraeus-datastore-on-minikube">How to Configure Piraeus Datastore on minikube<a class="headerlink" href="#how-to-configure-piraeus-datastore-on-minikube" title="Permanent link">&para;</a></h1>
-<p>This guide shows you how to configure Piraeus Datastore when using <a href="https://minikube.sigs.k8s.io/docs/">minikube</a>.</p>
-<p>To complete this guide, you should be familiar with:</p>
+<h1 id="how-piraeus-operator-selects-image-versions-for-deployed-resources">How Piraeus Operator Selects Image Versions for Deployed Resources<a class="headerlink" href="#how-piraeus-operator-selects-image-versions-for-deployed-resources" title="Permanent link">&para;</a></h1>
+<p>Piraeus Datastore consists of many different components, most of which follow their own release cycle. For this reason,
+Piraeus Operator comes with a default configuration that uses the latest versions of all components at the time of
+release.</p>
+<h2 id="the-default-image-configuration">The Default Image Configuration<a class="headerlink" href="#the-default-image-configuration" title="Permanent link">&para;</a></h2>
+<p>The default deployment of Piraeus Datastore creates a special ConfigMap resource named <code>piraeus-operator-image-config</code>.
+It contains two entries that represent YAML documents:</p>
 <ul>
-<li>editing <code>LinstorSatelliteConfiguration</code> resources.</li>
+<li><a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v2/config/manager/0_piraeus_datastore_images.yaml"><code>0_piraeus_datastore_images.yaml</code></a>,
+  which contains the image configuration for all components developed under the Piraeus Datastore umbrella.</li>
+<li><a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v2/config/manager/0_sig_storage_images.yaml"><code>0_sig_storage_images.yaml</code></a>,
+  which contains the image configuration for all components developed under the <a href="https://kubernetes-csi.github.io/">Kubernetes CSI</a> umbrella.</li>
 </ul>
-<h2 id="configure-the-drbd-module-loader-for-minikube">Configure the DRBD Module Loader for minikube<a class="headerlink" href="#configure-the-drbd-module-loader-for-minikube" title="Permanent link">&para;</a></h2>
-<p>minikube uses a stripped down Linux system to run its nodes. The system does not include the required sources to build
-DRBD. In order for the DRBD Module Loader to work, the Linux sources need to be fetched on demand.</p>
-<p>Configure the DRBD Module Loader to fetch the required Linux sources on demand by applying the following configuration:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorSatelliteConfiguration</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">minikube</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">nodeAffinity</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">nodeSelectorTerms</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">matchExpressions</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">minikube.k8s.io/name</span>
-<span class="w">        </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Exists</span>
-<span class="w">  </span><span class="nt">podTemplate</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">usr-src</span>
-<span class="w">        </span><span class="nt">hostPath</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">$patch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">delete</span>
-<span class="w">        </span><span class="nt">emptyDir</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
-<span class="w">      </span><span class="nt">initContainers</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drbd-module-loader</span>
-<span class="w">        </span><span class="nt">command</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/bin/sh</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-exc</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">          </span><span class="no">if [ ! -e /proc/drbd ]; then</span>
-<span class="w">            </span><span class="no">apt-get update</span>
-<span class="w">            </span><span class="no">apt-get install -y flex bison bc libssl-dev libelf-dev</span>
-<span class="w">            </span><span class="no">curl -fsSL https://www.kernel.org/pub/linux/kernel/v$(uname -r | cut -d. -f1).x/linux-$(uname -r).tar.gz | tar xzC /usr/src</span>
-<span class="w">            </span><span class="no">cd /usr/src/linux-$(uname -r)</span>
-<span class="w">            </span><span class="no">zcat /proc/config.gz &gt; .config</span>
-<span class="w">            </span><span class="no">make olddefconfig</span>
-<span class="w">            </span><span class="no">make modules_prepare</span>
-<span class="w">            </span><span class="no">cd /</span>
-<span class="w">          </span><span class="no">fi</span>
-<span class="w">          </span><span class="no">exec env &quot;LB_MAKEOPTS=KDIR=/usr/src/linux-$(uname -r)&quot; LB_HOW=compile /entry.sh</span>
-<span class="w">        </span><span class="nt">securityContext</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">privileged</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">          </span><span class="nt">readOnlyRootFilesystem</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-<span class="w">        </span><span class="nt">volumeMounts</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">usr-src</span>
-<span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/src</span>
-<span class="w">          </span><span class="nt">readOnly</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<p>The YAML documents follow the following scheme:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">base</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quay.io/piraeusdatastore</span>
 </code></pre></div>
-<p>Applying this configuration will let the <code>drbd-module-loader</code> container of the LINSTOR Satellite Pods complete.</p>
+<p>The "base" repository. All images configured in this YAML document will start with <code>quay.io/piraeusdatastore/</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">components</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">linstor-controller</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1.31.0</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus-server</span>
+</code></pre></div>
+<p>The <code>components</code> are the image names used in the workload resources. <code>image</code> is the image repository to use in the given
+"base" registry. <code>tag</code> is the image tag. There is also the option to set a <code>digest</code>, which takes precedence over tags,
+but is not used in the default configuration.</p>
+<p>These images are referenced in the Piraeus resources. For example, the LINSTOR Controller deployment has the
+<a href="https://github.com/piraeusdatastore/piraeus-operator/tree/v2/pkg/resources/cluster/controller/controller-deployment.yaml">following container configuration</a>,
+which will be replaced given the above configuration with <code>quay.io/piraeusdatastore/piraeus-server:v1.31.0</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># ...</span>
+<span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstor-controller</span>
+<span class="w">          </span><span class="c1"># will be replaced with:</span>
+<span class="w">          </span><span class="c1"># image: quay.io/piraeusdatastore/piraeus-server:v1.31.0</span>
+<span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstor-controller</span>
+<span class="c1"># ...</span>
+</code></pre></div>
+<p>For cases where it is necessary to use different images based on the node the workload is running on, there is the
+option to set an additional <code>match</code> configuration:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">components</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">drbd-module-loader</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">tag</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v9.2.13</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drbd9-noble</span>
+<span class="w">    </span><span class="nt">match</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">osImage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Red Hat Enterprise Linux Server 7\.</span>
+<span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drbd9-centos7</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">osImage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Red Hat Enterprise Linux 8\.</span>
+<span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drbd9-almalinux8</span>
+<span class="c1"># ...</span>
+</code></pre></div>
+<p>When a <code>match</code> section is present, the Operator will first try to match the Kubernetes Node "OS Image" (as reported by
+<a href="https://kubernetes.io/docs/reference/kubernetes-api/cluster-resources/node-v1/#NodeStatus"><code>status.nodeInfo.osImage</code></a>)
+against the given <code>osImage</code>. If a match is found, the matches' <code>image</code> is used instead of the component one. The
+<code>osImage</code> value is a <a href="https://pkg.go.dev/regexp">regular expression</a>. This is currently only used for the
+<code>drbd-module-loader</code>.</p>
+<h2 id="external-cluster-automations">External Cluster Automations<a class="headerlink" href="#external-cluster-automations" title="Permanent link">&para;</a></h2>
+<p>Apart from the matching of "OS Image" for the drbd-module-loader, there is a second automation built into the Operator:
+When using an <a href="../../how-to/external-controller/">external LINSTOR cluster</a>, the Operator will match the LINSTOR version
+as reported by the external cluster with matching tags.</p>
+<p>For example, assuming the external LINSTOR Cluster is running 1.31.2, as reported here:</p>
+<div class="highlight"><pre><span></span><code>$ linstor controller version
+linstor controller 1.31.2; GIT-hash: 6a9a4bb37f547ff73317585a3efa217523e01f43
+</code></pre></div>
+<p>The operator will automatically replace the default tags of the <code>linstor-satellite</code> component with the tag "v1.31.2".</p>
+<h2 id="options-for-overriding-the-image-configuration">Options for Overriding the Image Configuration<a class="headerlink" href="#options-for-overriding-the-image-configuration" title="Permanent link">&para;</a></h2>
+<p>In certain cases, it might be necessary to update or override parts of this configuration. The following methods are
+available to change the default image configuration.</p>
+<h3 id="overriding-the-image-configuration-via-linstorcluster">Overriding the Image Configuration via LinstorCluster<a class="headerlink" href="#overriding-the-image-configuration-via-linstorcluster" title="Permanent link">&para;</a></h3>
+<p>The following configuration will replace the <code>base:</code> setting in the image configuration with <code>registry.example.com/piraeus</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstorcluster</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">repository</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">registry.example.com/piraeus</span>
+</code></pre></div>
+<p>This example results in the following changes:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Default Image</th>
+<th>New Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>linstor-controller</td>
+<td>quay.io/piraeusdatastore/piraeus-server:v1.31.0</td>
+<td>registry.example.com/piraeus/piraeus-server:v1.31.0</td>
+</tr>
+<tr>
+<td>csi-attacher</td>
+<td>registry.k8s.io/sig-storage/csi-attacher:v4.8.1</td>
+<td>registry.example.com/piraeus/csi-attacher:v4.8.1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="overriding-the-image-configuration-by-adding-new-yaml-documents">Overriding the Image Configuration by Adding New YAML Documents<a class="headerlink" href="#overriding-the-image-configuration-by-adding-new-yaml-documents" title="Permanent link">&para;</a></h3>
+<p>The Operator will read all YAML documents in the Image Configuration ConfigMap. The files are read in ascending order,
+so providing a <code>1_override.yaml</code> document ensures the Operator will read this document after the default configuration.
+Since the Operator applies a "last configuration wins" algorithm for components, this document overrides the default
+configuration.</p>
+<p>The following example replaces the <code>linstor-controller</code> with version 1.31.1 and pins the <code>linstor-satellite</code> image
+to a specific digest:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigMap</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus-operator-image-config</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">0_piraeus_datastore_images.yaml</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no"># ...</span>
+<span class="w">  </span><span class="nt">0_sig_storage_images.yaml</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no"># ...</span>
+<span class="w">  </span><span class="nt">1_override.yaml</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">---</span>
+<span class="w">    </span><span class="no">base: quay.io/piraeusdatastore</span>
+<span class="w">    </span><span class="no">components:</span>
+<span class="w">      </span><span class="no">linstor-controller:</span>
+<span class="w">        </span><span class="no">image: piraeus-server</span>
+<span class="w">        </span><span class="no">tag: v1.31.1</span>
+<span class="w">      </span><span class="no">linstor-satellite:</span>
+<span class="w">        </span><span class="no">image: piraeus-server</span>
+<span class="w">        </span><span class="no">digest: sha256:8bc7fd45545744864633371161e6fcd6bcaea1e7a21fb053588f970b9f912b07</span>
+</code></pre></div>
+<p>This example results in the following changes:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Default Image</th>
+<th>New Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>linstor-controller</td>
+<td>quay.io/piraeusdatastore/piraeus-server:v1.31.0</td>
+<td>quay.io/piraeusdatastore/piraeus-server:v1.31.1</td>
+</tr>
+<tr>
+<td>linstor-satellite</td>
+<td>quay.io/piraeusdatastore/piraeus-server:v1.31.0</td>
+<td>quay.io/piraeusdatastore/piraeus-server@sha256:8bc7fd45545744864633371161e6fcd6bcaea1e7a21fb053588f970b9f912b07</td>
+</tr>
+</tbody>
+</table>
+<h3 id="overriding-the-image-configuration-by-adding-environment-variables-to-the-operator-deployment">Overriding the Image Configuration by Adding Environment Variables to the Operator Deployment<a class="headerlink" href="#overriding-the-image-configuration-by-adding-environment-variables-to-the-operator-deployment" title="Permanent link">&para;</a></h3>
+<p>To support the recommendation for "offline enabled" Operators, the Operator can also be configured using environment
+variables. These take precedence over all other configuration options. To override a specific image set the
+<code>RELATED_IMAGE_&lt;component&gt;</code> or <code>RELATED_IMAGE_&lt;component&gt;_&lt;image&gt;</code> environment variable. The second form is useful
+for overriding images from <code>match</code> configurations.</p>
+<p>The following example replaces the <code>linstor-controller</code> with version and 1.31.1 and replaces the AlmaLinux 9 loader
+image with a different image:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus-operator-controller-manager</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">manager</span>
+<span class="w">        </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RELATED_IMAGE_linstor-controller</span>
+<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">quay.io/piraeusdatastore/piraeus-server:v1.31.1</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RELATED_IMAGE_drbd-module-loader_drbd9-almalinux9</span>
+<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">registry.example.com/piraeus/drbd@sha256:16e5adec119cd0849e019fb40dbb2b256a3579a3a7e4e34b6ec35252edfeb231</span>
+</code></pre></div>
+<p>This example results in the following changes:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Default Image</th>
+<th>New Image</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>linstor-controller</td>
+<td>quay.io/piraeusdatastore/piraeus-server:v1.31.0</td>
+<td>quay.io/piraeusdatastore/piraeus-server:v1.31.1</td>
+</tr>
+<tr>
+<td>drbd-module-loader</td>
+<td>quay.io/piraeusdatastore/drbd9-almalinux9:v9.2.13</td>
+<td>registry.example.com/piraeus/drbd@sha256:16e5adec119cd0849e019fb40dbb2b256a3579a3a7e4e34b6ec35252edfeb231</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -2214,7 +2436,7 @@ DRBD. In order for the DRBD Module Loader to work, the Linux sources need to be 
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../raspian/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Raspian">
+          <a href="../components/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Piraeus Components">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2224,20 +2446,20 @@ DRBD. In order for the DRBD Module Loader to work, the Linux sources need to be 
                 Previous
               </span>
               <div class="md-ellipsis">
-                Raspian
+                Piraeus Components
               </div>
             </div>
           </a>
         
         
           
-          <a href="../http-proxy/" class="md-footer__link md-footer__link--next" aria-label="Next: Deploy Piraeus Datastore behind an HTTP Proxy">
+          <a href="../../reference/" class="md-footer__link md-footer__link--next" aria-label="Next: Reference">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Deploy Piraeus Datastore behind an HTTP Proxy
+                Reference
               </div>
             </div>
             <div class="md-footer__button md-icon">
