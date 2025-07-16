@@ -2643,10 +2643,11 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <p>Controls the CSI Controller Deployment:</p>
 <ul>
 <li>Setting <code>enabled: false</code> disables the deployment entirely.</li>
+<li>Setting <code>replicas:</code> sets the desired number of Pods for the Deployment.</li>
 <li>Setting a <code>podTemplate:</code> allows for simple modification of the CSI Controller Deployment.</li>
 </ul>
 <h4 id="example_9">Example<a class="headerlink" href="#example_9" title="Permanent link">&para;</a></h4>
-<p>This example configures a resource request of <code>memory: 1Gi</code> for the CSI Controller Deployment:</p>
+<p>This example configures 2 replicas and a resource request of <code>memory: 1Gi</code> for the CSI Controller Deployment:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -2654,6 +2655,7 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">csiController</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
 <span class="w">    </span><span class="nt">podTemplate</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">spec</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">containers</span><span class="p">:</span>
@@ -2712,10 +2714,11 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <p>Controls the Affinity Controller Deployment:</p>
 <ul>
 <li>Setting <code>enabled: false</code> disables the deployment entirely.</li>
+<li>Setting <code>replicas:</code> sets the desired number of Pods for the Deployment.</li>
 <li>Setting a <code>podTemplate:</code> allows for simple modification of the Affinity Controller Deployment.</li>
 </ul>
 <h4 id="example_12">Example<a class="headerlink" href="#example_12" title="Permanent link">&para;</a></h4>
-<p>This example configures a resource request of <code>memory: 1Gi</code> for the Affinity Controller Deployment:</p>
+<p>This example configures 3 replicas and a resource request of <code>memory: 1Gi</code> for the Affinity Controller Deployment:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -2723,6 +2726,7 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">affinityController</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
 <span class="w">    </span><span class="nt">podTemplate</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">spec</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">containers</span><span class="p">:</span>
