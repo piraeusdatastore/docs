@@ -2056,6 +2056,7 @@ running the following <code>kubectl</code> command:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl get pods &#39;-ocustom-columns=NAME:.metadata.name,COMPONENT:.metadata.labels.app\.kubernetes\.io/component&#39;
 NAME                                                   COMPONENT
 ha-controller-vd82w                                    ha-controller
+linstor-affinity-controller-c84cf8958-p5wjx            linstor-affinity-controller
 linstor-controller-6c8f8dc47-cm8hr                     linstor-controller
 linstor-csi-controller-59b9968b86-ftl76                linstor-csi-controller
 linstor-csi-node-hcmk9                                 linstor-csi-node
@@ -2103,15 +2104,24 @@ with the host operating system also leads to two noteworthy interactions with <a
 <p>The use of separate UTS namespace should be completely transparent to users: running <code>kubectl exec ...</code> on a satellite
   Pod will drop you into this namespace, enabling you to run <code>drbdadm</code> commands as expected.</p>
 <h1 id="linstor-csi-controller"><code>linstor-csi-controller</code><a class="headerlink" href="#linstor-csi-controller" title="Permanent link">&para;</a></h1>
-<p>The LINSTOR CSI Controller Pod creates, modifies and deletes volumes and snapshots. It translates the state of Kubernetes
+<p>The <a href="https://github.com/piraeusdatastore/linstor-csi">LINSTOR CSI</a> Controller Pod creates, modifies and deletes volumes and snapshots. It translates the state of Kubernetes
 resources (<code>StorageClass</code>, <code>PersistentVolumeClaims</code>, <code>VolumeSnapshots</code>) into their equivalent in LINSTOR.</p>
 <h1 id="linstor-csi-node"><code>linstor-csi-node</code><a class="headerlink" href="#linstor-csi-node" title="Permanent link">&para;</a></h1>
-<p>The LINSTOR CSI Node Pods execute mount and unmount operations. Mount and Unmount are initiated by kubelet before
+<p>The <a href="https://github.com/piraeusdatastore/linstor-csi">LINSTOR CSI</a> Node Pods execute mount and unmount operations. Mount and Unmount are initiated by kubelet before
 starting a Pod with a Piraeus volume.</p>
 <p>They are deployed as a DaemonSet on every node in the cluster by default. There needs to be a LINSTOR Satellite running
 on the same node as a CSI Node Pod.</p>
+<h1 id="linstor-affinity-controller"><code>linstor-affinity-controller</code><a class="headerlink" href="#linstor-affinity-controller" title="Permanent link">&para;</a></h1>
+<p>The <a href="https://github.com/piraeusdatastore/linstor-affinity-controller">LINSTOR Affinity Controller</a> keeps the affinity of volumes in sync between Kubernetes and LINSTOR.</p>
+<p>It watches the Kubernetes API for <code>PersistentVolumes</code> created by the LINSTOR CSI Controller and updates the
+<a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/#node-affinity"><code>nodeAffinity</code></a> accordingly.</p>
+<p>Usually, the affinity only affects volumes with a <code>allowRemoteVolumeAccess</code> other than the default <code>true</code>. In that
+case, LINSTOR CSI will create a PV bound to a specific set of nodes. If the volume is later reconfigured in LINSTOR,
+the Affinity Controller will ensure the PV resource is also updated.</p>
+<p>Because a PV in Kubernetes is immutable, the PV needs to be forcefully removed before the update can be applied.
+The Affinity Controller performs this action in such a way that the backing volume is never actually removed.</p>
 <h1 id="ha-controller"><code>ha-controller</code><a class="headerlink" href="#ha-controller" title="Permanent link">&para;</a></h1>
-<p>The Piraeus High Availability Controller will speed up the fail-over process for stateful workloads using Piraeus for
+<p>The <a href="https://github.com/piraeusdatastore/piraeus-ha-controller">Piraeus High Availability Controller</a> will speed up the fail-over process for stateful workloads using Piraeus for
 storage.</p>
 <p>It is deployed on every node in the cluster and listens for DRBD® events to detect storage failures on other nodes. It
 evicts Pods when it detects that the storage on their node is inaccessible.</p>

@@ -2055,6 +2055,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#specaffinitycontroller" class="md-nav__link">
+    <span class="md-ellipsis">
+      .spec.affinityController
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#specinternaltls" class="md-nav__link">
     <span class="md-ellipsis">
       .spec.internalTLS
@@ -2353,6 +2362,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#specaffinitycontroller" class="md-nav__link">
+    <span class="md-ellipsis">
+      .spec.affinityController
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#specinternaltls" class="md-nav__link">
     <span class="md-ellipsis">
       .spec.internalTLS
@@ -2628,7 +2646,7 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <li>Setting a <code>podTemplate:</code> allows for simple modification of the CSI Controller Deployment.</li>
 </ul>
 <h4 id="example_9">Example<a class="headerlink" href="#example_9" title="Permanent link">&para;</a></h4>
-<p>This example configures a resource request of <code>cpu: 10m</code> for the CSI Controller Deployment:</p>
+<p>This example configures a resource request of <code>memory: 1Gi</code> for the CSI Controller Deployment:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -2651,7 +2669,7 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <li>Setting a <code>podTemplate:</code> allows for simple modification of the CSI Node DaemonSet.</li>
 </ul>
 <h4 id="example_10">Example<a class="headerlink" href="#example_10" title="Permanent link">&para;</a></h4>
-<p>This example configures a resource request of <code>cpu: 10m</code> for the CSI Node DaemonSet:</p>
+<p>This example configures a resource request of <code>memory: 1Gi</code> for the CSI Node DaemonSet:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -2671,10 +2689,10 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <p>Controls the High Availability Controller DaemonSet:</p>
 <ul>
 <li>Setting <code>enabled: false</code> disables the deployment entirely.</li>
-<li>Setting a <code>podTemplate:</code> allows for simple modification of the CSI Node Deployment.</li>
+<li>Setting a <code>podTemplate:</code> allows for simple modification of the High Availability Controller DaemonSet.</li>
 </ul>
 <h4 id="example_11">Example<a class="headerlink" href="#example_11" title="Permanent link">&para;</a></h4>
-<p>This example configures a resource request of <code>cpu: 10m</code> for the CSI Node Deployment:</p>
+<p>This example configures a resource request of <code>memory: 1Gi</code> for the High Availability Controller DaemonSet:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -2686,6 +2704,29 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <span class="w">      </span><span class="nt">spec</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">containers</span><span class="p">:</span>
 <span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ha-controller</span>
+<span class="w">            </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">                </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1Gi</span>
+</code></pre></div>
+<h3 id="specaffinitycontroller"><code>.spec.affinityController</code><a class="headerlink" href="#specaffinitycontroller" title="Permanent link">&para;</a></h3>
+<p>Controls the Affinity Controller Deployment:</p>
+<ul>
+<li>Setting <code>enabled: false</code> disables the deployment entirely.</li>
+<li>Setting a <code>podTemplate:</code> allows for simple modification of the Affinity Controller Deployment.</li>
+</ul>
+<h4 id="example_12">Example<a class="headerlink" href="#example_12" title="Permanent link">&para;</a></h4>
+<p>This example configures a resource request of <code>memory: 1Gi</code> for the Affinity Controller Deployment:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstorcluster</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">affinityController</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">podTemplate</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">spec</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">containers</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstor-affinity-controller</span>
 <span class="w">            </span><span class="nt">resources</span><span class="p">:</span>
 <span class="w">              </span><span class="nt">requests</span><span class="p">:</span>
 <span class="w">                </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1Gi</span>
@@ -2703,7 +2744,7 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 to let the operator create the required secret.</p>
 <p>If the referenced secret does not contain a <code>ca.crt</code> certificate of a certificate authority, a <code>caReference</code> pointing
 to a secondary <code>Secret</code> or <code>ConfigMap</code> resource can be configured.</p>
-<h4 id="example_12">Example<a class="headerlink" href="#example_12" title="Permanent link">&para;</a></h4>
+<h4 id="example_13">Example<a class="headerlink" href="#example_13" title="Permanent link">&para;</a></h4>
 <p>This example creates a manually provisioned TLS secret and references it in the
 LinstorCluster configuration.</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
@@ -2725,7 +2766,7 @@ LinstorCluster configuration.</p>
 <span class="w">  </span><span class="nt">internalTLS</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-linstor-controller-tls</span>
 </code></pre></div>
-<h4 id="example_13">Example<a class="headerlink" href="#example_13" title="Permanent link">&para;</a></h4>
+<h4 id="example_14">Example<a class="headerlink" href="#example_14" title="Permanent link">&para;</a></h4>
 <p>This example sets up automatic creation of the LINSTOR Controller TLS secret using a
 cert-manager issuer named <code>piraeus-root</code>. The certificates will be validated against the certificate in the <code>trust-root</code>
 ConfigMap.</p>
@@ -2760,7 +2801,7 @@ ConfigMap.</p>
 to let the operator create the required secrets.</p>
 <p>If the referenced secret does not contain a <code>ca.crt</code> certificate of a certificate authority, a <code>caReference</code> pointing
 to a secondary <code>Secret</code> or <code>ConfigMap</code> resource can be configured.</p>
-<h4 id="example_14">Example<a class="headerlink" href="#example_14" title="Permanent link">&para;</a></h4>
+<h4 id="example_15">Example<a class="headerlink" href="#example_15" title="Permanent link">&para;</a></h4>
 <p>This example creates a manually provisioned TLS secret and references it in the
 LinstorCluster configuration. It uses the same secret for all clients of the LINSTOR API.</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
@@ -2795,7 +2836,7 @@ LinstorCluster configuration. It uses the same secret for all clients of the LIN
 <span class="w">    </span><span class="nt">csiControllerSecretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-linstor-client-tls</span>
 <span class="w">    </span><span class="nt">csiNodeSecretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-linstor-client-tls</span>
 </code></pre></div>
-<h4 id="example_15">Example<a class="headerlink" href="#example_15" title="Permanent link">&para;</a></h4>
+<h4 id="example_16">Example<a class="headerlink" href="#example_16" title="Permanent link">&para;</a></h4>
 <p>This example sets up automatic creation of the LINSTOR API and LINSTOR Client TLS secret using a
 cert-manager issuer named <code>piraeus-root</code>. The certificates will be validated against the certificate in the <code>trust-root</code>
 Secret.</p>
