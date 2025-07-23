@@ -12,13 +12,13 @@
         <meta name="author" content="The Piraeus Maintainers">
       
       
-        <link rel="canonical" href="https://piraeus.io/docs/v2/how-to/flatcar/">
+        <link rel="canonical" href="https://piraeus.io/docs/v2/explanation/deletion-policies/">
       
       
-        <link rel="prev" href="../talos/">
+        <link rel="prev" href="../image-configuration/">
       
       
-        <link rel="next" href="../microk8s/">
+        <link rel="next" href="../../reference/">
       
       
       <link rel="icon" href="../../assets/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Flatcar Container Linux - Piraeus Datastore</title>
+        <title>Satellite Deletion Policies - Piraeus Datastore</title>
       
     
     
@@ -61,11 +61,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Flatcar Container Linux - Piraeus Datastore" >
+        <meta  property="og:title"  content="Satellite Deletion Policies - Piraeus Datastore" >
       
         <meta  property="og:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
-        <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/flatcar.png" >
+        <meta  property="og:image"  content="https://piraeus.io/docs/v2/assets/images/social/explanation/deletion-policies.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -73,15 +73,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://piraeus.io/docs/v2/how-to/flatcar/" >
+        <meta  property="og:url"  content="https://piraeus.io/docs/v2/explanation/deletion-policies/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Flatcar Container Linux - Piraeus Datastore" >
+        <meta  name="twitter:title"  content="Satellite Deletion Policies - Piraeus Datastore" >
       
         <meta  name="twitter:description"  content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." >
       
-        <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/how-to/flatcar.png" >
+        <meta  name="twitter:image"  content="https://piraeus.io/docs/v2/assets/images/social/explanation/deletion-policies.png" >
       
     
     
@@ -104,7 +104,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-load-drbd-on-flatcar-container-linux" class="md-skip">
+        <a href="#understanding-satellite-deletion-policies" class="md-skip">
           Skip to content
         </a>
       
@@ -142,7 +142,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Flatcar Container Linux
+              Satellite Deletion Policies
             
           </span>
         </div>
@@ -309,13 +309,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../how-to/" class="md-tabs__link">
           
   
   
@@ -355,11 +353,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../explanation/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
   
@@ -625,8 +625,6 @@
       
   
   
-    
-  
   
   
     
@@ -650,23 +648,20 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../how-to/" class="md-nav__link ">
               
   
   
@@ -679,13 +674,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             How-To Guides
@@ -715,20 +710,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
   
@@ -755,7 +747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../external-controller/" class="md-nav__link">
+      <a href="../../how-to/external-controller/" class="md-nav__link">
         
   
   
@@ -778,7 +770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../drbd-loader/" class="md-nav__link">
+      <a href="../../how-to/drbd-loader/" class="md-nav__link">
         
   
   
@@ -801,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../install-kernel-headers/" class="md-nav__link">
+      <a href="../../how-to/install-kernel-headers/" class="md-nav__link">
         
   
   
@@ -848,20 +840,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
   
@@ -888,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../internal-tls/" class="md-nav__link">
+      <a href="../../how-to/internal-tls/" class="md-nav__link">
         
   
   
@@ -911,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../api-tls/" class="md-nav__link">
+      <a href="../../how-to/api-tls/" class="md-nav__link">
         
   
   
@@ -934,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../drbd-tls/" class="md-nav__link">
+      <a href="../../how-to/drbd-tls/" class="md-nav__link">
         
   
   
@@ -957,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../secure-boot/" class="md-nav__link">
+      <a href="../../how-to/secure-boot/" class="md-nav__link">
         
   
   
@@ -985,10 +974,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1011,21 +998,18 @@
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
             
   
   
@@ -1038,7 +1022,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             Kubernetes Distributions
@@ -1052,7 +1036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../openshift/" class="md-nav__link">
+      <a href="../../how-to/openshift/" class="md-nav__link">
         
   
   
@@ -1075,7 +1059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../talos/" class="md-nav__link">
+      <a href="../../how-to/talos/" class="md-nav__link">
         
   
   
@@ -1095,32 +1079,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Flatcar Container Linux
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../how-to/flatcar/" class="md-nav__link">
         
   
   
@@ -1131,35 +1093,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configure-the-drbd-module-loader" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configure the DRBD Module Loader
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1172,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../microk8s/" class="md-nav__link">
+      <a href="../../how-to/microk8s/" class="md-nav__link">
         
   
   
@@ -1195,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../k0s/" class="md-nav__link">
+      <a href="../../how-to/k0s/" class="md-nav__link">
         
   
   
@@ -1218,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../raspian/" class="md-nav__link">
+      <a href="../../how-to/raspian/" class="md-nav__link">
         
   
   
@@ -1241,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../minikube/" class="md-nav__link">
+      <a href="../../how-to/minikube/" class="md-nav__link">
         
   
   
@@ -1286,20 +1219,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
         
           
-          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
             
   
   
@@ -1326,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../http-proxy/" class="md-nav__link">
+      <a href="../../how-to/http-proxy/" class="md-nav__link">
         
   
   
@@ -1349,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../network-policy/" class="md-nav__link">
+      <a href="../../how-to/network-policy/" class="md-nav__link">
         
   
   
@@ -1372,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../drbd-host-networking/" class="md-nav__link">
+      <a href="../../how-to/drbd-host-networking/" class="md-nav__link">
         
   
   
@@ -1417,20 +1347,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
         
           
-          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
             
   
   
@@ -1457,7 +1384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../monitoring/" class="md-nav__link">
+      <a href="../../how-to/monitoring/" class="md-nav__link">
         
   
   
@@ -1480,7 +1407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linstor-affinity-controller/" class="md-nav__link">
+      <a href="../../how-to/linstor-affinity-controller/" class="md-nav__link">
         
   
   
@@ -1503,7 +1430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../restore-linstor-db/" class="md-nav__link">
+      <a href="../../how-to/restore-linstor-db/" class="md-nav__link">
         
   
   
@@ -1771,6 +1698,8 @@
       
   
   
+    
+  
   
   
     
@@ -1790,20 +1719,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../explanation/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   
@@ -1816,13 +1748,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Understanding Piraeus
@@ -1838,7 +1770,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../explanation/components/" class="md-nav__link">
+      <a href="../components/" class="md-nav__link">
         
   
   
@@ -1861,7 +1793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../explanation/image-configuration/" class="md-nav__link">
+      <a href="../image-configuration/" class="md-nav__link">
         
   
   
@@ -1881,10 +1813,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../explanation/deletion-policies/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Satellite Deletion Policies
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1895,6 +1849,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#when-are-satellites-deleted" class="md-nav__link">
+    <span class="md-ellipsis">
+      When are Satellites Deleted
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#satellite-deletion-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Satellite Deletion Policies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Satellite Deletion Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retain-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retain Policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evacuate-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evacuate Policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Policy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#satellite-evacuation-when-using-clusterapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Satellite Evacuation when using ClusterAPI
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2121,9 +2155,60 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configure-the-drbd-module-loader" class="md-nav__link">
+  <a href="#when-are-satellites-deleted" class="md-nav__link">
     <span class="md-ellipsis">
-      Configure the DRBD Module Loader
+      When are Satellites Deleted
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#satellite-deletion-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Satellite Deletion Policies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Satellite Deletion Policies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#retain-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retain Policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evacuate-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evacuate Policy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Delete Policy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#satellite-evacuation-when-using-clusterapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Satellite Evacuation when using ClusterAPI
     </span>
   </a>
   
@@ -2148,34 +2233,105 @@
   
 
 
-<h1 id="how-to-load-drbd-on-flatcar-container-linux">How to Load DRBD on Flatcar Container Linux<a class="headerlink" href="#how-to-load-drbd-on-flatcar-container-linux" title="Permanent link">&para;</a></h1>
-<p>This guide shows you how to set up the DRBD® Module Loader when using <a href="https://www.flatcar.org">Flatcar Container Linux</a>.</p>
-<p>To complete this guide, you should be familiar with:</p>
+<h1 id="understanding-satellite-deletion-policies">Understanding Satellite Deletion Policies<a class="headerlink" href="#understanding-satellite-deletion-policies" title="Permanent link">&para;</a></h1>
+<p>Piraeus Datastore supports different policies to handle removal of LINSTOR Satellites. Satellites are the local
+configuration agent for LINSTOR managed storage. As such, their core responsibility is managing (one copy of) the
+volume data. If a Satellite hosting the last copy of a volume is removed, that volume is rendered inaccessible and
+data is likely lost.</p>
+<h2 id="when-are-satellites-deleted">When are Satellites Deleted<a class="headerlink" href="#when-are-satellites-deleted" title="Permanent link">&para;</a></h2>
+<p>Piraeus Datastore manages LINSTOR Satellites by creating <a href="../../reference/linstorsatellite/"><code>LinstorSatellite</code></a> resource
+for every Satellite. From this resource, node resources, such as the <code>linstor-satellite</code> DaemonSet are spawned, the
+Satellite is registered with the LINSTOR Controller and Storage Pools are configured.</p>
+<p>Piraeus Datastore will create a <code>LinstorSatellite</code> resource for every Kubernetes <code>Node</code> that:</p>
 <ul>
-<li>editing <code>LinstorSatelliteConfiguration</code> resources.</li>
+<li>Matches the <a href="../../reference/linstorcluster/#specnodeselector"><code>nodeSelector</code></a> on the <code>LinstorCluster</code> resource.</li>
+<li>Matches the <a href="../../reference/linstorcluster/#specnodeaffinity"><code>nodeAffinity</code></a> on the <code>LinstorCluster</code> resource.</li>
+<li>Tolerates the Node taints based on the <a href="../../reference/linstorcluster/#spectolerations"><code>tolerations</code></a> on the <code>LinstorCluster</code> resource.</li>
 </ul>
-<h2 id="configure-the-drbd-module-loader">Configure the DRBD Module Loader<a class="headerlink" href="#configure-the-drbd-module-loader" title="Permanent link">&para;</a></h2>
-<p>Flatcar Container Linux uses a read-only <code>/usr</code> file system. For building DRBD from source on Flatcar Container Linux,
-the default bind mount for the not existing <code>/usr/src</code> directory needs to be disabled for the <code>drbd-module-loader</code> init container.</p>
-<p>To change the configuration for the <code>drbd-module-loader</code> container, apply the following <code>LinstorSatelliteConfiguration</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="nn">---</span>
-<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorSatelliteConfiguration</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">no-usr-src-mount</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">podTemplate</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">volumes</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">usr-src</span>
-<span class="w">          </span><span class="nt">$patch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">delete</span>
-<span class="w">      </span><span class="nt">initContainers</span><span class="p">:</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drbd-module-loader</span>
-<span class="w">          </span><span class="nt">volumeMounts</span><span class="p">:</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/usr/src</span>
-<span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">usr-src</span>
-<span class="w">              </span><span class="nt">$patch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">delete</span>
-</code></pre></div>
+<p>An existing <code>LinstorSatellite</code> is deleted by when:</p>
+<ul>
+<li>The Node no longer matches the <code>nodeSelector</code>, either because the selector was updated or the Node labels changed.</li>
+<li>The Node no longer matches the <code>nodeAffinity</code>, either because the selector was updated or the Node labels changed.</li>
+<li>The Node has taints with effect <code>NoExecute</code> that are not tolerated, either because the Node taints changed or the
+  tolerations changed.</li>
+</ul>
+<p>In addition to the above reasons, a <code>LinstorSatellite</code> resource can also be manually deleted using the Kubernetes API,
+for example by using <code>kubectl delete linstorsatellite &lt;name&gt;</code>. If the Node is matching the criteria listed above,
+Piraeus Datastore will recreate it after deletion.</p>
+<h2 id="satellite-deletion-policies">Satellite Deletion Policies<a class="headerlink" href="#satellite-deletion-policies" title="Permanent link">&para;</a></h2>
+<p>Deletion policies govern the behaviour of Piraeus Datastore when a LINSTOR Satellite is to be deleted. There are
+currently three deletion policies implemented:</p>
+<ul>
+<li><a href="#retain-policy"><code>Retain</code></a> (Default): Piraeus Datastore will keep the Satellite registered, but remove
+  the associated resources from Kubernetes.</li>
+<li><a href="#evacuate-policy"><code>Evacuate</code></a>: Piraeus Datastore will initiate an evacuation of the LINSTOR Satellite, ensuring
+  the configured number of replicas is available after the Satellite is removed.</li>
+<li><a href="#delete-policy"><code>Delete</code></a>: Piraeus Datastore will forcefully remove the Satellite from LINSTOR, ignoring any safety
+  checks, removing potentially the last replicas of volumes and snapshots.</li>
+</ul>
+<p>Policies can be set by creating a <a href="../../reference/linstorsatelliteconfiguration/#specdeletionpolicy"><code>LinstorSatelliteConfiguration</code></a>
+and setting the <code>spec.deletionPolicy</code> value.</p>
+<p>A detailed description is given below:</p>
+<h3 id="retain-policy"><code>Retain</code> Policy<a class="headerlink" href="#retain-policy" title="Permanent link">&para;</a></h3>
+<p>When using the default <code>Retain</code> policy, the associated Kubernetes resources of the Satellite are removed without
+removing the Satellite from the LINSTOR Cluster. This will cause the Satellite appear as OFFLINE in LINSTOR.</p>
+<p>LINSTOR will keep the offline Satellite indefinitely. Resources assigned to the Satellite will still appear in the list
+of LINSTOR resources and LINSTOR will keep necessary information such as device paths in its database to restore the
+Satellite when it is recreated.</p>
+<p>This is the default policy, as it is the least disruptive policies in Clusters that have a fixed set of Nodes, or
+clusters where Nodes are only added but not removed.</p>
+<h3 id="evacuate-policy"><code>Evacuate</code> Policy<a class="headerlink" href="#evacuate-policy" title="Permanent link">&para;</a></h3>
+<p>Using the <code>Evacuate</code> deletion policy, Piraeus Datastore will first ensure the configured number of replicas for all
+volumes remains available before removing the Satellite. The Satellite is only removed after all local replicas and
+snapshots are removed.</p>
+<p>In order to keep potential fail-over times short, Piraeus Datastore performs the following steps during evacuation:</p>
+<ol>
+<li>Piraeus Datastore searches for PersistentVolumes (PVs) that:<ul>
+<li>Are attached on the Node to be evacuated and marks them with <code>wait-for-reattach.evacuation.piraeus.io/&lt;node-name&gt;</code>
+  annotation. It will later use this annotation to wait for the PV to be reattached.</li>
+<li>In addition, if the PVs are also either using the <code>allowRemoteVolumeAcesss: "false"</code> policy or are otherwise bound
+  to the Node to be evacuated in their <code>.spec.nodeAffinity</code>, they are annotated with
+  <code>override.piraeus.io/&lt;nodename&gt;</code>. This causes the LINSTOR Affinity Controller to temporarily mark the PV as
+  accessible from any Node.</li>
+</ul>
+</li>
+<li>Piraeus Datastore will wait for all other <code>LinstorSatellite</code> resources to become available. This ensures that during
+   rolling upgrades of the infrastructure, it waits until a replacement node for the node to be evacuated is available.</li>
+<li>If using ClusterAPI, the <code>pre-drain.delete.hook.machine.cluster.x-k8s.io/linstor-prepare-for-drain</code> annotation on the
+   Machine is removed. This will cause ClusterAPI to start draining the node.</li>
+<li>Piraeus Datastore will wait for all PVs that were marked in Step 1 to be reattached on new nodes. This ensures that
+   LINSTOR can choose the optimal replica placement for the next step.</li>
+<li>Piraeus Datastore will signal LINSTOR to evacuate the node. LINSTOR will create replacement resources for all diskful
+   and diskless resources on the node. Volumes that are currently in use on a diskless will get a local replica, if that
+   is possible based on the available storage pools.</li>
+<li>Piraeus Datastore will wait for LINSTOR to complete the evacuation. The evacuated Node no longer has any resources
+   or snapshots.</li>
+<li>All temporary annotations from PVs are removed. In particular, any temporary override that allowed a volume to be
+   attached on a node violating the usual access policies is removed.</li>
+<li>If using ClusterAPI, the <code>pre-terminate.delete.hook.machine.cluster.x-k8s.io/linstor-wait-for-complete-evacuation</code>
+   annotation on the Machine is removed, letting ClusterAPI proceed with shutting down the node.</li>
+<li>The Satellite is removed from LINSTOR.</li>
+</ol>
+<h3 id="delete-policy"><code>Delete</code> Policy<a class="headerlink" href="#delete-policy" title="Permanent link">&para;</a></h3>
+<p>When using the <code>Delete</code> policy, Piraeus Datastore will remove the Satellite from the LINSTOR Cluster in addition to
+removing the associated Kubernetes resources. The Satellite will no longer appear in the list of LINSTOR nodes and
+any resources on it are removed.</p>
+<div class="admonition warning">
+<p class="admonition-title">There are no checks preventing deletion of the last replica of a volume</p>
+<p>Using this policy means that there are no checks the prevent the deletion of the last replica of a volume. While
+LINSTOR automatically tries to maintain the requested number of replicas, it does so only periodically.</p>
+<p>Using the <code>Delete</code> policy will cause the Satellite to be removed immediately, regardless of any current volume
+migration operations.</p>
+</div>
+<h2 id="satellite-evacuation-when-using-clusterapi">Satellite Evacuation when using ClusterAPI<a class="headerlink" href="#satellite-evacuation-when-using-clusterapi" title="Permanent link">&para;</a></h2>
+<p>Piraeus Datastore integrates with ClusterAPI when it detects that Kubernetes is managed by ClusterAPI. Piraeus Operator
+detects the presence of <code>cluster.x-k8s.io/machine</code> and <code>cluster.x-k8s.io/cluster-namespace</code> annotations and tries to
+hook into the <a href="https://cluster-api.sigs.k8s.io/tasks/automated-machine-management/machine_deletions">Machine deletion process</a>.</p>
+<p>In particular, if the Satellites are using the <code>Evacuate</code> deletion policy, Piraeus Datastore will instruct ClusterAPI
+to wait at the appropriate times, keeping the Machine running until all resources have been evacuated.</p>
+<p>By default, Piraeus Operator will search the Cluster it is deployed in for the Machine resources. If the Machine is
+managed by a different Cluster, set the <code>CLUSTER_API_KUBECONFIG</code> environment variable in the Operator Deployment to
+a file containing the configuration to access the Management Cluster.</p>
 
 
 
@@ -2214,7 +2370,7 @@ the default bind mount for the not existing <code>/usr/src</code> directory need
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../talos/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Talos Linux">
+          <a href="../image-configuration/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Image Configuration">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2224,20 +2380,20 @@ the default bind mount for the not existing <code>/usr/src</code> directory need
                 Previous
               </span>
               <div class="md-ellipsis">
-                Talos Linux
+                Image Configuration
               </div>
             </div>
           </a>
         
         
           
-          <a href="../microk8s/" class="md-footer__link md-footer__link--next" aria-label="Next: Microk8s">
+          <a href="../../reference/" class="md-footer__link md-footer__link--next" aria-label="Next: Reference">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Microk8s
+                Reference
               </div>
             </div>
             <div class="md-footer__button md-icon">
