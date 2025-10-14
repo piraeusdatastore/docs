@@ -2089,6 +2089,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#specnfsserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      .spec.nfsServer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#specinternaltls" class="md-nav__link">
     <span class="md-ellipsis">
       .spec.internalTLS
@@ -2390,6 +2399,15 @@
   <a href="#specaffinitycontroller" class="md-nav__link">
     <span class="md-ellipsis">
       .spec.affinityController
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specnfsserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      .spec.nfsServer
     </span>
   </a>
   
@@ -2760,6 +2778,29 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <span class="w">              </span><span class="nt">requests</span><span class="p">:</span>
 <span class="w">                </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1Gi</span>
 </code></pre></div>
+<h3 id="specnfsserver"><code>.spec.nfsServer</code><a class="headerlink" href="#specnfsserver" title="Permanent link">&para;</a></h3>
+<p>Controls the NFS Server DaemonSet:</p>
+<ul>
+<li>Setting <code>enabled: false</code> disables the DaemonSet entirely.</li>
+<li>Setting a <code>podTemplate:</code> allows for simple modification of the NFS Server DaemonSet.</li>
+</ul>
+<h4 id="example_13">Example<a class="headerlink" href="#example_13" title="Permanent link">&para;</a></h4>
+<p>This example configures a resource request of <code>memory: 2Gi</code> for the NFS Server DaemonSet:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstorcluster</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">nfsServer</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">enabled</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">podTemplate</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">spec</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">containers</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nfs-server</span>
+<span class="w">          </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">              </span><span class="nt">memory</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2Gi</span>
+</code></pre></div>
 <h3 id="specinternaltls"><code>.spec.internalTLS</code><a class="headerlink" href="#specinternaltls" title="Permanent link">&para;</a></h3>
 <p>Configures a TLS secret used by the LINSTOR Controller to:</p>
 <ul>
@@ -2773,7 +2814,7 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 to let the operator create the required secret.</p>
 <p>If the referenced secret does not contain a <code>ca.crt</code> certificate of a certificate authority, a <code>caReference</code> pointing
 to a secondary <code>Secret</code> or <code>ConfigMap</code> resource can be configured.</p>
-<h4 id="example_13">Example<a class="headerlink" href="#example_13" title="Permanent link">&para;</a></h4>
+<h4 id="example_14">Example<a class="headerlink" href="#example_14" title="Permanent link">&para;</a></h4>
 <p>This example creates a manually provisioned TLS secret and references it in the
 LinstorCluster configuration.</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
@@ -2795,7 +2836,7 @@ LinstorCluster configuration.</p>
 <span class="w">  </span><span class="nt">internalTLS</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-linstor-controller-tls</span>
 </code></pre></div>
-<h4 id="example_14">Example<a class="headerlink" href="#example_14" title="Permanent link">&para;</a></h4>
+<h4 id="example_15">Example<a class="headerlink" href="#example_15" title="Permanent link">&para;</a></h4>
 <p>This example sets up automatic creation of the LINSTOR Controller TLS secret using a
 cert-manager issuer named <code>piraeus-root</code>. The certificates will be validated against the certificate in the <code>trust-root</code>
 ConfigMap.</p>
@@ -2814,23 +2855,28 @@ ConfigMap.</p>
 <span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root.crt</span>
 </code></pre></div>
 <h3 id="specapitls"><code>.spec.apiTLS</code><a class="headerlink" href="#specapitls" title="Permanent link">&para;</a></h3>
-<p>Configures the TLS secrets used to secure the LINSTOR API. There are four different secrets to configure:</p>
+<p>Configures the TLS secrets used to secure the LINSTOR API. If the value is defined but empty (<code>apiTLS: {}</code>), TLS is
+configured expecting the following secrets using their default names to exist:</p>
 <ul>
 <li><code>apiSecretName</code>: sets the name of the secret used by the LINSTOR Controller to enable HTTPS. Defaults to
   <code>linstor-api-tls</code>. All clients of the API must have certificates signed by the <code>ca.crt</code> of this secret.</li>
 <li><code>clientSecretName</code>: sets the name of the secret used by the Operator to connect to the LINSTOR API. Defaults to
   <code>linstor-client-tls</code>. Must be trusted by <code>ca.crt</code> in the API Secret. Also used by the LINSTOR Controller to configure
   the included LINSTOR CLI.</li>
+<li><code>affinityControllerSecretName</code> sets the name of secret used by the Affinity Controller. Defaults to
+  <code>linstor-affinity-controller-tls</code>. Must be trusted by <code>ca.crt</code> in the API Secret.</li>
 <li><code>csiControllerSecretName</code> sets the name of the secret used by the CSI Controller. Defaults to
   <code>linstor-csi-controller-tls</code>. Must be trusted by <code>ca.crt</code> in the API Secret.</li>
-<li><code>csiNodeSecretName</code> sets the name of the secret used by the CSI Controller. Defaults to <code>linstor-csi-node-tls</code>.
+<li><code>csiNodeSecretName</code> sets the name of the secret used by the CSI Nodes. Defaults to <code>linstor-csi-node-tls</code>.
   Must be trusted by <code>ca.crt</code> in the API Secret.</li>
+<li><code>nfsServerSecretName</code> sets the name of the secret used by the NFS Server. Defaults to
+  <code>linstor-csi-nfs-server-tls</code>. Must be trusted by <code>ca.crt</code> in the API Secret.</li>
 </ul>
 <p>Optional, a reference to a <a href="https://cert-manager.io/docs/concepts/issuer/">cert-manager <code>Issuer</code></a> can be provided
 to let the operator create the required secrets.</p>
 <p>If the referenced secret does not contain a <code>ca.crt</code> certificate of a certificate authority, a <code>caReference</code> pointing
 to a secondary <code>Secret</code> or <code>ConfigMap</code> resource can be configured.</p>
-<h4 id="example_15">Example<a class="headerlink" href="#example_15" title="Permanent link">&para;</a></h4>
+<h4 id="example_16">Example<a class="headerlink" href="#example_16" title="Permanent link">&para;</a></h4>
 <p>This example creates a manually provisioned TLS secret and references it in the
 LinstorCluster configuration. It uses the same secret for all clients of the LINSTOR API.</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
@@ -2864,8 +2910,10 @@ LinstorCluster configuration. It uses the same secret for all clients of the LIN
 <span class="w">    </span><span class="nt">clientSecretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-linstor-client-tls</span>
 <span class="w">    </span><span class="nt">csiControllerSecretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-linstor-client-tls</span>
 <span class="w">    </span><span class="nt">csiNodeSecretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-linstor-client-tls</span>
+<span class="w">    </span><span class="nt">affinityControllerSecretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-linstor-client-tls</span>
+<span class="w">    </span><span class="nt">nfsServerSecretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-linstor-client-tls</span>
 </code></pre></div>
-<h4 id="example_16">Example<a class="headerlink" href="#example_16" title="Permanent link">&para;</a></h4>
+<h4 id="example_17">Example<a class="headerlink" href="#example_17" title="Permanent link">&para;</a></h4>
 <p>This example sets up automatic creation of the LINSTOR API and LINSTOR Client TLS secret using a
 cert-manager issuer named <code>piraeus-root</code>. The certificates will be validated against the certificate in the <code>trust-root</code>
 Secret.</p>

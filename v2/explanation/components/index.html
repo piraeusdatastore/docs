@@ -2084,6 +2084,7 @@ ha-controller-vd82w                                    ha-controller
 linstor-affinity-controller-c84cf8958-p5wjx            linstor-affinity-controller
 linstor-controller-6c8f8dc47-cm8hr                     linstor-controller
 linstor-csi-controller-59b9968b86-ftl76                linstor-csi-controller
+linstor-csi-nfs-server-n64jv                           linstor-csi-nfs-server
 linstor-csi-node-hcmk9                                 linstor-csi-node
 linstor-satellite-k8s-10.test-66687                    linstor-satellite
 piraeus-operator-controller-manager-6dcfcb4568-6jntp   piraeus-operator
@@ -2136,6 +2137,12 @@ resources (<code>StorageClass</code>, <code>PersistentVolumeClaims</code>, <code
 starting a Pod with a Piraeus volume.</p>
 <p>They are deployed as a DaemonSet on every node in the cluster by default. There needs to be a LINSTOR Satellite running
 on the same node as a CSI Node Pod.</p>
+<h1 id="linstor-csi-nfs-server"><code>linstor-csi-nfs-server</code><a class="headerlink" href="#linstor-csi-nfs-server" title="Permanent link">&para;</a></h1>
+<p>The <a href="https://github.com/piraeusdatastore/linstor-csi">LINSTOR CSI</a> NFS Server Pods export the NFS volumes to enable ReadWriteMany support for volumes. A Pod can run one
+or more NFS Server using <a href="https://github.com/LINBIT/drbd-reactor/">DRBD Reactor</a> ensuring high availability in case of
+node failures.</p>
+<p>They are deployed as a DaemonSet on every node in the cluster by default. NFS exports can run on any node that has a
+replica of the volume deployed.</p>
 <h1 id="linstor-affinity-controller"><code>linstor-affinity-controller</code><a class="headerlink" href="#linstor-affinity-controller" title="Permanent link">&para;</a></h1>
 <p>The <a href="https://github.com/piraeusdatastore/linstor-affinity-controller">LINSTOR Affinity Controller</a> keeps the affinity of volumes in sync between Kubernetes and LINSTOR.</p>
 <p>It watches the Kubernetes API for <code>PersistentVolumes</code> created by the LINSTOR CSI Controller and updates the
