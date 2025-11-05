@@ -2130,6 +2130,14 @@ Piraeus Datastore will no longer run on nodes tainted by the <code>node-role.kub
 <span class="w">    </span><span class="nt">effect</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NoSchedule</span>
 <span class="w">    </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Exists</span>
 </code></pre></div>
+<p>Combined, these changes might lead to situations where LINSTOR Satellites are registered for control plane nodes without
+any additional reconciliation. To clean up these LINSTOR Satellites, run:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl exec deploy/linstor-controller -- linstor node list --props Aux/piraeus.io/last-applied
+# Check for OFFLINE nodes, verify that it is no longer managed by the Operator:
+$ kubectl get linstorsatellite &lt;offline-node&gt;
+# Must report: linstorsatellites.piraeus.io &quot;&lt;offline-node&gt;&quot; not found
+$ kubectl exec deploy/linstor-controller -- linstor node delete &lt;offline-node&gt;
+</code></pre></div>
 <h1 id="upgrades-from-v27-to-v28">Upgrades from v2.7 to v2.8<a class="headerlink" href="#upgrades-from-v27-to-v28" title="Permanent link">&para;</a></h1>
 <p>No special steps required.</p>
 <h1 id="upgrades-from-v26-to-v27">Upgrades from v2.6 to v2.7<a class="headerlink" href="#upgrades-from-v26-to-v27" title="Permanent link">&para;</a></h1>
