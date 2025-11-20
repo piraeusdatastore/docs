@@ -2617,8 +2617,10 @@ snapshots are removed.</p>
 <li>
 <p>Piraeus Datastore searches for PersistentVolumes (PVs) that:</p>
 <ul>
-<li>Are attached on the Node to be evacuated and marks them with <code>wait-for-reattach.evacuation.piraeus.io/&lt;node-name&gt;</code>
-    annotation. It will later use this annotation to wait for the PV to be reattached.</li>
+<li>Have a replica on the Node to be evacuated and marks them with
+    <code>wait-for-reattach.evacuation.piraeus.io/&lt;node-name&gt;</code> annotation. It will later use this annotation to wait for
+    the PV to be reattached. The value of the annotation is <code>true</code> if the volume is currently attached on the node,
+    <code>false</code> otherwise.</li>
 <li>
 <p>If the PV has a <code>linstor.csi.linbit.com/evacuation-action</code> annotation or the storage class has the
     <code>property.linstor.csi.linbit.com/Aux/linstor.csi.linbit.com/evacuation-action</code> parameter set, the value is used
@@ -2644,7 +2646,8 @@ All other PVs use the <code>None</code> action.</p>
 <li>If using ClusterAPI, the <code>pre-drain.delete.hook.machine.cluster.x-k8s.io/linstor-prepare-for-drain</code> annotation on the
    Machine is removed. This will cause ClusterAPI to start draining the node.</li>
 <li>Piraeus Datastore will wait for all PVs that were marked in Step 1 to be reattached on new nodes. This ensures that
-   LINSTOR can choose the optimal replica placement for the next step.</li>
+   LINSTOR can choose the optimal replica placement for the next step. Piraeus Datastore will wait for a certain amount
+   of time, which can be configured using <a href="../../reference/linstorsatelliteconfiguration/#specevacuationstrategy"><code>LinstorSatelliteConfiguration</code></a></li>
 <li>Piraeus Datastore will signal LINSTOR to evacuate the node. LINSTOR will create replacement resources for all diskful
    and diskless resources on the node. Volumes that are currently in use on a diskless will get a local replica, if that
    is possible based on the available storage pools.</li>
