@@ -2605,7 +2605,7 @@ rolebinding.rbac.authorization.k8s.io/piraeus-operator created
 <p>The following commands create a <code>piraeus-clusterapi.kubeconfig</code> file.</p>
 <div class="highlight"><pre><span></span><code>$ export KUBECONFIG=management.kubeconfig
 $ export KUBENS=workload-cluster-ns
-$ TOKEN=&quot;$(kubectl --namespace=$KUBENS create token piraeus-operator)&quot;
+$ TOKEN=&quot;$(kubectl --namespace=$KUBENS create token piraeus-operator --duration=87600h)&quot;
 $ kubectl config view --flatten --minify -ojson | jq --arg TOKEN &quot;$TOKEN&quot; &#39;.users[0].user = {&quot;token&quot;: $TOKEN}&#39; &gt; piraeus-clusterapi.kubeconfig
 </code></pre></div>
 <p>This file contains the access credentials that Piraeus Operator can use to get and set the necessary annotations
