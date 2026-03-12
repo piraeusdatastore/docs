@@ -2527,6 +2527,7 @@ DRBD. In order for the DRBD Module Loader to work, the Linux sources need to be 
 <span class="w">            </span><span class="no">zcat /proc/config.gz &gt; .config</span>
 <span class="w">            </span><span class="no">make olddefconfig</span>
 <span class="w">            </span><span class="no">make modules_prepare</span>
+<span class="w">            </span><span class="no">ln -snf /usr/lib/modules/$(uname -r)/Module.symvers .</span>
 <span class="w">            </span><span class="no">cd /</span>
 <span class="w">          </span><span class="no">fi</span>
 <span class="w">          </span><span class="no">exec env &quot;LB_MAKEOPTS=KDIR=/usr/src/linux-$(uname -r)&quot; LB_HOW=compile /entry.sh</span>
