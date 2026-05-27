@@ -2382,6 +2382,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#specresourcenamesuffixseparator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        .spec.resourceNameSuffixSeparator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#specclusterref" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2584,6 +2595,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#specresourcenamesuffixseparator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        .spec.resourceNameSuffixSeparator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#specclusterref" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2723,6 +2745,13 @@ by merging all matching <a href="../linstorsatelliteconfiguration/"><code>Linsto
 <p>Holds the default image registry to use for all Piraeus images. Inherited from
 <a href="../linstorcluster/#specrepository"><code>LinstorCluster</code></a>.</p>
 <p>If empty (the default), the operator will use <code>quay.io/piraeusdatastore</code>.</p>
+<h3 id="specresourcenamesuffixseparator"><code>.spec.resourceNameSuffixSeparator</code><a class="headerlink" href="#specresourcenamesuffixseparator" title="Permanent link">&para;</a></h3>
+<p>Configures the separator inserted between generated Kubernetes resource names and the Satellite name. Inherited from
+matching <a href="../linstorsatelliteconfiguration/#specresourcenamesuffixseparator"><code>LinstorSatelliteConfiguration</code></a>
+resources.</p>
+<p>Defaults to <code>.</code>, for example <code>linstor-satellite.node1</code>. Set to <code>-</code> to generate names such as
+<code>linstor-satellite-node1</code>. This only changes the inserted separator; dots that are part of the Kubernetes Node name
+remain unchanged.</p>
 <h3 id="specclusterref"><code>.spec.clusterRef</code><a class="headerlink" href="#specclusterref" title="Permanent link">&para;</a></h3>
 <p>Holds a reference to the <a href="../linstorcluster/"><code>LinstorCluster</code></a> that controls this satellite.</p>
 <h3 id="specstoragepools"><code>.spec.storagePools</code><a class="headerlink" href="#specstoragepools" title="Permanent link">&para;</a></h3>

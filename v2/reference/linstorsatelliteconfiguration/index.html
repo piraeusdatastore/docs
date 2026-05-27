@@ -2337,6 +2337,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#specresourcenamesuffixseparator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        .spec.resourceNameSuffixSeparator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#specproperties" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2617,6 +2628,17 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#specresourcenamesuffixseparator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        .spec.resourceNameSuffixSeparator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#specproperties" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2796,6 +2818,20 @@ node.</p>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AutoplaceTarget</span>
 <span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;no&quot;</span>
 </code></pre></div>
+<h3 id="specresourcenamesuffixseparator"><code>.spec.resourceNameSuffixSeparator</code><a class="headerlink" href="#specresourcenamesuffixseparator" title="Permanent link">&para;</a></h3>
+<p>Configures the separator inserted between generated Kubernetes resource names and the Satellite name.</p>
+<p>Defaults to <code>.</code>, for example <code>linstor-satellite.node1</code>. Set to <code>-</code> to generate names such as
+<code>linstor-satellite-node1</code>. This only changes the inserted separator; dots that are part of the Kubernetes Node name
+remain unchanged.</p>
+<h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
+<p>This example configures Satellite resources to use <code>-</code> between the base name and node name:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorSatelliteConfiguration</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">satellite-name-separator</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">resourceNameSuffixSeparator</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;-&quot;</span>
+</code></pre></div>
 <h3 id="specproperties"><code>.spec.properties</code><a class="headerlink" href="#specproperties" title="Permanent link">&para;</a></h3>
 <p>Sets the given properties on the LINSTOR Satellite level.</p>
 <p>The property value can either be set directly using <code>value</code>, inherited from the Kubernetes Node's metadata using
@@ -2816,7 +2852,7 @@ already a map (<code>metadata.labels</code> or <code>metadata.annotations</code>
   is joined using the optional <code>delimiter</code> value.</p>
 <p>In addition, setting <code>optional</code> to true means the property is only applied if the value is not empty. This is useful
 in case the property value should be inherited from the node's metadata</p>
-<h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
+<h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
 <p>This examples sets the following Properties on every satellite:</p>
 <ul>
 <li><code>PrefNic</code> (the preferred network interface) is always set to <code>default-ipv6</code></li>
@@ -2880,7 +2916,7 @@ the matching key. Available types are:</p>
 of raw block devices, which LINSTOR will prepare as the chosen backing pool.</p>
 <p>All storage pools also can also be configured with <code>properties</code>. Properties are set on the Storage Pool level. The
 configuration values have the same form as <a href="#specproperties">Satellite Properties</a>.</p>
-<h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
+<h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h4>
 <p>This example configures these LINSTOR Storage Pools on all satellites:</p>
 <ul>
 <li>A LVM Pool named <code>vg1</code>. It will use the VG <code>vg1</code>, which needs to exist on the nodes already.</li>
@@ -2942,7 +2978,7 @@ configuration values have the same form as <a href="#specproperties">Satellite P
 name of the Kubernetes Node.</p>
 <p>Optional, a reference to a <a href="https://cert-manager.io/docs/concepts/issuer/">cert-manager <code>Issuer</code></a> can be provided
 to let the operator create the required secret.</p>
-<h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h4>
+<h4 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h4>
 <p>This example creates a manually provisioned TLS secret and references it in the LinstorSatelliteConfiguration, setting
 it for all nodes.</p>
 <div class="highlight"><pre><span></span><code><span class="nn">---</span>
@@ -2964,7 +3000,7 @@ it for all nodes.</p>
 <span class="w">  </span><span class="nt">internalTLS</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-node-tls</span>
 </code></pre></div>
-<h4 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h4>
+<h4 id="example_6">Example<a class="headerlink" href="#example_6" title="Permanent link">&para;</a></h4>
 <p>This example sets up automatic creation of the LINSTOR Satellite TLS secrets using a
 cert-manager issuer named <code>piraeus-root</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
@@ -2988,7 +3024,7 @@ cert-manager issuer named <code>piraeus-root</code>.</p>
 <li><code>Delete</code>. This policy causes the Satellite to be forcefully removed from the Cluster. All Kubernetes resources will
    be removed, and the node will be removed from LINSTOR without regard for replica integrity.</li>
 </ul>
-<h4 id="example_6">Example<a class="headerlink" href="#example_6" title="Permanent link">&para;</a></h4>
+<h4 id="example_7">Example<a class="headerlink" href="#example_7" title="Permanent link">&para;</a></h4>
 <p>This example sets the deletion policy of LINSTOR Satellites to <code>Evacuate</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorSatelliteConfiguration</span>
@@ -3005,7 +3041,7 @@ cert-manager issuer named <code>piraeus-root</code>.</p>
 <li><code>unattachedVolumeAttachTimeout</code>: sets the duration the evacuation waits for volumes that were not attached before
   draining the Node to be attached on a new node. Defaults to 5 minutes. Can be set to 0 to disable waiting.</li>
 </ul>
-<h4 id="example_7">Example<a class="headerlink" href="#example_7" title="Permanent link">&para;</a></h4>
+<h4 id="example_8">Example<a class="headerlink" href="#example_8" title="Permanent link">&para;</a></h4>
 <p>This example sets the re-attach timeout for volumes attached to the node being evacuated to one hour, and the timeout
 for volumes not currently attached to 30 minutes.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
@@ -3025,7 +3061,7 @@ Satellite Pods' Status.
 If set, the LINSTOR Controller will only attempt to reach the LINSTOR Satellite via all addresses matching the listed
 IP Families.</p>
 <p>Valid values are <code>IPv4</code> and <code>IPv6</code>.</p>
-<h4 id="example_8">Example<a class="headerlink" href="#example_8" title="Permanent link">&para;</a></h4>
+<h4 id="example_9">Example<a class="headerlink" href="#example_9" title="Permanent link">&para;</a></h4>
 <p>This example configures the LINSTOR Controller to only use IPv4, even in a dual stack cluster.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorSatelliteConfiguration</span>
@@ -3039,7 +3075,7 @@ IP Families.</p>
 <p>Configures the Pod used to run the LINSTOR Satellite.</p>
 <p>The template is applied as a patch (see <a href="#specpatches"><code>.spec.patches</code></a>) to the default resources, so it can be
 "sparse".</p>
-<h4 id="example_9">Example<a class="headerlink" href="#example_9" title="Permanent link">&para;</a></h4>
+<h4 id="example_10">Example<a class="headerlink" href="#example_10" title="Permanent link">&para;</a></h4>
 <p>This example configures a resource request of <code>cpu: 100m</code> on the satellite, and also enables host networking.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorSatelliteConfiguration</span>
@@ -3063,7 +3099,7 @@ forwarded to <code>kustomize</code> internally, and take the <a href="https://ku
 <p>No checks are run on the result of user-supplied patches: the resources are applied
 as-is. Patching some fundamental aspect, such as removing a specific volume from a
 container may lead to a degraded cluster.</p>
-<h4 id="example_10">Example<a class="headerlink" href="#example_10" title="Permanent link">&para;</a></h4>
+<h4 id="example_11">Example<a class="headerlink" href="#example_11" title="Permanent link">&para;</a></h4>
 <p>This example configures the LINSTOR Satellite to use the "TRACE" log level, creating very verbose output.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorSatelliteConfiguration</span>
