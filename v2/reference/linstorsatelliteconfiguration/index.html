@@ -2384,7 +2384,7 @@
   <a href="#specdeletionpolicy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        spec.deletionPolicy
+        .spec.deletionPolicy
       
     </span>
   </a>
@@ -2395,7 +2395,7 @@
   <a href="#specevacuationstrategy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        spec.evacuationStrategy
+        .spec.evacuationStrategy
       
     </span>
   </a>
@@ -2675,7 +2675,7 @@
   <a href="#specdeletionpolicy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        spec.deletionPolicy
+        .spec.deletionPolicy
       
     </span>
   </a>
@@ -2686,7 +2686,7 @@
   <a href="#specevacuationstrategy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        spec.evacuationStrategy
+        .spec.evacuationStrategy
       
     </span>
   </a>
@@ -3013,7 +3013,7 @@ cert-manager issuer named <code>piraeus-root</code>.</p>
 <span class="w">      </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Issuer</span>
 <span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus-root</span>
 </code></pre></div>
-<h3 id="specdeletionpolicy"><code>spec.deletionPolicy</code><a class="headerlink" href="#specdeletionpolicy" title="Permanent link">&para;</a></h3>
+<h3 id="specdeletionpolicy"><code>.spec.deletionPolicy</code><a class="headerlink" href="#specdeletionpolicy" title="Permanent link">&para;</a></h3>
 <p>Configure how Satellite removal is handled. Possible policies are:</p>
 <ul>
 <li><code>Retain</code>, the default policy if not set. This policy will cause the Satellite to remain registered in LINSTOR when
@@ -3033,7 +3033,7 @@ cert-manager issuer named <code>piraeus-root</code>.</p>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w"> </span><span class="nt">deletionPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Evacuate</span>
 </code></pre></div>
-<h3 id="specevacuationstrategy"><code>spec.evacuationStrategy</code><a class="headerlink" href="#specevacuationstrategy" title="Permanent link">&para;</a></h3>
+<h3 id="specevacuationstrategy"><code>.spec.evacuationStrategy</code><a class="headerlink" href="#specevacuationstrategy" title="Permanent link">&para;</a></h3>
 <p>Configure timeouts for Satellite Evacuation. To have any effect, <code>deletionPolicy: Delete</code> is required.</p>
 <ul>
 <li><code>attachedVolumeReattachTimeout</code>: sets the duration the evacuation waits for volumes that were attached before draining

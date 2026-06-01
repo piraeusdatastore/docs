@@ -2684,7 +2684,7 @@ add_key: Bad message
 </code></pre>
 </div>
 <p>Next, check the statistics on TLS sessions controlled by the kernel on each node. You should see an equal, nonzero
-number of <code>TlsRxSw</code> and <code>TlsRxSw</code>.</p>
+number of <code>TlsTxSw</code> and <code>TlsRxSw</code>.</p>
 <div class="highlight"><pre><span></span><code>$ kubectl exec node1.example.com -- cat /proc/net/tls_stat
 TlsCurrTxSw                         4
 TlsCurrRxSw                         4
