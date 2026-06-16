@@ -2914,6 +2914,19 @@ the matching key. Available types are:</p>
 </ul>
 <p>Optionally, you can configure LINSTOR to automatically create the backing pools. <code>source.hostDevices</code> takes a list
 of raw block devices, which LINSTOR will prepare as the chosen backing pool.</p>
+<p>Before registering a storage pool, the Operator probes the node to check whether the backing Volume Group or
+ZFS pool already exists:</p>
+<ul>
+<li>If it exists, the storage pool is registered as-is. This also applies when <code>source.hostDevices</code> is set but the
+  devices have already been prepared, so the backing pool is not created a second time.</li>
+<li>If it does not exist and <code>source.hostDevices</code> is set, the backing pool is created from those devices. The
+  Operator first verifies that the configured devices exist on the node, reporting any that are missing instead
+  of letting the creation fail with an unclear error.</li>
+<li>If it does not exist and no <code>source</code> is configured, the storage pool is <strong>not</strong> registered. Instead, the
+  <code>Configured</code> condition of the <code>LinstorSatellite</code> reports that it is waiting for the backing pool to appear.
+  Once you create the Volume Group or ZFS pool on the node, the storage pool is registered automatically on the
+  next reconciliation. This prevents storage pools from getting stuck in the LINSTOR <code>error</code> state.</li>
+</ul>
 <p>All storage pools also can also be configured with <code>properties</code>. Properties are set on the Storage Pool level. The
 configuration values have the same form as <a href="#specproperties">Satellite Properties</a>.</p>
 <h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h4>
