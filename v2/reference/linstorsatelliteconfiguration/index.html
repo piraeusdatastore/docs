@@ -2898,19 +2898,41 @@ in case the property value should be inherited from the node's metadata</p>
 <p>Every Storage Pool needs at least a <code>name</code>, and a type. Types are specified by setting a (potentially empty) value on
 the matching key. Available types are:</p>
 <ul>
-<li><code>lvmPool</code>: Configures a <a href="https://linbit.com/drbd-user-guide/drbd-guide-9_0-en/#s-lvm-primer">LVM Volume Group</a> as storage
-  pool. Defaults to using the storage pool name as the VG name. Can be overridden by setting <code>volumeGroup</code>.</li>
-<li><code>lvmThinPool</code>: Configures a <a href="https://man7.org/linux/man-pages/man7/lvmthin.7.html">LVM Thin Pool</a> as storage pool.
-  Defaults to using the storage pool name as name for the thin pool volume and the storage pool name prefixed by
-  <code>linstor_</code> as the VG name. Can be overridden by setting <code>thinPool</code> and <code>volumeGroup</code>.</li>
-<li><code>filePool</code>: Configures a file system based storage pool. Configures a host directory as location for the volume files.
-  Defaults to using the <code>/var/lib/linstor-pools/&lt;storage pool name&gt;</code> directory.</li>
-<li><code>fileThinPool</code>: Configures a file system based storage pool. Behaves the same as <code>filePool</code>, except the files will
-  be thinly allocated on file systems that support sparse files.</li>
-<li><code>zfsPool</code>: Configure a <a href="https://wiki.ubuntu.com/ZFS/ZPool">ZFS ZPool</a> as storage pool. Defaults to using the storage
-  pool name as name for the zpool. Can be overriden by setting <code>zPool</code>.</li>
-<li><code>zfsThinPool</code>: Configure a <a href="https://wiki.ubuntu.com/ZFS/ZPool">ZFS ZPool</a> as storage pool. Behaves the same as
-  <code>zfsPool</code>, except the contained zVol will be created using sparse reservation.</li>
+<li>
+<p><code>lvmPool</code>: Configures a <a href="https://linbit.com/drbd-user-guide/drbd-guide-9_0-en/#s-lvm-primer">LVM Volume Group</a> as storage pool.</p>
+<p>Arguments:
+* <code>volumeGroup</code>: Set the name of the Volume Group to use. Defaults to using the storage pool name.
+* <code>physicalVolumeCreateArguments</code>: Additional arguments to pass to the <code>pvcreate</code> command. Only applies when the
+  pool is first set up from a <code>source</code>.
+* <code>volumeGroupCreateArguments</code>: Additional arguments to pass to the <code>vgcreate</code> command. Only applies when the
+  pool is first set up from a <code>source</code>.
+*   <code>lvmThinPool</code>: Configures a <a href="https://man7.org/linux/man-pages/man7/lvmthin.7.html">LVM Thin Pool</a> as storage pool.</p>
+<p>Arguments:
+* <code>volumeGroup</code>: Set the name of the Volume Group to use. Defaults to using the storage pool name prefixed with
+  <code>linstor_</code>.
+* <code>thinPool</code>: Set the name of the Thinpool Logical Volume to use. Defaults to using the storage pool name.
+* <code>physicalVolumeCreateArguments</code>: Additional arguments to pass to the <code>pvcreate</code> command. Only applies when the
+  pool is first set up from a <code>source</code>.
+* <code>volumeGroupCreateArguments</code>: Additional arguments to pass to the <code>vgcreate</code> command. Only applies when the
+  pool is first set up from a <code>source</code>.
+* <code>logicalVolumeCreateArguments</code>: Additional arguments to pass to the <code>lvcreate</code> command. Only applies when the
+  pool is first set up from a <code>source</code>.
+*   <code>filePool</code>: Configures a file system based storage pool. Configures a host directory as location for the volume
+files.</p>
+<p>Arguments:
+* <code>directory</code>: Host directory used to store volume data. Defaults to using the
+  <code>/var/lib/linstor-pools/&lt;storage pool name&gt;</code> directory.
+*   <code>fileThinPool</code>: Configures a file system based storage pool. Behaves the same as <code>filePool</code>, except the files will
+be thinly allocated on file systems that support sparse files. Supports the same arguments as <code>filePool</code>.
+*   <code>zfsPool</code>: Configure a <a href="https://wiki.ubuntu.com/ZFS/ZPool">ZFS ZPool</a> as storage pool. Defaults to using the storage
+pool name as name for the zpool. Can be overridden by setting <code>zPool</code>.</p>
+<p>Arguments:
+* <code>zPool</code>: Set the name of the zpool on the host. Defaults to the storage pool name.
+* <code>zPoolCreateArguments</code>: Additional arguments to pass to the <code>zpool create</code> command. Only applies when the pool
+  is first set up from a <code>source</code>.
+*   <code>zfsThinPool</code>: Configure a <a href="https://wiki.ubuntu.com/ZFS/ZPool">ZFS ZPool</a> as storage pool. Behaves the same as <code>zfsPool</code>, except the contained
+zVol will be created using sparse reservation. Supports the same arguments as <code>zfsPool</code>.</p>
+</li>
 </ul>
 <p>Optionally, you can configure LINSTOR to automatically create the backing pools. <code>source.hostDevices</code> takes a list
 of raw block devices, which LINSTOR will prepare as the chosen backing pool.</p>
@@ -2937,6 +2959,9 @@ configuration values have the same form as <a href="#specproperties">Satellite P
 <li>A LVM Pool named <code>vg2-from-raw-devices</code>. It will use the VG <code>vg2</code>, which will be created on demand from the raw
   devices <code>/dev/sdb</code> and <code>/dev/sdc</code> if it does not exist already. In addition, it sets the <code>StorDriver/LvcreateOptions</code>
   property to <code>-i 2</code>, which causes every created LV to be striped across 2 PVs.</li>
+<li>A LVM Thin Pool named <code>thin-raid</code>. It will use the thinpool <code>linstor_thin-raid/thin-raid</code>, which will be created on
+  <code>/dev/nvme0n2</code> and <code>/dev/nvme0n3</code>. The backing VG will have a physical extent size of 512KiB and the Thinpool LV
+  striped across both devices.</li>
 <li>A File System Pool named <code>fs1</code>. It will use the <code>/var/lib/linstor-pools/fs1</code> directory on the host, creating the
   directory if necessary.</li>
 <li>A File System Pool named <code>fs2</code>, using sparse files. It will use the custom <code>/mnt/data</code> directory on the host.</li>
@@ -2966,6 +2991,14 @@ configuration values have the same form as <a href="#specproperties">Satellite P
 <span class="w">      </span><span class="nt">properties</span><span class="p">:</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StorDriver/LvcreateOptions</span>
 <span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;-i</span><span class="nv"> </span><span class="s">2&#39;</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">thin-raid</span>
+<span class="w">      </span><span class="nt">lvmThinPool</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">volumeGroupCreateArguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;-s&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;512KiB&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">logicalVolumeCreateArguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;-i&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">      </span><span class="nt">source</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">hostDevices</span><span class="p">:</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/nvme0n2</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/nvme0n3</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fs1</span>
 <span class="w">      </span><span class="nt">filePool</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">{}</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fs2</span>
