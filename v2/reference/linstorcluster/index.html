@@ -2462,6 +2462,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#specmaxconcurrentevacuations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        .spec.maxConcurrentEvacuations
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2830,6 +2841,17 @@
     <span class="md-ellipsis">
       
         .spec.apiTLS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#specmaxconcurrentevacuations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        .spec.maxConcurrentEvacuations
       
     </span>
   </a>
@@ -3340,6 +3362,23 @@ Secret.</p>
 <span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">trust-root</span>
 <span class="w">      </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Secret</span>
 <span class="w">      </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">root.crt</span>
+</code></pre></div>
+<h3 id="specmaxconcurrentevacuations"><code>.spec.maxConcurrentEvacuations</code><a class="headerlink" href="#specmaxconcurrentevacuations" title="Permanent link">&para;</a></h3>
+<p>Limits how many Satellites are evacuated at the same time when using the
+<a href="../../explanation/deletion-policies/#evacuate-policy"><code>Evacuate</code> deletion policy</a>.</p>
+<p>This applies both to Satellites removed because their node no longer matches the cluster, and to nodes removed
+through ClusterAPI. While the limit is reached, additional Satellites wait for a free slot before their volumes
+are moved and, for ClusterAPI managed nodes, before the node is allowed to drain. A Satellite that is waiting
+reports a <code>SatelliteEvacuated</code> condition with reason <code>Waiting</code>.</p>
+<p>A value of <code>0</code> (the default) places no limit on the number of concurrent evacuations.</p>
+<h4 id="example_18">Example<a class="headerlink" href="#example_18" title="Permanent link">&para;</a></h4>
+<p>This example allows at most two Satellites to evacuate simultaneously:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstorcluster</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">maxConcurrentEvacuations</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
 </code></pre></div>
 <h2 id="status"><code>.status</code><a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
 <p>Reports the actual state of the cluster.</p>

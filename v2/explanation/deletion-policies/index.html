@@ -2689,6 +2689,13 @@ All other PVs use the <code>None</code> action.</p>
    annotation on the Machine is removed, letting ClusterAPI proceed with shutting down the node.</li>
 <li>The Satellite is removed from LINSTOR.</li>
 </ol>
+<h4 id="limiting-concurrent-evacuations">Limiting Concurrent Evacuations<a class="headerlink" href="#limiting-concurrent-evacuations" title="Permanent link">&para;</a></h4>
+<p>By default, all Satellites that need to be evacuated start their evacuation at the same time. On larger clusters
+this can move a lot of data at once. Set <a href="../../reference/linstorcluster/#specmaxconcurrentevacuations"><code>LinstorCluster.spec.maxConcurrentEvacuations</code></a>
+to limit how many Satellites evacuate simultaneously. While the limit is reached, additional Satellites wait for
+a free slot (reported through a <code>SatelliteEvacuated</code> condition with reason <code>Waiting</code>) before any of their volumes
+are moved. Already running evacuations are always allowed to finish first, so increasing the data movement never
+abandons work that has already started.</p>
 <h3 id="delete-policy"><code>Delete</code> Policy<a class="headerlink" href="#delete-policy" title="Permanent link">&para;</a></h3>
 <p>When using the <code>Delete</code> policy, Piraeus Datastore will remove the Satellite from the LINSTOR Cluster in addition to
 removing the associated Kubernetes resources. The Satellite will no longer appear in the list of LINSTOR nodes and
@@ -2706,6 +2713,11 @@ detects the presence of <code>cluster.x-k8s.io/machine</code> and <code>cluster.
 hook into the <a href="https://cluster-api.sigs.k8s.io/tasks/automated-machine-management/machine_deletions">Machine deletion process</a>.</p>
 <p>In particular, if the Satellites are using the <code>Evacuate</code> deletion policy, Piraeus Datastore will instruct ClusterAPI
 to wait at the appropriate times, keeping the Machine running until all resources have been evacuated.</p>
+<p>When <a href="../../reference/linstorcluster/#specmaxconcurrentevacuations"><code>LinstorCluster.spec.maxConcurrentEvacuations</code></a> is set,
+this limit also applies to ClusterAPI-driven removals: a Machine that is marked for deletion but not yet admitted keeps
+its pre-drain hook in place, so ClusterAPI keeps the node running until a free evacuation slot becomes available. This
+composes with ClusterAPI's own rollout settings (such as <code>maxUnavailable</code>); the effective concurrency is the smaller of
+the two.</p>
 <p>By default, Piraeus Operator will search the Cluster it is deployed in for the Machine resources. If the Machine is
 managed by a different Cluster, set the <code>CLUSTER_API_KUBECONFIG</code> environment variable in the Operator Deployment to
 a file containing the configuration to access the Management Cluster.</p>
