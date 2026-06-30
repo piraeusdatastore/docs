@@ -2511,11 +2511,9 @@
 <span class="w">              </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">publish-dir</span>
 <span class="w">              </span><span class="nt">mountPropagation</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Bidirectional</span>
 <span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">csi-node-driver-registrar</span>
-<span class="w">            </span><span class="nt">args</span><span class="p">:</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--v=5</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--csi-address=/csi/csi.sock</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--kubelet-registration-path=/var/lib/k0s/kubelet/plugins/linstor.csi.linbit.com/csi.sock</span>
-<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--health-port=9809</span>
+<span class="w">            </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">              </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">KUBELET_REGISTRATION_PATH</span>
+<span class="w">                </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/lib/k0s/kubelet/plugins/linstor.csi.linbit.com/csi.sock</span>
 <span class="w">        </span><span class="nt">volumes</span><span class="p">:</span>
 <span class="w">         </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">publish-dir</span>
 <span class="w">           </span><span class="nt">hostPath</span><span class="p">:</span>
