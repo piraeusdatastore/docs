@@ -1549,8 +1549,6 @@
       
         
       
-        
-      
     
     
     
@@ -1639,34 +1637,6 @@
     
   
     Monitor Piraeus Datastore with Prometheus Operator
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../how-to/linstor-affinity-controller/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Keep Persistent Volume Affinity Updated with LINSTOR Affinity Controller
   
 
     
@@ -3110,7 +3080,7 @@ cert-manager issuer named <code>piraeus-root</code>.</p>
 <span class="w"> </span><span class="nt">deletionPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Evacuate</span>
 </code></pre></div>
 <h3 id="specevacuationstrategy"><code>.spec.evacuationStrategy</code><a class="headerlink" href="#specevacuationstrategy" title="Permanent link">&para;</a></h3>
-<p>Configure timeouts for Satellite Evacuation. To have any effect, <code>deletionPolicy: Delete</code> is required.</p>
+<p>Configure timeouts for Satellite Evacuation. To have any effect, <code>deletionPolicy: Evacuate</code> is required.</p>
 <ul>
 <li><code>attachedVolumeReattachTimeout</code>: sets the duration the evacuation waits for volumes that were attached before draining
   the Node to be attached on a new node. Defaults to 5 minutes. Can be set to 0 to disable waiting.</li>
