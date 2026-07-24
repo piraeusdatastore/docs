@@ -12,13 +12,13 @@
         <meta name="author" content="The Piraeus Maintainers">
       
       
-        <link rel="canonical" href="https://piraeus.io/docs/v2/how-to/drbd-tls/">
+        <link rel="canonical" href="https://piraeus.io/docs/v2/how-to/consistency-groups/">
       
       
-        <link rel="prev" href="../api-tls/">
+        <link rel="prev" href="../drbd-host-networking/">
       
       
-        <link rel="next" href="../secure-boot/">
+        <link rel="next" href="../troubleshooting/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Configure TLS for DRBD Replication - Piraeus Datastore</title>
+        <title>Use Consistency Groups - Piraeus Datastore</title>
       
     
     
@@ -63,17 +63,17 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Configure TLS for DRBD Replication - Piraeus Datastore" />
+<meta property="og:title" content="Use Consistency Groups - Piraeus Datastore" />
 <meta property="og:description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." />
-<meta property="og:image" content="https://piraeus.io/docs/v2/assets/images/social/how-to/drbd-tls.png" />
+<meta property="og:image" content="https://piraeus.io/docs/v2/assets/images/social/how-to/consistency-groups.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://piraeus.io/docs/v2/how-to/drbd-tls/" />
+<meta property="og:url" content="https://piraeus.io/docs/v2/how-to/consistency-groups/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="Configure TLS for DRBD Replication - Piraeus Datastore" />
+<meta property="twitter:title" content="Use Consistency Groups - Piraeus Datastore" />
 <meta property="twitter:description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." />
-<meta property="twitter:image" content="https://piraeus.io/docs/v2/assets/images/social/how-to/drbd-tls.png" />
+<meta property="twitter:image" content="https://piraeus.io/docs/v2/assets/images/social/how-to/consistency-groups.png" />
 </head>
   
   
@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-use-transport-layer-security-for-drbd-replication" class="md-skip">
+        <a href="#how-to-use-consistency-groups" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configure TLS for DRBD Replication
+              Use Consistency Groups
             
           </span>
         </div>
@@ -942,8 +942,6 @@
                 
   
   
-    
-  
   
   
     
@@ -969,11 +967,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
@@ -994,7 +992,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1065,37 +1063,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configure TLS for DRBD Replication
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../drbd-tls/" class="md-nav__link">
         
   
   
@@ -1111,81 +1082,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-tls-between-linstor-controller-and-linstor-satellite" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configure TLS Between LINSTOR Controller and LINSTOR Satellite
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configure-tls-for-drbd" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Configure TLS for DRBD
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#switch-existing-resources-to-tls" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Switch Existing Resources to TLS
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#confirm-drbd-uses-tls" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Confirm DRBD Uses TLS
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1661,6 +1557,8 @@
                 
   
   
+    
+  
   
   
     
@@ -1680,11 +1578,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
         
           
           <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
@@ -1705,7 +1603,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1720,10 +1618,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../consistency-groups/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Use Consistency Groups
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1739,6 +1664,81 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-volumes-in-a-consistency-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating Volumes in a Consistency Group
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-group-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a Group Snapshot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restoring-a-group-snapshot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restoring a Group Snapshot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restrictions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Restrictions
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2608,10 +2608,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configure-tls-between-linstor-controller-and-linstor-satellite" class="md-nav__link">
+  <a href="#creating-volumes-in-a-consistency-group" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configure TLS Between LINSTOR Controller and LINSTOR Satellite
+        Creating Volumes in a Consistency Group
       
     </span>
   </a>
@@ -2619,10 +2619,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configure-tls-for-drbd" class="md-nav__link">
+  <a href="#creating-a-group-snapshot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configure TLS for DRBD
+        Creating a Group Snapshot
       
     </span>
   </a>
@@ -2630,10 +2630,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#switch-existing-resources-to-tls" class="md-nav__link">
+  <a href="#restoring-a-group-snapshot" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Switch Existing Resources to TLS
+        Restoring a Group Snapshot
       
     </span>
   </a>
@@ -2641,10 +2641,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#confirm-drbd-uses-tls" class="md-nav__link">
+  <a href="#restrictions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Confirm DRBD Uses TLS
+        Restrictions
       
     </span>
   </a>
@@ -2671,135 +2671,307 @@
   
 
 
-<h1 id="how-to-use-transport-layer-security-for-drbd-replication">How to Use Transport Layer Security for DRBD Replication<a class="headerlink" href="#how-to-use-transport-layer-security-for-drbd-replication" title="Permanent link">&para;</a></h1>
-<p>This guide shows you how to use Transport Layer Security (TLS) for DRBD® replication.</p>
-<p>TLS is a protocol designed to provide security, including privacy, integrity and authentication for network
-communications. Starting with DRBD 9.2.6, replication traffic in DRBD can be encrypted using TLS, using the Linux
-kernel <a href="https://www.kernel.org/doc/html/latest/networking/tls.html#kernel-tls">TLS Upper Layer Protocol</a>.</p>
-<p>To complete this guide, you should be familiar with:</p>
-<ul>
-<li>editing <code>LinstorCluster</code> and <code>LinstorSatelliteConfiguration</code> resources.</li>
-<li>configuring <a href="../internal-tls/">TLS certificates for internal traffic</a>.</li>
-</ul>
+<h1 id="how-to-use-consistency-groups">How to Use Consistency Groups<a class="headerlink" href="#how-to-use-consistency-groups" title="Permanent link">&para;</a></h1>
+<p>This guide shows you how to use consistency groups to combine multiple volumes into a single LINSTOR® resource,
+so that replicas and snapshots always present a consistent view of the whole set of volumes.</p>
+<p>Workloads often spread their state over multiple volumes — for example, a virtual machine with multiple disks,
+or a database with separate data and log volumes. By default, every PersistentVolume is a separate LINSTOR
+resource, replicated independently of all others. Replication of one volume can pause, disconnect or fall
+behind without affecting the other volumes. If the workload's node then crashes or is disconnected, a fail-over
+node may see up-to-date data on one volume and outdated data on another: a combined state of the volume set
+that never existed on the original node.</p>
+<p>A consistency group avoids this: all PersistentVolumeClaims sharing a <code>linstor.csi.linbit.com/consistency-group</code>
+label are placed as separate volumes of a single LINSTOR resource, sharing one replication connection and one
+replication state. Whatever data a fail-over node sees is consistent across the whole group, exactly as it
+existed on the original node at one point in time. All members of the group are also always placed on the same
+set of nodes.</p>
+<p>The same idea applies to backups: snapshots of consistency group members are always created for the whole
+group at once, using the <code>VolumeGroupSnapshot</code> resource. The group is captured in a single LINSTOR snapshot,
+with every volume at the same point in time.</p>
+<p>To follow the steps in this guide, you should be familiar with creating and restoring snapshots of single
+volumes. Learn about them in the <a href="../../tutorial/snapshots/">snapshots tutorial</a>.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Install Piraeus Operator &gt;= 2.3.0. The following command shows the deployed version, in this case v2.3.0:
-  <div class="highlight"><pre><span></span><code>$ kubectl get pods -l app.kubernetes.io/component=piraeus-operator -ojsonpath=&#39;{.items[*].spec.containers[?(@.name==&quot;manager&quot;)].image}{&quot;\n&quot;}&#39;
-quay.io/piraeusdatastore/piraeus-operator:v2.3.0
+<li>An installed and configured Piraeus Datastore. Learn how to get started in our
+  <a href="../../tutorial/get-started/">introduction tutorial</a>.</li>
+<li>A storage pool supporting snapshots. LINSTOR supports snapshots for <code>LVM_THIN</code>, <code>FILE_THIN</code>, <code>ZFS</code> and
+  <code>ZFS_THIN</code> pools.</li>
+<li>A cluster with the <a href="https://github.com/kubernetes-csi/external-snapshotter/"><code>snapshot-controller</code></a> deployed,
+  including support for the <code>groupsnapshot.storage.k8s.io/v1</code> API (external-snapshotter v8.6.0 or newer). To
+  check if the API is available, try running:
+  <div class="highlight"><pre><span></span><code>$ kubectl api-resources --api-group=groupsnapshot.storage.k8s.io -oname
+volumegroupsnapshotclasses.groupsnapshot.storage.k8s.io
+volumegroupsnapshotcontents.groupsnapshot.storage.k8s.io
+volumegroupsnapshots.groupsnapshot.storage.k8s.io
+</code></pre></div>
+  If your output is empty, deploy the snapshot controller and its CustomResourceDefinitions by using:
+  <div class="highlight"><pre><span></span><code>kubectl apply -k https://github.com/kubernetes-csi/external-snapshotter//client/config/crd
+kubectl apply -k https://github.com/kubernetes-csi/external-snapshotter//deploy/kubernetes/snapshot-controller
+</code></pre></div>
+  The snapshot controller processes <code>VolumeGroupSnapshot</code> resources only when the <code>CSIVolumeGroupSnapshot</code>
+  feature gate is enabled, which is not the default. Verify that the <code>snapshot-controller</code> Deployment includes
+  <code>--feature-gates=CSIVolumeGroupSnapshot=true</code> in its arguments. To add it, run:
+  <div class="highlight"><pre><span></span><code>kubectl -n kube-system patch deployment snapshot-controller --type=json \
+  -p=&#39;[{&quot;op&quot;:&quot;add&quot;,&quot;path&quot;:&quot;/spec/template/spec/containers/0/args/-&quot;,&quot;value&quot;:&quot;--feature-gates=CSIVolumeGroupSnapshot=true&quot;}]&#39;
 </code></pre></div></li>
-<li>Use a host operating system with kernel TLS offload enabled. TLS offload was added in Linux 4.19. The following
-  distributions are known to have TLS offload enabled:<ul>
-<li>RHEL &gt;= 8.2</li>
-<li>Ubuntu &gt;= 22.04</li>
-<li>Debian &gt;= 12</li>
 </ul>
-</li>
-<li>Have DRBD 9.2.6 or newer loaded. The following script shows the currently loaded DRBD version on all nodes:
-  <div class="highlight"><pre><span></span><code>for SATELLITE in $(kubectl get pods -l app.kubernetes.io/component=linstor-satellite -ojsonpath=&#39;{range .items[*]}{.metadata.name}{&quot;\n&quot;}{end}&#39;); do
-  echo &quot;$SATELLITE: $(kubectl exec $SATELLITE -- head -1 /proc/drbd)&quot;
-done
-</code></pre></div></li>
+<h2 id="creating-volumes-in-a-consistency-group">Creating Volumes in a Consistency Group<a class="headerlink" href="#creating-volumes-in-a-consistency-group" title="Permanent link">&para;</a></h2>
+<p>Membership in a consistency group is controlled by a label on the PersistentVolumeClaim:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">linstor.csi.linbit.com/consistency-group</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-group</span>
+</code></pre></div>
+<p>All PersistentVolumeClaims in the same namespace carrying the same label value form one group. The label needs
+to be present when the PersistentVolumeClaim is created: adding it to an existing volume has no effect. All
+members of a group must use the same <code>StorageClass</code>, and because they share one LINSTOR resource, they are
+always placed on the same set of nodes.</p>
+<p>As an example workload, we deploy a Pod that appends the same log line to two separate volumes: a data volume
+and a log volume. Both PersistentVolumeClaims carry the same <code>linstor.csi.linbit.com/consistency-group</code> label,
+placing them in one consistency group named <code>volume-logger</code>:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl apply -f - &lt;&lt;EOF
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: piraeus-storage
+provisioner: linstor.csi.linbit.com
+allowVolumeExpansion: true
+volumeBindingMode: WaitForFirstConsumer
+parameters:
+  linstor.csi.linbit.com/storagePool: pool1
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: data-volume
+  labels:
+    linstor.csi.linbit.com/consistency-group: volume-logger
+spec:
+  storageClassName: piraeus-storage
+  resources:
+    requests:
+      storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: log-volume
+  labels:
+    linstor.csi.linbit.com/consistency-group: volume-logger
+spec:
+  storageClassName: piraeus-storage
+  resources:
+    requests:
+      storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: volume-logger
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: volume-logger
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: volume-logger
+    spec:
+      terminationGracePeriodSeconds: 0
+      containers:
+        - name: volume-logger
+          image: busybox
+          args:
+            - sh
+            - -c
+            - |
+              echo &quot;Hello from \$HOSTNAME, started at \$(date)&quot; | tee -a /data/hello /log/hello
+              # We use this to keep the Pod running
+              tail -f /dev/null
+          volumeMounts:
+            - mountPath: /data
+              name: data-volume
+            - mountPath: /log
+              name: log-volume
+      volumes:
+        - name: data-volume
+          persistentVolumeClaim:
+            claimName: data-volume
+        - name: log-volume
+          persistentVolumeClaim:
+            claimName: log-volume
+EOF
+</code></pre></div>
+<p>Then, we wait for the Pod to start, and verify that the same line was logged to both volumes:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl wait pod --for=condition=Ready -l app.kubernetes.io/name=volume-logger
+pod/volume-logger-66f57d8bbd-jwmnh condition met
+$ kubectl exec deploy/volume-logger -- cat /data/hello /log/hello
+Hello from volume-logger-66f57d8bbd-jwmnh, started at Wed Jul 22 09:14:02 UTC 2026
+Hello from volume-logger-66f57d8bbd-jwmnh, started at Wed Jul 22 09:14:02 UTC 2026
+</code></pre></div>
+<p>Instead of two separate resources, LINSTOR created a single resource named <code>cg-&lt;uuid&gt;</code>, holding both
+PersistentVolumes as separate volume numbers:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl -n piraeus-datastore exec deploy/linstor-controller -- linstor volume-definition list
++------------------------------------------------------------------------------------------+
+| ResourceName                            | VolumeNr | VolumeMinor | Size  | Gross | State |
+|==========================================================================================|
+| cg-05b322f5-c522-45a0-9de4-3e3c1cca9be5 | 0        | 1000        | 1 GiB |       | ok    |
+| cg-05b322f5-c522-45a0-9de4-3e3c1cca9be5 | 1        | 1001        | 1 GiB |       | ok    |
++------------------------------------------------------------------------------------------+
+</code></pre></div>
+<h2 id="creating-a-group-snapshot">Creating a Group Snapshot<a class="headerlink" href="#creating-a-group-snapshot" title="Permanent link">&para;</a></h2>
+<p>Creating a group snapshot requires the creation of a <code>VolumeGroupSnapshotClass</code> first. Just like the
+<code>VolumeSnapshotClass</code> for single-volume snapshots, it specifies our <code>linstor.csi.linbit.com</code> provisioner and the
+clean-up policy for the snapshots:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl apply -f - &lt;&lt;EOF
+apiVersion: groupsnapshot.storage.k8s.io/v1
+kind: VolumeGroupSnapshotClass
+metadata:
+  name: piraeus-group-snapshots
+driver: linstor.csi.linbit.com
+deletionPolicy: Delete
+EOF
+</code></pre></div>
+<p>Next, we request the creation of a group snapshot using a <code>VolumeGroupSnapshot</code> resource. It selects its member
+volumes using a label selector: here we simply select the same label that defines the consistency group:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl apply -f - &lt;&lt;EOF
+apiVersion: groupsnapshot.storage.k8s.io/v1
+kind: VolumeGroupSnapshot
+metadata:
+  name: volume-logger-snap-1
+spec:
+  volumeGroupSnapshotClassName: piraeus-group-snapshots
+  source:
+    selector:
+      matchLabels:
+        linstor.csi.linbit.com/consistency-group: volume-logger
+EOF
+</code></pre></div>
+<p>Now, we wait for the group snapshot to be created:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl wait volumegroupsnapshot --for=jsonpath=&#39;{.status.readyToUse}&#39;=true volume-logger-snap-1
+volumegroupsnapshot.groupsnapshot.storage.k8s.io/volume-logger-snap-1 condition met
+</code></pre></div>
+<p>The snapshot controller created one <code>VolumeSnapshot</code> resource per member. The <code>SOURCEPVC</code> column shows which
+member each snapshot belongs to — take note of these generated names, they are referenced when restoring:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl get volumesnapshot
+NAME                                                                        READYTOUSE   SOURCEPVC     SOURCESNAPSHOTCONTENT   RESTORESIZE   SNAPSHOTCLASS   SNAPSHOTCONTENT                                                                CREATIONTIME   AGE
+snapshot-46f95430b32172e01d035ffed01a512f76dc317aeb15d689e40b26f0a13c76d1   true         data-volume                           1Gi                           snapcontent-46f95430b32172e01d035ffed01a512f76dc317aeb15d689e40b26f0a13c76d1   17s            17s
+snapshot-c92e39e07c9e0d1801e0e26adcb2c337a0a4a45de53f3f8b98429aeb7db9a765   true         log-volume                            1Gi                           snapcontent-c92e39e07c9e0d1801e0e26adcb2c337a0a4a45de53f3f8b98429aeb7db9a765   17s            17s
+</code></pre></div>
+<p>While Kubernetes shows one <code>VolumeSnapshot</code> per member, LINSTOR created a single snapshot of the shared
+resource, capturing both volumes at the same point in time:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl -n piraeus-datastore exec deploy/linstor-controller -- linstor snapshot list
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ResourceName                            | SnapshotName                                       | NodeNames      | Volumes            | CreatedOn           | State      |
+|=======================================================================================================================================================================|
+| cg-05b322f5-c522-45a0-9de4-3e3c1cca9be5 | groupsnapshot-8f9e0e5c-3f04-4d5f-9f4e-b23a5c0efc21 | n1.example.com | 0: 1 GiB, 1: 1 GiB | 2026-07-22 09:15:41 | Successful |
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+</code></pre></div>
+<h2 id="restoring-a-group-snapshot">Restoring a Group Snapshot<a class="headerlink" href="#restoring-a-group-snapshot" title="Permanent link">&para;</a></h2>
+<p>To simulate the accidental removal of important data, we delete the files on both volumes:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl exec deploy/volume-logger -- rm /data/hello /log/hello
+</code></pre></div>
+<p>Restoring mirrors the creation of the group: we create one new PersistentVolumeClaim per member, each
+referencing the member's <code>VolumeSnapshot</code> as its data source, and each carrying the same <strong>new</strong>
+consistency-group label value. The restored PersistentVolumeClaims again form one shared LINSTOR resource, with
+every member claiming the volume number recorded in its snapshot.</p>
+<p>A group must be restored completely: use the same new label value for all members, restore every member from
+the same group snapshot, and do not add fresh volumes to the restored group. The requested sizes must match the
+size of the snapshots.</p>
+<p>First, we stop the Deployment and remove the existing PersistentVolumeClaims:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl scale deploy/volume-logger --replicas=0
+deployment.apps/volume-logger scaled
+$ kubectl delete pvc data-volume log-volume
+persistentvolumeclaim &quot;data-volume&quot; deleted
+persistentvolumeclaim &quot;log-volume&quot; deleted
+</code></pre></div>
+<p>Then, we recreate them from the group snapshot. Replace the <code>dataSource</code> names with the generated
+<code>VolumeSnapshot</code> names from the previous section, matching each new PersistentVolumeClaim with the snapshot of
+the volume it replaces:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl apply -f - &lt;&lt;EOF
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: data-volume
+  labels:
+    linstor.csi.linbit.com/consistency-group: volume-logger-restored
+spec:
+  storageClassName: piraeus-storage
+  resources:
+    requests:
+      storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  dataSource:
+    apiGroup: snapshot.storage.k8s.io
+    kind: VolumeSnapshot
+    name: snapshot-46f95430b32172e01d035ffed01a512f76dc317aeb15d689e40b26f0a13c76d1
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: log-volume
+  labels:
+    linstor.csi.linbit.com/consistency-group: volume-logger-restored
+spec:
+  storageClassName: piraeus-storage
+  resources:
+    requests:
+      storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  dataSource:
+    apiGroup: snapshot.storage.k8s.io
+    kind: VolumeSnapshot
+    name: snapshot-c92e39e07c9e0d1801e0e26adcb2c337a0a4a45de53f3f8b98429aeb7db9a765
+EOF
+</code></pre></div>
+<p>Since the new PersistentVolumeClaims use the same names, we can simply scale the Deployment back up and verify
+that both volumes contain the data from the time of the snapshot again:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl scale deploy/volume-logger --replicas=1
+deployment.apps/volume-logger scaled
+$ kubectl wait pod --for=condition=Ready -l app.kubernetes.io/name=volume-logger
+pod/volume-logger-66f57d8bbd-b6kfx condition met
+$ kubectl exec deploy/volume-logger -- cat /data/hello /log/hello
+Hello from volume-logger-66f57d8bbd-jwmnh, started at Wed Jul 22 09:14:02 UTC 2026
+Hello from volume-logger-66f57d8bbd-b6kfx, started at Wed Jul 22 09:31:56 UTC 2026
+Hello from volume-logger-66f57d8bbd-jwmnh, started at Wed Jul 22 09:14:02 UTC 2026
+Hello from volume-logger-66f57d8bbd-b6kfx, started at Wed Jul 22 09:31:56 UTC 2026
+</code></pre></div>
+<h2 id="restrictions">Restrictions<a class="headerlink" href="#restrictions" title="Permanent link">&para;</a></h2>
+<p>Because all members of a consistency group share one LINSTOR resource, some operations available on regular
+volumes do not apply to group members:</p>
+<ul>
+<li>All members of a group must be in the same namespace and use the same <code>StorageClass</code>: they share one resource
+  definition, resource group and placement. Groups with the same label value in different namespaces are
+  independent.</li>
+<li>A member cannot be created from another volume or from a snapshot of a regular volume: LINSTOR restores whole
+  resources only. The only supported data source for a member is a <code>VolumeSnapshot</code> created by a group
+  snapshot, used when restoring the whole group. For the same reason, a single member snapshot cannot be
+  restored into a standalone volume outside a group.</li>
+<li>A single member cannot be snapshotted on its own with a <code>VolumeSnapshot</code>: snapshots always cover the whole
+  group, so use a <code>VolumeGroupSnapshot</code> instead.</li>
+<li>The <code>VolumeSnapshot</code> resources created by a group snapshot can only be deleted by deleting the owning
+  <code>VolumeGroupSnapshot</code> resource.</li>
+<li>Members cannot use <code>ReadWriteMany</code> volumes in <code>Filesystem</code> mode, as the NFS export used to implement them is
+  incompatible with consistency groups. <code>ReadWriteMany</code> in <code>Block</code> mode, as used for KubeVirt live migration,
+  is supported: the driver temporarily allows the volume to be active on two nodes during the migration.</li>
+<li>Members can still be deleted individually: this removes only the member's volume, and the shared resource is
+  removed together with its last member.</li>
+<li>Nothing applies the consistency-group label automatically: label the PersistentVolumeClaims yourself, or use
+  a tool that propagates labels, such as CDI, which copies labels from a <code>DataVolume</code> to the created
+  PersistentVolumeClaim.</li>
 </ul>
-<h2 id="configure-tls-between-linstor-controller-and-linstor-satellite">Configure TLS Between LINSTOR Controller and LINSTOR Satellite<a class="headerlink" href="#configure-tls-between-linstor-controller-and-linstor-satellite" title="Permanent link">&para;</a></h2>
-<p>This step is covered in <a href="../internal-tls/">a dedicated guide</a>. Follow the steps in the guide, but set the
-<code>tlsHandshakeDaemon</code> field in the <code>LinstorSatelliteConfiguration</code> resource:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorSatelliteConfiguration</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">internal-tls</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">internalTLS</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">tlsHandshakeDaemon</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="w">    </span><span class="c1"># ...</span>
-</code></pre></div>
-<p>This change will cause the Piraeus Operator to deploy an additional container named <code>ktls-utils</code> on the Satellite Pod.</p>
-<div class="highlight"><pre><span></span><code>$ kubectl logs -l app.kubernetes.io/component=linstor-satellite -c ktls-utils
-tlshd[1]: Built from ktls-utils 0.10 on Oct  4 2023 07:26:06
-tlshd[1]: Built from ktls-utils 0.10 on Oct  4 2023 07:26:06
-tlshd[1]: Built from ktls-utils 0.10 on Oct  4 2023 07:26:06
-</code></pre></div>
-<h2 id="configure-tls-for-drbd">Configure TLS for DRBD<a class="headerlink" href="#configure-tls-for-drbd" title="Permanent link">&para;</a></h2>
-<p>To instruct LINSTOR® to configure TLS for DRBD, the <code>DrbdOptions/Net/tls</code> property needs to be set to <code>yes</code>. This
-can be done directly on the <code>LinstorCluster</code> resource, so it automatically applies to all resources, or as part of
-the parameters in a StorageClass.</p>
-<p>To apply the property cluster-wide, add the following property entry to your <code>LinstorCluster</code> resource:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstorcluster</span>
-<span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">properties</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DrbdOptions/Net/tls</span>
-<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;yes&quot;</span>
-</code></pre></div>
-<p>To apply the property only for certain StorageClasses, add the following parameter to the selected StorageClasses:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">storage.k8s.io/v1</span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StorageClass</span>
-<span class="nt">metadata</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
-<span class="nt">provisioner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstor.csi.linbit.com</span>
-<span class="nt">parameters</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">property.linstor.csi.linbit.com/DrbdOptions/Net/tls</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;yes&quot;</span>
-<span class="w">  </span><span class="c1"># ...</span>
-</code></pre></div>
-<h2 id="switch-existing-resources-to-tls">Switch Existing Resources to TLS<a class="headerlink" href="#switch-existing-resources-to-tls" title="Permanent link">&para;</a></h2>
-<p>DRBD does not support online reconfiguration to use DRBD. To switch existing resources to use TLS, for example by
-setting the property on the <code>LinstorCluster</code> resource, you need to perform the following steps on all nodes:</p>
-<p>First, you need to temporarily stop all replication and suspend all DRBD volumes using <code>drbdadm suspend-io all</code>.
-The command is executed once on each LINSTOR Satellite Pod.</p>
-<div class="highlight"><pre><span></span><code>$ kubectl exec node1.example.com -- drbdadm suspend-io all
-$ kubectl exec node2.example.com -- drbdadm suspend-io all
-$ kubectl exec node3.example.com -- drbdadm suspend-io all
-</code></pre></div>
-<p>Next, you will need to disconnect all DRBD connections on all nodes.</p>
-<div class="highlight"><pre><span></span><code>$ kubectl exec node1.example.com -- drbdadm disconnect --force all
-$ kubectl exec node2.example.com -- drbdadm disconnect --force all
-$ kubectl exec node3.example.com -- drbdadm disconnect --force all
-</code></pre></div>
-<p>Now, we can safely reconnect DRBD connection paths, which configures the TLS connection parameters.</p>
-<div class="highlight"><pre><span></span><code>$ kubectl exec node1.example.com -- drbdadm adjust all
-$ kubectl exec node2.example.com -- drbdadm adjust all
-$ kubectl exec node3.example.com -- drbdadm adjust all
-</code></pre></div>
-<h2 id="confirm-drbd-uses-tls">Confirm DRBD Uses TLS<a class="headerlink" href="#confirm-drbd-uses-tls" title="Permanent link">&para;</a></h2>
-<p>To confirm that DRBD is using TLS for replication, check the following resources.</p>
-<p>First, confirm that the <code>ktls-utils</code> container performed the expected handshakes:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl logs -l app.kubernetes.io/component=linstor-satellite -c ktls-utils
-...
-Handshake with node2.example.com (10.127.183.183) was successful
-Handshake with node2.example.com (10.127.183.183) was successful
-...
-Handshake with node3.example.com (10.125.97.42) was successful
-Handshake with node3.example.com (10.125.97.42) was successful
-...
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The following messages are expected when running <code>ktls-utils</code> in a container and can be safely ignored:</p>
-<pre><code>File /etc/tlshd.d/tls.key: expected mode 600
-add_key: Bad message
-</code></pre>
-</div>
-<p>Next, check the statistics on TLS sessions controlled by the kernel on each node. You should see an equal, nonzero
-number of <code>TlsTxSw</code> and <code>TlsRxSw</code>.</p>
-<div class="highlight"><pre><span></span><code>$ kubectl exec node1.example.com -- cat /proc/net/tls_stat
-TlsCurrTxSw                         4
-TlsCurrRxSw                         4
-TlsCurrTxDevice                     0
-TlsCurrRxDevice                     0
-TlsTxSw                             4
-TlsRxSw                             4
-TlsTxDevice                         0
-TlsRxDevice                         0
-TlsDecryptError                     0
-TlsRxDeviceResync                   0
-TlsDecryptRetry                     0
-TlsRxNoPadViolation                 0
-</code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If your network card supports TLS offloading, you might see <code>TlsTxDevice</code> and <code>TlsRxDevice</code> being nonzero instead.</p>
-</div>
+<p>For a complete example of running KubeVirt virtual machines with consistency groups — including cloning all
+virtual machine disks from a shared golden image — see the
+<a href="https://github.com/piraeusdatastore/linstor-csi/tree/master/examples/consistency-groups">consistency group examples in the LINSTOR CSI repository</a>.</p>
 
 
 
@@ -2835,7 +3007,7 @@ TlsRxNoPadViolation                 0
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../api-tls/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configure TLS for the LINSTOR API">
+          <a href="../drbd-host-networking/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Use the Host Network for DRBD Replication">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2845,20 +3017,20 @@ TlsRxNoPadViolation                 0
                 Previous
               </span>
               <div class="md-ellipsis">
-                Configure TLS for the LINSTOR API
+                Use the Host Network for DRBD Replication
               </div>
             </div>
           </a>
         
         
           
-          <a href="../secure-boot/" class="md-footer__link md-footer__link--next" aria-label="Next: Load DRBD with SecureBoot Enabled">
+          <a href="../troubleshooting/" class="md-footer__link md-footer__link--next" aria-label="Next: Troubleshoot Piraeus Datastore">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Load DRBD with SecureBoot Enabled
+                Troubleshoot Piraeus Datastore
               </div>
             </div>
             <div class="md-footer__button md-icon">
