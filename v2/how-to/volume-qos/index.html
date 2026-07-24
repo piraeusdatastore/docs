@@ -12,13 +12,13 @@
         <meta name="author" content="The Piraeus Maintainers">
       
       
-        <link rel="canonical" href="https://piraeus.io/docs/v2/how-to/external-cluster-api/">
+        <link rel="canonical" href="https://piraeus.io/docs/v2/how-to/volume-qos/">
       
       
-        <link rel="prev" href="../install-kernel-headers/">
+        <link rel="prev" href="../external-cluster-api/">
       
       
-        <link rel="next" href="../volume-qos/">
+        <link rel="next" href="../internal-tls/">
       
       
         
@@ -29,7 +29,7 @@
     
     
       
-        <title>Integrate with a Cluster API Management Cluster - Piraeus Datastore</title>
+        <title>Configure Volume IO Limits (QoS) - Piraeus Datastore</title>
       
     
     
@@ -63,17 +63,17 @@
     
   
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Integrate with a Cluster API Management Cluster - Piraeus Datastore" />
+<meta property="og:title" content="Configure Volume IO Limits (QoS) - Piraeus Datastore" />
 <meta property="og:description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." />
-<meta property="og:image" content="https://piraeus.io/docs/v2/assets/images/social/how-to/external-cluster-api.png" />
+<meta property="og:image" content="https://piraeus.io/docs/v2/assets/images/social/how-to/volume-qos.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:url" content="https://piraeus.io/docs/v2/how-to/external-cluster-api/" />
+<meta property="og:url" content="https://piraeus.io/docs/v2/how-to/volume-qos/" />
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="Integrate with a Cluster API Management Cluster - Piraeus Datastore" />
+<meta property="twitter:title" content="Configure Volume IO Limits (QoS) - Piraeus Datastore" />
 <meta property="twitter:description" content="An easy-to-use cloud native datastore for Kubernetes. 100% open source, run anywhere." />
-<meta property="twitter:image" content="https://piraeus.io/docs/v2/assets/images/social/how-to/external-cluster-api.png" />
+<meta property="twitter:image" content="https://piraeus.io/docs/v2/assets/images/social/how-to/volume-qos.png" />
 </head>
   
   
@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#integrate-with-a-cluster-api-management-cluster" class="md-skip">
+        <a href="#how-to-configure-volume-io-limits-qos" class="md-skip">
           Skip to content
         </a>
       
@@ -131,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Integrate with a Cluster API Management Cluster
+              Configure Volume IO Limits (QoS)
             
           </span>
         </div>
@@ -910,6 +910,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../external-cluster-api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integrate with a Cluster API Management Cluster
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -929,7 +957,7 @@
   <span class="md-ellipsis">
     
   
-    Integrate with a Cluster API Management Cluster
+    Configure Volume IO Limits (QoS)
   
 
     
@@ -947,7 +975,7 @@
   <span class="md-ellipsis">
     
   
-    Integrate with a Cluster API Management Cluster
+    Configure Volume IO Limits (QoS)
   
 
     
@@ -973,10 +1001,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preconditions" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Preconditions
+        Prerequisites
       
     </span>
   </a>
@@ -984,10 +1012,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-serviceaccount-on-the-management-cluster" class="md-nav__link">
+  <a href="#deploying-the-nri-plugin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Create a ServiceAccount on the Management Cluster
+        Deploying the NRI Plugin
       
     </span>
   </a>
@@ -995,10 +1023,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-kubeconfig-file-for-the-service-account" class="md-nav__link">
+  <a href="#configuring-io-limits-in-a-storageclass" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Create a Kubeconfig File for the Service Account
+        Configuring IO Limits in a StorageClass
       
     </span>
   </a>
@@ -1006,10 +1034,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configure-the-piraeus-operator-to-use-the-kubeconfig-file" class="md-nav__link">
+  <a href="#verifying-the-limits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configure the Piraeus Operator to Use the Kubeconfig File
+        Verifying the Limits
       
     </span>
   </a>
@@ -1017,10 +1045,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#confirm-a-working-cluster-api-integration" class="md-nav__link">
+  <a href="#changing-the-limits-of-an-existing-volume" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Confirm a Working Cluster API Integration
+        Changing the Limits of an Existing Volume
       
     </span>
   </a>
@@ -1031,34 +1059,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../volume-qos/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Configure Volume IO Limits (QoS)
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -2627,10 +2627,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preconditions" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Preconditions
+        Prerequisites
       
     </span>
   </a>
@@ -2638,10 +2638,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-serviceaccount-on-the-management-cluster" class="md-nav__link">
+  <a href="#deploying-the-nri-plugin" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Create a ServiceAccount on the Management Cluster
+        Deploying the NRI Plugin
       
     </span>
   </a>
@@ -2649,10 +2649,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#create-a-kubeconfig-file-for-the-service-account" class="md-nav__link">
+  <a href="#configuring-io-limits-in-a-storageclass" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Create a Kubeconfig File for the Service Account
+        Configuring IO Limits in a StorageClass
       
     </span>
   </a>
@@ -2660,10 +2660,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#configure-the-piraeus-operator-to-use-the-kubeconfig-file" class="md-nav__link">
+  <a href="#verifying-the-limits" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Configure the Piraeus Operator to Use the Kubeconfig File
+        Verifying the Limits
       
     </span>
   </a>
@@ -2671,10 +2671,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#confirm-a-working-cluster-api-integration" class="md-nav__link">
+  <a href="#changing-the-limits-of-an-existing-volume" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Confirm a Working Cluster API Integration
+        Changing the Limits of an Existing Volume
       
     </span>
   </a>
@@ -2701,123 +2701,184 @@
   
 
 
-<h1 id="integrate-with-a-cluster-api-management-cluster">Integrate with a Cluster API Management Cluster<a class="headerlink" href="#integrate-with-a-cluster-api-management-cluster" title="Permanent link">&para;</a></h1>
-<p>This guide shows you how to integrate Piraeus in a cluster managed by Cluster API, where the Cluster API is running
-in a different cluster from Piraeus.</p>
+<h1 id="how-to-configure-volume-io-limits-qos">How to Configure Volume IO Limits (QoS)<a class="headerlink" href="#how-to-configure-volume-io-limits-qos" title="Permanent link">&para;</a></h1>
+<p>Piraeus Datastore can enforce per-volume IO limits, restricting the read and write bandwidth and IOPS available to
+the containers using a volume. This prevents a single noisy workload from saturating the storage of a node.</p>
+<p>Two components work together to enforce the limits:</p>
+<ul>
+<li>The LINSTOR CSI driver reads the limits from the StorageClass parameters and stores them with the volume. Whenever
+  the volume is attached to a node, the driver publishes the limits and the device path in the <code>VolumeAttachment</code>
+  metadata.</li>
+<li>The <a href="https://github.com/piraeusdatastore/nri-volume-qos">nri-volume-qos</a> plugin runs on every node and hooks into the container runtime using the <a href="https://github.com/containerd/nri">Node Resource
+  Interface (NRI)</a>. When a container using the volume starts, the plugin applies the limits to the container's
+  cgroup using the Linux cgroupv2 <code>io.max</code> interface. Both filesystem volumes and raw block volumes are supported.</li>
+</ul>
 <p>To complete this guide, you should be familiar with:</p>
 <ul>
-<li>Cluster API concepts such as <a href="https://cluster-api.sigs.k8s.io/user/concepts#management-cluster">Management Clusters</a>.</li>
-<li>editing the Piraeus Operator Deployment, using either <code>kustomize</code> or <code>helm</code>.</li>
-<li>managing Service Accounts and RBAC resources.</li>
+<li>Deploying workloads in Kubernetes using <a href="https://helm.sh/"><code>helm</code></a></li>
+<li>Deploying resources using <a href="https://kubernetes.io/docs/tasks/tools/"><code>kubectl</code></a></li>
 </ul>
-<h2 id="preconditions">Preconditions<a class="headerlink" href="#preconditions" title="Permanent link">&para;</a></h2>
-<p>This guide assumes that the Management Cluster and the Workload Cluster are distinct clusters. If they are the same
-cluster, no additional configuration is necessary to integrate with Cluster API and you can skip this guide.</p>
-<h2 id="create-a-serviceaccount-on-the-management-cluster">Create a ServiceAccount on the Management Cluster<a class="headerlink" href="#create-a-serviceaccount-on-the-management-cluster" title="Permanent link">&para;</a></h2>
-<p>Piraeus Operator needs to be able to update annotations on the Machine resource to
-<a href="../../explanation/deletion-policies/#satellite-evacuation-when-using-clusterapi">hook into the Machine deletion process</a>.</p>
-<p>Create a Service Account and matching RBAC resources in the Management Cluster using the following kubectl commands.
-The commands assume that the Cluster API resources are deployed in the <code>workload-cluster-ns</code> namespace, and
-<code>management.kubeconfig</code> is the name of the kubeconfig file used to access the Management Cluster.</p>
-<div class="highlight"><pre><span></span><code>$ export KUBECONFIG=management.kubeconfig
-$ export KUBENS=workload-cluster-ns
-$ kubectl --namespace=$KUBENS create serviceaccount piraeus-operator
-serviceaccount/piraeus-operator created
-$ kubectl --namespace=$KUBENS role piraeus-operator --verb=get,update --resource=machines.cluster.x-k8s.io
-role.rbac.authorization.k8s.io/piraeus-operator created
-$ kubectl --namespace=$KUBENS create rolebinding piraeus-operator --role=piraeus-operator --serviceaccount=$KUBENS:piraeus-operator
-rolebinding.rbac.authorization.k8s.io/piraeus-operator created
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Piraeus Datastore v2.10.8 or later, which deploys LINSTOR CSI v1.11.3 or later.</li>
+<li>Kubernetes 1.26 or later.</li>
+<li>
+<p>A container runtime with NRI support: containerd 1.7 or later, or CRI-O 1.26 or later.</p>
+<p>In containerd 1.7, NRI support is disabled by default. Enable it by adding the following snippet to
+<code>/etc/containerd/config.toml</code> and restarting containerd on every node:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[plugins.</span><span class="s2">&quot;io.containerd.nri.v1.nri&quot;</span><span class="k">]</span>
+<span class="w">  </span><span class="n">disable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
 </code></pre></div>
-<h2 id="create-a-kubeconfig-file-for-the-service-account">Create a Kubeconfig File for the Service Account<a class="headerlink" href="#create-a-kubeconfig-file-for-the-service-account" title="Permanent link">&para;</a></h2>
-<p>The following commands create a <code>piraeus-clusterapi.kubeconfig</code> file.</p>
-<div class="highlight"><pre><span></span><code>$ export KUBECONFIG=management.kubeconfig
-$ export KUBENS=workload-cluster-ns
-$ TOKEN=&quot;$(kubectl --namespace=$KUBENS create token piraeus-operator --duration=87600h)&quot;
-$ kubectl config view --flatten --minify -ojson | jq --arg TOKEN &quot;$TOKEN&quot; &#39;.users[0].user = {&quot;token&quot;: $TOKEN}&#39; &gt; piraeus-clusterapi.kubeconfig
-</code></pre></div>
-<p>This file contains the access credentials that Piraeus Operator can use to get and set the necessary annotations
-on the Machine resources in the Management Cluster.</p>
-<h2 id="configure-the-piraeus-operator-to-use-the-kubeconfig-file">Configure the Piraeus Operator to Use the Kubeconfig File<a class="headerlink" href="#configure-the-piraeus-operator-to-use-the-kubeconfig-file" title="Permanent link">&para;</a></h2>
-<p>Now, update the Piraeus Operator Deployment to use the <code>piraeus-clusterapi.kubeconfig</code> created in the previous step.</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Kustomize</label><label for="__tabbed_1_2">Helm</label></div>
+<p>Starting with containerd 2.0, and in all supported CRI-O releases, NRI is enabled by default.</p>
+</li>
+<li>
+<p>A Linux kernel with the cgroupv2 IO controller, version 5.14 or later.</p>
+</li>
+</ul>
+<h2 id="deploying-the-nri-plugin">Deploying the NRI Plugin<a class="headerlink" href="#deploying-the-nri-plugin" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Helm</label><label for="__tabbed_1_2">kubectl</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p>Update <code>kustomization.yaml</code> to create a secret containing the <code>piraeus-clusterapi.kubeconfig</code> and apply a patch to
-let the Piraeus Operator use the updated configuration. Apply using <code>kubectl apply -k .</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">resources</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/piraeusdatastore/piraeus-operator/releases/latest/download/manifest.yaml</span>
-<span class="nt">secretGenerator</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus-clusterapi-kubeconfig</span>
-<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus-datastore</span>
-<span class="w">  </span><span class="nt">files</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">kubeconfig=piraeus-clusterapi.kubeconfig</span>
-<span class="w">  </span><span class="nt">options</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">disableSuffixHash</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-<span class="nt">patches</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">patch</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">    </span><span class="no">apiVersion: apps/v1</span>
-<span class="w">    </span><span class="no">kind: Deployment</span>
-<span class="w">    </span><span class="no">metadata:</span>
-<span class="w">      </span><span class="no">name: piraeus-operator-controller-manager</span>
-<span class="w">      </span><span class="no">namespace: piraeus-datastore</span>
-<span class="w">    </span><span class="no">spec:</span>
-<span class="w">      </span><span class="no">template:</span>
-<span class="w">        </span><span class="no">spec:</span>
-<span class="w">          </span><span class="no">containers:</span>
-<span class="w">          </span><span class="no">- name: manager</span>
-<span class="w">            </span><span class="no">env:</span>
-<span class="w">            </span><span class="no">- name: CLUSTER_API_KUBECONFIG</span>
-<span class="w">              </span><span class="no">value: /etc/clusterapi/kubeconfig</span>
-<span class="w">            </span><span class="no">volumeMounts:</span>
-<span class="w">            </span><span class="no">- name: piraeus-clusterapi-kubeconfig</span>
-<span class="w">              </span><span class="no">mountPath: /etc/clusterapi</span>
-<span class="w">              </span><span class="no">readOnly: true</span>
-<span class="w">          </span><span class="no">volumes:</span>
-<span class="w">          </span><span class="no">- name: piraeus-clusterapi-kubeconfig</span>
-<span class="w">            </span><span class="no">secret:</span>
-<span class="w">              </span><span class="no">secretName: piraeus-clusterapi-kubeconfig</span>
+<p>Deploy the <code>nri-volume-qos</code> plugin using the Helm chart published on the GitHub Container Registry:</p>
+<div class="highlight"><pre><span></span><code>$ helm install nri-volume-qos oci://ghcr.io/piraeusdatastore/nri-volume-qos --namespace kube-system
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<p>Create or update <code>values.yaml</code>, replacing the content of the secret in <code>extraManifests</code> with the content of
-<code>piraeus-clusterapi.kubeconfig</code>. Update the Piraeus Operator deployment using
-<code>helm upgrade --namespace piraeus-datastore piraeus-operator ... --values values.yaml</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="nt">operator</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">options</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">clusterApiKubeconfig</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/clusterapi/kubeconfig</span>
-<span class="w">  </span><span class="nt">extraVolumeMounts</span><span class="p">:</span>
-<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus-clusterapi-kubeconfig</span>
-<span class="w">    </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/clusterapi</span>
-<span class="w">    </span><span class="nt">readOnly</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-
-<span class="nt">extraVolumes</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus-clusterapi-kubeconfig</span>
-<span class="w">  </span><span class="nt">secret</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">secretName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus-clusterapi-kubeconfig</span>
-
-<span class="nt">extraManifests</span><span class="p">:</span>
-<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
-<span class="w">  </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Secret</span>
-<span class="w">  </span><span class="nt">metadata</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus-clusterapi-kubeconfig</span>
-<span class="w">  </span><span class="nt">stringData</span><span class="p">:</span>
-<span class="w">   </span><span class="nt">kubeconfig</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">     </span><span class="no">REPLACE THIS</span>
+<p>Every <a href="https://github.com/piraeusdatastore/nri-volume-qos/releases">release</a> includes a <code>manifest.yaml</code>, containing the Helm chart rendered with
+default values. Apply it to deploy the plugin in the <code>kube-system</code> namespace:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl apply --server-side -f https://github.com/piraeusdatastore/nri-volume-qos/releases/latest/download/manifest.yaml
 </code></pre></div>
 </div>
 </div>
 </div>
-<h2 id="confirm-a-working-cluster-api-integration">Confirm a Working Cluster API Integration<a class="headerlink" href="#confirm-a-working-cluster-api-integration" title="Permanent link">&para;</a></h2>
-<p>To confirm that the integration works, check for the presence of the following annotations on the Machine resources:</p>
-<div class="highlight"><pre><span></span><code>$ export KUBECONFIG=management.kubeconfig
-$ export KUBENS=workload-cluster-ns
-$ kubectl get machines --namespace=$KUBENS -ocustom-columns=&#39;NAME:metadata.name,HOOK:metadata.annotations.pre-drain\.delete\.hook\.machine\.cluster\.x-k8s\.io/linstor-prepare-for-drain&#39;
-NAME                           HOOK
-machine-without-integration    &lt;none&gt;
-machine-with-integration
+<p>Then, wait for the plugin to be ready on all nodes:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl --namespace kube-system rollout status daemonset nri-volume-qos
+daemon set &quot;nri-volume-qos&quot; successfully rolled out
 </code></pre></div>
-<p>If the <code>HOOK</code> field shows <code>&lt;none&gt;</code>, the integration is not active. If the output is empty, the integration is
-enabled.</p>
+<blockquote>
+<p>🗒️ NOTE: Some distributions place the kubelet directory somewhere other than <code>/var/lib/kubelet</code>, for example k0s
+and MicroK8s. Set the <code>hostPaths.kubeletPodsDir</code> Helm value to the pods directory used by your distribution. See
+the <a href="https://github.com/piraeusdatastore/nri-volume-qos/tree/main/charts/nri-volume-qos">chart documentation</a> for all available values.</p>
+</blockquote>
+<h2 id="configuring-io-limits-in-a-storageclass">Configuring IO Limits in a StorageClass<a class="headerlink" href="#configuring-io-limits-in-a-storageclass" title="Permanent link">&para;</a></h2>
+<p>IO limits are configured as StorageClass parameters. Create a StorageClass, adding the limits that should apply to
+every volume provisioned from it:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">storage.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StorageClass</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus-storage-qos</span>
+<span class="nt">provisioner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstor.csi.linbit.com</span>
+<span class="nt">allowVolumeExpansion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="nt">volumeBindingMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WaitForFirstConsumer</span>
+<span class="nt">parameters</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">linstor.csi.linbit.com/storagePool</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pool1</span>
+<span class="w">  </span><span class="nt">qos.linbit.com/rbps</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;40Mi&quot;</span>
+<span class="w">  </span><span class="nt">qos.linbit.com/wbps</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;20Mi&quot;</span>
+<span class="w">  </span><span class="nt">qos.linbit.com/riops</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4000&quot;</span>
+<span class="w">  </span><span class="nt">qos.linbit.com/wiops</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2000&quot;</span>
+</code></pre></div>
+<p>The following parameters are available. All of them are optional: leaving out a parameter leaves that dimension
+unlimited.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>qos.linbit.com/rbps</code></td>
+<td>Maximum read bandwidth, in bytes per second</td>
+</tr>
+<tr>
+<td><code>qos.linbit.com/wbps</code></td>
+<td>Maximum write bandwidth, in bytes per second</td>
+</tr>
+<tr>
+<td><code>qos.linbit.com/riops</code></td>
+<td>Maximum read operations per second</td>
+</tr>
+<tr>
+<td><code>qos.linbit.com/wiops</code></td>
+<td>Maximum write operations per second</td>
+</tr>
+</tbody>
+</table>
+<p>Values are plain integers (<code>"41943040"</code>) or <a href="https://kubernetes.io/docs/reference/kubernetes-api/common-definitions/quantity/">Kubernetes quantities</a>
+(<code>"40Mi"</code>, <code>"500k"</code>).</p>
+<blockquote>
+<p>🗒️ NOTE: The limits are stored with the volume when it is provisioned. Changing the parameters of a StorageClass
+only affects newly provisioned volumes. See <a href="#changing-the-limits-of-an-existing-volume">Changing the Limits of an Existing Volume</a>
+for existing volumes.</p>
+</blockquote>
+<p>The limits apply to each container individually: every container using the volume receives its own <code>io.max</code> entry,
+so two containers sharing a volume can each use the full configured limit.</p>
+<h2 id="verifying-the-limits">Verifying the Limits<a class="headerlink" href="#verifying-the-limits" title="Permanent link">&para;</a></h2>
+<p>Create a volume using the StorageClass and a Job running the <a href="https://github.com/axboe/fio"><code>fio</code></a> disk benchmark:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolumeClaim</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qos-test-volume</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">storageClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus-storage-qos</span>
+<span class="w">  </span><span class="nt">accessModes</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">ReadWriteOnce</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">resources</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">requests</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1Gi</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">batch/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Job</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qos-test</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">template</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">restartPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Never</span>
+<span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fio</span>
+<span class="w">          </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nixery.dev/fio</span>
+<span class="w">          </span><span class="nt">command</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">fio</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--name=qos-test</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--filename=/volume/test.dat</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--size=256m</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--rw=randrw</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--bs=128k</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--direct=1</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--ioengine=libaio</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--iodepth=8</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--runtime=30</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">--time_based</span>
+<span class="w">          </span><span class="nt">volumeMounts</span><span class="p">:</span>
+<span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">volume</span>
+<span class="w">              </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/volume</span>
+<span class="w">      </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">volume</span>
+<span class="w">          </span><span class="nt">persistentVolumeClaim</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">claimName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qos-test-volume</span>
+</code></pre></div>
+<p>While the Job is running, verify that the CSI driver published the limits in the <code>VolumeAttachment</code> resource:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl get volumeattachments -o yaml | grep &quot;qos.linbit.com&quot;
+      qos.linbit.com/device: /dev/drbd1000
+      qos.linbit.com/rbps: &quot;41943040&quot;
+      qos.linbit.com/riops: &quot;4000&quot;
+      qos.linbit.com/wbps: &quot;20971520&quot;
+      qos.linbit.com/wiops: &quot;2000&quot;
+</code></pre></div>
+<p>Once the Job completes, the reported bandwidth matches the configured limits of 40 MiB/s read and 20 MiB/s write:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl logs job/qos-test | grep -E &quot;READ|WRITE&quot;
+   READ: bw=40.1MiB/s (42.0MB/s), 40.1MiB/s-40.1MiB/s (42.0MB/s-42.0MB/s), io=1204MiB (1262MB), run=30020-30020msec
+  WRITE: bw=20.0MiB/s (21.0MB/s), 20.0MiB/s-20.0MiB/s (21.0MB/s-21.0MB/s), io=601MiB (630MB), run=30020-30020msec
+</code></pre></div>
+<h2 id="changing-the-limits-of-an-existing-volume">Changing the Limits of an Existing Volume<a class="headerlink" href="#changing-the-limits-of-an-existing-volume" title="Permanent link">&para;</a></h2>
+<p>The limits are stored as auxiliary properties on the LINSTOR resource definition. To change them for an existing
+volume, set the properties using the LINSTOR client, referencing the volume by its PersistentVolume name:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl -n piraeus-datastore exec deploy/linstor-controller -- \
+    linstor resource-definition set-property --aux pvc-1e24339c-ee8d-4c0e-a68e-cbc85c866704 qos.linbit.com/wbps 10Mi
+</code></pre></div>
+<p>The new limits take effect the next time the volume is attached: delete the Pods using the volume, wait for the
+volume to be detached from the node, and start the Pods again.</p>
 
 
 
@@ -2853,7 +2914,7 @@ enabled.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../install-kernel-headers/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Install Kernel Headers to build DRBD">
+          <a href="../external-cluster-api/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Integrate with a Cluster API Management Cluster">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2863,20 +2924,20 @@ enabled.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Install Kernel Headers to build DRBD
+                Integrate with a Cluster API Management Cluster
               </div>
             </div>
           </a>
         
         
           
-          <a href="../volume-qos/" class="md-footer__link md-footer__link--next" aria-label="Next: Configure Volume IO Limits (QoS)">
+          <a href="../internal-tls/" class="md-footer__link md-footer__link--next" aria-label="Next: Configure TLS Between LINSTOR Controller and LINSTOR Satellite">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Configure Volume IO Limits (QoS)
+                Configure TLS Between LINSTOR Controller and LINSTOR Satellite
               </div>
             </div>
             <div class="md-footer__button md-icon">
