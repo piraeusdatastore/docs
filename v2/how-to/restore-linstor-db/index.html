@@ -2715,7 +2715,7 @@ Persistent Volumes and Volume Snapshots that were created after the backup are l
 </ul>
 <h2 id="find-the-latest-backup">Find the Latest Backup<a class="headerlink" href="#find-the-latest-backup" title="Permanent link">&para;</a></h2>
 <p>The backup is stored in Kubernetes Secrets. List all backups by using the following command:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl get secrets --field-selector type=piraeus.io/linstor-backup --sort-by .metadata.creationTimestamp -ocustom-columns=&quot;NAME:.metadata.name,CREATED-AT:metadata.creationTimestamp,VERSION:.metadata.annotations.piraeus\.io/linstor-version&quot;
+<div class="highlight"><pre><span></span><code>$ kubectl get secrets --field-selector type=piraeus.io/linstor-backup --sort-by .metadata.creationTimestamp -ocustom-columns="NAME:.metadata.name,CREATED-AT:metadata.creationTimestamp,VERSION:.metadata.annotations.piraeus\.io/linstor-version"
 NAME                                                     CREATED-AT             VERSION
 linstor-backup-for-linstor-controller-db7fbfd95-zsfmm    2024-11-04T07:54:29Z   LINSTOR Controller 1.27.0
 linstor-backup-for-linstor-controller-745d54bf99-544hf   2024-11-04T08:03:59Z   LINSTOR Controller 1.29.1
@@ -2737,14 +2737,14 @@ deployment.apps/linstor-controller scaled
 <div class="highlight"><pre><span></span><code>$ mkdir backup
 $ cd backup
 $ kubectl api-resources --api-group=internal.linstor.linbit.com -oname | xargs --no-run-if-empty kubectl get crds -oyaml &gt; crds.yaml
-$ kubectl api-resources --api-group=internal.linstor.linbit.com -oname | xargs --no-run-if-empty -I {} sh -c &#39;kubectl get {} -oyaml &gt; {}.yaml&#39;
+$ kubectl api-resources --api-group=internal.linstor.linbit.com -oname | xargs --no-run-if-empty -I {} sh -c 'kubectl get {} -oyaml &gt; {}.yaml'
 </code></pre></div>
 <h2 id="restore-the-database">Restore the Database<a class="headerlink" href="#restore-the-database" title="Permanent link">&para;</a></h2>
 <p>Copy and unpack the selected backup to a local directory by using the following commands:</p>
 <div class="highlight"><pre><span></span><code>$ mkdir restore
 $ cd restore
 # Replace $BACKUP_NAME with your selected backup name
-$ kubectl get secrets --sort-by=.metadata.name -l piraeus.io/backup=$BACKUP_NAME -ogo-template=&#39;{{range .items}}{{index .data &quot;backup.tar.gz&quot; | base64decode}}{{end}}&#39; &gt; backup.tar.gz
+$ kubectl get secrets --sort-by=.metadata.name -l piraeus.io/backup=$BACKUP_NAME -ogo-template='{{range .items}}{{index .data "backup.tar.gz" | base64decode}}{{end}}' &gt; backup.tar.gz
 $ tar -xvf backup.tar.gz
 crds.yaml
 [...]
@@ -2760,11 +2760,11 @@ deployment.apps/piraeus-operator-controller-manager scaled
 $ kubectl scale deployment linstor-controller --replicas 1
 deployment.apps/linstor-controller scaled
 $ kubectl rollout status deployment piraeus-operator-controller-manager
-Waiting for deployment &quot;piraeus-operator-controller-manager&quot; rollout to finish: 0 of 1 updated replicas are available...
-deployment &quot;piraeus-operator-controller-manager&quot; successfully rolled out
+Waiting for deployment "piraeus-operator-controller-manager" rollout to finish: 0 of 1 updated replicas are available...
+deployment "piraeus-operator-controller-manager" successfully rolled out
 $ kubectl rollout status deployment linstor-controller
-Waiting for deployment &quot;linstor-controller&quot; rollout to finish: 0 of 1 updated replicas are available...
-deployment &quot;linstor-controller&quot; successfully rolled out
+Waiting for deployment "linstor-controller" rollout to finish: 0 of 1 updated replicas are available...
+deployment "linstor-controller" successfully rolled out
 </code></pre></div>
 
 

@@ -2531,7 +2531,7 @@
 plain Pod.</p>
 <p>All Pods are labelled according to their component. You can check the Pods running in your own cluster by
 running the following <code>kubectl</code> command:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl get pods &#39;-ocustom-columns=NAME:.metadata.name,COMPONENT:.metadata.labels.app\.kubernetes\.io/component&#39;
+<div class="highlight"><pre><span></span><code>$ kubectl get pods '-ocustom-columns=NAME:.metadata.name,COMPONENT:.metadata.labels.app\.kubernetes\.io/component'
 NAME                                                   COMPONENT
 ha-controller-vd82w                                    ha-controller
 linstor-affinity-controller-c84cf8958-p5wjx            linstor-affinity-controller

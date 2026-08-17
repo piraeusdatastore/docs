@@ -2732,8 +2732,8 @@ rolebinding.rbac.authorization.k8s.io/piraeus-operator created
 <p>The following commands create a <code>piraeus-clusterapi.kubeconfig</code> file.</p>
 <div class="highlight"><pre><span></span><code>$ export KUBECONFIG=management.kubeconfig
 $ export KUBENS=workload-cluster-ns
-$ TOKEN=&quot;$(kubectl --namespace=$KUBENS create token piraeus-operator --duration=87600h)&quot;
-$ kubectl config view --flatten --minify -ojson | jq --arg TOKEN &quot;$TOKEN&quot; &#39;.users[0].user = {&quot;token&quot;: $TOKEN}&#39; &gt; piraeus-clusterapi.kubeconfig
+$ TOKEN="$(kubectl --namespace=$KUBENS create token piraeus-operator --duration=87600h)"
+$ kubectl config view --flatten --minify -ojson | jq --arg TOKEN "$TOKEN" '.users[0].user = {"token": $TOKEN}' &gt; piraeus-clusterapi.kubeconfig
 </code></pre></div>
 <p>This file contains the access credentials that Piraeus Operator can use to get and set the necessary annotations
 on the Machine resources in the Management Cluster.</p>
@@ -2811,7 +2811,7 @@ let the Piraeus Operator use the updated configuration. Apply using <code>kubect
 <p>To confirm that the integration works, check for the presence of the following annotations on the Machine resources:</p>
 <div class="highlight"><pre><span></span><code>$ export KUBECONFIG=management.kubeconfig
 $ export KUBENS=workload-cluster-ns
-$ kubectl get machines --namespace=$KUBENS -ocustom-columns=&#39;NAME:metadata.name,HOOK:metadata.annotations.pre-drain\.delete\.hook\.machine\.cluster\.x-k8s\.io/linstor-prepare-for-drain&#39;
+$ kubectl get machines --namespace=$KUBENS -ocustom-columns='NAME:metadata.name,HOOK:metadata.annotations.pre-drain\.delete\.hook\.machine\.cluster\.x-k8s\.io/linstor-prepare-for-drain'
 NAME                           HOOK
 machine-without-integration    &lt;none&gt;
 machine-with-integration

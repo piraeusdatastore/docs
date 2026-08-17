@@ -2837,7 +2837,7 @@ proved to be difficult to maintain, often requiring manual intervention.</p>
 backend of your LINSTOR cluster by running the following command:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl exec deploy/piraeus-op-cs-controller -- cat /etc/linstor/linstor.toml
 [db]
-  connection_url = &quot;etcd://piraeus-op-etcd:2379&quot;
+  connection_url = "etcd://piraeus-op-etcd:2379"
 </code></pre></div>
 <p>If the <code>connection_url</code> value starts with <code>etcd://</code> you are using the etcd backend and should consider
 migrating.</p>
@@ -2857,14 +2857,14 @@ currently deployed, so that no accidental upgrade happens:</p>
 <div class="highlight"><pre><span></span><code>$ git checkout v1.10.8
 $ helm upgrade piraeus-op ./charts/piraeus --reuse-values --set operator.controller.replicas=0
 $ kubectl rollout status deploy/piraeus-op-cs-controller -w
-deployment &quot;piraeus-op-cs-controller&quot; successfully rolled out
+deployment "piraeus-op-cs-controller" successfully rolled out
 </code></pre></div>
 <h3 id="2-prepare-a-pod-for-running-the-migration">2. Prepare a Pod for Running the Migration<a class="headerlink" href="#2-prepare-a-pod-for-running-the-migration" title="Permanent link">&para;</a></h3>
 <p>To run the migration, you need access to the <code>linstor-database</code> tool, which comes preinstalled with the LINSTOR
 Controller image. The following command displays the LINSTOR Controller image, the name of the ConfigMap storing the
 LINSTOR Configuration, and the service account for LINSTOR Controller. Take note of them, as they will be used for the
 migration Pod.</p>
-<div class="highlight"><pre><span></span><code>$ kubectl get deploy/piraeus-op-cs-controller --output=jsonpath=&#39;IMAGE={$.spec.template.spec.containers[?(@.name==&quot;linstor-controller&quot;)].image}{&quot;\n&quot;}CONFIG_MAP={$.spec.template.spec.volumes[?(@.name==&quot;linstor-conf&quot;)].configMap.name}{&quot;\n&quot;}SERVICE_ACCOUNT={$.spec.template.spec.serviceAccountName}{&quot;\n&quot;}&#39;
+<div class="highlight"><pre><span></span><code>$ kubectl get deploy/piraeus-op-cs-controller --output=jsonpath='IMAGE={$.spec.template.spec.containers[?(@.name=="linstor-controller")].image}{"\n"}CONFIG_MAP={$.spec.template.spec.volumes[?(@.name=="linstor-conf")].configMap.name}{"\n"}SERVICE_ACCOUNT={$.spec.template.spec.serviceAccountName}{"\n"}'
 IMAGE=quay.io/piraeusdatastore/piraeus-server:v1.24.2
 CONFIG_MAP=piraeus-op-cs-controller-config
 SERVICE_ACCOUNT=linstor-controller
@@ -2883,7 +2883,7 @@ SERVICE_ACCOUNT=linstor-controller
 <span class="w">      </span><span class="nt">command</span><span class="p">:</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/bin/bash</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">-c</span>
-<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;sleep</span><span class="nv"> </span><span class="s">infinity&quot;</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"sleep</span><span class="nv"> </span><span class="s">infinity"</span>
 <span class="w">      </span><span class="nt">volumeMounts</span><span class="p">:</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstor-conf</span>
 <span class="w">          </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/etc/linstor</span>
@@ -2904,17 +2904,17 @@ SERVICE_ACCOUNT=linstor-controller
 <h3 id="3-create-a-database-backup">3. Create a Database Backup<a class="headerlink" href="#3-create-a-database-backup" title="Permanent link">&para;</a></h3>
 <p>Using the newly created migration Pod, create a database backup using the <code>linstor-database</code> tool.</p>
 <div class="highlight"><pre><span></span><code>$ kubectl exec linstor-database-migration -- /usr/share/linstor-server/bin/linstor-database export-db -c /etc/linstor /backup/backup-before-migration.json
-Loading configuration file &quot;/etc/linstor/linstor.toml&quot;
+Loading configuration file "/etc/linstor/linstor.toml"
 15:22:55.684 [main] INFO LINSTOR/linstor-db -- SYSTEM - ErrorReporter DB first time init.
-15:22:55.685 [main] INFO LINSTOR/linstor-db -- SYSTEM - Log directory set to: &#39;./logs&#39;
-15:22:56.417 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module &quot;com.linbit.linstor.modularcrypto.FipsCryptoModule&quot;
-15:22:56.418 [main] INFO LINSTOR/linstor-db -- SYSTEM - Extension module &quot;com.linbit.linstor.modularcrypto.FipsCryptoModule&quot; is not installed
-15:22:56.418 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module &quot;com.linbit.linstor.modularcrypto.JclCryptoModule&quot;
-15:22:56.426 [main] INFO LINSTOR/linstor-db -- SYSTEM - Dynamic load of extension module &quot;com.linbit.linstor.modularcrypto.JclCryptoModule&quot; was successful
-15:22:56.427 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module &quot;com.linbit.linstor.spacetracking.ControllerSpaceTrackingModule&quot;
-15:22:56.429 [main] INFO LINSTOR/linstor-db -- SYSTEM - Dynamic load of extension module &quot;com.linbit.linstor.spacetracking.ControllerSpaceTrackingModule&quot; was successful
+15:22:55.685 [main] INFO LINSTOR/linstor-db -- SYSTEM - Log directory set to: './logs'
+15:22:56.417 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module "com.linbit.linstor.modularcrypto.FipsCryptoModule"
+15:22:56.418 [main] INFO LINSTOR/linstor-db -- SYSTEM - Extension module "com.linbit.linstor.modularcrypto.FipsCryptoModule" is not installed
+15:22:56.418 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module "com.linbit.linstor.modularcrypto.JclCryptoModule"
+15:22:56.426 [main] INFO LINSTOR/linstor-db -- SYSTEM - Dynamic load of extension module "com.linbit.linstor.modularcrypto.JclCryptoModule" was successful
+15:22:56.427 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module "com.linbit.linstor.spacetracking.ControllerSpaceTrackingModule"
+15:22:56.429 [main] INFO LINSTOR/linstor-db -- SYSTEM - Dynamic load of extension module "com.linbit.linstor.spacetracking.ControllerSpaceTrackingModule" was successful
 15:22:57.666 [main] INFO LINSTOR/linstor-db -- SYSTEM - Initializing the etcd database
-15:22:57.667 [main] INFO LINSTOR/linstor-db -- SYSTEM - etcd connection URL is &quot;etcd://piraeus-op-etcd:2379&quot;
+15:22:57.667 [main] INFO LINSTOR/linstor-db -- SYSTEM - etcd connection URL is "etcd://piraeus-op-etcd:2379"
 15:22:59.480 [main] INFO LINSTOR/linstor-db -- SYSTEM - Export finished
 </code></pre></div>
 <p>Then, copy the just created backup to permanent storage, so that it is not lost should the migration pod restart:</p>
@@ -2930,23 +2930,23 @@ chart version currently deployed, so that no accidental upgrade happens:</p>
 propagate. Eventually, you will see the <code>k8s</code> database connection:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl exec linstor-database-migration -- cat /etc/linstor/linstor.toml
 [db]
-  connection_url = &quot;k8s&quot;
+  connection_url = "k8s"
 </code></pre></div>
 <h3 id="5-import-the-database-from-the-backup">5. Import the Database from the Backup<a class="headerlink" href="#5-import-the-database-from-the-backup" title="Permanent link">&para;</a></h3>
 <p>After changing the configuration, you can again use the <code>linstor-database</code> tool to restore the database backup to the
 new backend.</p>
 <div class="highlight"><pre><span></span><code>$ kubectl exec linstor-database-migration -- /usr/share/linstor-server/bin/linstor-database import-db -c /etc/linstor /backup/backup-before-migration.json
-Loading configuration file &quot;/etc/linstor/linstor.toml&quot;
+Loading configuration file "/etc/linstor/linstor.toml"
 15:39:41.270 [main] INFO LINSTOR/linstor-db -- SYSTEM - ErrorReporter DB version 1 found.
-15:39:41.272 [main] INFO LINSTOR/linstor-db -- SYSTEM - Log directory set to: &#39;./logs&#39;
-15:39:41.848 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module &quot;com.linbit.linstor.modularcrypto.FipsCryptoModule&quot;
-15:39:41.849 [main] INFO LINSTOR/linstor-db -- SYSTEM - Extension module &quot;com.linbit.linstor.modularcrypto.FipsCryptoModule&quot; is not installed
-15:39:41.850 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module &quot;com.linbit.linstor.modularcrypto.JclCryptoModule&quot;
-15:39:41.858 [main] INFO LINSTOR/linstor-db -- SYSTEM - Dynamic load of extension module &quot;com.linbit.linstor.modularcrypto.JclCryptoModule&quot; was successful
-15:39:41.859 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module &quot;com.linbit.linstor.spacetracking.ControllerSpaceTrackingModule&quot;
-15:39:41.860 [main] INFO LINSTOR/linstor-db -- SYSTEM - Dynamic load of extension module &quot;com.linbit.linstor.spacetracking.ControllerSpaceTrackingModule&quot; was successful
+15:39:41.272 [main] INFO LINSTOR/linstor-db -- SYSTEM - Log directory set to: './logs'
+15:39:41.848 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module "com.linbit.linstor.modularcrypto.FipsCryptoModule"
+15:39:41.849 [main] INFO LINSTOR/linstor-db -- SYSTEM - Extension module "com.linbit.linstor.modularcrypto.FipsCryptoModule" is not installed
+15:39:41.850 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module "com.linbit.linstor.modularcrypto.JclCryptoModule"
+15:39:41.858 [main] INFO LINSTOR/linstor-db -- SYSTEM - Dynamic load of extension module "com.linbit.linstor.modularcrypto.JclCryptoModule" was successful
+15:39:41.859 [main] INFO LINSTOR/linstor-db -- SYSTEM - Attempting dynamic load of extension module "com.linbit.linstor.spacetracking.ControllerSpaceTrackingModule"
+15:39:41.860 [main] INFO LINSTOR/linstor-db -- SYSTEM - Dynamic load of extension module "com.linbit.linstor.spacetracking.ControllerSpaceTrackingModule" was successful
 15:39:43.307 [main] INFO LINSTOR/linstor-db -- SYSTEM - Initializing the k8s crd database connector
-15:39:43.307 [main] INFO LINSTOR/linstor-db -- SYSTEM - Kubernetes-CRD connection URL is &quot;k8s&quot;
+15:39:43.307 [main] INFO LINSTOR/linstor-db -- SYSTEM - Kubernetes-CRD connection URL is "k8s"
 15:40:22.418 [main] INFO LINSTOR/linstor-db -- SYSTEM - Import finished
 </code></pre></div>
 <h3 id="6-start-the-linstor-controller">6. Start the LINSTOR Controller<a class="headerlink" href="#6-start-the-linstor-controller" title="Permanent link">&para;</a></h3>
@@ -2954,7 +2954,7 @@ Loading configuration file &quot;/etc/linstor/linstor.toml&quot;
 number of replicas for the LINSTOR Controller back to the original value before starting the migration. Once again,
 ensure that you apply the chart version currently deployed, so that no accidental upgrade happens:</p>
 <div class="highlight"><pre><span></span><code>$ helm upgrade piraeus-op ./charts/piraeus --reuse-values --set operator.controller.replicas=1
-deployment &quot;piraeus-op-cs-controller&quot; successfully rolled out
+deployment "piraeus-op-cs-controller" successfully rolled out
 </code></pre></div>
 <p>Once the LINSTOR Controller is up and running, verify the state of your cluster: check all nodes and resource are in
 the expected state:</p>

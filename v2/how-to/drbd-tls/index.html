@@ -2714,7 +2714,7 @@ kernel <a href="https://www.kernel.org/doc/html/latest/networking/tls.html#kerne
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Install Piraeus Operator &gt;= 2.3.0. The following command shows the deployed version, in this case v2.3.0:
-  <div class="highlight"><pre><span></span><code>$ kubectl get pods -l app.kubernetes.io/component=piraeus-operator -ojsonpath=&#39;{.items[*].spec.containers[?(@.name==&quot;manager&quot;)].image}{&quot;\n&quot;}&#39;
+  <div class="highlight"><pre><span></span><code>$ kubectl get pods -l app.kubernetes.io/component=piraeus-operator -ojsonpath='{.items[*].spec.containers[?(@.name=="manager")].image}{"\n"}'
 quay.io/piraeusdatastore/piraeus-operator:v2.3.0
 </code></pre></div></li>
 <li>Use a host operating system with kernel TLS offload enabled. TLS offload was added in Linux 4.19. The following
@@ -2725,8 +2725,8 @@ quay.io/piraeusdatastore/piraeus-operator:v2.3.0
 </ul>
 </li>
 <li>Have DRBD 9.2.6 or newer loaded. The following script shows the currently loaded DRBD version on all nodes:
-  <div class="highlight"><pre><span></span><code>for SATELLITE in $(kubectl get pods -l app.kubernetes.io/component=linstor-satellite -ojsonpath=&#39;{range .items[*]}{.metadata.name}{&quot;\n&quot;}{end}&#39;); do
-  echo &quot;$SATELLITE: $(kubectl exec $SATELLITE -- head -1 /proc/drbd)&quot;
+  <div class="highlight"><pre><span></span><code>for SATELLITE in $(kubectl get pods -l app.kubernetes.io/component=linstor-satellite -ojsonpath='{range .items[*]}{.metadata.name}{"\n"}{end}'); do
+  echo "$SATELLITE: $(kubectl exec $SATELLITE -- head -1 /proc/drbd)"
 done
 </code></pre></div></li>
 </ul>
@@ -2760,7 +2760,7 @@ the parameters in a StorageClass.</p>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">properties</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DrbdOptions/Net/tls</span>
-<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;yes&quot;</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">"yes"</span>
 </code></pre></div>
 <p>To apply the property only for certain StorageClasses, add the following parameter to the selected StorageClasses:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">storage.k8s.io/v1</span>
@@ -2769,7 +2769,7 @@ the parameters in a StorageClass.</p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example</span>
 <span class="nt">provisioner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstor.csi.linbit.com</span>
 <span class="nt">parameters</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">property.linstor.csi.linbit.com/DrbdOptions/Net/tls</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;yes&quot;</span>
+<span class="w">  </span><span class="nt">property.linstor.csi.linbit.com/DrbdOptions/Net/tls</span><span class="p">:</span><span class="w"> </span><span class="s">"yes"</span>
 <span class="w">  </span><span class="c1"># ...</span>
 </code></pre></div>
 <h2 id="switch-existing-resources-to-tls">Switch Existing Resources to TLS<a class="headerlink" href="#switch-existing-resources-to-tls" title="Permanent link">&para;</a></h2>

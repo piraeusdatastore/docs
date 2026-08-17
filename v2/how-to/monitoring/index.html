@@ -2695,7 +2695,7 @@ In the example above, this is achieved by setting the various <code>*NilUsesHelm
 <h2 id="deploying-monitoring-and-alerting-rules-for-piraeus-datastore">Deploying Monitoring and Alerting Rules for Piraeus Datastore<a class="headerlink" href="#deploying-monitoring-and-alerting-rules-for-piraeus-datastore" title="Permanent link">&para;</a></h2>
 <p>After creating a Prometheus Operator deployment and configuring it to watch all namespaces, apply the monitoring
 and alerting resources for Piraeus Datastore:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl apply --server-side -n piraeus-datastore -k &quot;https://github.com/piraeusdatastore/piraeus-operator//config/extras/monitoring?ref=v2&quot;
+<div class="highlight"><pre><span></span><code>$ kubectl apply --server-side -n piraeus-datastore -k "https://github.com/piraeusdatastore/piraeus-operator//config/extras/monitoring?ref=v2"
 </code></pre></div>
 <h2 id="verify-monitoring">Verify Monitoring<a class="headerlink" href="#verify-monitoring" title="Permanent link">&para;</a></h2>
 <p>Verify that the monitoring configuration is working by checking the prometheus console. First, get access to the

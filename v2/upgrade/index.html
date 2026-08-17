@@ -2526,7 +2526,7 @@ volumes and volumes already in use by a pod will continue to work without interr
 (<code>kubectl</code> vs <code>helm</code>). There is no need to change existing <code>LinstorCluster</code>, <code>LinstorSatelliteConfiguration</code> or
 <code>LinstorNodeConnection</code> resources.</p>
 <p>To upgrade to the latest release using <code>kubectl</code>, run the following commands:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl apply --server-side -f &quot;https://github.com/piraeusdatastore/piraeus-operator/releases/latest/download/manifest.yaml&quot;
+<div class="highlight"><pre><span></span><code>$ kubectl apply --server-side -f "https://github.com/piraeusdatastore/piraeus-operator/releases/latest/download/manifest.yaml"
 $ kubectl wait pod --for=condition=Ready -n piraeus-datastore --all
 </code></pre></div>
 <h1 id="upgrades-from-v28-to-v29">Upgrades from v2.8 to v2.9<a class="headerlink" href="#upgrades-from-v28-to-v29" title="Permanent link">&para;</a></h1>
@@ -2563,7 +2563,7 @@ any additional reconciliation. To clean up these LINSTOR Satellites, run:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl exec deploy/linstor-controller -- linstor node list --props Aux/piraeus.io/last-applied
 # Check for OFFLINE nodes, verify that it is no longer managed by the Operator:
 $ kubectl get linstorsatellite &lt;offline-node&gt;
-# Must report: linstorsatellites.piraeus.io &quot;&lt;offline-node&gt;&quot; not found
+# Must report: linstorsatellites.piraeus.io "&lt;offline-node&gt;" not found
 $ kubectl exec deploy/linstor-controller -- linstor node delete &lt;offline-node&gt;
 </code></pre></div>
 <h1 id="upgrades-from-v27-to-v28">Upgrades from v2.7 to v2.8<a class="headerlink" href="#upgrades-from-v27-to-v28" title="Permanent link">&para;</a></h1>
@@ -2687,7 +2687,7 @@ kubectl replace -f charts/piraeus/crds/piraeus.linbit.com_linstorsatellitesets_c
 <p>Renamed <code>LinstorNodeSet</code> to <code>LinstorSatelliteSet</code>. This brings the operator in line with other LINSTOR resources.
   Existing <code>LinstorNodeSet</code> resources will automatically be migrated to <code>LinstorSatelliteSet</code>. The old resources will
   not be deleted. You can verify that migration was successful by running the following command:
-  <div class="highlight"><pre><span></span><code>$ kubectl get linstornodesets.piraeus.linbit.com -o=jsonpath=&#39;{range .items[*]}{.metadata.name}{&quot;\t&quot;}{.status.ResourceMigrated}{&quot;\t&quot;}{.status.DependantsMigrated}{&quot;\n&quot;}{end}&#39;
+  <div class="highlight"><pre><span></span><code>$ kubectl get linstornodesets.piraeus.linbit.com -o=jsonpath='{range .items[*]}{.metadata.name}{"\t"}{.status.ResourceMigrated}{"\t"}{.status.DependantsMigrated}{"\n"}{end}'
 piraeus-op-ns true    true
 </code></pre></div>
   If both values are <code>true</code>, migration was successful. The old resource can be removed after migration.</p>
@@ -2696,7 +2696,7 @@ piraeus-op-ns true    true
 <p>Renamed <code>LinstorControllerSet</code> to <code>LinstorController</code>. The old name implied the existence of multiple (separate)
   controllers. Existing <code>LinstorControllerSet</code> resources will automatically be migrated to <code>LinstorController</code>. The old
   resources will not be deleted. You can verify that migration was successful by running the following command:
-  <div class="highlight"><pre><span></span><code>$ kubectl get linstorcontrollersets.piraeus.linbit.com -o=jsonpath=&#39;{range .items[*]}{.metadata.name}{&quot;\t&quot;}{.status.ResourceMigrated}{&quot;\t&quot;}{.status.DependantsMigrated}{&quot;\n&quot;}{end}&#39;
+  <div class="highlight"><pre><span></span><code>$ kubectl get linstorcontrollersets.piraeus.linbit.com -o=jsonpath='{range .items[*]}{.metadata.name}{"\t"}{.status.ResourceMigrated}{"\t"}{.status.DependantsMigrated}{"\n"}{end}'
 piraeus-op-cs true    true
 </code></pre></div>
   If both values are <code>true</code>, migration was successful. The old resource can be removed after migration.</p>
@@ -2742,7 +2742,7 @@ piraeus-op-cs true    true
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstor.linbit.com/piraeus-node</span>
 <span class="w">          </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">In</span>
 <span class="w">          </span><span class="nt">values</span><span class="p">:</span>
-<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
+<span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">"true"</span>
 </code></pre></div></p>
 </li>
 <li>
@@ -2757,7 +2757,7 @@ piraeus-op-cs true    true
 stability of or provide conversion of the Custom Resource Definitions.</p>
 <p>If you are using the Helm deployment, you may find that upgrades fail with
 errors similar to the following:</p>
-<div class="highlight"><pre><span></span><code>UPGRADE FAILED: cannot patch &quot;piraeus-op-cs&quot; with kind LinstorController: LinstorController.piraeus.linbit.com &quot;piraeus-op-cs&quot; is invalid: spec.etcdURL: Required value
+<div class="highlight"><pre><span></span><code>UPGRADE FAILED: cannot patch "piraeus-op-cs" with kind LinstorController: LinstorController.piraeus.linbit.com "piraeus-op-cs" is invalid: spec.etcdURL: Required value
 </code></pre></div>
 <p>The simplest solution in this case is to manually replace the CRD:</p>
 <div class="highlight"><pre><span></span><code>kubectl replace -f charts/piraeus/crds/piraeus.linbit.com_linstorcsidrivers_crd.yaml

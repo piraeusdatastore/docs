@@ -2723,14 +2723,14 @@ new deployment is rolled out.</p>
 <p>To prevent modification of the existing cluster, scale down the existing Piraeus Operator deployment.</p>
 <div class="highlight"><pre><span></span><code>$ helm upgrade piraeus-op ./charts/piraeus --set operator.replicas=0
 $ kubectl rollout status -w deploy/piraeus-op-operator
-deployment &quot;piraeus-op-operator&quot; successfully rolled out
+deployment "piraeus-op-operator" successfully rolled out
 </code></pre></div>
 <h2 id="remove-the-finalizers-from-the-piraeus-resources">Remove the Finalizers from the Piraeus Resources<a class="headerlink" href="#remove-the-finalizers-from-the-piraeus-resources" title="Permanent link">&para;</a></h2>
 <p>The Operator sets Finalizers on the resource it controls. This prevents the deletion of these resources when the
 Operator is not running. Remove the Finalizers by applying a patch:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl patch linstorsatellitesets piraeus-op-ns --type merge --patch &#39;{&quot;metadata&quot;: {&quot;finalizers&quot;: []}}&#39;
+<div class="highlight"><pre><span></span><code>$ kubectl patch linstorsatellitesets piraeus-op-ns --type merge --patch '{"metadata": {"finalizers": []}}'
 linstorsatelliteset.piraeus.linbit.com/piraeus-op-ns patched
-$ kubectl patch linstorcontrollers piraeus-op-cs --type merge --patch &#39;{&quot;metadata&quot;: {&quot;finalizers&quot;: []}}&#39;
+$ kubectl patch linstorcontrollers piraeus-op-cs --type merge --patch '{"metadata": {"finalizers": []}}'
 linstorcontroller.piraeus.linbit.com/piraeus-op-cs patched
 </code></pre></div>
 <h2 id="remove-the-piraeus-resources">Remove the Piraeus Resources<a class="headerlink" href="#remove-the-piraeus-resources" title="Permanent link">&para;</a></h2>

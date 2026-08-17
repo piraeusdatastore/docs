@@ -2726,7 +2726,7 @@ the containers using a volume. This prevents a single noisy workload from satura
 <p>A container runtime with NRI support: containerd 1.7 or later, or CRI-O 1.26 or later.</p>
 <p>In containerd 1.7, NRI support is disabled by default. Enable it by adding the following snippet to
 <code>/etc/containerd/config.toml</code> and restarting containerd on every node:</p>
-<div class="highlight"><pre><span></span><code><span class="k">[plugins.</span><span class="s2">&quot;io.containerd.nri.v1.nri&quot;</span><span class="k">]</span>
+<div class="highlight"><pre><span></span><code><span class="k">[plugins.</span><span class="s2">"io.containerd.nri.v1.nri"</span><span class="k">]</span>
 <span class="w">  </span><span class="n">disable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
 </code></pre></div>
 <p>Starting with containerd 2.0, and in all supported CRI-O releases, NRI is enabled by default.</p>
@@ -2753,7 +2753,7 @@ default values. Apply it to deploy the plugin in the <code>kube-system</code> na
 </div>
 <p>Then, wait for the plugin to be ready on all nodes:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl --namespace kube-system rollout status daemonset nri-volume-qos
-daemon set &quot;nri-volume-qos&quot; successfully rolled out
+daemon set "nri-volume-qos" successfully rolled out
 </code></pre></div>
 <blockquote>
 <p>🗒️ NOTE: Some distributions place the kubelet directory somewhere other than <code>/var/lib/kubelet</code>, for example k0s
@@ -2772,10 +2772,10 @@ every volume provisioned from it:</p>
 <span class="nt">volumeBindingMode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">WaitForFirstConsumer</span>
 <span class="nt">parameters</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">linstor.csi.linbit.com/storagePool</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pool1</span>
-<span class="w">  </span><span class="nt">qos.linbit.com/rbps</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;40Mi&quot;</span>
-<span class="w">  </span><span class="nt">qos.linbit.com/wbps</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;20Mi&quot;</span>
-<span class="w">  </span><span class="nt">qos.linbit.com/riops</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;4000&quot;</span>
-<span class="w">  </span><span class="nt">qos.linbit.com/wiops</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;2000&quot;</span>
+<span class="w">  </span><span class="nt">qos.linbit.com/rbps</span><span class="p">:</span><span class="w"> </span><span class="s">"40Mi"</span>
+<span class="w">  </span><span class="nt">qos.linbit.com/wbps</span><span class="p">:</span><span class="w"> </span><span class="s">"20Mi"</span>
+<span class="w">  </span><span class="nt">qos.linbit.com/riops</span><span class="p">:</span><span class="w"> </span><span class="s">"4000"</span>
+<span class="w">  </span><span class="nt">qos.linbit.com/wiops</span><span class="p">:</span><span class="w"> </span><span class="s">"2000"</span>
 </code></pre></div>
 <p>The following parameters are available. All of them are optional: leaving out a parameter leaves that dimension
 unlimited.</p>
@@ -2859,15 +2859,15 @@ so two containers sharing a volume can each use the full configured limit.</p>
 <span class="w">            </span><span class="nt">claimName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">qos-test-volume</span>
 </code></pre></div>
 <p>While the Job is running, verify that the CSI driver published the limits in the <code>VolumeAttachment</code> resource:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl get volumeattachments -o yaml | grep &quot;qos.linbit.com&quot;
+<div class="highlight"><pre><span></span><code>$ kubectl get volumeattachments -o yaml | grep "qos.linbit.com"
       qos.linbit.com/device: /dev/drbd1000
-      qos.linbit.com/rbps: &quot;41943040&quot;
-      qos.linbit.com/riops: &quot;4000&quot;
-      qos.linbit.com/wbps: &quot;20971520&quot;
-      qos.linbit.com/wiops: &quot;2000&quot;
+      qos.linbit.com/rbps: "41943040"
+      qos.linbit.com/riops: "4000"
+      qos.linbit.com/wbps: "20971520"
+      qos.linbit.com/wiops: "2000"
 </code></pre></div>
 <p>Once the Job completes, the reported bandwidth matches the configured limits of 40 MiB/s read and 20 MiB/s write:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl logs job/qos-test | grep -E &quot;READ|WRITE&quot;
+<div class="highlight"><pre><span></span><code>$ kubectl logs job/qos-test | grep -E "READ|WRITE"
    READ: bw=40.1MiB/s (42.0MB/s), 40.1MiB/s-40.1MiB/s (42.0MB/s-42.0MB/s), io=1204MiB (1262MB), run=30020-30020msec
   WRITE: bw=20.0MiB/s (21.0MB/s), 20.0MiB/s-20.0MiB/s (21.0MB/s-21.0MB/s), io=601MiB (630MB), run=30020-30020msec
 </code></pre></div>

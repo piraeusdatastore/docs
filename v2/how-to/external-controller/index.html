@@ -2697,15 +2697,15 @@ So you should configure your Satellites to use <a href="../drbd-host-networking/
 <p>To verify that the external LINSTOR Controller is configured, check:</p>
 <ul>
 <li>The <code>Available</code> condition on the <code>LinstorCluster</code> resource reports the expected Controller URL:
-  <div class="highlight"><pre><span></span><code>$ kubectl get LinstorCluster -ojsonpath=&#39;{.items[].status.conditions[?(@.type==&quot;Available&quot;)].message}{&quot;\n&quot;}&#39;
-Controller 1.20.3 (API: 1.16.0, Git: 8d19a891df018f6e3d40538d809904f024bfe361) reachable at &#39;http://linstor-controller.example.com:3370&#39;
+  <div class="highlight"><pre><span></span><code>$ kubectl get LinstorCluster -ojsonpath='{.items[].status.conditions[?(@.type=="Available")].message}{"\n"}'
+Controller 1.20.3 (API: 1.16.0, Git: 8d19a891df018f6e3d40538d809904f024bfe361) reachable at 'http://linstor-controller.example.com:3370'
 </code></pre></div></li>
 <li>The <code>linstor-csi-controller</code> Deployment uses the expected URL:
-  <div class="highlight"><pre><span></span><code>$ kubectl get -n piraeus-datastore deployment linstor-csi-controller -ojsonpath=&#39;{.spec.template.spec.containers[?(@.name==&quot;linstor-csi&quot;)].env[?(@.name==&quot;LS_CONTROLLERS&quot;)].value}{&quot;\n&quot;}&#39;
+  <div class="highlight"><pre><span></span><code>$ kubectl get -n piraeus-datastore deployment linstor-csi-controller -ojsonpath='{.spec.template.spec.containers[?(@.name=="linstor-csi")].env[?(@.name=="LS_CONTROLLERS")].value}{"\n"}'
 http://linstor-controller.example.com:3370
 </code></pre></div></li>
 <li>The <code>linstor-csi-node</code> Deployment uses the expected URL:
-  <div class="highlight"><pre><span></span><code>$ kubectl get -n piraeus-datastore daemonset linstor-csi-node -ojsonpath=&#39;{.spec.template.spec.containers[?(@.name==&quot;linstor-csi&quot;)].env[?(@.name==&quot;LS_CONTROLLERS&quot;)].value}{&quot;\n&quot;}&#39;
+  <div class="highlight"><pre><span></span><code>$ kubectl get -n piraeus-datastore daemonset linstor-csi-node -ojsonpath='{.spec.template.spec.containers[?(@.name=="linstor-csi")].env[?(@.name=="LS_CONTROLLERS")].value}{"\n"}'
 http://linstor-controller.example.com:3370
 </code></pre></div></li>
 <li>The Kubernetes nodes are registered as Satellite nodes on the LINSTOR Controller:

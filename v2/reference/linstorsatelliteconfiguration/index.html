@@ -2917,10 +2917,10 @@
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">disabled-nodes</span>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">nodeSelector</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">piraeus.io/autoplace</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;no&quot;</span>
+<span class="w">    </span><span class="nt">piraeus.io/autoplace</span><span class="p">:</span><span class="w"> </span><span class="s">"no"</span>
 <span class="w">  </span><span class="nt">properties</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AutoplaceTarget</span>
-<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;no&quot;</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">"no"</span>
 </code></pre></div>
 <h3 id="specnodeaffinity"><code>.spec.nodeAffinity</code><a class="headerlink" href="#specnodeaffinity" title="Permanent link">&para;</a></h3>
 <p>Selects which nodes the LinstorSatelliteConfiguration should apply to. If empty, the configuration applies to all nodes.</p>
@@ -2940,7 +2940,7 @@ node.</p>
 <span class="w">            </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Exists</span>
 <span class="w">  </span><span class="nt">properties</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AutoplaceTarget</span>
-<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;no&quot;</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">"no"</span>
 </code></pre></div>
 <h3 id="specresourcenamesuffixseparator"><code>.spec.resourceNameSuffixSeparator</code><a class="headerlink" href="#specresourcenamesuffixseparator" title="Permanent link">&para;</a></h3>
 <p>Configures the separator inserted between generated Kubernetes resource names and the Satellite name.</p>
@@ -2954,7 +2954,7 @@ remain unchanged.</p>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">satellite-name-separator</span>
 <span class="nt">spec</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">resourceNameSuffixSeparator</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;-&quot;</span>
+<span class="w">  </span><span class="nt">resourceNameSuffixSeparator</span><span class="p">:</span><span class="w"> </span><span class="s">"-"</span>
 </code></pre></div>
 <h3 id="specproperties"><code>.spec.properties</code><a class="headerlink" href="#specproperties" title="Permanent link">&para;</a></h3>
 <p>Sets the given properties on the LINSTOR Satellite level.</p>
@@ -2998,24 +2998,24 @@ in case the property value should be inherited from the node's metadata</p>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">properties</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PrefNic</span>
-<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;default-ipv6&quot;</span>
+<span class="w">      </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">"default-ipv6"</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Aux/example-property</span>
 <span class="w">      </span><span class="nt">valueFrom</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">nodeFieldRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.labels[&#39;piraeus.io/example&#39;]</span>
+<span class="w">        </span><span class="nt">nodeFieldRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.labels['piraeus.io/example']</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AutoplaceTarget</span>
 <span class="w">      </span><span class="nt">valueFrom</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">nodeFieldRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.annotations[&#39;piraeus.io/autoplace&#39;]</span>
+<span class="w">        </span><span class="nt">nodeFieldRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.annotations['piraeus.io/autoplace']</span>
 <span class="w">      </span><span class="nt">optional</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">yes</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Aux/role/</span>
 <span class="w">      </span><span class="nt">expandFrom</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">nodeFieldRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.labels[&#39;node-role.kubernetes.io/*&#39;]</span>
-<span class="w">        </span><span class="nt">nameTemplate</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$1&quot;</span>
-<span class="w">        </span><span class="nt">valueTemplate</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$2&quot;</span>
+<span class="w">        </span><span class="nt">nodeFieldRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.labels['node-role.kubernetes.io/*']</span>
+<span class="w">        </span><span class="nt">nameTemplate</span><span class="p">:</span><span class="w"> </span><span class="s">"$1"</span>
+<span class="w">        </span><span class="nt">valueTemplate</span><span class="p">:</span><span class="w"> </span><span class="s">"$2"</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Aux/features</span>
 <span class="w">      </span><span class="nt">expandFrom</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">nodeFieldRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.labels[&#39;feature.example.com/*&#39;]</span>
-<span class="w">        </span><span class="nt">valueTemplate</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;$1&quot;</span>
-<span class="w">        </span><span class="nt">delimiter</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;,&quot;</span>
+<span class="w">        </span><span class="nt">nodeFieldRef</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">metadata.labels['feature.example.com/*']</span>
+<span class="w">        </span><span class="nt">valueTemplate</span><span class="p">:</span><span class="w"> </span><span class="s">"$1"</span>
+<span class="w">        </span><span class="nt">delimiter</span><span class="p">:</span><span class="w"> </span><span class="s">","</span>
 </code></pre></div>
 <h3 id="specstoragepools"><code>.spec.storagePools</code><a class="headerlink" href="#specstoragepools" title="Permanent link">&para;</a></h3>
 <p>Configures LINSTOR Storage Pools.</p>
@@ -3030,6 +3030,14 @@ the matching key. Available types are:</p>
   pool is first set up from a <code>source</code>.
 * <code>volumeGroupCreateArguments</code>: Additional arguments to pass to the <code>vgcreate</code> command. Only applies when the
   pool is first set up from a <code>source</code>.
+* <code>sharedSpace</code>: Mark the Volume Group as shared between multiple nodes, for example when backed by a SAN.
+  The given name identifies the shared space in LINSTOR: all storage pools backed by the same physical storage
+  must use the same shared space name. A shared VG must be set up manually on the hosts, it cannot be created
+  from a <code>source</code>.
+* <code>externalLocking</code>: Skip LINSTOR's internal locking for the shared VG, relying on an external lock manager
+  such as <a href="https://man7.org/linux/man-pages/man8/lvmlockd.8.html"><code>lvmlockd</code></a> running on the hosts instead.
+  The Operator mounts the host's lvmlockd pid file and sockets into the satellite container, so the pod only
+  starts once <code>lvmlockd</code> is running on the host. Requires <code>sharedSpace</code> to be set.
 *   <code>lvmThinPool</code>: Configures a <a href="https://man7.org/linux/man-pages/man7/lvmthin.7.html">LVM Thin Pool</a> as storage pool.</p>
 <p>Arguments:
 * <code>volumeGroup</code>: Set the name of the Volume Group to use. Defaults to using the storage pool name prefixed with
@@ -3114,11 +3122,11 @@ configuration values have the same form as <a href="#specproperties">Satellite P
 <span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/sdc</span>
 <span class="w">      </span><span class="nt">properties</span><span class="p">:</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StorDriver/LvcreateOptions</span>
-<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;-i</span><span class="nv"> </span><span class="s">2&#39;</span>
+<span class="w">          </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">'-i</span><span class="nv"> </span><span class="s">2'</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">thin-raid</span>
 <span class="w">      </span><span class="nt">lvmThinPool</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">volumeGroupCreateArguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;-s&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;512KiB&quot;</span><span class="p p-Indicator">]</span>
-<span class="w">        </span><span class="nt">logicalVolumeCreateArguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;-i&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;2&quot;</span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">volumeGroupCreateArguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"-s"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"512KiB"</span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">logicalVolumeCreateArguments</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">"-i"</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">"2"</span><span class="p p-Indicator">]</span>
 <span class="w">      </span><span class="nt">source</span><span class="p">:</span>
 <span class="w">        </span><span class="nt">hostDevices</span><span class="p">:</span>
 <span class="w">          </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/dev/nvme0n2</span>
@@ -3221,8 +3229,8 @@ for volumes not currently attached to 30 minutes.</p>
 <span class="nt">spec</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">deletionPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Evacuate</span>
 <span class="w">  </span><span class="nt">evacuationStrategy</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">attachedVolumeReattachTimeout</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;1h&quot;</span>
-<span class="w">    </span><span class="nt">unattachedVolumeAttachTimeout</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;30m&quot;</span>
+<span class="w">    </span><span class="nt">attachedVolumeReattachTimeout</span><span class="p">:</span><span class="w"> </span><span class="s">"1h"</span>
+<span class="w">    </span><span class="nt">unattachedVolumeAttachTimeout</span><span class="p">:</span><span class="w"> </span><span class="s">"30m"</span>
 </code></pre></div>
 <h3 id="specipfamilies"><code>.spec.ipFamilies</code><a class="headerlink" href="#specipfamilies" title="Permanent link">&para;</a></h3>
 <p>Configures the IP Family (IPv4 or IPv6) to use to connect to the LINSTOR Satellite.</p>
@@ -3288,7 +3296,7 @@ container may lead to a degraded cluster.</p>
 <span class="w">        </span><span class="no">data:</span>
 <span class="w">          </span><span class="no">linstor_satellite.toml: |</span>
 <span class="w">            </span><span class="no">[logging]</span>
-<span class="w">              </span><span class="no">linstor_level = &quot;TRACE&quot;</span>
+<span class="w">              </span><span class="no">linstor_level = "TRACE"</span>
 </code></pre></div>
 <h2 id="status"><code>.status</code><a class="headerlink" href="#status" title="Permanent link">&para;</a></h2>
 <p>Reports the actual state of the cluster.</p>

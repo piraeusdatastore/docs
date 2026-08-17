@@ -2722,7 +2722,7 @@ DRBD. This can either be achieved by rebooting every node, or by manually resett
 <h3 id="switch-from-host-network-to-container-network-using-reboots">Switch from Host Network to Container Network Using Reboots<a class="headerlink" href="#switch-from-host-network-to-container-network-using-reboots" title="Permanent link">&para;</a></h3>
 <p>First, you need to remove the <code>LinstorSatelliteConfiguration</code> that set <code>hostNetwork: true</code>:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl delete linstorsatelliteconfigurations.piraeus.io host-network
-linstorsatelliteconfiguration.piraeus.io &quot;host-network&quot; deleted
+linstorsatelliteconfiguration.piraeus.io "host-network" deleted
 </code></pre></div>
 <p>Then, reboot each cluster node, either one by one or multiple at once. In general, replication will not work between
 rebooted nodes and non-rebooted nodes. The non-rebooted nodes will continue to use the host network addresses, which
@@ -2751,7 +2751,7 @@ $ kubectl exec ds/linstor-satellite.node3.example.com -- drbdadm del-path all
 <p>Finally, removing the <code>LinstorSatelliteConfiguration</code> that set <code>hostNetwork: true</code> will trigger the creation of new
 LINSTOR Satellite Pods using the container network:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl delete linstorsatelliteconfigurations.piraeus.io host-network
-linstorsatelliteconfiguration.piraeus.io &quot;host-network&quot; deleted
+linstorsatelliteconfiguration.piraeus.io "host-network" deleted
 </code></pre></div>
 <p>After the Pods are recreated and the LINSTOR Satellites are <code>Online</code>, the DRBD resource will be reconfigured and resume
 IO.</p>

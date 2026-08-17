@@ -2557,7 +2557,7 @@ The provided policy restricts incoming network connections to LINSTOR Satellite 
 <li>Metrics collection from DRBD Reactor.</li>
 </ul>
 <p>To deploy the Network Policy, apply the following remote resource:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl apply --server-side -k &quot;https://github.com/piraeusdatastore/piraeus-operator//config/extras/network-policy?ref=v2&quot;
+<div class="highlight"><pre><span></span><code>$ kubectl apply --server-side -k "https://github.com/piraeusdatastore/piraeus-operator//config/extras/network-policy?ref=v2"
 networkpolicy.networking.k8s.io/satellite serverside-applied
 </code></pre></div>
 

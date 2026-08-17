@@ -2742,7 +2742,7 @@ kubectl apply -k https://github.com/kubernetes-csi/external-snapshotter//deploy/
   feature gate is enabled, which is not the default. Verify that the <code>snapshot-controller</code> Deployment includes
   <code>--feature-gates=CSIVolumeGroupSnapshot=true</code> in its arguments. To add it, run:
   <div class="highlight"><pre><span></span><code>kubectl -n kube-system patch deployment snapshot-controller --type=json \
-  -p=&#39;[{&quot;op&quot;:&quot;add&quot;,&quot;path&quot;:&quot;/spec/template/spec/containers/0/args/-&quot;,&quot;value&quot;:&quot;--feature-gates=CSIVolumeGroupSnapshot=true&quot;}]&#39;
+  -p='[{"op":"add","path":"/spec/template/spec/containers/0/args/-","value":"--feature-gates=CSIVolumeGroupSnapshot=true"}]'
 </code></pre></div></li>
 </ul>
 <h2 id="creating-volumes-in-a-consistency-group">Creating Volumes in a Consistency Group<a class="headerlink" href="#creating-volumes-in-a-consistency-group" title="Permanent link">&para;</a></h2>
@@ -2821,7 +2821,7 @@ spec:
             - sh
             - -c
             - |
-              echo &quot;Hello from \$HOSTNAME, started at \$(date)&quot; | tee -a /data/hello /log/hello
+              echo "Hello from \$HOSTNAME, started at \$(date)" | tee -a /data/hello /log/hello
               # We use this to keep the Pod running
               tail -f /dev/null
           volumeMounts:
@@ -2884,7 +2884,7 @@ spec:
 EOF
 </code></pre></div>
 <p>Now, we wait for the group snapshot to be created:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl wait volumegroupsnapshot --for=jsonpath=&#39;{.status.readyToUse}&#39;=true volume-logger-snap-1
+<div class="highlight"><pre><span></span><code>$ kubectl wait volumegroupsnapshot --for=jsonpath='{.status.readyToUse}'=true volume-logger-snap-1
 volumegroupsnapshot.groupsnapshot.storage.k8s.io/volume-logger-snap-1 condition met
 </code></pre></div>
 <p>The snapshot controller created one <code>VolumeSnapshot</code> resource per member. The <code>SOURCEPVC</code> column shows which
@@ -2918,8 +2918,8 @@ size of the snapshots.</p>
 <div class="highlight"><pre><span></span><code>$ kubectl scale deploy/volume-logger --replicas=0
 deployment.apps/volume-logger scaled
 $ kubectl delete pvc data-volume log-volume
-persistentvolumeclaim &quot;data-volume&quot; deleted
-persistentvolumeclaim &quot;log-volume&quot; deleted
+persistentvolumeclaim "data-volume" deleted
+persistentvolumeclaim "log-volume" deleted
 </code></pre></div>
 <p>Then, we recreate them from the group snapshot. Replace the <code>dataSource</code> names with the generated
 <code>VolumeSnapshot</code> names from the previous section, matching each new PersistentVolumeClaim with the snapshot of

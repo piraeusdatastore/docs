@@ -2623,7 +2623,7 @@
 <p>By default, the DRBD Module Loader will try to find the necessary header files to build DRBD from source on the host
 system. In <a href="https://www.raspberrypi.com/software/">Raspberry Pi OS / Raspian</a> these files reference specific tools that are not mounted into the build
 container by default, leading to errors such as:</p>
-<div class="highlight"><pre><span></span><code>make[2]: *** No rule to make target &#39;/usr/src/linux-headers-6.6.51+rpt-common-rpi/scripts/Makefile.extrawarn&#39;.  Stop.
+<div class="highlight"><pre><span></span><code>make[2]: *** No rule to make target '/usr/src/linux-headers-6.6.51+rpt-common-rpi/scripts/Makefile.extrawarn'.  Stop.
 make[1]: *** [Makefile:236: compat.h] Error 2
 make: *** [Makefile:131: module] Error 2
 </code></pre></div>

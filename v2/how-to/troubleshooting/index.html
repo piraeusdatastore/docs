@@ -3064,8 +3064,8 @@ kubectl<span class="w"> </span>describe<span class="w"> </span>pod<span class="w
     install did not complete; re-apply it.</li>
 </ul>
 <h3 id="applying-a-resource-is-rejected-by-a-webhook">Applying a resource is rejected by a webhook<a class="headerlink" href="#applying-a-resource-is-rejected-by-a-webhook" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>Error from server (InternalError): error when creating &quot;cluster.yaml&quot;: Internal error occurred:
-failed calling webhook &quot;vlinstorcluster.kb.io&quot;: ... x509: certificate signed by unknown authority
+<div class="highlight"><pre><span></span><code>Error from server (InternalError): error when creating "cluster.yaml": Internal error occurred:
+failed calling webhook "vlinstorcluster.kb.io": ... x509: certificate signed by unknown authority
 </code></pre></div>
 <p>The Operator serves validating webhooks on port <code>9443</code>, using a certificate provisioned either by the bundled
 <code>gencert</code> Job or by cert-manager. If the Operator Pod is not ready, or the serving certificate is missing, every
@@ -3080,8 +3080,8 @@ again, an unready Operator Pod.</p>
 <h3 id="the-cluster-resources-are-unhealthy">The cluster resources are unhealthy<a class="headerlink" href="#the-cluster-resources-are-unhealthy" title="Permanent link">&para;</a></h3>
 <p>The <code>LinstorCluster</code> and <code>LinstorSatellite</code> resources report their state through conditions. <code>kubectl get</code> shows the
 summary columns; the full message (including any error) is in the object itself:</p>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>linstorcluster<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{range .items[*].status.conditions[*]}{.type}={.status} ({.reason}): {.message}{&quot;\n&quot;}{end}&#39;</span>
-kubectl<span class="w"> </span>get<span class="w"> </span>linstorsatellite<span class="w"> </span>&lt;node-name&gt;<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{range .status.conditions[*]}{.type}={.status} ({.reason}): {.message}{&quot;\n&quot;}{end}&#39;</span>
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>linstorcluster<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range .items[*].status.conditions[*]}{.type}={.status} ({.reason}): {.message}{"\n"}{end}'</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>linstorsatellite<span class="w"> </span>&lt;node-name&gt;<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range .status.conditions[*]}{.type}={.status} ({.reason}): {.message}{"\n"}{end}'</span>
 </code></pre></div>
 <p>The Operator reports three condition <code>type</code>s on both resources:</p>
 <table>
@@ -3110,7 +3110,7 @@ kubectl<span class="w"> </span>get<span class="w"> </span>linstorsatellite<span 
 with <code>Error:</code> and names the exact operation that failed — read it first.</p>
 <h3 id="the-linstorcluster-never-becomes-applied">The <code>LinstorCluster</code> never becomes <code>Applied</code><a class="headerlink" href="#the-linstorcluster-never-becomes-applied" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>linstorcluster
-kubectl<span class="w"> </span>get<span class="w"> </span>linstorcluster<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[*].status.conditions[?(@.type==&quot;Applied&quot;)].message}{&quot;\n&quot;}&#39;</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>linstorcluster<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.items[*].status.conditions[?(@.type=="Applied")].message}{"\n"}'</span>
 kubectl<span class="w"> </span>logs<span class="w"> </span>-n<span class="w"> </span>piraeus-datastore<span class="w"> </span>-l<span class="w"> </span>app.kubernetes.io/component<span class="o">=</span>piraeus-operator
 </code></pre></div>
 <p><code>Applied=False</code> with an <code>Error:</code> message means server-side apply of a managed resource failed. The message names the
@@ -3129,7 +3129,7 @@ its URL and host networking as described in
 <p>If <code>kubectl get linstorsatellite</code> lists <strong>fewer nodes than expected</strong>, no <code>LinstorSatellite</code> was generated for those
 nodes — the cluster's <code>spec.nodeSelector</code>/<code>spec.nodeAffinity</code> does not match them:</p>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>--show-labels
-kubectl<span class="w"> </span>get<span class="w"> </span>linstorcluster<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[*].spec.nodeSelector}{&quot;\n&quot;}{.items[*].spec.nodeAffinity}{&quot;\n&quot;}&#39;</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>linstorcluster<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.items[*].spec.nodeSelector}{"\n"}{.items[*].spec.nodeAffinity}{"\n"}'</span>
 </code></pre></div>
 <p>If a <code>LinstorSatellite</code> <strong>exists but its Pod is <code>Pending</code></strong>:</p>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>piraeus-datastore<span class="w"> </span>-l<span class="w"> </span>app.kubernetes.io/component<span class="o">=</span>linstor-satellite<span class="w"> </span>-o<span class="w"> </span>wide
@@ -3177,7 +3177,7 @@ problem, not a DRBD problem. The two common causes are:</p>
 nodes; then the CSI Node plugin attaches and mounts it where the consuming Pod runs. A failure at any step leaves the
 PVC <code>Pending</code> or the Pod stuck in <code>ContainerCreating</code>.</p>
 <h3 id="the-storageclass-is-rejected-on-creation">The StorageClass is rejected on creation<a class="headerlink" href="#the-storageclass-is-rejected-on-creation" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>admission webhook &quot;vstorageclass.kb.io&quot; denied the request: ...
+<div class="highlight"><pre><span></span><code>admission webhook "vstorageclass.kb.io" denied the request: ...
 </code></pre></div>
 <p>Piraeus validates every <code>StorageClass</code> whose <code>provisioner</code> is <code>linstor.csi.linbit.com</code> at admission time and rejects
 invalid CSI <code>parameters</code>. Read the rejection message, fix the offending parameter key or value, and re-apply. Only the
@@ -3205,7 +3205,7 @@ kubectl<span class="w"> </span>-n<span class="w"> </span>piraeus-datastore<span 
 </ul>
 <h3 id="a-storage-pool-is-missing-or-a-satellite-is-not-configured">A storage pool is missing or a Satellite is not <code>Configured</code><a class="headerlink" href="#a-storage-pool-is-missing-or-a-satellite-is-not-configured" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>get<span class="w"> </span>linstorsatellite
-kubectl<span class="w"> </span>get<span class="w"> </span>linstorsatellite<span class="w"> </span>&lt;node-name&gt;<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{range .status.conditions[*]}{.type}={.status} ({.reason}): {.message}{&quot;\n&quot;}{end}&#39;</span>
+kubectl<span class="w"> </span>get<span class="w"> </span>linstorsatellite<span class="w"> </span>&lt;node-name&gt;<span class="w"> </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{range .status.conditions[*]}{.type}={.status} ({.reason}): {.message}{"\n"}{end}'</span>
 kubectl<span class="w"> </span>-n<span class="w"> </span>piraeus-datastore<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>deploy/linstor-controller<span class="w"> </span>--<span class="w"> </span>linstor<span class="w"> </span>storage-pool<span class="w"> </span>list
 </code></pre></div>
 <p>Since v2.10.8 the Operator only registers a storage pool once its backing device exists, so that a pool never lingers
@@ -3261,11 +3261,11 @@ out afterwards.</p>
 <p>Then copy that file to your machine. <code>kubectl cp</code> cannot address a Deployment, so resolve the Controller Pod name
 first:</p>
 <div class="highlight"><pre><span></span><code><span class="nv">POD</span><span class="o">=</span><span class="k">$(</span>kubectl<span class="w"> </span>-n<span class="w"> </span>piraeus-datastore<span class="w"> </span>get<span class="w"> </span>pod<span class="w"> </span>-l<span class="w"> </span>app.kubernetes.io/component<span class="o">=</span>linstor-controller<span class="w"> </span><span class="se">\</span>
-<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">&#39;{.items[0].metadata.name}&#39;</span><span class="k">)</span>
+<span class="w">  </span>-o<span class="w"> </span><span class="nv">jsonpath</span><span class="o">=</span><span class="s1">'{.items[0].metadata.name}'</span><span class="k">)</span>
 
 <span class="c1"># List the reports and copy the one you just created (replace &lt;report&gt;.tar.gz with the real name)</span>
-kubectl<span class="w"> </span>-n<span class="w"> </span>piraeus-datastore<span class="w"> </span><span class="nb">exec</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$POD</span><span class="s2">&quot;</span><span class="w"> </span>--<span class="w"> </span>ls<span class="w"> </span>-rt<span class="w"> </span>/var/log/linstor
-kubectl<span class="w"> </span>-n<span class="w"> </span>piraeus-datastore<span class="w"> </span>cp<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$POD</span><span class="s2">:/var/log/linstor/&lt;report&gt;.tar.gz&quot;</span><span class="w"> </span>./&lt;report&gt;.tar.gz
+kubectl<span class="w"> </span>-n<span class="w"> </span>piraeus-datastore<span class="w"> </span><span class="nb">exec</span><span class="w"> </span><span class="s2">"</span><span class="nv">$POD</span><span class="s2">"</span><span class="w"> </span>--<span class="w"> </span>ls<span class="w"> </span>-rt<span class="w"> </span>/var/log/linstor
+kubectl<span class="w"> </span>-n<span class="w"> </span>piraeus-datastore<span class="w"> </span>cp<span class="w"> </span><span class="s2">"</span><span class="nv">$POD</span><span class="s2">:/var/log/linstor/&lt;report&gt;.tar.gz"</span><span class="w"> </span>./&lt;report&gt;.tar.gz
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>

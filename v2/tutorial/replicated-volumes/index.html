@@ -2682,7 +2682,7 @@ allowVolumeExpansion: true
 volumeBindingMode: WaitForFirstConsumer
 parameters:
   linstor.csi.linbit.com/storagePool: pool1
-  linstor.csi.linbit.com/placementCount: &quot;2&quot;
+  linstor.csi.linbit.com/placementCount: "2"
 EOF
 </code></pre></div>
 <p>Next, we will again create a <a href="https://kubernetes.io/docs/concepts/storage/persistent-volumes/"><code>PersistentVolumeClaim</code></a>,
@@ -2727,7 +2727,7 @@ spec:
             - sh
             - -c
             - |
-              echo &quot;Hello from \$HOSTNAME, running on \$NODENAME, started at \$(date)&quot; &gt;&gt; /volume/hello
+              echo "Hello from \$HOSTNAME, running on \$NODENAME, started at \$(date)" &gt;&gt; /volume/hello
               # We use this to keep the Pod running
               tail -f /dev/null
           env:

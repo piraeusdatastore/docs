@@ -2758,7 +2758,7 @@ spec:
             - sh
             - -c
             - |
-              echo &quot;Hello from \$HOSTNAME, running on \$NODENAME, started at \$(date)&quot; &gt;&gt; /volume/hello
+              echo "Hello from \$HOSTNAME, running on \$NODENAME, started at \$(date)" &gt;&gt; /volume/hello
               # We use this to keep the Pod running
               tail -f /dev/null
           env:
@@ -2809,7 +2809,7 @@ spec:
 EOF
 </code></pre></div>
 <p>Now, we need to wait for the snapshot to be created. We can then also verify its creation in LINSTOR:</p>
-<div class="highlight"><pre><span></span><code>$ kubectl wait volumesnapshot --for=jsonpath=&#39;{.status.readyToUse}&#39;=true data-volume-snapshot-1
+<div class="highlight"><pre><span></span><code>$ kubectl wait volumesnapshot --for=jsonpath='{.status.readyToUse}'=true data-volume-snapshot-1
 volumesnapshot.snapshot.storage.k8s.io/data-volume-snapshot-1 condition met
 $ kubectl get volumesnapshot data-volume-snapshot-1
 NAME                     READYTOUSE   SOURCEPVC     SOURCESNAPSHOTCONTENT   RESTORESIZE   SNAPSHOTCLASS       SNAPSHOTCONTENT                                    CREATIONTIME   AGE
@@ -2827,7 +2827,7 @@ workload is the log of Pod name, Node name and timestamp. We will manually delet
 accidental removal of an important file on a persistent volume:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl exec deploy/volume-logger -- rm /volume/hello
 $ kubectl exec deploy/volume-logger -- cat /volume/hello
-cat: can&#39;t open &#39;/volume/hello&#39;: No such file or directory
+cat: can't open '/volume/hello': No such file or directory
 command terminated with exit code 1
 </code></pre></div>
 <h2 id="restoring-from-a-snapshot">Restoring From a Snapshot<a class="headerlink" href="#restoring-from-a-snapshot" title="Permanent link">&para;</a></h2>
@@ -2836,14 +2836,14 @@ file, we can create a new volume to recover our data. We will be replacing the e
 based on the snapshot.</p>
 <p>First, we will stop the Deployment by scaling it down to zero Pods, so that it does not interfere with our next steps:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl scale deploy/volume-logger --replicas=0
-deployment.apps &quot;volume-logger&quot; deleted
+deployment.apps "volume-logger" deleted
 $ kubectl rollout status deploy/volume-logger
-deployment &quot;volume-logger&quot; successfully rolled out
+deployment "volume-logger" successfully rolled out
 </code></pre></div>
 <p>Next, we will also remove the <code>PersistentVolumeClaim</code>. We still have the snapshot which contains the data we want to
 restore, so we can safely remove the volume.</p>
 <div class="highlight"><pre><span></span><code>$ kubectl delete pvc/data-volume
-persistentvolumeclaim &quot;data-volume&quot; deleted
+persistentvolumeclaim "data-volume" deleted
 </code></pre></div>
 <p>Now, we will create a new <code>PersistentVolumeClaim</code>, referencing our snapshot. This will create a volume, using the data
 from the snapshot.</p>
