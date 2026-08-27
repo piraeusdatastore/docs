@@ -1577,6 +1577,8 @@
       
         
       
+        
+      
     
     
     
@@ -1637,6 +1639,34 @@
     
   
     Use Consistency Groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/s3-backup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Back Up Volumes to S3
   
 
     
@@ -2528,6 +2558,65 @@ volumes and volumes already in use by a pod will continue to work without interr
 <p>To upgrade to the latest release using <code>kubectl</code>, run the following commands:</p>
 <div class="highlight"><pre><span></span><code>$ kubectl apply --server-side -f "https://github.com/piraeusdatastore/piraeus-operator/releases/latest/download/manifest.yaml"
 $ kubectl wait pod --for=condition=Ready -n piraeus-datastore --all
+</code></pre></div>
+<h1 id="upgrades-from-v211-to-v212">Upgrades from v2.11 to v2.12<a class="headerlink" href="#upgrades-from-v211-to-v212" title="Permanent link">&para;</a></h1>
+<p>The CSI controller no longer has cluster-wide permission to read Secrets. This permission was only used by the
+<code>csi-snapshotter</code> sidecar to read the Secrets referenced in a <code>VolumeSnapshotClass</code>, for example S3 credentials
+for <a href="../how-to/s3-backup/">backups to S3</a>.</p>
+<p>To list all <code>VolumeSnapshotClass</code> resources along with the Secrets they reference, run:</p>
+<div class="highlight"><pre><span></span><code>$ kubectl get volumesnapshotclasses -o custom-columns='NAME:.metadata.name,SECRET-NAMESPACE:.parameters.csi\.storage\.k8s\.io/snapshotter-secret-namespace,SECRET-NAME:.parameters.csi\.storage\.k8s\.io/snapshotter-secret-name'
+NAME                SECRET-NAMESPACE    SECRET-NAME
+piraeus-s3-backup   piraeus-datastore   s3-backup-credentials
+piraeus-snapshots   &lt;none&gt;              &lt;none&gt;
+</code></pre></div>
+<p>If any Secret is referenced, grant the <code>linstor-csi-controller</code> ServiceAccount access to it <strong>before</strong>
+upgrading, otherwise creating new snapshots and deleting existing ones will fail. Create the following
+resources, replacing <code>NAMESPACE</code> with the namespace containing the Secret and <code>SECRET-NAME</code> with the name of
+the Secret:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Role</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read-snapshot-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NAMESPACE</span>
+<span class="nt">rules</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">apiGroups</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">""</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">resources</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">"secrets"</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">resourceNames</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">SECRET-NAME</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">verbs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="s">"get"</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RoleBinding</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read-snapshot-secret</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NAMESPACE</span>
+<span class="nt">roleRef</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">apiGroup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
+<span class="w">  </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Role</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read-snapshot-secret</span>
+<span class="nt">subjects</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstor-csi-controller</span>
+<span class="w">    </span><span class="c1"># Must be the namespace of the Piraeus Datastore deployment.</span>
+<span class="w">    </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus-datastore</span>
+</code></pre></div>
+<p>Alternatively, restore the previous cluster-wide access by patching the ClusterRole through the
+<code>LinstorCluster</code> resource:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorCluster</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstorcluster</span>
+<span class="nt">spec</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">patches</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">target</span><span class="p">:</span>
+<span class="w">        </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterRole</span>
+<span class="w">        </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">linstor-csi-controller</span>
+<span class="w">      </span><span class="nt">patch</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|-</span>
+<span class="w">        </span><span class="no">- op: add</span>
+<span class="w">          </span><span class="no">path: /rules/-</span>
+<span class="w">          </span><span class="no">value:</span>
+<span class="w">            </span><span class="no">apiGroups: [ "" ]</span>
+<span class="w">            </span><span class="no">resources: [ "secrets" ]</span>
+<span class="w">            </span><span class="no">verbs: [ "get" ]</span>
 </code></pre></div>
 <h1 id="upgrades-from-v28-to-v29">Upgrades from v2.8 to v2.9<a class="headerlink" href="#upgrades-from-v28-to-v29" title="Permanent link">&para;</a></h1>
 <p>Generally, no special steps required.</p>

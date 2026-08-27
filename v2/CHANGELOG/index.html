@@ -1575,6 +1575,8 @@
       
         
       
+        
+      
     
     
     
@@ -1635,6 +1637,34 @@
     
   
     Use Consistency Groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to/s3-backup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Back Up Volumes to S3
   
 
     
@@ -7522,6 +7552,8 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 </ul>
 <h3 id="removed">Removed<a class="headerlink" href="#removed" title="Permanent link">&para;</a></h3>
 <ul>
+<li>Removed the cluster-wide permission to read Secrets from the CSI controller: access to Secrets referenced in a <code>VolumeSnapshotClass</code>, such as S3 credentials, now needs to be <a href="../how-to/s3-backup/">granted explicitly</a>.</li>
+<li>Removed the cluster-wide permission to read and modify Secrets from the Operator: it now manages Secrets only in its own namespace, using a namespaced Role.</li>
 <li>Removed the deprecated <code>csi-health-monitor</code> sidecar (csi-external-health-monitor-controller) from the CSI controller
   deployment, along with its RBAC rules and default image.</li>
 </ul>
