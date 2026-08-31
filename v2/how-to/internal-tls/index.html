@@ -1134,6 +1134,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#certificate-rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certificate Rotation
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2667,6 +2678,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#certificate-rotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Certificate Rotation
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2826,6 +2848,12 @@ k8s_secret_trusted_by<span class="w"> </span>satellite-tls<span class="w"> </spa
 <span class="c1"># Expected output:</span>
 <span class="c1"># satellite-tls.tls.crt: OK</span>
 </code></pre></div>
+<h2 id="certificate-rotation">Certificate Rotation<a class="headerlink" href="#certificate-rotation" title="Permanent link">&para;</a></h2>
+<p>LINSTOR only reads certificates during start-up. To ensure rotated certificates are picked up, for example after
+cert-manager renewed a certificate, the Operator deploys the Satellite and Controller with liveness probes that detect
+stale certificates. When a probe fails, the container is restarted, loading the new certificates.</p>
+<p>The restart does not interrupt replication: DRBD® connections are handled entirely in the kernel and remain up while
+the Satellite container restarts.</p>
 <p>All available options are documented in the reference for
 <a href="../../reference/linstorcluster/#specinternaltls"><code>LinstorCluster</code></a> and
 <a href="../../reference/linstorsatelliteconfiguration/#specinternaltls"><code>LinstorSatelliteConfiguration</code></a>.</p>

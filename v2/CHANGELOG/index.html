@@ -7545,6 +7545,10 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 <ul>
 <li>Support shared LVM storage pools: setting <code>lvmPool.sharedSpace</code> registers the storage pool as backed by storage
   shared between nodes, optionally using an external lock manager such as lvmlockd (<code>lvmPool.externalLocking</code>).</li>
+<li>Support rotation of Satellite TLS certificates: with <code>internalTLS</code> enabled, the Satellite container will restart
+  to pick up a rotated certificate.</li>
+<li>Support rotation of Controller TLS certificates: with <code>internalTLS</code> or <code>apiTLS</code> enabled, restarting the Controller
+  container to pick up a rotated certificate.</li>
 </ul>
 <h3 id="changed">Changed<a class="headerlink" href="#changed" title="Permanent link">&para;</a></h3>
 <ul>
