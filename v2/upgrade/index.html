@@ -2560,6 +2560,11 @@ volumes and volumes already in use by a pod will continue to work without interr
 $ kubectl wait pod --for=condition=Ready -n piraeus-datastore --all
 </code></pre></div>
 <h1 id="upgrades-from-v211-to-v212">Upgrades from v2.11 to v2.12<a class="headerlink" href="#upgrades-from-v211-to-v212" title="Permanent link">&para;</a></h1>
+<p>The CSIDriver now uses <code>fsGroupPolicy: File</code>. Previously, a Pod's <code>fsGroup</code> was only applied to <code>ReadWriteOnce</code>
+volumes. Now it is also applied to <code>ReadWriteMany</code> volumes in <code>Filesystem</code> mode, changing the ownership of all files on
+the NFS export when a Pod with <code>fsGroup</code> starts. For large volumes, set <code>fsGroupChangePolicy: OnRootMismatch</code> in the
+Pod's <code>securityContext</code> to skip the recursive ownership change when the root directory already has the expected owner.
+Applying <code>fsGroup</code> requires the default <code>no_root_squash</code> NFS export setting.</p>
 <p>The CSI controller no longer has cluster-wide permission to read Secrets. This permission was only used by the
 <code>csi-snapshotter</code> sidecar to read the Secrets referenced in a <code>VolumeSnapshotClass</code>, for example S3 credentials
 for <a href="../how-to/s3-backup/">backups to S3</a>.</p>
