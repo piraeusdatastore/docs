@@ -2687,6 +2687,11 @@
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">drbd_transport_tcp</span>
 <span class="w">      </span><span class="c1"># LVM_THIN storage pools require this module</span>
 <span class="w">      </span><span class="c1">#- name: dm-thin-pool</span>
+<span class="w">      </span><span class="c1"># Snapshots on LVM storage pools require this module</span>
+<span class="w">      </span><span class="c1">#- name: dm-snapshot</span>
+<span class="w">      </span><span class="c1"># The LINSTOR writecache and cache layers require these modules</span>
+<span class="w">      </span><span class="c1">#- name: dm-writecache</span>
+<span class="w">      </span><span class="c1">#- name: dm-cache</span>
 <span class="w">      </span><span class="c1"># ZFS storage pools require this module from the ZFS extension</span>
 <span class="w">      </span><span class="c1">#- name: zfs</span>
 </code></pre></div>
@@ -2737,7 +2742,9 @@ disabled
 <ul>
 <li><code>/etc/lvm/*</code> is read-only in Talos and therefore can't be used. Let's use <code>/var/etc/lvm/*</code> instead.</li>
 <li>Talos does not ship with Systemd, so everything Systemd related needs to be removed</li>
-<li><code>/usr/lib/modules</code> and <code>/usr/src</code> are not needed as the Kernel module is already compiled and needs just to be used.</li>
+<li><code>/usr/lib/modules</code> and <code>/usr/src</code> are not needed as the Kernel module is already compiled and needs just to be used.
+  As a consequence, the LINSTOR Satellite cannot load any kernel modules itself: all required modules need to be listed
+  in the machine config.</li>
 </ul>
 
 
