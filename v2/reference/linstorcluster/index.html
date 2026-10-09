@@ -3249,8 +3249,17 @@ LINSTOR Controller service to run in <code>SingleStack</code> mode.</p>
 <p>Controls the LINSTOR Controller Deployment:</p>
 <ul>
 <li>Setting <code>enabled: false</code> disables the controller deployment entirely. See also <a href="#specexternalcontroller"><code>.spec.externalController</code></a>.</li>
+<li>Setting <code>replicas:</code> sets the desired number of Pods for the Deployment.</li>
 <li>Setting a <code>podTemplate:</code> allows for simple modification of the LINSTOR Controller Deployment.</li>
 </ul>
+<h4 id="warning_1">Warning<a class="headerlink" href="#warning_1" title="Permanent link">&para;</a></h4>
+<p>Running more than one LINSTOR Controller replica is possible, but not recommended.</p>
+<p>Only one LINSTOR Controller is active at any time. The additional Pods act as standby: they remain
+in the <code>Init:0/1</code> state until the active Controller Pod is removed, at which point one of them takes
+over. The takeover still involves starting the LINSTOR Controller, so the LINSTOR API remains
+unavailable for a short time.</p>
+<p>Because the standby Pods never become ready, the Deployment does not report <code>Available</code> and
+<code>kubectl rollout status deployment linstor-controller</code> does not complete.</p>
 <h4 id="example_8">Example<a class="headerlink" href="#example_8" title="Permanent link">&para;</a></h4>
 <p>This example configures a resource request of <code>memory: 1Gi</code> for the LINSTOR Controller Deployment:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
