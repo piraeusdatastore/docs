@@ -2705,8 +2705,21 @@ drbd<span class="w"> </span><span class="m">643072</span><span class="w"> </span
 disabled
 </code></pre></div></p>
 <h2 id="configure-the-drbd-module-loader">Configure the DRBD Module Loader<a class="headerlink" href="#configure-the-drbd-module-loader" title="Permanent link">&para;</a></h2>
-<p>To change the DRBD Module Loader, so that it uses the modules provided by system extension, apply the following <code>LinstorSatelliteConfiguration</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
+<p>To change the DRBD Module Loader, so that it uses the modules provided by system extension, apply the following
+<code>ConfigMap</code> and <code>LinstorSatelliteConfiguration</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ConfigMap</span>
+<span class="nt">metadata</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">talos-lvm-config</span>
+<span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus-datastore</span>
+<span class="nt">data</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">lvm.conf</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">backup {</span>
+<span class="w">      </span><span class="no">backup = 1</span>
+<span class="w">      </span><span class="no">archive = 1</span>
+<span class="w">    </span><span class="no">}</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>
 <span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LinstorSatelliteConfiguration</span>
 <span class="nt">metadata</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">talos-loader-override</span>
@@ -2729,6 +2742,10 @@ disabled
 <span class="w">          </span><span class="nt">$patch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">delete</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">usr-src</span>
 <span class="w">          </span><span class="nt">$patch</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">delete</span>
+<span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">etc-lvm</span>
+<span class="w">          </span><span class="nt">hostPath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">          </span><span class="nt">configMap</span><span class="p">:</span>
+<span class="w">            </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">talos-lvm-config</span>
 <span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">etc-lvm-backup</span>
 <span class="w">          </span><span class="nt">hostPath</span><span class="p">:</span>
 <span class="w">            </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/var/etc/lvm/backup</span>
@@ -2741,6 +2758,8 @@ disabled
 <p>Explanation:</p>
 <ul>
 <li><code>/etc/lvm/*</code> is read-only in Talos and therefore can't be used. Let's use <code>/var/etc/lvm/*</code> instead.</li>
+<li>The LVM configuration shipped with Talos disables LVM metadata backups. The <code>talos-lvm-config</code> ConfigMap replaces the
+  host configuration, so that the LINSTOR Satellite keeps writing backups to <code>/var/etc/lvm/*</code>.</li>
 <li>Talos does not ship with Systemd, so everything Systemd related needs to be removed</li>
 <li><code>/usr/lib/modules</code> and <code>/usr/src</code> are not needed as the Kernel module is already compiled and needs just to be used.
   As a consequence, the LINSTOR Satellite cannot load any kernel modules itself: all required modules need to be listed
