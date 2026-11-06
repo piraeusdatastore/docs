@@ -2650,7 +2650,7 @@
 <li>editing <code>LinstorCluster</code> resources.</li>
 </ul>
 <h2 id="configure-the-csi-driver">Configure the CSI Driver<a class="headerlink" href="#configure-the-csi-driver" title="Permanent link">&para;</a></h2>
-<p>MicroK8s is distributed as a <a href="https://ubuntu.com/core/services/guide/snaps-intro">Snap</a>. Because Snaps store their state
+<p>MicroK8s is distributed as a <a href="https://snapcraft.io/about">Snap</a>. Because Snaps store their state
 in a separate directory (<code>/var/snap</code>) the LINSTOR CSI Driver needs to be updated to use a new path for mounting volumes.</p>
 <p>To change the LINSTOR CSI Driver, so that it uses the MicroK8s state paths, apply the following <code>LinstorCluster</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">piraeus.io/v1</span>

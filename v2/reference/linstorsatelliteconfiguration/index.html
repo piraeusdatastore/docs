@@ -3106,7 +3106,7 @@ the matching key. Available types are:</p>
     be thinly allocated on file systems that support sparse files. Supports the same arguments as <code>filePool</code>.</p>
 </li>
 <li>
-<p><code>zfsPool</code>: Configure a <a href="https://wiki.ubuntu.com/ZFS/ZPool">ZFS ZPool</a> as storage pool. Defaults to using the storage
+<p><code>zfsPool</code>: Configure a <a href="https://openzfs.github.io/openzfs-docs/man/master/8/zpool.8.html">ZFS ZPool</a> as storage pool. Defaults to using the storage
     pool name as name for the zpool. Can be overridden by setting <code>zPool</code>.</p>
 <p>Arguments:</p>
 <ul>
@@ -3116,7 +3116,7 @@ the matching key. Available types are:</p>
 </ul>
 </li>
 <li>
-<p><code>zfsThinPool</code>: Configure a <a href="https://wiki.ubuntu.com/ZFS/ZPool">ZFS ZPool</a> as storage pool. Behaves the same as <code>zfsPool</code>, except the contained
+<p><code>zfsThinPool</code>: Configure a <a href="https://openzfs.github.io/openzfs-docs/man/master/8/zpool.8.html">ZFS ZPool</a> as storage pool. Behaves the same as <code>zfsPool</code>, except the contained
     zVol will be created using sparse reservation. Supports the same arguments as <code>zfsPool</code>.</p>
 </li>
 </ul>
